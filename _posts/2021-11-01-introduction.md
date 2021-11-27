@@ -25,3 +25,5 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 **NOTE:**  I am open to all improvement suggestions and the toolkit has been written to be easily extensible in all regards, so you are free to extend this toolkit to meet your own needs should your requirements fall outside that which is already supported.  
 
 Below is  a list of VPS cloud hosts that this toolkit currently supports.
+
+![](imaages/do.jpg)
