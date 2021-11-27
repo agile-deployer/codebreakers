@@ -9,3 +9,5 @@ hide: true
 ### [Introduction](/codebreakers/introduction/)
 
 ### [Background Philosophy](/codebreakers/backgroundphilosophy/)
+
+### [Tutorials](/codebreakers/tutorials/)
