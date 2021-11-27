@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: The agile deployment toolkit background philosophy
-title: Background Philosophy
+title: backgroundphilosophy
 permalink: /codebreakers/:title/
 ---
 #### BACKGROUND PHILOSOPHY
