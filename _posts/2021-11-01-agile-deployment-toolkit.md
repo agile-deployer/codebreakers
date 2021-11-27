@@ -8,4 +8,4 @@ title: The Agile Deployment Toolkit
 
 # Posts
 
-[Background Philosophy](/codebreakers/backgroundphilosophy)
+[Background Philosophy](/codebreakers/backgroundphilosophy/)
