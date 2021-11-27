@@ -1,10 +1,10 @@
 ---
 toc: true
 layout: post
-description: Ny first blog with fastpages
+description: The agile deployment toolkit
 categories: [markdown]
-title: Ny first blog
+title: The Agile Deployment Toolkit
 ---
-# My first blog
+# The Agile Deployment Toolkit
 
 Rock on
