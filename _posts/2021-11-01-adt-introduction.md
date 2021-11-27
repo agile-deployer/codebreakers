@@ -1,4 +1,13 @@
-[Agile Deployer](https://github.com/agile-deployer)
+---
+toc: true
+layout: post
+description: The Agile Deployment Toolkit Introduction
+title: Introduction
+permalink: /introduction/
+hide: true
+---
+
+### [Agile Deployer](https://github.com/agile-deployer)
 
 Is shared hosting not the ideal solution for your web hosting?
 
