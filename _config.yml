@@ -36,15 +36,15 @@ url: "https://agile-deployer.github.io" # the base hostname & protocol for your 
 #
 baseurl: "/codebreakers" # the subpath of your site, e.g. "/blog".
 
-defaults:
-  -
-    scope:
-      type: posts
-      path: _posts
-    values:
-      is_post: true
-      layout: post
-      permalink: /codebreakers/:categories/:title/
+#defaults:
+#  -
+#    scope:
+#      type: posts
+#      path: _posts
+#    values:
+#      is_post: true
+#      layout: post
+#      permalink: /codebreakers/:categories/:title/
 
 # Github and twitter are optional:
 minima:
