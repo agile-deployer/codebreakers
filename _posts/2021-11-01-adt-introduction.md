@@ -1,5 +1,4 @@
 ---
-toc: true
 layout: post
 description: The Agile Deployment Toolkit Introduction
 title: Introduction
