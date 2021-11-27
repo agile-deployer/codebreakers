@@ -4,6 +4,7 @@ layout: post
 description: The Agile Deployment Toolkit background philosophy
 title: Background Philosophy
 permalink: /backgroundphilosophy/
+hide: true
 ---
 #### BACKGROUND PHILOSOPHY
 
