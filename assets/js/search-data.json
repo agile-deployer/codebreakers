@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "The Agile Deployment Toolkit",
-            "content": "Background Philosophy .",
+            "content": "### [Background Philosophy](/codebreakers/introduction /) ### [Background Philosophy](/codebreakers/backgroundphilosophy/) .",
             "url": "https://agile-deployer.github.io/codebreakers/agiledeploymenttoolkit/",
             "relUrl": "/agiledeploymenttoolkit/",
             "date": " • Nov 1, 2021"
