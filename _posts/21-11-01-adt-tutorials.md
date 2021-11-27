@@ -6,4 +6,4 @@ permalink: /tutorials/
 hide: true
 ---
 
-> youtube: https://www.youtube.com/mXpIRB_7O_M
+> youtube: https://youtu.be/mXpIRB_7O_M
