@@ -1,6 +1,6 @@
 ---
 toc: true
-layout: page
+layout: default
 description: The Agile Deployment Toolkit background philosophy
 title: Background Philosophy
 permalink: /backgroundphilosophy/
