@@ -7,4 +7,6 @@ title: The Agile Deployment Toolkit
 ---
 # The Agile Deployment Toolkit
 
+# Posts
+
 [Background Philosophy](https://agile-deployer.github.io/codebreakers/markdown/2021/11/01/backgroundphilosophy.html)
