@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: The agile deployment toolkit
-categories: [markdown]
+categories: [agiledeployment]
 title: The Agile Deployment Toolkit
 ---
 # The Agile Deployment Toolkit
