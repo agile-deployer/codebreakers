@@ -9,4 +9,4 @@ title: The Agile Deployment Toolkit
 
 # Posts
 
-[Background Philosophy]({{ site.baseurl }}/agiledeployment/backgroundphilosophy.html)
+[Background Philosophy]({{ site.baseurl }}/agiledeployment/backgroundphilosophy.md)
