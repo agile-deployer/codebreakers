@@ -6,4 +6,4 @@ permalink: /tutorials/
 hide: true
 ---
 
-> youtube: https://youtu.be/mXpIRB_7O_M
+[[yt:https://youtu.be/5haX95nk02E][New Link Feature Org Mode]]
