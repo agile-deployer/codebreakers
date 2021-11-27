@@ -1,5 +1,4 @@
 ---
-toc: true
 layout: post
 description: The Agile Deployment Toolkit background philosophy
 title: Background Philosophy
