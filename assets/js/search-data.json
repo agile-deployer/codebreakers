@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Adt Tutorials",
+            "title": "Tutorials",
             "content": "youtube: https://www.youtube.com/watch?v=mXpIRB_7O_M .",
-            "url": "https://agile-deployer.github.io/codebreakers/2021/11/01/adt-tutorials.html",
-            "relUrl": "/2021/11/01/adt-tutorials.html",
+            "url": "https://agile-deployer.github.io/codebreakers/tutorials/",
+            "relUrl": "/tutorials/",
             "date": " • Nov 1, 2021"
         }
         
