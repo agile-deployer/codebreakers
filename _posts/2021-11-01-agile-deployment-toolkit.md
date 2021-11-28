@@ -6,8 +6,8 @@ permalink: /agiledeploymenttoolkit/
 hide: true
 ---
 
-### [Introduction]({{ site.baseurl }}/codebreakers/introduction/)
+### [Introduction]({{ site.baseurl }}/introduction/)
 
-### [Background Philosophy]({{ site.baseurl }}/codebreakers/backgroundphilosophy/)
+### [Background Philosophy]({{ site.baseurl }}/backgroundphilosophy/)
 
-### [Tutorials]({{ site.baseurl }}/codebreakers/tutorials/)
+### [Tutorials]({{ site.baseurl }}/tutorials/)
