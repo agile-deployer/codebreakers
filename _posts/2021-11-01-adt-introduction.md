@@ -34,4 +34,9 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 
 Below is  a list of VPS cloud hosts that this toolkit currently supports.
 
-![]({{ site.baseurl }}/images/do.jpg "Digital Ocean")
+![]({{ site.baseurl }}/images/do.jpg "Digital Ocean Cloud Hosting")
+![]({{ site.baseurl }}/images/exo.png "Exoscale Cloud Hosting")
+![]({{ site.baseurl }}/images/lin.png "Linode Cloud Hosting")
+![]({{ site.baseurl }}/images/vult.png "Vultr Cloud Hosting")
+![]({{ site.baseurl }}/images/aws.png "Amazon Web Services")
+
