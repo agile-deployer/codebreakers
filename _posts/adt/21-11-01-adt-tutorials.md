@@ -11,7 +11,7 @@ category: agiledeploymenttoolkit
 
 If you are new to this toolkit, pick which provider you want to use and then you can follow the tutorials to become familiar with how things work. 
 
-You will need to repeatedly reference the [Specification](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/specification.md) throughout these tutorials. 
+You will need to repeatedly reference the [Specification](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/specification.md){:target="_blank"} throughout these tutorials. 
 
 ------------
 
