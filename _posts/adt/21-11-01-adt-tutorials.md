@@ -17,8 +17,6 @@ You will need to repeatedly reference the [Specification](https://github.com/agi
 
 * [Digital Ocean Tutorials]({{ site.baseurl }}/adtdigitaloceantutorials/)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mXpIRB_7O_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 * [ExoscaleTutorials]({{ site.baseurl }}/adtexoscaletutorials/)
 
 * [Linode Tutorials]({{ site.baseurl }}/adtlinodetutorials/)
