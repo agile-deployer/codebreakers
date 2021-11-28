@@ -58,7 +58,7 @@
     
         ,"post5": {
             "title": "Tutorials",
-            "content": "Tutorial sets for the Agile Deployment Toolkit, organised by cloudhost provider . If you are new to this toolkit, pick which provider you want to use and then you can follow the tutorials to become familiar with how things work. You will need to repeatedly reference the [Specification](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/specification.md) throughout these tutorials. . Digital Ocean Tutorials . ExoscaleTutorials . Linode Tutorials . Vultr Tutorials . AWS Tutorials .",
+            "content": "Tutorial sets for the Agile Deployment Toolkit, organised by cloudhost provider . If you are new to this toolkit, pick which provider you want to use and then you can follow the tutorials to become familiar with how things work. . You will need to repeatedly reference the Specification throughout these tutorials. . Digital Ocean Tutorials . ExoscaleTutorials . Linode Tutorials . Vultr Tutorials . AWS Tutorials .",
             "url": "https://agile-deployer.github.io/codebreakers/tutorials/",
             "relUrl": "/tutorials/",
             "date": " • Nov 1, 2021"
