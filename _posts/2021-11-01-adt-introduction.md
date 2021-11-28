@@ -60,7 +60,7 @@ Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe c
 
 ---------------------
 
-![]({{ site.baseurl }}/images/lin.png "Linode Cloud Hosting")  
+![]({{ site.baseurl }}/images/lin.svg "Linode Cloud Hosting")  
 
 Linode is a cloudhost from the US with global reach. Again, their interfaces are simple and their service offerings are expanding.  
 
