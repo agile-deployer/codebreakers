@@ -5,7 +5,6 @@ title: Background Philosophy
 permalink: /backgroundphilosophy/
 hide: true
 ---
-#### BACKGROUND PHILOSOPHY
 
 In another life, I was a consultant for a big IT outsourcing company used by the government for a lot of projects that they needed doing. The problem was the social disconnect. The users of the systems lived on a different planet to those of us building them. So, in order to be a consultant with conviction, I went to actually look, or, was led into looking by my intuitive self, to interact with the people that use the systems so that I could actually advise based on experience rather than assumption. Here's what I found:
 
