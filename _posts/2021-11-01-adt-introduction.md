@@ -40,7 +40,7 @@ Below is  a list of VPS cloud hosts that this toolkit currently supports.
 
 ![]({{ site.baseurl }}/images/lin.png "Linode Cloud Hosting")  
 
-![]({{ site.baseurl }}/images/vult.png "Vultr Cloud Hosting")  
+![]({{ site.baseurl }}/images/vult.jpg "Vultr Cloud Hosting")  
 
 ![]({{ site.baseurl }}/images/aws.png "Amazon Web Services")  
 
