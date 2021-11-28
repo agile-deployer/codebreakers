@@ -43,31 +43,46 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 ![]({{ site.baseurl }}/images/do.png "Digital Ocean Cloud Hosting") 
 
 Digital Ocean is a cloudhost that is simple to use and global. They also provide managed databases and so on, so their service offering is growing. 
-<br/><br/><br/><br/><br/><br/><br/><br/>
+&nbsp  
+&nbsp  
+&nbsp  
+&nbsp  
 -------------------
 
 ![]({{ site.baseurl }}/images/exo.png "Exoscale Cloud Hosting")  
 
 Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe centric cloudhost because their datacentres are either in Switzerland (in decommissioned military nuclear bunkers) or elsewhere within the EU.  
-<br/><br/><br/><br/><br/><br/><br/><br/>
+&nbsp  
+&nbsp  
+&nbsp  
+&nbsp  
 ---------------------
 
 ![]({{ site.baseurl }}/images/lin.svg "Linode Cloud Hosting")  
 
 Linode is a cloudhost from the US with global reach. Again, their interfaces are simple and their service offerings are expanding.   
-<br/><br/><br/><br/><br/><br/><br/><br/>
+&nbsp  
+&nbsp  
+&nbsp  
+&nbsp  
 ----------------------
 
 ![]({{ site.baseurl }}/images/vult.jpg "Vultr Cloud Hosting")  
 
 Vultr are a smart cloudhosting company. They seem particularly strong on security to me with processes and so on in place to make sure that things are tied down in terms of security.  
-<br/><br/><br/><br/><br/><br/><br/><br/>
+&nbsp  
+&nbsp  
+&nbsp  
+&nbsp  
 ----------------------
 
 ![]({{ site.baseurl }}/images/aws.png "Amazon Web Services")  
 
 AWS is the world's largest cloudhost. It also provides a plethora of services such as managed databases and so on which means that your application will be well served if you deploy here. 
-<br/><br/><br/><br/><br/><br/><br/><br/>
+&nbsp  
+&nbsp  
+&nbsp  
+&nbsp  
 ------------------------
 
 
