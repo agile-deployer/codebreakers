@@ -42,6 +42,8 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 
 ![]({{ site.baseurl }}/images/do.png "Digital Ocean Cloud Hosting") 
 
+[![Digital Ocean]({{ site.baseurl }}/images/do.png "Digital Ocean Cloud Hosting")](http://www.digitalocean.com)
+
 Digital Ocean is a cloudhost that is simple to use and global. They also provide managed databases and so on, so their service offering is growing. 
 
 &nbsp;  
