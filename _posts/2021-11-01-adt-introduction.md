@@ -39,7 +39,7 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 Below is  a list of VPS cloud hosts that this toolkit currently supports.
 
 ![]({{ site.baseurl }}/images/do.jpg "Digital Ocean Cloud Hosting") 
-<img src="/images/do.jpg" alt="Digital Ocean Cloud Hosting" width="250" height="250">
+<img src="/images/do.jpg" alt="Digital Ocean Cloud Hosting" width="500" height="250">
 
 
 
