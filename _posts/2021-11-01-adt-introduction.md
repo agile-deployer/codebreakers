@@ -34,4 +34,4 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 
 Below is  a list of VPS cloud hosts that this toolkit currently supports.
 
-![](images/do.jpg)
+![]({{ site.baseurl }}/images/do.jpg "Digital Ocean")
