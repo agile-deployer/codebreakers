@@ -47,6 +47,7 @@ Digital Ocean is a cloudhost that is simple to use and global. They also provide
 &nbsp  
 &nbsp  
 &nbsp  
+
 -------------------
 
 ![]({{ site.baseurl }}/images/exo.png "Exoscale Cloud Hosting")  
@@ -56,6 +57,7 @@ Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe c
 &nbsp  
 &nbsp  
 &nbsp  
+
 ---------------------
 
 ![]({{ site.baseurl }}/images/lin.svg "Linode Cloud Hosting")  
@@ -65,6 +67,7 @@ Linode is a cloudhost from the US with global reach. Again, their interfaces are
 &nbsp  
 &nbsp  
 &nbsp  
+
 ----------------------
 
 ![]({{ site.baseurl }}/images/vult.jpg "Vultr Cloud Hosting")  
@@ -74,6 +77,7 @@ Vultr are a smart cloudhosting company. They seem particularly strong on securit
 &nbsp  
 &nbsp  
 &nbsp  
+
 ----------------------
 
 ![]({{ site.baseurl }}/images/aws.png "Amazon Web Services")  
@@ -83,6 +87,7 @@ AWS is the world's largest cloudhost. It also provides a plethora of services su
 &nbsp  
 &nbsp  
 &nbsp  
+
 ------------------------
 
 
