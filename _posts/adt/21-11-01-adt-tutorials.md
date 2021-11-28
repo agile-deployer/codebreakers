@@ -7,7 +7,7 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-#### Tutorial sets for the Agile Deployment Toolkit, organised by cloudhost provider
+### Tutorial sets for the Agile Deployment Toolkit, organised by cloudhost provider
 
 If you are new to this toolkit, pick which provider you want to use and then you can follow the tutorials to become familiar with how things work. 
 
