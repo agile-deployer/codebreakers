@@ -73,7 +73,7 @@ Linode is a cloudhost from the US with global reach. Again, their interfaces are
 
 ----------------------
 
-![]({{ site.baseurl }}/images/vult.jpg "Vultr Cloud Hosting")  
+![]({{ site.baseurl }}/images/vult.png "Vultr Cloud Hosting")  
 
 Vultr are a smart cloudhosting company. They seem particularly strong on security to me with processes and so on in place to make sure that things are tied down in terms of security.  
 
