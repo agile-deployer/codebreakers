@@ -4,6 +4,7 @@ description: The Agile Deployment Toolkit Introduction
 title: Introduction
 permalink: /introduction/
 hide: true
+category: agiledeploymenttoolkit
 ---
 
 ### [Agile Deployment Toolkit](https://github.com/agile-deployer)
