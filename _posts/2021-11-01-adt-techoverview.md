@@ -4,6 +4,7 @@ description: The Agile Deployment Toolkit Tech Overview
 title: The Agile Deployment Toolkit Tech Overview
 permalink: /agiledeploymenttoolkittechoverview/
 hide: true
+category: adt
 ---
 
 * Fully automated virgin server configuration and deployment with sensible default webserver and database configuration settings with best practice security guidelines baked in.
