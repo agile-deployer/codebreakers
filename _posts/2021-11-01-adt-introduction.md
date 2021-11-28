@@ -87,10 +87,10 @@ Vultr are a smart cloudhosting company. They seem particularly strong on securit
 ![]({{ site.baseurl }}/images/aws.png "Amazon Web Services")  
 
 AWS is the world's largest cloudhost. It also provides a plethora of services such as managed databases and so on which means that your application will be well served if you deploy here. 
-&nbsp  
-&nbsp  
-&nbsp  
-&nbsp  
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 ------------------------
 
