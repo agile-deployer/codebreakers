@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "The Agile Deployment Toolkit",
-            "content": "Introduction . Background Philosophy . Tutorials .",
+            "content": "Introduction . Tech Overview . Background Philosophy . Tutorials .",
             "url": "https://agile-deployer.github.io/codebreakers/agiledeploymenttoolkit/",
             "relUrl": "/agiledeploymenttoolkit/",
             "date": " • Nov 1, 2021"
