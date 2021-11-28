@@ -38,19 +38,36 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 
 Below is  a list of VPS cloud hosts that this toolkit currently supports.
 
+--------------------
+
 ![]({{ site.baseurl }}/images/do.png "Digital Ocean Cloud Hosting") 
-<img src="images/do.jpg" alt="Digital Ocean Cloud Hosting" width="700" height="250">
-<img src="images/exo.png" alt="Exoscale Cloud Hosting" width="700" height="250">
-<img src="images/lin.png" alt="Linode Cloud Hosting" width="700" height="250">
 
+Digital Ocean is a cloudhost that is simple to use and global. They also provide managed databases and so on, so their service offering is growing.  
 
+-------------------
 
 ![]({{ site.baseurl }}/images/exo.png "Exoscale Cloud Hosting")  
 
+Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe centric cloudhost because their datacentres are either in Switzerland (in decommissioned military nuclear bunkers) or elsewhere within the EU.  
+
+---------------------
+
 ![]({{ site.baseurl }}/images/lin.png "Linode Cloud Hosting")  
+
+Linode is a cloudhost from the US with global reach. Again, their interfaces are simple and their service offerings are expanding.  
+
+----------------------
 
 ![]({{ site.baseurl }}/images/vult.jpg "Vultr Cloud Hosting")  
 
+Vultr are a smart cloudhosting company. They seem particularly strong on security to me with processes and so on in place to make sure that things are tied down in terms of security.  
+
+----------------------
+
 ![]({{ site.baseurl }}/images/aws.png "Amazon Web Services")  
+
+AWS is the world's largest cloudhost. It also provides a plethora of services such as managed databases and so on which means that your application will be well served if you deploy here. 
+
+------------------------
 
 
