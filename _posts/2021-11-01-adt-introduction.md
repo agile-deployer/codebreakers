@@ -51,7 +51,7 @@ Digital Ocean is a cloudhost that is simple to use and global. They also provide
 
 -------------------
 
-![]({{ site.baseurl }}/images/exo.svg "Exoscale Cloud Hosting")  
+![]({{ site.baseurl }}/images/exoscale.svg "Exoscale Cloud Hosting")  
 
 Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe centric cloudhost because their datacentres are either in Switzerland (in decommissioned military nuclear bunkers) or elsewhere within the EU.  
 
