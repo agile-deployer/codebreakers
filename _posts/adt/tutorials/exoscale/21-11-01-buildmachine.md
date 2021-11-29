@@ -178,7 +178,7 @@ Click on the security groups option of your exoscale GUI
 &nbsp;  
 &nbsp; 
 
-Click "Create New Security Group"
+Click "Add Security Group" and call it "ADT Build Machine" or something to your liking. 
 
 &nbsp;  
 &nbsp;
