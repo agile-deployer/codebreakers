@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit background philosophy
 title: Background Philosophy
-permalink: https://www.codebreakers.uk/backgroundphilosophy/
+permalink: /backgroundphilosophy/
 hide: true
 category: agiledeploymenttoolkit
 ---
