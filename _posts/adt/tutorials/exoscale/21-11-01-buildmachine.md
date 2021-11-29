@@ -206,7 +206,8 @@ Put in a CIDR of 0.0.0.0/0 for the source and 1035 for start port and 1035 for e
 Click "Create" and the rules you have set will be added to your security group
 &nbsp;  
 &nbsp;  
-&nbsp; 	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
+
 
 ---------------
 
@@ -227,7 +228,6 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image12.png "Exoscale Tutorial Image 12")  
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image13.png "Exoscale Tutorial Image 13")  
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image14.png "Exoscale Tutorial Image 14")  
