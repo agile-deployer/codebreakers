@@ -188,6 +188,8 @@ Click "Add Security Group" and call it "ADT Build Machine" or something to your 
 &nbsp;  
 &nbsp;
 	
+You can then see your new security Group "adtbuildmachine" listed
+	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
 	
 &nbsp;  
