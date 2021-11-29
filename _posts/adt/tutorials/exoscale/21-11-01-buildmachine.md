@@ -121,8 +121,8 @@ Now issue the command:
 Once logged in to your build machine
 
 >     sudo su 
-
-And enter 
-
->     ${BUILDMACHINE_USER}
+>     [sudo] password for agile-deployer:
+	
+And then enter your build machine password
+	
 >     ${BUILDMACHINE_PASSWORD}
