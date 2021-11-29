@@ -6,3 +6,5 @@ permalink: /adtexoscaletutorialsfullbuildvideo/
 hide: true
 category: agiledeploymenttoolkit
 ---
+
+1. Begin by following this: [Build Machine Setup](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)
