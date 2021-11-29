@@ -91,7 +91,7 @@
     
         ,"post8": {
             "title": "Exoscale ADT Tutorials Expedited Text",
-            "content": "Begin by following this: Build Machine Setup |",
+            "content": "Begin by following this: Build Machine Setup | At this point, your build machine should be up and running. Your build machine SSH port will accept connections from any ip address. If you wish to tighten it up so that it only accepts connections from specific machines, please review Tightening Build Machine Firewall. This is a strong step to making your build machine even more secure which is important because it will have sensitive credentials stored on it. |",
             "url": "https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtext/",
             "relUrl": "/adtexoscaletutorialsexpeditedtext/",
             "date": " • Nov 1, 2021"
