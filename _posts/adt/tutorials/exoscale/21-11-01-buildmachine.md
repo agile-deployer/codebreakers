@@ -175,14 +175,14 @@ I just use the default security group with this toolkit. So, the default securit
 
 6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
 
->     Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
->     Select which zone you want to deploy to, for example, CH-GVA-2
->     Select instance type "Tiny" for example
->     Select disk size (50GB)
->     Ignore SSH KEY
->     Make sure your default security group is set
->     In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
->     Click Create and wait for your machine to build
+>     1. Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
+>     2. Select which zone you want to deploy to, for example, CH-GVA-2
+>     3. Select instance type "Tiny" for example
+>     4. Select disk size (50GB)
+>     5. Ignore SSH KEY
+>     6. Make sure your default security group is set
+>     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+>     8. Click Create and wait for your machine to build
 
 &nbsp;  
 &nbsp;  
