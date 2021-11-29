@@ -174,50 +174,33 @@ Click on the security groups option of your exoscale GUI
 &nbsp; 
 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")
-
 &nbsp;  
 &nbsp; 
-
 Click "Add Security Group" and call it "ADT Build Machine" or something to your liking and then click "Create Group"
-
 &nbsp;  
 &nbsp;
-	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image4.png "Exoscale Tutorial Image 4")  
-	
 &nbsp;  
 &nbsp;
-	
-
-	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
-	
 &nbsp;  
 &nbsp;
-
 You can then see your new security Group "adt build machine" listed
-	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image6.png "Exoscale Tutorial Image 6")  
-
 &nbsp;  
 &nbsp;
-	
+Click on the "adt build machine" security group
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image7.png "Exoscale Tutorial Image 7")  
-
 &nbsp;  
 &nbsp;
+Click "Add Rule" and click on "Ping" to make the machine pingable and then click on "custom rule"
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image8.png "Exoscale Tutorial Image 8")  
-
 &nbsp;  
 &nbsp;	
-
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image9.png "Exoscale Tutorial Image 9")  
-
 &nbsp;  
 &nbsp;
-
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10") 
-
 &nbsp;  
 &nbsp;
 	
