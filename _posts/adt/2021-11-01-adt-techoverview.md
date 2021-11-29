@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Tech Overview
 title: The Agile Deployment Toolkit Tech Overview
-permalink: /agiledeploymenttoolkittechoverview/
+permalink: https://www.codebreakers.uk/agiledeploymenttoolkittechoverview/
 hide: true
 category: agiledeploymenttoolkit
 ---
