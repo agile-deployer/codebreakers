@@ -40,9 +40,7 @@ This will give you your **public** key which you need later so, take a copy of t
 
 --------------------
 	
-2) Take a copy of the script: 
-
-#### [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
+2) Take a copy of the script: #### [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
 	
 &nbsp;  
 &nbsp;  
