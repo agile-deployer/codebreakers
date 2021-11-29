@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Introduction
 title: Introduction
-permalink: https://www.codebreakers.uk/introduction/
+permalink: /introduction/
 hide: true
 category: agiledeploymenttoolkit
 ---
