@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Introduction
 title: Introduction
-permalink: /introduction/
+permalink: https://www.codebreakers.uk/introduction/
 hide: true
 category: agiledeploymenttoolkit
 ---
@@ -41,7 +41,7 @@ Many VPS providers out there, don't necessarily have clear processes for deployi
 
 --------------------
 
-[![Digital Ocean]({{ site.baseurl }}/images/do.png "Digital Ocean Cloud Hosting")](http://www.digitalocean.com)
+[![Digital Ocean](https://www.codebreakers.uk/images/do.png "Digital Ocean Cloud Hosting")](http://www.digitalocean.com)
 
 Digital Ocean is a cloudhost that is simple to use and global. They also provide managed databases and so on, so their service offering is growing. 
 
@@ -52,7 +52,7 @@ Digital Ocean is a cloudhost that is simple to use and global. They also provide
 
 -------------------
 
-[![Exoscale]({{ site.baseurl }}/images/exoscale.svg "Exoscale Cloud Hosting")](http://www.exoscale.com)
+[![Exoscale](https://www.codebreakers.uk/images/exoscale.svg "Exoscale Cloud Hosting")](http://www.exoscale.com)
 
 
 Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe centric cloudhost because their datacentres are either in Switzerland (in decommissioned military nuclear bunkers) or elsewhere within the EU.  
@@ -64,7 +64,7 @@ Exoscale is a Swiss cloudhost, so, if you like the idea of being with a Europe c
 
 ---------------------
 
-[![Linode]({{ site.baseurl }}/images/lin.svg "Linode Cloud Hosting")](http://www.linode.com)
+[![Linode](https://www.codebreakers.uk/images/lin.svg "Linode Cloud Hosting")](http://www.linode.com)
 
 
 Linode is a cloudhost from the US with global reach. Again, their interfaces are simple and their service offerings are expanding.   
@@ -76,7 +76,7 @@ Linode is a cloudhost from the US with global reach. Again, their interfaces are
 
 ----------------------
 
-[![Vultr]({{ site.baseurl }}/images/vult.png "Vultr Cloud Hosting")](http://www.vultr.com)
+[![Vultr](https://www.codebreakers.uk/images/vult.png "Vultr Cloud Hosting")](http://www.vultr.com)
 
 
 Vultr are a smart cloudhosting company. They seem particularly strong on security to me with processes and so on in place to make sure that things are tied down in terms of security.  
@@ -88,7 +88,7 @@ Vultr are a smart cloudhosting company. They seem particularly strong on securit
 
 ----------------------
 
-[![AWS]({{ site.baseurl }}/images/aws.png "Amazon Web Services")](http://www.aws.com)
+[![AWS](https://www.codebreakers.uk/images/aws.png "Amazon Web Services")](http://www.aws.com)
 
 AWS is the world's largest cloudhost. It also provides a plethora of services such as managed databases and so on which means that your application will be well served if you deploy here. 
 &nbsp;  
