@@ -158,17 +158,75 @@ export LAPTOP_IP=""
 </code></pre></div>  </div>
 </blockquote>
 
-<p>If I decide on a username of “agile-deployer” then in the copy that I made in 2, I need to change it as follows:<br />
- <br />
+<p>If I decide on a username of “agile-deployer” then in the copy that I made in 2, I need to change it as follows:</p>
+
+<p> <br />
  </p>
+
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-deployer" &amp;nbsp;   &amp;nbsp; 	 If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows: &amp;nbsp;   &amp;nbsp; 
-export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098" &amp;nbsp;   &amp;nbsp; 	 If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows: &amp;nbsp;   &amp;nbsp; 	
-export BUILDMACHINE_SSH_PORT="1035" &amp;nbsp;   &amp;nbsp;  You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: "111.111.111.111" and pasting your ip address into your copy as follows: &amp;nbsp;   &amp;nbsp; 	
-export LAPTOP_IP="111.111.111.111" &amp;nbsp;   &amp;nbsp;  The **public** ssh key that you took a copy of in 1 needs to be pasted as follows: &amp;nbsp;   &amp;nbsp; 	
-export SSH=\"&lt;ssh-public-key-substance&gt;\" &amp;nbsp;   &amp;nbsp;  The top part of the copy that you made in 2 will now look like this: &amp;nbsp;   &amp;nbsp; 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-deployer"
 </code></pre></div>  </div>
 </blockquote>
+
+<p> <br />
+ </p>
+
+<p>If I decide on a password of “QQQPPPZZZMMM123098” then in the copy that I made in 2, I need to change it as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>If you decide on an SSH_PORT of “1035” then in the copy that I made in 2, I need to change it as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_SSH_PORT="1035"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: “111.111.111.111” and pasting your ip address into your copy as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export LAPTOP_IP="111.111.111.111"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>The <strong>public</strong> ssh key that you took a copy of in 1 needs to be pasted as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"&lt;ssh-public-key-substance&gt;\"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>The top part of the copy that you made in 2 will now look like this:</p>
+
+<p> <br />
+ </p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
