@@ -212,7 +212,7 @@ Click "Create" and the rules you have set will be added to your security group
 
 6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
 
->     1. Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
+>     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
 >     2. Select which zone you want to deploy to, for example, CH-GVA-2
 >     3. Select instance type "Tiny" for example
 >     4. Select disk size (50GB)
@@ -220,6 +220,17 @@ Click "Create" and the rules you have set will be added to your security group
 >     6. Make sure your default security group is set
 >     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
 >     8. Click Create and wait for your machine to build
+
+Graphically you can see what I have described in these 8 steps here:
+
+&nbsp;  
+&nbsp;  
+&nbsp;
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
+![](https://www.codebreakers.uk/images/exoscaletutorial/image12.png "Exoscale Tutorial Image 12")  
+![](https://www.codebreakers.uk/images/exoscaletutorial/image13.png "Exoscale Tutorial Image 13")  
+![](https://www.codebreakers.uk/images/exoscaletutorial/image14.png "Exoscale Tutorial Image 14")  
 
 &nbsp;  
 &nbsp;  
@@ -279,8 +290,5 @@ And then enter your build machine password
 --------------------------------------
 	
  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image12.png "Exoscale Tutorial Image 12")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image13.png "Exoscale Tutorial Image 13")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image14.png "Exoscale Tutorial Image 14")  
+
 
