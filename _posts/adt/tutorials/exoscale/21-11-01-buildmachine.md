@@ -191,31 +191,49 @@ I just use the default security group with this toolkit. So, the default securit
 ---------------
 
 7) Once the machine has built you can access it as follows:
+	
 &nbsp;  
 &nbsp; 
+	
 >     Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+	
 Now issue the command:
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+
 >     ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 or yours might be:
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 >     ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>	
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+
 Once logged in to your build machine
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+
 >     sudo su 
 >     [sudo] password for agile-deployer:
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+
 And then enter your build machine password
+
 &nbsp;  
 &nbsp; 	
+
 >     ${BUILDMACHINE_PASSWORD}
