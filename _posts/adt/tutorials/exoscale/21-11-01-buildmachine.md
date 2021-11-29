@@ -14,58 +14,83 @@ Before performing an expedited or full build, you need to set up a build machine
 ----------------
 
 1) If you don't have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:
-
+&nbsp;  
+&nbsp; 
 >     /usr/bin/ssh-keygen -t rsa 
-
+&nbsp;  
+&nbsp; 
 Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
 	 
 Issue the command (for example)
-	 
+&nbsp;  
+&nbsp; 	 
 >     /bin/cat /root/.ssh/id_rsa.pub - this will be your <ssh-public-key-substance>
-	 
+&nbsp;  
+&nbsp; 	 
 This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
+
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 --------------------
 	
 2) Take a copy of the script: 
 
 >     [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
+	
+&nbsp;  
+&nbsp;  
+&nbsp; 
 
 ------------------
 	
 3) If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:
-
+&nbsp;  
+&nbsp; 
 >     export BUILDMACHINE_USER=""
 >     export BUILDMACHINE_PASSWORD="" 
 >     export BUILDMACHINE_SSH_PORT=""
 >     export LAPTOP_IP=""
 	
 >     export SSH=\"\" 
-	
+&nbsp;  
+&nbsp; 	
 Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine's ssh system and the IP address of your desktop or laptop.
 	
-If I decide on a username of "agile-deployer" then in the copy that I made in 2, I need to change it as follows:
-	
+If I decide on a username of "agile-deployer" then in the copy that I made in 2, I need to change it as follows:  
+&nbsp;  
+&nbsp; 
 >     export BUILDMACHINE_USER="agile-deployer"
-	
+&nbsp;  
+&nbsp; 	
 If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows:
-
+&nbsp;  
+&nbsp; 
 >     export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
-	
+&nbsp;  
+&nbsp; 	
 If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows:
-	
+&nbsp;  
+&nbsp; 	
 >     export BUILDMACHINE_SSH_PORT="1035"
-
+&nbsp;  
+&nbsp; 
 You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: "111.111.111.111" and pasting your ip address into your copy as follows:
-	
+&nbsp;  
+&nbsp; 	
 >     export LAPTOP_IP="111.111.111.111"
-
+&nbsp;  
+&nbsp; 
 The **public** ssh key that you took a copy of in 1 needs to be pasted as follows:
-	
+&nbsp;  
+&nbsp; 	
 >     export SSH=\"<ssh-public-key-substance>\"
-
+&nbsp;  
+&nbsp; 
 The top part of the copy that you made in 2 will now look like this:
-
+&nbsp;  
+&nbsp; 
 
 >     #!/bin/bash
 >    
@@ -96,9 +121,17 @@ The top part of the copy that you made in 2 will now look like this:
 >     
 >     The rest of the script will appear below here
 
------------------
+&nbsp;  
+&nbsp;  
+&nbsp; 
+
+	-----------------
 
 4) Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute. 
+
+&nbsp;  
+&nbsp;  
+&nbsp; 
 
 ---------------
 	
@@ -108,6 +141,9 @@ I just use the default security group with this toolkit. So, the default securit
 
 >     In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
 	
+&nbsp;  
+&nbsp;  
+&nbsp; 	
 ---------------
 
 6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
@@ -120,26 +156,39 @@ I just use the default security group with this toolkit. So, the default securit
 >     Make sure your default security group is set
 >     In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
 >     Click Create and wait for your machine to build
+
+&nbsp;  
+&nbsp;  
+&nbsp;
 	
 ---------------
 
 7) Once the machine has built you can access it as follows:
-
+&nbsp;  
+&nbsp; 
 >     Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
-
+&nbsp;  
+&nbsp; 
 Now issue the command:
-
+&nbsp;  
+&nbsp; 
 >     ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>
-	
+&nbsp;  
+&nbsp; 	
 or yours might be:
-	
+&nbsp;  
+&nbsp; 	
 >     ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>	
-
+&nbsp;  
+&nbsp; 
 Once logged in to your build machine
-
+&nbsp;  
+&nbsp; 
 >     sudo su 
 >     [sudo] password for agile-deployer:
-	
+&nbsp;  
+&nbsp; 	
 And then enter your build machine password
-	
+&nbsp;  
+&nbsp; 	
 >     ${BUILDMACHINE_PASSWORD}
