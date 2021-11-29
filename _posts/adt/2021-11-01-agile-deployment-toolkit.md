@@ -2,15 +2,15 @@
 layout: post
 description: The Agile Deployment Toolkit
 title: The Agile Deployment Toolkit
-permalink: /agiledeploymenttoolkit/
+permalink: https://www.codebreakers.uk/agiledeploymenttoolkit/
 hide: true
 category: agiledeploymenttoolkit
 ---
 
-### [Introduction]({{ site.baseurl }}/introduction/)
+### [Introduction](https://www.codebreakers.uk/introduction/)
 
-### [Tech Overview]({{ site.baseurl }}/agiledeploymenttoolkittechoverview/) 
+### [Tech Overview](https://www.codebreakers.uk/agiledeploymenttoolkittechoverview/) 
 
-### [Background Philosophy]({{ site.baseurl }}/backgroundphilosophy/)
+### [Background Philosophy](https://www.codebreakers.uk/backgroundphilosophy/)
 
-### [Tutorials]({{ site.baseurl }}/tutorials/)
+### [Tutorials](https://www.codebreakers.uk/tutorials/)
