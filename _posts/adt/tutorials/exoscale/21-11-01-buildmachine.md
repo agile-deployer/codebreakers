@@ -22,7 +22,7 @@ Before performing an expedited or full build, you need to set up a build machine
 &nbsp;  
 &nbsp; 
 
-Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
+Your key will be saved to the indicated file, for example, **/root/.ssh/id_rsa** your path might be different such as **/home/bob/.ssh/id_rsa**
 	 
 Issue the command (for example)
 
