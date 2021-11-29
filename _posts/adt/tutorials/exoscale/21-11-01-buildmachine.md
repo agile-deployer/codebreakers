@@ -49,14 +49,17 @@ This will give you your **public** key which you need later so, take a copy of t
 ------------------
 	
 3) If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+	
 >     export BUILDMACHINE_USER=""
 >     export BUILDMACHINE_PASSWORD="" 
 >     export BUILDMACHINE_SSH_PORT=""
 >     export LAPTOP_IP=""
 	
 >     export SSH=\"\" 
+	
 &nbsp;  
 &nbsp; 	
 Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine's ssh system and the IP address of your desktop or laptop.
