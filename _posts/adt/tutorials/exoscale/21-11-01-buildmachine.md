@@ -292,11 +292,15 @@ In Graphical form, it looks like this:
 	
 Grab your build machine's IP address (third column)
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image15.png "Exoscale Tutorial Image 15")
+	
 &nbsp;  
 &nbsp;
+	
 Run through the commands as shown on your laptop to access your build machine
+
 &nbsp;  
-&nbsp;	
+&nbsp;
+	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image16.png "Exoscale Tutorial Image 16")
 		
 --------------------------------------
