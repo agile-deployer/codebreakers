@@ -117,6 +117,10 @@ I just use the default security group with this toolkit. So, the default securit
 Now issue the command:
 
 >     ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>
+	
+or yours might be:
+	
+>     ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>	
 
 Once logged in to your build machine
 
