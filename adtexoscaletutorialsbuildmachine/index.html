@@ -102,61 +102,63 @@ window.onload = wrap_img;
 </ol>
 
 <blockquote>
-  <p>/usr/bin/ssh-keygen -t rsa</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ssh-keygen -t rsa 
+</code></pre></div>  </div>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
- 
- Issue the command (for example)
-</code></pre></div></div>
+<p>Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa</p>
+
+<p>Issue the command (for example)</p>
 
 <blockquote>
-  <p>/bin/cat /root/.ssh/id_rsa.pub - this will be your <ssh-public-key-substance></ssh-public-key-substance></p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cat /root/.ssh/id_rsa.pub - this will be your &lt;ssh-public-key-substance&gt;
+</code></pre></div>  </div>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
-</code></pre></div></div>
+<p>This will give you your <strong>public</strong> key which you need later so, take a copy of the output that is printed to the screen.</p>
 
 <ol>
-  <li>
-    <p>Take a copy of the script:</p>
-
-    <p><a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh">Initial Script</a></p>
-  </li>
-  <li>
-    <p>If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:</p>
-  </li>
+  <li>Take a copy of the script:</li>
 </ol>
 
 <blockquote>
-  <p>export BUILDMACHINE_USER=””
-export BUILDMACHINE_PASSWORD=”” 
-export BUILDMACHINE_SSH_PORT=””
-export LAPTOP_IP=””</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
+</code></pre></div>  </div>
+</blockquote>
+
+<ol>
+  <li>If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:</li>
+</ol>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER=""
+export BUILDMACHINE_PASSWORD="" 
+export BUILDMACHINE_SSH_PORT=""
+export LAPTOP_IP=""
+</code></pre></div>  </div>
 </blockquote>
 
 <blockquote>
-  <p>export SSH=""</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\" 
+</code></pre></div>  </div>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine's ssh system and the IP address of your desktop or laptop.
+<p>Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine’s ssh system and the IP address of your desktop or laptop.</p>
 
-If I decide on a username of "agile-deployer" then in the copy that I made in 2, I need to change it as follows:
-</code></pre></div></div>
+<p>If I decide on a username of “agile-deployer” then in the copy that I made in 2, I need to change it as follows:</p>
 
 <blockquote>
-  <p>export BUILDMACHINE_USER=”agile-deployer”</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-deployer"
+</code></pre></div>  </div>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows:
-</code></pre></div></div>
+<p>If I decide on a password of “QQQPPPZZZMMM123098” then in the copy that I made in 2, I need to change it as follows:</p>
 
 <blockquote>
   <p>export BUILDMACHINE_PASSWORD=”QQQPPPZZZMMM123098”</p>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows:
-</code></pre></div></div>
+<p>If you decide on an SSH_PORT of “1035” then in the copy that I made in 2, I need to change it as follows:</p>
 
 <blockquote>
   <p>export BUILDMACHINE_SSH_PORT=”1035”</p>
@@ -177,34 +179,35 @@ If I decide on a username of "agile-deployer" then in the copy that I made in 2,
 <p>The top part of the copy that you made in 2 will now look like this:</p>
 
 <blockquote>
-  <p>#!/bin/bash</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+   
+/bin/mkdir /root/logs
+   
+OUT_FILE="webserver-build-out-`/bin/date | /bin/sed 's/ //g'`"
+exec 1&gt;&gt;/root/logs/${OUT_FILE}
+ERR_FILE="webserver-build-err-`/bin/date | /bin/sed 's/ //g'`"
+exec 2&gt;&gt;/root/logs/${ERR_FILE}
 
-  <p>/bin/mkdir /root/logs</p>
-
-  <p>OUT_FILE=”webserver-build-out-<code class="language-plaintext highlighter-rouge">/bin/date | /bin/sed 's/ //g'</code>”
-exec 1»/root/logs/${OUT_FILE}
-ERR_FILE=”webserver-build-err-<code class="language-plaintext highlighter-rouge">/bin/date | /bin/sed 's/ //g'</code>”
-exec 2»/root/logs/${ERR_FILE}</p>
-
-  <p>###############################################################################################</p>
-  <h1 id="set-these-for-your-build-client-machine">SET THESE FOR YOUR BUILD CLIENT MACHINE</h1>
-  <h1 id="this-will-not-start-a-build-it-will-just-setup-the-toolkit">THIS WILL NOT START A BUILD IT WILL JUST SETUP THE TOOLKIT</h1>
-  <h1 id="use-this-if-you-want-to-perform-an-expedited-or-a-full-build-from-the-command-line">USE THIS IF YOU WANT TO PERFORM AN EXPEDITED OR A FULL BUILD FROM THE COMMAND LINE</h1>
-  <h1 id="ssh--i---p-buildclient_ssh_port-buildclient_user">ssh -i <ssh-private-key> -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip></buildclientip></ssh-private-key></h1>
-  <h1 id="buildclient_usersudo-su">$BUILDCLIENT_USER&gt;sudo su</h1>
-  <h1 id="passwordbuildclient_password">password:${BUILDCLIENT_PASSWORD}</h1>
-  <h1 id="cd-agile-infrastructure-build-client-scriptslogs">cd agile-infrastructure-build-client-scripts/logs</h1>
-  <p>#################################################################################################
-export BUILDMACHINE_USER=”agile-deployer”
-export BUILDMACHINE_PASSWORD=”QQQPPPZZZMMM123098” #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
-export BUILDMACHINE_SSH_PORT=”1035”
-export LAPTOP_IP=”111.111.111.111”</p>
-
-  <p>/bin/echo “
+###############################################################################################
+# SET THESE FOR YOUR BUILD CLIENT MACHINE
+# THIS WILL NOT START A BUILD IT WILL JUST SETUP THE TOOLKIT
+# USE THIS IF YOU WANT TO PERFORM AN EXPEDITED OR A FULL BUILD FROM THE COMMAND LINE
+# ssh -i &lt;ssh-private-key&gt; -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;
+# $BUILDCLIENT_USER&gt;sudo su
+# password:${BUILDCLIENT_PASSWORD}
+# cd agile-infrastructure-build-client-scripts/logs
+#################################################################################################
+export BUILDMACHINE_USER="agile-deployer"
+export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+export BUILDMACHINE_SSH_PORT="1035"
+export LAPTOP_IP="111.111.111.111"
+ 
+/bin/echo "
 #BASE OVERRIDES
-export SSH="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEgqlNPY9uh6SpihNXm/7XGqOKvAcH8Z0Y6pZG9lTIm/PHI5VijIFqs0OzM3DPLFARtut7lojBoKq9ljBmKeVBGX5EkJ5O3CJfEZs9E13e2Qk+7F9wTmoMBG8XY4l/SmD9HddLTS/7Oadg+C4RDxHlSMrl1PSCdzlM14spHCI8rwUntNCUY+fObolqel0829zYDX0oEWzYyoIEUs1847X3cRp9+yZsjqSD5Nw9jacLcWjtdfClEvx5F8ZVm0+s5OLtz9cCf6NkOgYf3KFz+e8qAO/w83Umh5B2Gem1uOxSDtUmzVlRiMTfP6CTSKRnYRnkb97F9RZsmAsG6+g+eKvp root@penguin" #paste your public key here</p>
+export SSH=\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEgqlNPY9uh6SpihNXm/7XGqOKvAcH8Z0Y6pZG9lTIm/PHI5VijIFqs0OzM3DPLFARtut7lojBoKq9ljBmKeVBGX5EkJ5O3CJfEZs9E13e2Qk+7F9wTmoMBG8XY4l/SmD9HddLTS/7Oadg+C4RDxHlSMrl1PSCdzlM14spHCI8rwUntNCUY+fObolqel0829zYDX0oEWzYyoIEUs1847X3cRp9+yZsjqSD5Nw9jacLcWjtdfClEvx5F8ZVm0+s5OLtz9cCf6NkOgYf3KFz+e8qAO/w83Umh5B2Gem1uOxSDtUmzVlRiMTfP6CTSKRnYRnkb97F9RZsmAsG6+g+eKvp root@penguin\" #paste your public key here
 
-  <p>The rest of the script will appear below here</p>
+The rest of the script will appear below here
+</code></pre></div>  </div>
 </blockquote>
 
 <ol>
@@ -219,7 +222,8 @@ export SSH="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEgqlNPY9uh6SpihNXm/7XGqOKvAcH
 <p>I just use the default security group with this toolkit. So, the default security group needs to let through connections to 1035 for the SSH connections.</p>
 
 <blockquote>
-  <p>In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
+</code></pre></div>  </div>
 </blockquote>
 
 <ol>
@@ -227,14 +231,15 @@ export SSH="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEgqlNPY9uh6SpihNXm/7XGqOKvAcH
 </ol>
 
 <blockquote>
-  <p>Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
 Select which zone you want to deploy to, for example, CH-GVA-2
-Select instance type “Tiny” for example
+Select instance type "Tiny" for example
 Select disk size (50GB)
 Ignore SSH KEY
 Make sure your default security group is set
-In the “User Data” area of your VPC machine, paste the entire script that you were left with from 4.
-Click Create and wait for your machine to build</p>
+In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+Click Create and wait for your machine to build
+</code></pre></div>  </div>
 </blockquote>
 
 <ol>
@@ -242,26 +247,30 @@ Click Create and wait for your machine to build</p>
 </ol>
 
 <blockquote>
-  <p>Discover what the machine’s IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
+</code></pre></div>  </div>
 </blockquote>
 
 <p>Now issue the command:</p>
 
 <blockquote>
-  <p>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip></buildclientip></p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;
+</code></pre></div>  </div>
 </blockquote>
 
 <p>Once logged in to your build machine</p>
 
 <blockquote>
-  <p>sudo su</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su 
+</code></pre></div>  </div>
 </blockquote>
 
 <p>And enter</p>
 
 <blockquote>
-  <p>${BUILDMACHINE_USER}
-${BUILDMACHINE_PASSWORD}</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${BUILDMACHINE_USER}
+${BUILDMACHINE_PASSWORD}
+</code></pre></div>  </div>
 </blockquote>
 
   </div><a class="u-url" href="/adtexoscaletutorialsbuildmachine/" hidden></a>
