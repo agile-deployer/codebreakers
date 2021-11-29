@@ -64,36 +64,57 @@ This will give you your **public** key which you need later so, take a copy of t
 Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine's ssh system and the IP address of your desktop or laptop.
 	
 If I decide on a username of "agile-deployer" then in the copy that I made in 2, I need to change it as follows:  
+	
 &nbsp;  
 &nbsp; 
+	
 >     export BUILDMACHINE_USER="agile-deployer"
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows:
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+	
 >     export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows:
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 >     export BUILDMACHINE_SSH_PORT="1035"
+
 &nbsp;  
 &nbsp; 
+
 You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: "111.111.111.111" and pasting your ip address into your copy as follows:
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 >     export LAPTOP_IP="111.111.111.111"
+
 &nbsp;  
-&nbsp; 
+&nbsp;
+	
 The **public** ssh key that you took a copy of in 1 needs to be pasted as follows:
+
 &nbsp;  
-&nbsp; 	
+&nbsp;
+	
 >     export SSH=\"<ssh-public-key-substance>\"
+
 &nbsp;  
 &nbsp; 
+
 The top part of the copy that you made in 2 will now look like this:
+
 &nbsp;  
 &nbsp; 
 
