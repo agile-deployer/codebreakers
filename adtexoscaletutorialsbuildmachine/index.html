@@ -284,48 +284,43 @@ The rest of the script will appear below here
  <br />
  </p>
 
-<p>Click on the security groups option of your exoscale GUI</p>
-
-<p> <br />
- </p>
-
-<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image3.png" alt="" title="Exoscale Tutorial Image 3" />
+<p>Click on the security groups option of your exoscale GUI
+<img src="https://www.codebreakers.uk/images/exoscaletutorial/image3.png" alt="" title="Exoscale Tutorial Image 3" />
  <br />
   
 Click “Add Security Group” and call it “ADT Build Machine” or something to your liking and then click “Create Group”
- <br />
- 
 <img src="https://www.codebreakers.uk/images/exoscaletutorial/image4.png" alt="" title="Exoscale Tutorial Image 4" /><br />
- <br />
- 
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image5.png" alt="" title="Exoscale Tutorial Image 5" /> 
- <br />
- 
-You can then see your new security Group “adt build machine” listed
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image6.png" alt="" title="Exoscale Tutorial Image 6" /><br />
- <br />
- 
-Click on the “adt build machine” security group
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image7.png" alt="" title="Exoscale Tutorial Image 7" /><br />
- <br />
- 
-Click “Add Rule” and click on “Ping” to make the machine pingable and then click on “custom rule”
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image8.png" alt="" title="Exoscale Tutorial Image 8" /><br />
- <br />
- 	
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image9.png" alt="" title="Exoscale Tutorial Image 9" /><br />
- <br />
- 
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image10.png" alt="" title="Exoscale Tutorial Image 10" /> 
  <br />
  </p>
 
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
-</code></pre></div>  </div>
-</blockquote>
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image5.png" alt="" title="Exoscale Tutorial Image 5" /> 
+ <br />
+ 
+You can then see your new security Group “adt build machine” listed</p>
 
-<p> <br />
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image6.png" alt="" title="Exoscale Tutorial Image 6" /><br />
+ <br />
+ 
+Click on the “adt build machine” security group</p>
+
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image7.png" alt="" title="Exoscale Tutorial Image 7" /><br />
+ <br />
+ 
+Click “Add Rule” and click on “Ping” to make the machine pingable and then click on “custom rule”</p>
+
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image8.png" alt="" title="Exoscale Tutorial Image 8" /><br />
+ <br />
+ 	
+This is what it looks like once you have cliked “Custom Rule”</p>
+
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image9.png" alt="" title="Exoscale Tutorial Image 9" /><br />
+ <br />
+ 
+Put in a CIDR of 0.0.0.0/0 for the source and 1035 for start port and 1035 for end port (note 1035 is what I set the ssh port to earlier, yours may be different)
+<img src="https://www.codebreakers.uk/images/exoscaletutorial/image10.png" alt="" title="Exoscale Tutorial Image 10" /></p>
+
+<p>Click “Create” and the rules you have set will be added to your security group
+ <br />
  <br />
  </p>
 
