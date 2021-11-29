@@ -309,16 +309,66 @@ Click Create and wait for your machine to build
 
 <hr />
 
-<p>7) Once the machine has built you can access it as follows:
- <br />
+<p>7) Once the machine has built you can access it as follows:</p>
+
+<p> <br />
  </p>
+
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip &amp;nbsp;   &amp;nbsp;  Now issue the command: &amp;nbsp;   &amp;nbsp; 
-ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt; &amp;nbsp;   &amp;nbsp; 	 or yours might be: &amp;nbsp;   &amp;nbsp; 	
-ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;	 &amp;nbsp;   &amp;nbsp;  Once logged in to your build machine &amp;nbsp;   &amp;nbsp; 
-sudo su 
-[sudo] password for agile-deployer: &amp;nbsp;   &amp;nbsp; 	 And then enter your build machine password &amp;nbsp;   &amp;nbsp; 	
-${BUILDMACHINE_PASSWORD}
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>Now issue the command:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>or yours might be:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;	
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>Once logged in to your build machine</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su 
+[sudo] password for agile-deployer:
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>And then enter your build machine password</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${BUILDMACHINE_PASSWORD}
 </code></pre></div>  </div>
 </blockquote>
 
