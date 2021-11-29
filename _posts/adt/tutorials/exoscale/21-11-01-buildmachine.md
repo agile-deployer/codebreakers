@@ -290,7 +290,7 @@ Grab your build machine's IP address (where the mouse pointer is)
 &nbsp;  
 &nbsp;
 Run through the commands as shown to access your build machine
-![](https://www.codebreakers.uk/images/exoscaletutorial/image15.png "Exoscale Tutorial Image 15")
+![](https://www.codebreakers.uk/images/exoscaletutorial/image16.png "Exoscale Tutorial Image 16")
 	
 
 	
