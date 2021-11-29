@@ -9,7 +9,7 @@ category: agiledeploymenttoolkit
 
 * Fully automated virgin server configuration and deployment with sensible default webserver and database configuration settings with best practice security guidelines baked in.
 
-* Flexible deployment options - no of webservers to use for the deployment with a development mode, for when you are developing your application and a deployment mode for when it is time for it to "go live"
+* Flexible deployment options - number of webservers to be used for a deployment when in production mode with a single webserver development mode, for when you are developing your application.
 
 * In built resilient and scalable architecture including flexible time based scaling to accommodate increased or decreased capacity
 
