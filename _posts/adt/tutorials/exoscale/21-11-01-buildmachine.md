@@ -281,11 +281,15 @@ And then enter your build machine password
 &nbsp; 	
 
 >     ${BUILDMACHINE_PASSWORD}
+
 &nbsp;  
 &nbsp;		
+	
 In Graphical form, it looks like this:
+
 &nbsp;  
-&nbsp;	
+&nbsp;
+	
 Grab your build machine's IP address (third column)
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image15.png "Exoscale Tutorial Image 15")
 &nbsp;  
