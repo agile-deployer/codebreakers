@@ -1,3 +1,12 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Exoscale Build Machine Method
+title: Exoscale ADT Tutorials Build Machine Method
+permalink: /adtexoscaletutorialsbuildmachine/
+hide: true
+category: agiledeploymenttoolkit
+---
+
 PRE BUILD PREPARATIONS FOR EXPEDITED AND FULL BUILDS:
 
 Before performing an expedited or full build, you need to set up a build machine. The way you do this for Exoscale is as follows:
