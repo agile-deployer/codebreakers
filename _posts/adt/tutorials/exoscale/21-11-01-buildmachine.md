@@ -11,7 +11,9 @@ PRE BUILD PREPARATIONS FOR EXPEDITED AND FULL BUILDS:
 
 Before performing an expedited or full build, you need to set up a build machine. The way you do this for Exoscale is as follows:
 
-1. If you don't have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:
+----------------
+
+1) If you don't have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:
 
 >     /usr/bin/ssh-keygen -t rsa 
 
@@ -23,11 +25,15 @@ Issue the command (for example)
 	 
 This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
 
-2. Take a copy of the script: 
+--------------------
+	
+2) Take a copy of the script: 
 
 >     [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
+
+------------------
 	
-3. If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:
+3) If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:
 
 >     export BUILDMACHINE_USER=""
 >     export BUILDMACHINE_PASSWORD="" 
@@ -90,16 +96,21 @@ The top part of the copy that you made in 2 will now look like this:
 >     
 >     The rest of the script will appear below here
 
+-----------------
 
-4. Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute. 
+4) Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute. 
 
-5. What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.
+---------------
+	
+5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.
 
 I just use the default security group with this toolkit. So, the default security group needs to let through connections to 1035 for the SSH connections.
 
 >     In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
+	
+---------------
 
-6. You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
+6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
 
 >     Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
 >     Select which zone you want to deploy to, for example, CH-GVA-2
@@ -109,8 +120,10 @@ I just use the default security group with this toolkit. So, the default securit
 >     Make sure your default security group is set
 >     In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
 >     Click Create and wait for your machine to build
+	
+---------------
 
-7. Once the machine has built you can access it as follows:
+7) Once the machine has built you can access it as follows:
 
 >     Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
 
