@@ -169,43 +169,41 @@ You will need to create a security group for your build machine. You can do this
 &nbsp; 
 	
 Click on the security groups option of your exoscale GUI
-
-&nbsp;  
-&nbsp; 
-
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")
 &nbsp;  
 &nbsp; 
 Click "Add Security Group" and call it "ADT Build Machine" or something to your liking and then click "Create Group"
-&nbsp;  
-&nbsp;
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image4.png "Exoscale Tutorial Image 4")  
 &nbsp;  
 &nbsp;
+
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
 &nbsp;  
 &nbsp;
 You can then see your new security Group "adt build machine" listed
+
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image6.png "Exoscale Tutorial Image 6")  
 &nbsp;  
 &nbsp;
 Click on the "adt build machine" security group
+
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image7.png "Exoscale Tutorial Image 7")  
 &nbsp;  
 &nbsp;
 Click "Add Rule" and click on "Ping" to make the machine pingable and then click on "custom rule"
+
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image8.png "Exoscale Tutorial Image 8")  
 &nbsp;  
 &nbsp;	
+This is what it looks like once you have cliked "Custom Rule"
+	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image9.png "Exoscale Tutorial Image 9")  
 &nbsp;  
 &nbsp;
-![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10") 
-&nbsp;  
-&nbsp;
+Put in a CIDR of 0.0.0.0/0 for the source and 1035 for start port and 1035 for end port (note 1035 is what I set the ssh port to earlier, yours may be different)
+![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10") 	
 	
->     In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
-	
+Click "Create" and the rules you have set will be added to your security group
 &nbsp;  
 &nbsp;  
 &nbsp; 	
