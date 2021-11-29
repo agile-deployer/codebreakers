@@ -165,13 +165,58 @@ The top part of the copy that you made in 2 will now look like this:
 5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.
 
 You will need to create a security group for your build machine. You can do this as follows:
+&nbsp;  
+&nbsp; 
 	
-	
-	
-	
-	
-I just use the default security group with this toolkit. So, the default security group needs to let through connections to 1035 for the SSH connections.
+Click on the security groups option of your exoscale GUI
 
+&nbsp;  
+&nbsp; 
+
+![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")
+
+&nbsp;  
+&nbsp; 
+
+Click "Create New Security Group"
+
+&nbsp;  
+&nbsp;
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image4.png "Exoscale Tutorial Image 4")  
+	
+&nbsp;  
+&nbsp;
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
+	
+&nbsp;  
+&nbsp;
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image6.png "Exoscale Tutorial Image 6")  
+
+&nbsp;  
+&nbsp;
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image7.png "Exoscale Tutorial Image 7")  
+
+&nbsp;  
+&nbsp;
+![](https://www.codebreakers.uk/images/exoscaletutorial/image8.png "Exoscale Tutorial Image 8")  
+
+&nbsp;  
+&nbsp;	
+
+![](https://www.codebreakers.uk/images/exoscaletutorial/image9.png "Exoscale Tutorial Image 9")  
+
+&nbsp;  
+&nbsp;
+
+![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10") 
+
+&nbsp;  
+&nbsp;
+	
 >     In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
 	
 &nbsp;  
@@ -248,16 +293,7 @@ And then enter your build machine password
 	
 --------------------------------------
 	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image1.png "Exoscale Tutorial Image 1")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image2.png "Exoscale Tutorial Image 2")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image4.png "Exoscale Tutorial Image 4")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image6.png "Exoscale Tutorial Image 6")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image7.png "Exoscale Tutorial Image 7")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image8.png "Exoscale Tutorial Image 8")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image9.png "Exoscale Tutorial Image 9")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10")  
+ 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image12.png "Exoscale Tutorial Image 12")  
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image13.png "Exoscale Tutorial Image 13")  
