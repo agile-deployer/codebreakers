@@ -1,0 +1,170 @@
+<p>PRE BUILD PREPARATIONS FOR EXPEDITED AND FULL BUILDS:</p>
+
+<p>Before performing an expedited or full build, you need to set up a build machine. The way you do this for Exoscale is as follows:</p>
+
+<ol>
+  <li>If you don’t have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:</li>
+</ol>
+
+<blockquote>
+  <p>/usr/bin/ssh-keygen -t rsa</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
+ 
+ Issue the command (for example)
+</code></pre></div></div>
+
+<blockquote>
+  <p>/bin/cat /root/.ssh/id_rsa.pub - this will be your <ssh-public-key-substance></ssh-public-key-substance></p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Take a copy of the script:</p>
+
+    <p><a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh">Initial Script</a></p>
+  </li>
+  <li>
+    <p>If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>export BUILDMACHINE_USER=””
+export BUILDMACHINE_PASSWORD=”” 
+export BUILDMACHINE_SSH_PORT=””
+export LAPTOP_IP=””</p>
+</blockquote>
+
+<blockquote>
+  <p>export SSH=""</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine's ssh system and the IP address of your desktop or laptop.
+
+If I decide on a username of "agile-deployer" then in the copy that I made in 2, I need to change it as follows:
+</code></pre></div></div>
+
+<blockquote>
+  <p>export BUILDMACHINE_USER=”agile-deployer”</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows:
+</code></pre></div></div>
+
+<blockquote>
+  <p>export BUILDMACHINE_PASSWORD=”QQQPPPZZZMMM123098”</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows:
+</code></pre></div></div>
+
+<blockquote>
+  <p>export BUILDMACHINE_SSH_PORT=”1035”</p>
+</blockquote>
+
+<p>You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: “111.111.111.111” and pasting your ip address into your copy as follows:</p>
+
+<blockquote>
+  <p>export LAPTOP_IP=”111.111.111.111”</p>
+</blockquote>
+
+<p>The <strong>public</strong> ssh key that you took a copy of in 1 needs to be pasted as follows:</p>
+
+<blockquote>
+  <p>export SSH="<ssh-public-key-substance>\"</ssh-public-key-substance></p>
+</blockquote>
+
+<p>The top part of the copy that you made in 2 will now look like this:</p>
+
+<blockquote>
+  <p>#!/bin/bash</p>
+
+  <p>/bin/mkdir /root/logs</p>
+
+  <p>OUT_FILE=”webserver-build-out-<code class="language-plaintext highlighter-rouge">/bin/date | /bin/sed 's/ //g'</code>”
+exec 1»/root/logs/${OUT_FILE}
+ERR_FILE=”webserver-build-err-<code class="language-plaintext highlighter-rouge">/bin/date | /bin/sed 's/ //g'</code>”
+exec 2»/root/logs/${ERR_FILE}</p>
+
+  <p>###############################################################################################</p>
+  <h1 id="set-these-for-your-build-client-machine">SET THESE FOR YOUR BUILD CLIENT MACHINE</h1>
+  <h1 id="this-will-not-start-a-build-it-will-just-setup-the-toolkit">THIS WILL NOT START A BUILD IT WILL JUST SETUP THE TOOLKIT</h1>
+  <h1 id="use-this-if-you-want-to-perform-an-expedited-or-a-full-build-from-the-command-line">USE THIS IF YOU WANT TO PERFORM AN EXPEDITED OR A FULL BUILD FROM THE COMMAND LINE</h1>
+  <h1 id="ssh--i---p-buildclient_ssh_port-buildclient_user">ssh -i <ssh-private-key> -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip></buildclientip></ssh-private-key></h1>
+  <h1 id="buildclient_usersudo-su">$BUILDCLIENT_USER&gt;sudo su</h1>
+  <h1 id="passwordbuildclient_password">password:${BUILDCLIENT_PASSWORD}</h1>
+  <h1 id="cd-agile-infrastructure-build-client-scriptslogs">cd agile-infrastructure-build-client-scripts/logs</h1>
+  <p>#################################################################################################
+export BUILDMACHINE_USER=”agile-deployer”
+export BUILDMACHINE_PASSWORD=”QQQPPPZZZMMM123098” #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+export BUILDMACHINE_SSH_PORT=”1035”
+export LAPTOP_IP=”111.111.111.111”</p>
+
+  <p>/bin/echo “
+#BASE OVERRIDES
+export SSH="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEgqlNPY9uh6SpihNXm/7XGqOKvAcH8Z0Y6pZG9lTIm/PHI5VijIFqs0OzM3DPLFARtut7lojBoKq9ljBmKeVBGX5EkJ5O3CJfEZs9E13e2Qk+7F9wTmoMBG8XY4l/SmD9HddLTS/7Oadg+C4RDxHlSMrl1PSCdzlM14spHCI8rwUntNCUY+fObolqel0829zYDX0oEWzYyoIEUs1847X3cRp9+yZsjqSD5Nw9jacLcWjtdfClEvx5F8ZVm0+s5OLtz9cCf6NkOgYf3KFz+e8qAO/w83Umh5B2Gem1uOxSDtUmzVlRiMTfP6CTSKRnYRnkb97F9RZsmAsG6+g+eKvp root@penguin" #paste your public key here</p>
+
+  <p>The rest of the script will appear below here</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute.</p>
+  </li>
+  <li>
+    <p>What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.</p>
+  </li>
+</ol>
+
+<p>I just use the default security group with this toolkit. So, the default security group needs to let through connections to 1035 for the SSH connections.</p>
+
+<blockquote>
+  <p>In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035</p>
+</blockquote>
+
+<ol>
+  <li>You need to spin up a small machine to be your build machine by clicking “Add” on the top right of the GUI. And then follow these steps:</li>
+</ol>
+
+<blockquote>
+  <p>Select if you want debian 10 (or later) or ubuntu 20.04 (or later)
+Select which zone you want to deploy to, for example, CH-GVA-2
+Select instance type “Tiny” for example
+Select disk size (50GB)
+Ignore SSH KEY
+Make sure your default security group is set
+In the “User Data” area of your VPC machine, paste the entire script that you were left with from 4.
+Click Create and wait for your machine to build</p>
+</blockquote>
+
+<ol>
+  <li>Once the machine has built you can access it as follows:</li>
+</ol>
+
+<blockquote>
+  <p>Discover what the machine’s IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip</p>
+</blockquote>
+
+<p>Now issue the command:</p>
+
+<blockquote>
+  <p>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip></buildclientip></p>
+</blockquote>
+
+<p>Once logged in to your build machine</p>
+
+<blockquote>
+  <p>sudo su</p>
+</blockquote>
+
+<p>And enter</p>
+
+<blockquote>
+  <p>${BUILDMACHINE_USER}
+${BUILDMACHINE_PASSWORD}</p>
+</blockquote>
