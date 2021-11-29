@@ -7,4 +7,4 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-1. Follow the following: [Build Machine Setup](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)
+1. Begin by following this: [Build Machine Setup](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)
