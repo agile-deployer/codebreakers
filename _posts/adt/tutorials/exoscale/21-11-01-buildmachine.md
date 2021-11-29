@@ -173,9 +173,6 @@ Click on the security groups option of your exoscale GUI
 &nbsp;  
 &nbsp; 
 Click "Add Security Group" and call it "ADT Build Machine" or something to your liking and then click "Create Group"
-![](https://www.codebreakers.uk/images/exoscaletutorial/image4.png "Exoscale Tutorial Image 4")  
-&nbsp;  
-&nbsp;
 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
 &nbsp;  
@@ -247,7 +244,7 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 	
-Now issue the command:
+Now on your laptop issue the command:
 
 &nbsp;  
 &nbsp;
@@ -284,6 +281,18 @@ And then enter your build machine password
 &nbsp; 	
 
 >     ${BUILDMACHINE_PASSWORD}
+	
+In Graphical form, it looks like this:
+&nbsp;  
+&nbsp;	
+Grab your build machine's IP address (where the mouse pointer is)
+![](https://www.codebreakers.uk/images/exoscaletutorial/image15.png "Exoscale Tutorial Image 15")
+&nbsp;  
+&nbsp;
+Run through the commands as shown to access your build machine
+![](https://www.codebreakers.uk/images/exoscaletutorial/image15.png "Exoscale Tutorial Image 15")
+	
+
 	
 	
 --------------------------------------
