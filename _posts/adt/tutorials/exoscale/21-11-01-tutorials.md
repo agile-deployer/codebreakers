@@ -11,15 +11,15 @@ There's a few options here for learning how to use this toolkit with the Exoscal
 
 #### 1. Expedited Build Method (recommended)  
 
->    [Tutorial Set 1 : Text Based](https://www.google.com)   
->    [Tutorial Set 2 : Video Based](https://www.google.com)  
+>    [Tutorial Set 1 : Text Based](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtext)   
+>    [Tutorial Set 2 : Video Based](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedvideo)  
 
 #### 2. Hardcore Build Method  
 
->    Tutorial Set 1 : Text Based  
->    Tutorial Set 2 : Video Based  
+>    [Tutorial Set 1 : Text Based](https://www.codebreakers.uk/adtexoscaletutorialshardcoretext)  
+>    [Tutorial Set 2 : Video Based](https://www.codebreakers.uk/adtexoscaletutorialshardcorevideo)
 
 #### 3. The Full Build Method (interactive)  
 
->    Tutorial Set 1 : Text Based  
->    Tutorial Set 2 : Video Based  
+>    [Tutorial Set 1 : Text Based](https://www.codebreakers.uk/adtexoscaletutorialsfullbuildtext)  
+>    [Tutorial Set 2 : Video Based](https://www.codebreakers.uk/adtexoscaletutorialsfullbuildvideo)
