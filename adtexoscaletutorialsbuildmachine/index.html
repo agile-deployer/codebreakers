@@ -99,21 +99,32 @@ window.onload = wrap_img;
 
 <hr />
 
-<p>1) If you don’t have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:
- <br />
+<p>1) If you don’t have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:</p>
+
+<p> <br />
  </p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ssh-keygen -t rsa  &amp;nbsp;   &amp;nbsp;  Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ssh-keygen -t rsa 
 </code></pre></div>  </div>
 </blockquote>
 
-<p>Issue the command (for example)
- <br />
+<p> <br />
+ </p>
+
+<p>Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa</p>
+
+<p>Issue the command (for example)</p>
+
+<p> <br />
  </p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cat /root/.ssh/id_rsa.pub - this will be your &lt;ssh-public-key-substance&gt; &amp;nbsp;   &amp;nbsp; 	  This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cat /root/.ssh/id_rsa.pub - this will be your &lt;ssh-public-key-substance&gt;
 </code></pre></div>  </div>
 </blockquote>
+
+<p> <br />
+  	 
+This will give you your <strong>public</strong> key which you need later so, take a copy of the output that is printed to the screen.</p>
 
 <p> <br />
  <br />
@@ -123,10 +134,7 @@ window.onload = wrap_img;
 
 <p>2) Take a copy of the script:</p>
 
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
-</code></pre></div>  </div>
-</blockquote>
+<h4 id="initial-script"><a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh">Initial Script</a></h4>
 
 <p> <br />
  <br />
