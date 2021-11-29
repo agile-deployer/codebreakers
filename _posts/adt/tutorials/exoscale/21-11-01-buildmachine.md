@@ -7,7 +7,7 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-PRE BUILD PREPARATIONS FOR EXPEDITED AND FULL BUILDS:
+### PRE BUILD PREPARATIONS FOR EXPEDITED AND FULL BUILDS:
 
 Before performing an expedited or full build, you need to set up a build machine. The way you do this for Exoscale is as follows:
 
