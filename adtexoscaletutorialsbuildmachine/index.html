@@ -99,23 +99,25 @@ window.onload = wrap_img;
 
 <hr />
 
-<p>1) If you don’t have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:</p>
-
+<p>1) If you don’t have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:
+ <br />
+ </p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ssh-keygen -t rsa 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ssh-keygen -t rsa  &amp;nbsp;   &amp;nbsp;  Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
 </code></pre></div>  </div>
 </blockquote>
 
-<p>Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa</p>
-
-<p>Issue the command (for example)</p>
-
+<p>Issue the command (for example)
+ <br />
+ </p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cat /root/.ssh/id_rsa.pub - this will be your &lt;ssh-public-key-substance&gt;
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cat /root/.ssh/id_rsa.pub - this will be your &lt;ssh-public-key-substance&gt; &amp;nbsp;   &amp;nbsp; 	  This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
 </code></pre></div>  </div>
 </blockquote>
 
-<p>This will give you your <strong>public</strong> key which you need later so, take a copy of the output that is printed to the screen.</p>
+<p> <br />
+ <br />
+ </p>
 
 <hr />
 
@@ -126,10 +128,15 @@ window.onload = wrap_img;
 </code></pre></div>  </div>
 </blockquote>
 
+<p> <br />
+ <br />
+ </p>
+
 <hr />
 
-<p>3) If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:</p>
-
+<p>3) If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:
+ <br />
+ </p>
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER=""
 export BUILDMACHINE_PASSWORD="" 
@@ -139,48 +146,21 @@ export LAPTOP_IP=""
 </blockquote>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\" 
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\"  &amp;nbsp;   &amp;nbsp; 	 Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine's ssh system and the IP address of your desktop or laptop.
 </code></pre></div>  </div>
 </blockquote>
 
-<p>Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine’s ssh system and the IP address of your desktop or laptop.</p>
-
-<p>If I decide on a username of “agile-deployer” then in the copy that I made in 2, I need to change it as follows:</p>
-
+<p>If I decide on a username of “agile-deployer” then in the copy that I made in 2, I need to change it as follows:<br />
+ <br />
+ </p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-deployer"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-deployer" &amp;nbsp;   &amp;nbsp; 	 If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows: &amp;nbsp;   &amp;nbsp; 
+export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098" &amp;nbsp;   &amp;nbsp; 	 If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows: &amp;nbsp;   &amp;nbsp; 	
+export BUILDMACHINE_SSH_PORT="1035" &amp;nbsp;   &amp;nbsp;  You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: "111.111.111.111" and pasting your ip address into your copy as follows: &amp;nbsp;   &amp;nbsp; 	
+export LAPTOP_IP="111.111.111.111" &amp;nbsp;   &amp;nbsp;  The **public** ssh key that you took a copy of in 1 needs to be pasted as follows: &amp;nbsp;   &amp;nbsp; 	
+export SSH=\"&lt;ssh-public-key-substance&gt;\" &amp;nbsp;   &amp;nbsp;  The top part of the copy that you made in 2 will now look like this: &amp;nbsp;   &amp;nbsp; 
 </code></pre></div>  </div>
 </blockquote>
-
-<p>If I decide on a password of “QQQPPPZZZMMM123098” then in the copy that I made in 2, I need to change it as follows:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
-</code></pre></div>  </div>
-</blockquote>
-
-<p>If you decide on an SSH_PORT of “1035” then in the copy that I made in 2, I need to change it as follows:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_SSH_PORT="1035"
-</code></pre></div>  </div>
-</blockquote>
-
-<p>You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: “111.111.111.111” and pasting your ip address into your copy as follows:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export LAPTOP_IP="111.111.111.111"
-</code></pre></div>  </div>
-</blockquote>
-
-<p>The <strong>public</strong> ssh key that you took a copy of in 1 needs to be pasted as follows:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"&lt;ssh-public-key-substance&gt;\"
-</code></pre></div>  </div>
-</blockquote>
-
-<p>The top part of the copy that you made in 2 will now look like this:</p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
@@ -214,9 +194,18 @@ The rest of the script will appear below here
 </code></pre></div>  </div>
 </blockquote>
 
-<hr />
+<p> <br />
+ <br />
+ </p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-----------------
+</code></pre></div></div>
 
 <p>4) Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute.</p>
+
+<p> <br />
+ <br />
+ </p>
 
 <hr />
 
@@ -229,7 +218,10 @@ The rest of the script will appear below here
 </code></pre></div>  </div>
 </blockquote>
 
-<hr />
+<p> <br />
+ <br />
+  	
+—————</p>
 
 <p>6) You need to spin up a small machine to be your build machine by clicking “Add” on the top right of the GUI. And then follow these steps:</p>
 
@@ -245,41 +237,22 @@ Click Create and wait for your machine to build
 </code></pre></div>  </div>
 </blockquote>
 
+<p> <br />
+ <br />
+ </p>
+
 <hr />
 
-<p>7) Once the machine has built you can access it as follows:</p>
-
+<p>7) Once the machine has built you can access it as follows:
+ <br />
+ </p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
-</code></pre></div>  </div>
-</blockquote>
-
-<p>Now issue the command:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;
-</code></pre></div>  </div>
-</blockquote>
-
-<p>or yours might be:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;	
-</code></pre></div>  </div>
-</blockquote>
-
-<p>Once logged in to your build machine</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su 
-[sudo] password for agile-deployer:
-</code></pre></div>  </div>
-</blockquote>
-
-<p>And then enter your build machine password</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${BUILDMACHINE_PASSWORD}
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip &amp;nbsp;   &amp;nbsp;  Now issue the command: &amp;nbsp;   &amp;nbsp; 
+ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt; &amp;nbsp;   &amp;nbsp; 	 or yours might be: &amp;nbsp;   &amp;nbsp; 	
+ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;	 &amp;nbsp;   &amp;nbsp;  Once logged in to your build machine &amp;nbsp;   &amp;nbsp; 
+sudo su 
+[sudo] password for agile-deployer: &amp;nbsp;   &amp;nbsp; 	 And then enter your build machine password &amp;nbsp;   &amp;nbsp; 	
+${BUILDMACHINE_PASSWORD}
 </code></pre></div>  </div>
 </blockquote>
 
