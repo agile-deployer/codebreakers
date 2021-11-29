@@ -230,7 +230,6 @@ Graphically you can see what I have described in these 8 steps here:
 	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image12.png "Exoscale Tutorial Image 12")  
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image13.png "Exoscale Tutorial Image 13")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image14.png "Exoscale Tutorial Image 14")  
 
 &nbsp;  
 &nbsp;  
