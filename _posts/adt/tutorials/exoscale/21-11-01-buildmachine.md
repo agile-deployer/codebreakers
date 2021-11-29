@@ -40,7 +40,9 @@ This will give you your **public** key which you need later so, take a copy of t
 
 --------------------
 	
-2) Take a copy of the script: #### [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
+2) Take a copy of the script: 
+&nbsp; 
+#### [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
 	
 &nbsp;  
 &nbsp;  
@@ -128,7 +130,7 @@ The top part of the copy that you made in 2 will now look like this:
 &nbsp;  
 &nbsp; 
 
-	-----------------
+-----------------
 
 4) Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute. 
 
@@ -147,6 +149,7 @@ I just use the default security group with this toolkit. So, the default securit
 &nbsp;  
 &nbsp;  
 &nbsp; 	
+
 ---------------
 
 6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
