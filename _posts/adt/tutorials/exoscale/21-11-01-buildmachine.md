@@ -164,6 +164,12 @@ The top part of the copy that you made in 2 will now look like this:
 	
 5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.
 
+You will need to create a security group for your build machine. You can do this as follows:
+	
+	
+	
+	
+	
 I just use the default security group with this toolkit. So, the default security group needs to let through connections to 1035 for the SSH connections.
 
 >     In the exoscale default security group, allow through TCP connections to CIDR 0.0.0.0/0 this will allow your laptop to connect to your build machine through port 1035
