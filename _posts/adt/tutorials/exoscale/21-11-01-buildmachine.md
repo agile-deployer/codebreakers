@@ -44,19 +44,19 @@ If I decide on a username of "agile-deployer" then in the copy that I made in 2,
 	
 If I decide on a password of "QQQPPPZZZMMM123098" then in the copy that I made in 2, I need to change it as follows:
 
->    export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
+>     export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
 	
 If you decide on an SSH_PORT of "1035" then in the copy that I made in 2, I need to change it as follows:
 	
->    export BUILDMACHINE_SSH_PORT="1035"
+>     export BUILDMACHINE_SSH_PORT="1035"
 
 You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: "111.111.111.111" and pasting your ip address into your copy as follows:
 	
->    export LAPTOP_IP="111.111.111.111"
+>     export LAPTOP_IP="111.111.111.111"
 
 The **public** ssh key that you took a copy of in 1 needs to be pasted as follows:
 	
->    export SSH=\"<ssh-public-key-substance>\"
+>     export SSH=\"<ssh-public-key-substance>\"
 
 The top part of the copy that you made in 2 will now look like this:
 
