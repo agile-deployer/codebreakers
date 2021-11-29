@@ -15,12 +15,12 @@ You will need to repeatedly reference the [Specification](https://github.com/agi
 
 ------------
 
-* [Digital Ocean Tutorials]({{ site.baseurl }}/adtdigitaloceantutorials/)
+* [Digital Ocean Tutorials](https://www.codebreakers.uk/adtdigitaloceantutorials/)
 
-* [ExoscaleTutorials]({{ site.baseurl }}/adtexoscaletutorials/)
+* [ExoscaleTutorials](https://www.codebreakers.uk/adtexoscaletutorials/)
 
-* [Linode Tutorials]({{ site.baseurl }}/adtlinodetutorials/)
+* [Linode Tutorials](https://www.codebreakers.uk/adtlinodetutorials/)
 
-* [Vultr Tutorials]({{ site.baseurl }}/adtvultrtutorials/)
+* [Vultr Tutorials](https://www.codebreakers.uk/adtvultrtutorials/)
 
-* [AWS Tutorials]({{ site.baseurl }}/adtawstutorials/)
+* [AWS Tutorials](https://www.codebreakers.uk/adtawstutorials/)
