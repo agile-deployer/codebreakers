@@ -239,7 +239,7 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp; 
 	
->     Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - buildclientip
+>     Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - In this case: 185.19.29.134
 
 &nbsp;  
 &nbsp;
