@@ -14,17 +14,22 @@ Before performing an expedited or full build, you need to set up a build machine
 ----------------
 
 1) If you don't have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:
+
 &nbsp;  
 &nbsp; 
 >     /usr/bin/ssh-keygen -t rsa 
+
 &nbsp;  
 &nbsp; 
+
 Your key will be saved to the indicated file, for example, /root/.ssh/id_rsa your path might be different such as /home/bob/.ssh/id_rsa
 	 
 Issue the command (for example)
+
 &nbsp;  
 &nbsp; 	 
 >     /bin/cat /root/.ssh/id_rsa.pub - this will be your <ssh-public-key-substance>
+
 &nbsp;  
 &nbsp; 	 
 This will give you your **public** key which you need later so, take a copy of the output that is printed to the screen.
@@ -37,7 +42,7 @@ This will give you your **public** key which you need later so, take a copy of t
 	
 2) Take a copy of the script: 
 
->     [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
+#### [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh)
 	
 &nbsp;  
 &nbsp;  
