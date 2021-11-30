@@ -1,4 +1,11 @@
-
+---
+layout: post
+description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin Joomla 
+title: Exoscale ADT Tutorials Expedited Virgin Joomla
+permalink: /adtexoscaletutorialsexpeditedtext/
+hide: true
+category: agiledeploymenttoolkit
+---
 
 
 
