@@ -218,7 +218,12 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export BUILD_IDENTIFIER="nuocial"
 >     export PUBLIC_KEY_ID="AGILE_TOOLKIT_PUBLIC_KEY-nuocial"
 
-So, I have referred to the specification and I have freely chosen to modify the WEBSERVER_CHOICE to "NGINX" PHP_VERSION to "8.0" APPLICATION_IDENTIFIER to "1" and DATABASE_INSTALLATION_TYPE to "Postgres"
+So, I have referred to the specification and I have freely chosen to modify the  
+
+**WEBSERVER_CHOICE to "NGINX"**  
+**PHP_VERSION to "8.0"**  
+**APPLICATION_IDENTIFIER to "1"**  
+**DATABASE_INSTALLATION_TYPE to "Postgres"**  
 
 So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl and using the values I recorded in my text file earlier, I modify the file as follows, the lines beginning with dashes have been modified
 
