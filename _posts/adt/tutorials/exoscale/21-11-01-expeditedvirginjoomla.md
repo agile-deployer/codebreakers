@@ -212,38 +212,38 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     ###############################################################################################
 >     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md
 >     ###############################################################################################
->   **------export APPLICATION="joomla"**
->   **------export JOOMLA_VERSION="4.0.4"** #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla
+>     ------export APPLICATION="joomla"**
+>     ------export JOOMLA_VERSION="4.0.4"** #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla
 >     export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal
->   **-------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="JOOMLA:4.0.4"** #MANDATORY 
+>     -------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="JOOMLA:4.0.4"** #MANDATORY 
 >     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 >     # change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)
 >     # change this to, WORDPRESS if you are deploying wordpress
 >     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
 >     # change this to, MOODLE if you are deploying moodle
 >     #############################################################################################
->   **------export S3_ACCESS_KEY="AAAAA"**  #MANDATORY
->   **------export S3_SECRET_KEY="BBBBB"**  #MANDATORY
+>     ------export S3_ACCESS_KEY="AAAAA"**  #MANDATORY
+>     ------export S3_SECRET_KEY="BBBBB"**  #MANDATORY
 >     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
 >     export S3_LOCATION="US" #For exoscale, this always needs to be set to "US"
 >     export TOKEN="" #NOT REQUIRED
->   **------export ACCESS_KEY="XXXXX"**   #MANDATORY
->   **------export SECRET_KEY="YYYYY"**   #MANDATORY
->   **------export DNS_USERNAME="testemail@testemail.com"**  #MANDATORY
->   **------export DNS_SECURITY_KEY="CCCCC:DDDDD"**   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     ------export ACCESS_KEY="XXXXX"**   #MANDATORY
+>     ------export SECRET_KEY="YYYYY"**   #MANDATORY
+>     ------export DNS_USERNAME="testemail@testemail.com"**  #MANDATORY
+>     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"**   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
 >     export DNS_CHOICE="exoscale" #MANDATORY - you will need to set your DNS nameservers according to this choice
->   **------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com"** #MANDATORY
+>     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com"** #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
 >     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11
 >     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian
->   **------export WEBSITE_DISPLAY_NAME="Test Social Network"** #MANDATORY
->   **------export WEBSITE_NAME="testsocialnetwork"** #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
->   **------export WEBSITE_URL="www.testsocialnetwork.org.uk"**  #MANDATORY
+>     ------export WEBSITE_DISPLAY_NAME="Test Social Network"** #MANDATORY
+>     ------export WEBSITE_NAME="testsocialnetwork"** #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
+>     ------export WEBSITE_URL="www.testsocialnetwork.org.uk"**  #MANDATORY
 >     export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
->   **------export APPLICATION_REPOSITORY_OWNER="mytestgituser"** #MANDATORY
->   **------export APPLICATION_REPOSITORY_USERNAME="mytestgituser"** #MANDATORY
+>     ------export APPLICATION_REPOSITORY_OWNER="mytestgituser"** #MANDATORY
+>     ------export APPLICATION_REPOSITORY_USERNAME="mytestgituser"** #MANDATORY
 >     export APPLICATION_REPOSITORY_PASSWORD="" #MANDATORY
->   **------export APPLICATION_REPOSITORY_TOKEN="KKKKK"** #MANDATORY
+>     ------export APPLICATION_REPOSITORY_TOKEN="KKKKK"** #MANDATORY
 >     export SYSTEM_EMAIL_PROVIDER="" #MANDATORY
 >     export SYSTEM_TOEMAIL_ADDRESS="" #MANDATORY
 >     export SYSTEM_FROMEMAIL_ADDRESS="" #MANDATORY
@@ -256,12 +256,12 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     export PRODUCTION="0"
 >     export DEVELOPMENT="1"
 >     export BUILD_CHOICE="0"
->   **------export WEBSERVER_CHOICE="NGINX"**
+>     ------export WEBSERVER_CHOICE="NGINX"**
 >     export NO_AUTOSCALERS="1"
 >     export NUMBER_WS="1"
 >     export SUPERSAFE_WEBROOT="1"
 >     export SUPERSAFE_DB="1"
->   **------export DATABASE_INSTALLATION_TYPE="Postgres"**
+>     ------export DATABASE_INSTALLATION_TYPE="Postgres"**
 >     export PERSIST_ASSETS_TO_CLOUD="0" #This should always be set to 0 for a virgin deployment
 >     export DISABLE_HOURLY="0"
 >     export SERVER_TIMEZONE_CONTINENT="Europe"
@@ -269,8 +269,8 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     export BASELINE_DB_REPOSITORY="VIRGIN"
 >     export BUILD_ARCHIVE_CHOICE="virgin"
 >     export APPLICATION_LANGUAGE="PHP"
->   **------export APPLICATION_IDENTIFIER="1"**
->   **------export PHP_VERSION="8.0"**
+>     ------export APPLICATION_IDENTIFIER="1"**
+>     ------export PHP_VERSION="8.0"**
 >     export REGION=""
 >     export REGION_ID="1128bd56-b4d9-4ac6-a7b9-c715b187ce11"
 >     export DB_SIZE="10G"
