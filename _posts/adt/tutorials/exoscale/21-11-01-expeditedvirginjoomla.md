@@ -76,34 +76,35 @@ Then we can open up the
 
 This file looks like this (I have put a dashes before each line I wish to modify for this deployment which is for illustrative purposes only):
 
-###############################################################################################
-# Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md
-###############################################################################################
-------export APPLICATION=""
-export JOOMLA_VERSION="" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla
-export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal
-------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="" #MANDATORY 
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-# change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)
-# change this to, WORDPRESS if you are deploying wordpress
-# change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
-# change this to, MOODLE if you are deploying moodle
-#############################################################################################
-------export S3_ACCESS_KEY=""  #MANDATORY
-------export S3_SECRET_KEY=""  #MANDATORY
-export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
-export S3_LOCATION="US" #For exoscale, this always needs to be set to "US"
-export TOKEN="" #NOT REQUIRED
-------export ACCESS_KEY=""   #MANDATORY
-------export SECRET_KEY=""   #MANDATORY
-------export DNS_USERNAME=""  #MANDATORY
-------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
-export DNS_CHOICE="exoscale" #MANDATORY - you will need to set your DNS nameservers according to this choice
-------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY
-export BUILDOS="debian" #MANDATORY one of ubuntu|debian
-export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11
-export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian
-------export WEBSITE_DISPLAY_NAME="" #MANDATORY
+>     ###############################################################################################  
+>     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
+>     ###############################################################################################  
+>     ------export APPLICATION=""  
+>     export JOOMLA_VERSION="" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
+>     export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal  
+>     ------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="" #MANDATORY  
+>     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
+>     # change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)  
+>     # change this to, WORDPRESS if you are deploying wordpress  
+>     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)  
+>     # change this to, MOODLE if you are deploying moodle  
+>     #############################################################################################  
+>     ------export S3_ACCESS_KEY=""  #MANDATORY  
+>     ------export S3_SECRET_KEY=""  #MANDATORY  
+>     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
+>     export S3_LOCATION="US" #For exoscale, this always needs to be set to "US"  
+>     export TOKEN="" #NOT REQUIRED  
+>     ------export ACCESS_KEY=""   #MANDATORY  
+>     ------export SECRET_KEY=""   #MANDATORY  
+>     ------export DNS_USERNAME=""  #MANDATORY  
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
+>     export DNS_CHOICE="exoscale" #MANDATORY - you will need to set your DNS nameservers according to this choice  
+>     ------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY  
+>     export BUILDOS="debian" #MANDATORY one of ubuntu|debian  
+>     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11  
+>     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian  
+>     ------export WEBSITE_DISPLAY_NAME="" #MANDATORY  
+>   
 ------export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
 ------export WEBSITE_URL=""  #MANDATORY
 export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
