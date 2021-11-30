@@ -11,8 +11,7 @@ There's a few options here for learning how to use this toolkit with the Exoscal
 
 #### 1. Expedited Build Method (recommended)  
 
->    [Tutorial Set 1 : Text Based](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtext)   
->    [Tutorial Set 2 : Video Based](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedvideo)  
+>    [Tutorial Set 1 ](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtext)   
 
 #### 2. Hardcore Build Method  
 
