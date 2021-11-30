@@ -2,13 +2,10 @@
 layout: post
 description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin Joomla 
 title: Exoscale ADT Tutorials Expedited Virgin Joomla
-permalink: /adtexoscaletutorialsexpeditedtext/
+permalink: /adtexoscaletutorialsexpeditedvirginjoomla/
 hide: true
 category: agiledeploymenttoolkit
 ---
-
-
-
 
 If you have followed these steps your build machine is online and secured and you have an SSH session open to it from your laptop through which to initiate your build processes.
 
