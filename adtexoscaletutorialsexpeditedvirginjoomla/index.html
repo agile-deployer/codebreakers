@@ -105,41 +105,65 @@ window.onload = wrap_img;
 
 <p>And I note the latest version in a separate text file:</p>
 
-<p>joomla_version=”4.0.4”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>joomla_version="4.0.4"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>I then need a set of compute access keys so, I go to the IAM option on my exoscale dashboard and generate an IAM key with compute access. In my separate text file, I record:</p>
 
-<p>exoscale_access_key_compute=”XXXXX”  where XXXXX and YYYYY are the actual values generated when I click “Add Key”
-exoscale_secret_key_compute=”YYYYY”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exoscale_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
+exoscale_secret_key_compute="YYYYY"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my exoscale dashboard and generate an IAM key with S3 access. In my separate text file, I record:</p>
 
-<p>exoscale_access_key_s3=”AAAAA”  where AAAAA and BBBBB are the actual values generated when I click “Add Key”
-exoscale_secret_key_s3=”BBBBB”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exoscale_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
+exoscale_secret_key_s3="BBBBB"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>I then need a set of DNS access keys so, I go to the IAM option on my exoscale dashboard and generate an IAM key with DNS access. In my separate text file, I record:</p>
 
-<p>exoscale_access_key_dns=”CCCCC”  where CCCCC and DDDDD are the actual values generated when I click “Add Key”
-exoscale_secret_key_dns=”DDDDD”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exoscale_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
+exoscale_secret_key_dns="DDDDD"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>You now need to make a note of the email address that you have registered with your exoscale account:</p>
 
-<p>exoscale_email=”testemail@testemail.com”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exoscale_email="testemail@testemail.com"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>You then need the url that you want to use for your website. If you don’t have a DNS URL for your website, you need to purchase one and set the nameservers to exoscale as described <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/Nameservers.md">here</a></p>
 
-<p>exoscale_dns_name=”www.testsocialnetwork.org.uk”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exoscale_dns_name="www.testsocialnetwork.org.uk"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>You then need the username and owner of you gitprovider application repositories.
 To do this, if you don’t have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:</p>
 
-<p>gitusername=”mytestgituser”</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitusername="mytestgituser"
+</code></pre></div>  </div>
+</blockquote>
 
 <p>Then create a “personal access token” by following:</p>
 
 <p><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal Access Token</a> making sure you give it all “repo” permissions</p>
 
-<p>gitpersonalaccesstoken=”KKKKK” where KKKKK represents your actual personal access token</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitpersonalaccesstoken="KKKKK" where KKKKK represents your actual personal access token
+</code></pre></div>  </div>
+</blockquote>
 
 <p>To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md">here</a></p>
 
@@ -153,11 +177,17 @@ To do this, if you don’t have a git account sign up with one (in this case usi
 
 <p>So, to begin an expedited build process, I need to:</p>
 
-<p>cd /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale
+</code></pre></div>  </div>
+</blockquote>
 
 <p>Then we can open up the</p>
 
-<p>vi exoscale1.tmpl</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi exoscale1.tmpl
+</code></pre></div>  </div>
+</blockquote>
 
 <p>This file looks like this (I have put a dashes before each line I wish to modify for this deployment which is for illustrative purposes only):</p>
 
