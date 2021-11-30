@@ -101,16 +101,22 @@ window.onload = wrap_img;
 
 <p>I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla</p>
 
+<hr />
+
 <p>To find the latest version of Joomla, I go to this URL in my browser:</p>
 
-<p>https://downloads.joomla.org/</p>
+<p><a href="https://downloads.joomla.org/">Joomla Latest</a></p>
 
 <p>And I note the latest version in a separate text file:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>joomla_version="4.0.4"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>joomla_version="4.0.4"  
 </code></pre></div>  </div>
 </blockquote>
+
+<p>You can of course use a legacy version of joomla also by choosing a different version numnber.</p>
+
+<hr />
 
 <p>I then need a set of compute access keys so, I go to the IAM option on my exoscale dashboard and generate an IAM key with compute access. In my separate text file, I record:</p>
 
@@ -136,6 +142,8 @@ exoscale_secret_key_dns="DDDDD"
 </code></pre></div>  </div>
 </blockquote>
 
+<hr />
+
 <p>You now need to make a note of the email address that you have registered with your exoscale account:</p>
 
 <blockquote>
@@ -143,12 +151,16 @@ exoscale_secret_key_dns="DDDDD"
 </code></pre></div>  </div>
 </blockquote>
 
+<hr />
+
 <p>You then need the url that you want to use for your website. If you don’t have a DNS URL for your website, you need to purchase one and set the nameservers to exoscale as described <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/Nameservers.md">here</a></p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exoscale_dns_name="www.testsocialnetwork.org.uk"
 </code></pre></div>  </div>
 </blockquote>
+
+<hr />
 
 <p>You then need the username and owner of you gitprovider application repositories.
 To do this, if you don’t have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:</p>
@@ -167,12 +179,14 @@ To do this, if you don’t have a git account sign up with one (in this case usi
 </code></pre></div>  </div>
 </blockquote>
 
-<p>To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md">here</a></p>
+<hr />
+
+<p>To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md">here</a>. If you wish to include SMTP credentials you will need to have a service offering set up with either sendpulse, mailjet or AWS SES.</p>
 
 <p>So, that should be all the core credentials that I need to make a deployment. I can save my text file now (and keep it secure) because I might want to use these credentials again for other deployments or redeployments.</p>
 
 <hr />
-
+<hr />
 <p>So, at the command line of my build machine that we spun up earlier:</p>
 
 <p>My chosen username is “agile-deployer”</p>
