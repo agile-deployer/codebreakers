@@ -7,6 +7,8 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+This will deploy the latest version of Joomla using template 1 which you can read about here: [template 1](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description) and the expedited method.
+
 If you have followed these steps your build machine is online and secured and you have an SSH session open to it from your laptop through which to initiate your build processes.
 
 We need several pieces of information from our cloud host and 3rd party services for a successful build to be possible:
