@@ -1,7 +1,7 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin  
-title: Exoscale ADT Tutorials Expedited Virgin Joomla
+title: Exoscale ADT Tutorials Expedited Virgin
 permalink: /adtexoscaletutorialsexpeditedvirginjoomla/
 hide: true
 category: agiledeploymenttoolkit
@@ -61,7 +61,7 @@ You then need the url that you want to use for your website. If you don't have a
 
 -------------------------------
 
-You then need the username and owner of you gitprovider application repositories.
+You then need the username and owner of you git provider application repositories.
 To do this, if you don't have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:
 
 >     gitusername="mytestgituser"
@@ -80,6 +80,7 @@ So, that should be all the core credentials that I need to make a deployment. I 
 
 --------------------------------------------
 --------------------------------------------
+
 So, at the command line of my build machine that we spun up earlier:
 
 My chosen username is "agile-deployer"
