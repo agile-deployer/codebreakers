@@ -1,6 +1,6 @@
 ---
 layout: post
-description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin Joomla 
+description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin  
 title: Exoscale ADT Tutorials Expedited Virgin Joomla
 permalink: /adtexoscaletutorialsexpeditedvirginjoomla/
 hide: true
@@ -44,6 +44,8 @@ I then need a set of DNS access keys so, I go to the IAM option on my exoscale d
 
 >     exoscale_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
 >     exoscale_secret_key_dns="DDDDD"
+
+**NOTE:** Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn't have to juggle three set of keys then and could use the same key pair in all three cases.
 
 -----------------------------------
 
