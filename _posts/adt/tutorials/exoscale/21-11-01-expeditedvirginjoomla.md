@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin  
 title: Exoscale ADT Tutorials Expedited Virgin
-permalink: /adtexoscaletutorialsexpeditedvirginjoomla/
+permalink: /adtexoscaletutorialsexpeditedvirgin/
 hide: true
 category: agiledeploymenttoolkit
 ---
