@@ -1,8 +1,8 @@
 ---
 layout: post
-description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Text 
+description: The Agile Deployment Toolkit Exoscale Tutorials Expedited Virgin
 title: Exoscale ADT Tutorials Expedited Text
-permalink: /adtexoscaletutorialsexpeditedtext/
+permalink: /adtexoscaletutorialsexpeditedvirgin/
 hide: true
 category: agiledeploymenttoolkit
 ---
