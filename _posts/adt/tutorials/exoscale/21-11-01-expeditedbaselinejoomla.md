@@ -38,7 +38,7 @@ In a minute or two your webiste baseline will have been generated and you should
 
 Now you need to generate a baseline of the database. To do that you need to issue the command:
 
->     /bin/sh PerformDatabaseBackup.sh
+>     /bin/sh PerformDatabaseBaseline.sh
 
 If there is a prompt for an identifier, I enter "communitybuilder" and make very sure that the repository communitybuilder-db-baseline exists
 
