@@ -91,5 +91,10 @@ There are some other values that I need to change in /home/agile-deployer/agile-
 >     export PERSIST_ASSETS_TO_CLOUD="0" #MANDATORY This should only be 0 if your application has a very small number of assets
 >     export DIRECTORIES_TO_MOUNT="" #MANDATORY - this will define which directories in your webroot will be mounted from S3, if PERSIST_ASSETS_TO_CLOUD=1
 
+You can make any other adjustments you want like if you want to choose APACHE instead of NGINX or change the size of the machines (you can find out about such things in the specification).
+
+With your baseline template fully configured, you are now ready to perform a baseline build (in other words, directly install a live application starting from zilch).
+That will look something like the following:
+
 
 
