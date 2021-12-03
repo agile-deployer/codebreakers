@@ -58,7 +58,7 @@ I then need to set the template to use the temporal backups that I have generate
 >     export PERSIST_ASSETS_TO_CLOUD="1" #MANDATORY This should only be 0 if your application has a very small number of assets
 >     export DIRECTORIES_TO_MOUNT="images" #MANDATORY - this will define which directories in your webroot will be mounted from S3, if PERSIST_ASSETS_TO_CLOUD=1
   
-
+Shutdown any webservers that you have running from tutorial 2 and you are then ready to perform a temporal build, as shown below:
   
   
 
