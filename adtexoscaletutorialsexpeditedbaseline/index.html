@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -166,6 +166,44 @@ communitybuilder-db-baseline
 </blockquote>
 
 <p>I can extract the values for the following variables:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export S3_ACCESS_KEY="AAAAA"  #MANDATORY
+export S3_SECRET_KEY="BBBBB"  #MANDATORY
+export ACCESS_KEY="XXXXX"   #MANDATORY
+export SECRET_KEY="YYYYY"   #MANDATORY
+export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
+export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
+export WEBSITE_DISPLAY_NAME="Test Social Network" #MANDATORY
+export WEBSITE_NAME="testsocialnetwork" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
+export WEBSITE_URL="www.testsocialnetwork.org.uk"  #MANDATORY
+export APPLICATION_REPOSITORY_OWNER="mytestgituser" #MANDATORY
+export APPLICATION_REPOSITORY_USERNAME="mytestgituser" #MANDATORY
+export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
+</code></pre></div>  </div>
+</blockquote>
+
+<p>What I then do is adjust /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl to contain these values instead of its defaults.</p>
+
+<p>With that done, because I used “Postgres” which from the file dbe.dat in the webroot of my baseline when I deployed Joomla originally, I need to make sure that I set the database to use as follows:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export DATABASE_INSTALLATION_TYPE="Postgres"
+</code></pre></div>  </div>
+</blockquote>
+
+<p>There are some other values that I need to change in /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl, as follows:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export APPLICATION="joomla" #MANDATORY (joomla or wordpress or drupal or moodle)
+export APPLICATION_IDENTIFIER="1" #MANDATORY (1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle)
+export BASELINE_DB_REPOSITORY="communitybuilder-db-baseline" #MANDATORY
+export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="communitybuilder-webroot-sourcecode-baseline" #MANDATORY
+export PERSIST_ASSETS_TO_CLOUD="0" #MANDATORY This should only be 0 if your application has a very small number of assets
+export DIRECTORIES_TO_MOUNT="" #MANDATORY - this will define which directories in your webroot will be mounted from S3, if PERSIST_ASSETS_TO_CLOUD=1
+</code></pre></div>  </div>
+</blockquote>
 
 
   </div><a class="u-url" href="/adtexoscaletutorialsexpeditedbaseline/" hidden></a>
