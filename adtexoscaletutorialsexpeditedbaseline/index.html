@@ -4,19 +4,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Exoscale ADT Tutorials Expedited Baseline | Codebreakers</title>
+<title>Exoscale ADT Tutorials Expedited Baseline Joomla | Codebreakers</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Exoscale ADT Tutorials Expedited Baseline" />
+<meta property="og:title" content="Exoscale ADT Tutorials Expedited Baseline Joomla" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline" />
-<meta property="og:description" content="The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline" />
+<meta name="description" content="The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline Joomla" />
+<meta property="og:description" content="The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline Joomla" />
 <link rel="canonical" href="https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline/" />
 <meta property="og:url" content="https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline/" />
 <meta property="og:site_name" content="Codebreakers" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-01T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-11-01T00:00:00-05:00","url":"https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline/","@type":"BlogPosting","headline":"Exoscale ADT Tutorials Expedited Baseline","dateModified":"2021-11-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline/"},"description":"The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline","@context":"https://schema.org"}</script>
+{"datePublished":"2021-11-01T00:00:00-05:00","url":"https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline/","@type":"BlogPosting","headline":"Exoscale ADT Tutorials Expedited Baseline Joomla","dateModified":"2021-11-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline/"},"description":"The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline Joomla","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.codebreakers.uk/feed.xml" title="Codebreakers" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,7 +71,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Exoscale ADT Tutorials Expedited Baseline</h1><p class="page-description">The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-01T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Exoscale ADT Tutorials Expedited Baseline Joomla</h1><p class="page-description">The Agile Deployment Toolkit Exoscale Tutorials Expedited Baseline Joomla</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-01T00:00:00-05:00" itemprop="datePublished">
         Nov 1, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -99,6 +99,37 @@ What you need to do now is to customise your version of (Joomla) so that it is a
 <p>What I have done for this tutorial is install a very simple application using a tool called “Community Builder” which you can find here: <a href="www.joomlapolis.com">Community Builder</a>. Literally all I have done is install the latest version (at the time) into my Joomla installation that I installed earlier.</p>
 
 <p>The next thing I have to do is to generate a baseline of my application so that the baseline can be redeployed. A baseline is stored with whatever git provider you have set in your template when you made your deployment. In my case my git account is my “adt-demos” account with Github.</p>
+
+<p>In order to create the baseline I am going to deploy, I need to do the following:</p>
+
+<ol>
+  <li>Choose a unique identifier for my baseline repositories, in this case I am going to call them, “communitybuilder”</li>
+  <li>Go to you git provider account console with your browser, in this case it is my “adt-demos” account with Github and create two private repositories:</li>
+</ol>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>communitybuilder-webroot-sourcecode-baseline
+communitybuilder-db-baseline
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Once these two repositories have been created you are ready to make a baseline of the joomla install that you have modified.</p>
+
+<ol>
+  <li>To generate your baseline, you have to run two commands on your build machine. At the command prompt of your build machine cd into the <strong>helperscripts</strong> directory of your agile deployment toolkit installation. In my case it is like this:</li>
+</ol>
+
+<blockquote>
+  <p>cd /home/agile-deployer/agile-infrastructure-build-client-scripts/helperscripts</p>
+</blockquote>
+
+<p>Once you are in that directory, you need to issue the command:</p>
+
+<blockquote>
+  <p>/bin/sh PerformWebsiteBaseline.sh</p>
+</blockquote>
+
+<p>Once that starts running, you need to answer the questions you are prompted for entering, “communitybuilder” if you are prompted for an identifier.</p>
 
   </div><a class="u-url" href="/adtexoscaletutorialsexpeditedbaseline/" hidden></a>
 </article>
