@@ -60,5 +60,11 @@ I then need to set the template to use the temporal backups that I have generate
   
 Shutdown any webservers that you have running from tutorial 2 and you are then ready to perform a temporal build, as shown below:
   
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/WiuacLCV_XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
+  If all has gone according to plan, you will have seen a full deployment of your temporal backup. 
+  
+  There's something else to be aware of, if you want to deploy a managed DBaaS system instead of just using the one that is built in to the build process you can do that as detailed in this document
+  
+  You can also build your webservers using snapshots that you generate and then use. You can read about how to perform snapshot builds here.
 
