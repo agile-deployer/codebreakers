@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -103,7 +103,7 @@ What you need to do now is to customise your version of (Joomla) so that it is a
 <p>In order to create the baseline I am going to deploy, I need to do the following:</p>
 
 <ol>
-  <li>Choose a unique identifier for my baseline repositories, in this case I am going to call them, “communitybuilder”</li>
+  <li>Choose a unique identifier for my baseline repositories, in this case I am going to call them, “communitybuilder” yours will be a different name.</li>
   <li>Go to you git provider account console with your browser, in this case it is my “adt-demos” account with Github and create two private repositories:</li>
 </ol>
 
@@ -130,6 +130,43 @@ communitybuilder-db-baseline
 </blockquote>
 
 <p>Once that starts running, you need to answer the questions you are prompted for entering, “communitybuilder” if you are prompted for an identifier.</p>
+
+<p>In a minute or two your webiste baseline will have been generated and you should check in its repository that sourceode has been generated to it.</p>
+
+<p>Now you need to generate a baseline of the database. To do that you need to issue the command:</p>
+
+<blockquote>
+  <p>/bin/sh PerformDatabaseBackup.sh</p>
+</blockquote>
+
+<p>If there is a prompt for an identifier, I enter “communitybuilder” and make very sure that the repository communitybuilder-db-baseline exists</p>
+
+<p>In short order, my database is backed up to the Github repository and again, I should check that the repository I have chosen has been updated using the github console.</p>
+
+<hr />
+
+<p>My application baselines are now complete. The process for generating baselines is the same whichever application type you have built, Joomla, Wordpress, Drupal or Moodle.</p>
+
+<p>The next step is to make a deployment of these baselines. So, if I have any webservers or databases running with my cloudhost, I need to take them off line (shut them down) and destroy them.</p>
+
+<p>I am then interested in template 2 because that is the template that is used for deploying baselined application. If its not clear, template 1 is used for virgin CMS deployments, template 2 is used for baselined application deployments and template 3 is used for temporal deployments.</p>
+
+<p>So, template 2 is located here on my build machine:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl
+</code></pre></div>  </div>
+</blockquote>
+
+<p>I can copy the credentials that I need from the values that I set them to previously in template1. So, looking in template1,</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl
+</code></pre></div>  </div>
+</blockquote>
+
+<p>I can extract the values for the following variables:</p>
+
 
   </div><a class="u-url" href="/adtexoscaletutorialsexpeditedbaseline/" hidden></a>
 </article>
