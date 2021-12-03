@@ -99,7 +99,7 @@ That will look something like the following:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JiweJOLr-R8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If you follow these steps, then, you will have a copy of your customised Joomla application running in the cloud. 
-Temporal backups will be made once it is online and so, if you wait for an hour as long as "DISABLE_HOURLY" is set to "0", you will have a temporaly backup in your git repository which you can use for deployment in the next tutorial which is to show you how to deploy a "production" build from temporaly backups which means it will include autoscaling and so on. 
+**Leave the servers you have deployer running for use in the next tutorial in the series.**
 
 
 
