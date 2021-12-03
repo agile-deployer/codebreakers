@@ -28,4 +28,6 @@ Making sure you pick the same periodicity as for the temporal database backup, f
   
 What we are then interested in is template 3 which is at:
   
->     
+>     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl
+  
+
