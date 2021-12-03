@@ -26,11 +26,11 @@ Once these two repositories have been created you are ready to make a baseline o
 
 3. To generate your baseline, you have to run two commands on your build machine. At the command prompt of your build machine cd into the **helperscripts** directory of your agile deployment toolkit installation. In my case it is like this:
 
->    cd /home/agile-deployer/agile-infrastructure-build-client-scripts/helperscripts
+>     cd /home/agile-deployer/agile-infrastructure-build-client-scripts/helperscripts
 
 Once you are in that directory, you need to issue the command:
 
->    /bin/sh PerformWebsiteBaseline.sh
+>     /bin/sh PerformWebsiteBaseline.sh
 
 Once that starts running, you need to answer the questions you are prompted for entering, "communitybuilder" if you are prompted for an identifier. 
 
@@ -38,7 +38,7 @@ In a minute or two your webiste baseline will have been generated and you should
 
 Now you need to generate a baseline of the database. To do that you need to issue the command:
 
-> /bin/sh PerformDatabaseBackup.sh
+>     /bin/sh PerformDatabaseBackup.sh
 
 If there is a prompt for an identifier, I enter "communitybuilder" and make very sure that the repository communitybuilder-db-baseline exists
 
