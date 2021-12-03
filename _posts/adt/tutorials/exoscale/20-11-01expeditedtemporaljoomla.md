@@ -30,7 +30,7 @@ What we are then interested in is template 3 which is at:
   
 >     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl
   
-I can extract the values for the following variables from template 1 or template 2 which I used in the previous tutorial and set them in template 3:
+I can extract the values for the following variables from template 1 or template 2 which I used in the previous tutorial and set them in template 3, replace these with your own live values:
 
 >     export S3_ACCESS_KEY="AAAAA"  #MANDATORY
 >     export S3_SECRET_KEY="BBBBB"  #MANDATORY
@@ -47,9 +47,18 @@ I can extract the values for the following variables from template 1 or template
 >     export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
   
 What I then do is adjust /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl to contain these values instead of its defaults.
+
+**NOTE:** the WEBSITE_URL value has to be identical to what it was set to when I generated the temporal backups. 
   
 I then need to set the template to use the temporal backups that I have generated and I do that by setting these values in template3:
   
+>     export APPLICATION="joomla" #MANDATORY (joomla or wordpress or drupal or moodle)
+>     export BUILD_CHOICE="2" #MANDATORY 2=hourly, 3=daily, 4=weekly, 5=monthly, 6=bimonthly
+>     export BUILD_ARCHIVE_CHOICE="hourly" #MANDATORY hourly, daily, weekly, monthly, bimonthly
+>     export PERSIST_ASSETS_TO_CLOUD="1" #MANDATORY This should only be 0 if your application has a very small number of assets
+>     export DIRECTORIES_TO_MOUNT="images" #MANDATORY - this will define which directories in your webroot will be mounted from S3, if PERSIST_ASSETS_TO_CLOUD=1
+  
+
   
   
 
