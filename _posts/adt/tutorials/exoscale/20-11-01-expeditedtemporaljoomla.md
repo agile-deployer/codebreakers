@@ -46,9 +46,11 @@ I can extract the values for the following variables from template 1 or template
 >     export APPLICATION_REPOSITORY_USERNAME="mytestgituser" #MANDATORY
 >     export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
   
-What I then do is adjust /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl to contain these values instead of its defaults.
+What I then do is adjust  
 
-**NOTE:** the WEBSITE_URL value has to be identical to what it was set to when I generated the temporal backups. 
+**/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl**  
+  
+to contain these values instead of its defaults.
   
 I then need to set the template to use the temporal backups that I have generated and I do that by setting these values in template3:
   
