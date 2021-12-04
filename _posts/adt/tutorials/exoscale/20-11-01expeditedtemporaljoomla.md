@@ -67,4 +67,23 @@ Shutdown any webservers that you have running from tutorial 2 and you are then r
   There's something else to be aware of, if you want to deploy a managed DBaaS system instead of just using the one that is built in to the build process you can do that as detailed in [this](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingDBaaS-Shortcut.md) document
   
   You can also build your webservers using snapshots that you generate and then use. You can read about how to perform snapshot builds [here](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/SnapshotsWorkflow.md).
-
+  
+  ------------------------
+  
+  In order to do a temporaly build from backups you have made for a different application type (wordpress, drupal or moodle) you will need to alter the following variables in your template compared to what you have used above:
+  
+  For Wordpress:
+  
+>     export APPLICATION="wordpress"
+>     export DIRECTORIES_TO_MOUNT="wp-content.uploads"
+  
+  For Drupal:
+  
+>     export APPLICATION="drupal"
+>     export DIRECTORIES_TO_MOUNT="sites.default.files"
+  
+  For Moodle:
+  
+>     export APPLICATION="moodle"
+>     export DIRECTORIES_TO_MOUNT="moodledata.filedir"
+  
