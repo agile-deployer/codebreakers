@@ -72,7 +72,9 @@ Shutdown any webservers that you have running from tutorial 2 and you are then r
   
   ------------------------
   
-  In order to do a temporaly build from backups you have made for a different application type (wordpress, drupal or moodle) you will need to alter the following variables in your template compared to what you have used above:
+  **OTHER APPLICATION TYPES**
+  
+In order to do a temporaly build from backups you have made for a different application type (wordpress, drupal or moodle) you will need to alter the following variables in your template compared to what you have used above:
   
   For Wordpress:
   
