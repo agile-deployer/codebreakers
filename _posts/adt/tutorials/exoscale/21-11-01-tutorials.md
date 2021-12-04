@@ -17,12 +17,12 @@ This tutorial set needs to be followed sequentially in numeric order.
 >    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline)  
 >    [Tutorial Set 3 (Temporal CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtemporal)
 
-#### 2. Hardcore Build Method  
+#### 2. Hardcore Build Method (expert)
 
 >    [Tutorial Set 1 : Text Based](https://www.codebreakers.uk/adtexoscaletutorialshardcoretext)  
 >    [Tutorial Set 2 : Video Based](https://www.codebreakers.uk/adtexoscaletutorialshardcorevideo)
 
-#### 3. The Full Build Method (interactive)  
+#### 3. The Full Build Method (interactively guided)  
 
 >    [Tutorial Set 1 : Text Based](https://www.codebreakers.uk/adtexoscaletutorialsfullbuildtext)  
 >    [Tutorial Set 2 : Video Based](https://www.codebreakers.uk/adtexoscaletutorialsfullbuildvideo)
