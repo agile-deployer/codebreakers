@@ -13,7 +13,7 @@ There's a few options here for learning how to use this toolkit with the Exoscal
 
 This tutorial set needs to be followed sequentially in numeric order.
 
->    [Tutorial Set 1 (Virgin CMS Installation) ](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedvirgin)   
+>    [Tutorial Set 1 (Virgin CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedvirgin)   
 >    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline)  
 >    [Tutorial Set 3 (Temporal CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtemporal)
 
