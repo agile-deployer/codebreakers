@@ -15,6 +15,7 @@ This tutorial set needs to be followed sequentially in numeric order.
 
 >    [Tutorial Set 1 (Virgin CMS Installations) ](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedvirgin)   
 >    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedbaseline)
+>    [Tutorial Set 3 (Temporal CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedtemporal)
 
 #### 2. Hardcore Build Method  
 
