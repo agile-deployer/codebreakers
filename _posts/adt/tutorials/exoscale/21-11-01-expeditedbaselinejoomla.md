@@ -7,6 +7,18 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+**PREBUILD NECESSITIES**
+
+If you don't already have a build machine running in the Exoscale cloud, follow these steps to get ready for the main build)
+
+1. Begin by following this: [Build Machine Setup](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)  
+
+2. At this point, your build machine should be up and running. Please review [Tightening Build Machine Firewall](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md). At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Firewall" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+
+-----------------------------
+
+**EXPEDITED BUILD PROCESS**
+
 If you have followed the tutorial here, then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser.
 What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on. 
 
