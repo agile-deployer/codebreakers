@@ -1,11 +1,11 @@
 ---
 layout: post
-description: The Agile Deployment Toolkit Exoscale Tutorials Hardcore Video 
-title: Exoscale ADT Tutorials Hardcore Video
-permalink: /adtexoscaletutorialshardcorevideo/
+description: The Agile Deployment Toolkit Exoscale Tutorials Hardcore Virgin Joomla
+title: Exoscale ADT Tutorials Hardcore Virgin Joomla
+permalink: /adtexoscaletutorialshardcorevirginjoomla/
 hide: true
 category: agiledeploymenttoolkit
 ---
 
-1. Follow the following: [Build Machine Setup](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)
+
 
