@@ -87,7 +87,12 @@ So, that should be all the core credentials that I need to make a deployment. I 
 >     cd agile-infrastructure-build-client-scripts/helperscripts
 
 >     /bin/sh GenerateHardcoreUserDataScript.sh
-     
+
+What I have done is run a sample execution of GenerateHardcoreUserData.sh so you can get an idea of how I set the values. This is just a dump of an example run through and it only sets the mandatory values to set other values such as machine size or database type you need to answer "Y" to the last question and review all non-mandatory settings as well. 
+
+>    root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# /bin/sh GenerateOverrideTemplate.sh
+
+
 
 
 
