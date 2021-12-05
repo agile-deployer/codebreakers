@@ -124,7 +124,7 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     ---- 
 >     Found a variable JOOMLA_VERSION what do you want to set it to?
 >     Its current value is "3.9.22" press <enter> to retain, anything else to override
->     4.0.4
+      **4.0.4**
 >     OK, thanks...
 >     
 >     
@@ -172,16 +172,17 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     
 >     You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
 >     
->     ########################################################################### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
+>     ########################################################################### 
+>      digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
 >     
->     ########################################################################### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
+>      exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
 >     
->     ########################################################################### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
+>      linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
+>  
+>      vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
 >     
->     ########################################################################### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
->     
->     ########################################################################### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
->     
+>      AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
+>     ################################################################################
 >     -----
 >     Found a variable S3_ACCESS_KEY what do you want to set it to?
 >     Its current value is "" press <enter> to retain, anything else to override
