@@ -7,6 +7,16 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+**PREBUILD NECESSITIES**
+
+1. Begin by following this: [Build Machine Setup](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)  
+
+2. At this point, your build machine should be up and running. Please review [Tightening Build Machine Firewall](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md). At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Firewall" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+
+-----------------------------
+
+**EXPEDITED BUILD PROCESS**
+
 This will deploy the latest version of Joomla using template 1 which you can read about here: [template 1](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description) and the expedited method.
 
 If you have followed these steps your build machine is online and secured and you have an SSH session open to it from your laptop through which to initiate your build processes.
