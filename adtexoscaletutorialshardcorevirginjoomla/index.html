@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      83 min read
+      23 min read
     
 </span></p>
 
@@ -214,1086 +214,33 @@ To do this, if you don’t have a git account sign up with one (in this case usi
   <p>root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# /bin/sh GenerateOverrideTemplate.sh</p>
 </blockquote>
 
-<p>############################################################################################################
-WARNING: THERE IS NO SANITY CHECKING IF YOU USE THIS SCRIPT WHICH MEANS THAT IF YOU ENTER ANYTHING INCORRECT
-YOU WON’T FIND OUT ABOUT IT UNTIL YOU CONFIGURE A BUILD USING THE OUTPUT FROM THIS SCRIPT AND THE BUILD FAILS
-AT THE END, THIS SCRIPT WILL OUTPUT ITS CONFIGURATION AND YOU CAN TAKE A COPY OF THE OUTPUT AND STORE IT ON YOUR LAPTOP OR DESKTOP
-FOR USE IN CURRENT AND FUTURE DEPLOYMENTS
-BE AWARE THAT THE OUTPUT GENERATED WILL CONTAIN SENSITIVE INFORMATION WHICH YOU NEED TO KEEP SECURE
-############################################################################################################
-Press <enter> to continue</enter></p>
-
-<p>Which Cloudhost are you using? 1) Digital Ocean 2) Exoscale 3) Linode 4) Vultr 5)AWS. Please Enter the number for your cloudhost
-2
-Please tell us which template you wish to override</p>
-<ol>
-  <li>VIRGIN DEVELOPMENT MODE INSTALLATION OF JOOMLA, WORDPRESS, DRUPAL or MOODLE</li>
-  <li>BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION</li>
-  <li>TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
-Please input a number between 1 and 3 to select a template to override
-1
-###############################################################################
-YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
-###############################################################################
-Press <enter to="" begin=""></enter></li>
-</ol>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="joomla_version">JOOMLA_VERSION</h3>
-
-<p>If you are deploying a virgin joomla installation, you must give the version number of joomla that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.</p>
-
-<hr />
-<p>Found a variable JOOMLA_VERSION what do you want to set it to?
-Its current value is “3.9.22” press <enter> to retain, anything else to override
-4.0.4
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="drupal_version">DRUPAL_VERSION</h3>
-
-<p>If you are deploying a virgin drupal installation, you must give the version number of drupal that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.</p>
-
-<hr />
-<p>Found a variable DRUPAL_VERSION what do you want to set it to?
-Its current value is “9.2.1” press <enter> to retain, anything else to override
-N/A
-OK, thanks...</enter></p>
-
-<p>/bin/sed: -e expression #1, char 54: unknown option to <code class="language-plaintext highlighter-rouge">s'
-/bin/sed: -e expression #1, char 90: unknown option to </code>s’
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_baseline_sourcecode_repository">APPLICATION_BASELINE_SOURCECODE_REPOSITORY</h3>
-
-<p>If you are deploying a virgin application, you can set this to “JOOMLA:{latest_version}”, “WORDPRESS”, “DRUPAL:{latest_version}” or “MOODLE”</p>
-
-<hr />
-<p>Found a variable APPLICATION_BASELINE_SOURCECODE_REPOSITORY what do you want to set it to?
-Its current value is “JOOMLA:3.9.22” press <enter> to retain, anything else to override
-JOOMLA:4.0.4
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="s3_access_key">S3_ACCESS_KEY</h3>
-<h3 id="s3_secret_key">S3_SECRET_KEY</h3>
-
-<p>These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting.</p>
-
-<p>You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:</p>
-
-<h5 id="digital-ocean---login-to-your-digital-ocean-account-and-go-to-the-api-submenu-on-the-left-bottom-and-generate-digital-ocean-spaces-keys-this-will-give-you-an-access-key-which-you-can-paste-into-your-template-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key">digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate “Digital Ocean Spaces Keys”. This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY</h5>
-
-<h5 id="exoscale---login-to-your-exoscale-account-and-go-to-the-iam-menu-on-the-right-and-generate-a-pair-of-api-keys-which-have-access-to-object-storage-capabilities-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-which-you-can-post-into-your-template">exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.</h5>
-
-<h5 id="linode---login-to-your-linode-account-and-go-to-the-object-storage-menu-on-the-right-then-select-the-access-key-menu-and-select-create-an-access-key-and-that-will-generate-an-access-key-and-a-secret-key-which-you-can-copy-into-your-template-as-s3_access_key-and-s3_secret_key">linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select “Create an Access Key” and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.</h5>
-
-<h5 id="vultr---you-need-to-subscribe-to-s3-object-storage-and-this-will-grant-you-a-pair-of-s3-access-keys-which-you-can-copy-and-paste-into-your-template">vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template.</h5>
-
-<h5 id="aws---under-your-iam-user-create-a-pair-of-keys-which-have-s3-manipulation-capabilities-and-paste-them-into-your-template-as-s3_access_key-and-s3_secret_key">AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY</h5>
-
-<hr />
-<p>Found a variable S3_ACCESS_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-AAAA
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="s3_secret_key-1">S3_SECRET_KEY</h3>
-
-<p>These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting.</p>
-
-<p>You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:</p>
-
-<h5 id="digital-ocean---login-to-your-digital-ocean-account-and-go-to-the-api-submenu-on-the-left-bottom-and-generate-digital-ocean-spaces-keys-this-will-give-you-an-access-key-which-you-can-paste-into-your-template-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-1">digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate “Digital Ocean Spaces Keys”. This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY</h5>
-
-<h5 id="exoscale---login-to-your-exoscale-account-and-go-to-the-iam-menu-on-the-right-and-generate-a-pair-of-api-keys-which-have-access-to-object-storage-capabilities-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-which-you-can-post-into-your-template-1">exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.</h5>
-
-<h5 id="linode---login-to-your-linode-account-and-go-to-the-object-storage-menu-on-the-right-then-select-the-access-key-menu-and-select-create-an-access-key-and-that-will-generate-an-access-key-and-a-secret-key-which-you-can-copy-into-your-template-as-s3_access_key-and-s3_secret_key-1">linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select “Create an Access Key” and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.</h5>
-
-<h5 id="vultr---you-need-to-subscribe-to-s3-object-storage-and-this-will-grant-you-a-pair-of-s3-access-keys-which-you-can-copy-and-paste-into-your-template-1">vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template.</h5>
-
-<h5 id="aws---under-your-iam-user-create-a-pair-of-keys-which-have-s3-manipulation-capabilities-and-paste-them-into-your-template-as-s3_access_key-and-s3_secret_key-1">AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY</h5>
-
-<hr />
-<p>Found a variable S3_SECRET_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-BBBB
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="s3_host_base">S3_HOST_BASE</h3>
-
-<p>This parameter is the S3 endpoint for your deployment. It should be located as near as possible to where (in the world) you plan to run your VPS systems.</p>
-
-<h5 id="digital-ocean---available-endpoints-to-choose-from-2020---nyc3digitaloceanspacescom-ams3digitaloceanspacescom-sfo2digitaloceanspacescom-sgp1digitaloceanspacescom-fra1digitaloceanspacescom">digital ocean - Available endpoints to choose from (2020) - nyc3.digitaloceanspaces.com, ams3.digitaloceanspaces.com, sfo2.digitaloceanspaces.com, sgp1.digitaloceanspaces.com, fra1.digitaloceanspaces.com</h5>
-
-<h5 id="exoscale---available-endpoints-to-choose-from-2020---sos-ch-gva-2exoio-sos-ch-dk-2exoio-sos-de-fra-1exoio-sos-de-muc-1exoio-sos-at-vie-1exoio-sos-bg-sof-1">exoscale - Available endpoints to choose from (2020) - sos-ch-gva-2.exo.io, sos-ch-dk-2.exo.io, sos-de-fra-1.exo.io, sos-de-muc-1.exo.io, sos-at-vie-1.exo.io, sos-bg-sof-1</h5>
-
-<h5 id="linode---available-endpoints-to-choose-from-2020---us-east-1linodeobjectscom-eu-central-1linodeobjectscom-ap-south-1linodeobjectscom">linode - Available endpoints to choose from (2020) - us-east-1.linodeobjects.com, eu-central-1.linodeobjects.com, ap-south-1.linodeobjects.com</h5>
-
-<h5 id="vultr---available-endpints-to-choose-from-2020---ewr1vultrobjectscom">vultr - Available endpints to choose from (2020) - ewr1.vultrobjects.com,</h5>
-
-<h5 id="amazon---there-are-lots-of-s3-endpoints-to-choose-from-for-amazon-your-s3-endpoint-should-be-region-specific-for-example-if-you-are-in-eu-west-1-in-would-be-s3eu-west-1amazonawscom">Amazon - There are lots of S3 endpoints to choose from for Amazon. Your S3 endpoint should be region specific. For example if you are in eu-west-1 in would be, s3.eu-west-1.amazonaws.com</h5>
-
-<p>You can set your ${S3_HOST_BASE} parameter in your template to one of these listed endpoints depending on who your object storage is hosted with (which will likely be the ssame provider as your VPS systems).</p>
-
-<hr />
-<p>Found a variable S3_HOST_BASE what do you want to set it to?
-Its current value is “sos-ch-gva-2.exo.io” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="access_key">ACCESS_KEY</h3>
-<h3 id="secret_key">SECRET_KEY</h3>
-
-<p>Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively</p>
-
-<h5 id="digital-ocean---does-not-use-access-keys-and-secret-keys-see-token">digital ocean - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="exoscale---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys">exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<h5 id="linode---does-not-use-access-keys-and-secret-keys-see-token">linode - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="vultr---does-not-use-access-keys-and-secret-keys-see-token">Vultr - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="aws---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys">AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<hr />
-<p>Found a variable ACCESS_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-XXXX
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="secret_key-1">SECRET_KEY</h3>
-
-<p>Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively</p>
-
-<h5 id="digital-ocean---does-not-use-access-keys-and-secret-keys-see-token-1">digital ocean - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="exoscale---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys-1">exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<h5 id="linode---does-not-use-access-keys-and-secret-keys-see-token-1">linode - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="vultr---does-not-use-access-keys-and-secret-keys-see-token-1">Vultr - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="aws---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys-1">AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<hr />
-<p>Found a variable SECRET_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-YYYY
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="dns_username">DNS_USERNAME</h3>
-
-<p>This will be the username for your DNS service provider</p>
-
-<h5 id="cloudflare---the-emal-address-of-username-of-your-cloudflare-account">cloudflare - the emal address of username of your cloudflare account</h5>
-
-<h5 id="digitalocean---your-digital-ocean-account-email-address">digitalocean - your digital ocean account email address</h5>
-
-<h5 id="exoscale---your-exoscale-account-email-address">exoscale - your exoscale account email address</h5>
-
-<h5 id="linode---your-linode-account-email-address">linode - your linode account email address</h5>
-
-<h5 id="vultr---your-vultr-account-email-address">vultr - your vultr account email address</h5>
-
-<hr />
-<p>Found a variable DNS_USERNAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-testemail@testemail.com
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="dns_security_key">DNS_SECURITY_KEY</h3>
-
-<p>This is the security key which will enable us to manipulate records as needed with your DNS provider. You can find this key as follows for each provider:</p>
-
-<h5 id="cloudflare---ths-is-the-global-api-key-for-your-cloudflare-account-which-you-can-find-by-clicking-on-your-profile-at-the-top-right-of-the-screen">cloudflare - Ths is the Global API key for your cloudflare account which you can find by clicking on your profile at the top right of the screen</h5>
-
-<h5 id="digital-ocean---the-access-token-for-your-digital-ocean-account-can-be-the-same-as-token">digital ocean - The access token for your digital ocean account, (can be the same as TOKEN)</h5>
-
-<h5 id="exoscale----the-access-key-and-secret-key-for-your-exoscale-account-you-need-to-enter-this-as-access_keysecret_key-you-can-use-the-same-access-key-and-secret-key-as-your-main-account-or-you-can-create-separate-ones-with-only-dns-manipulation-rights">exoscale  - The access key and secret key for your exoscale account. You need to enter this as ${ACCESS_KEY}:${SECRET_KEY}. You can use the same access key and secret key as your main account or you can create separate ones with only DNS manipulation rights.</h5>
-
-<h5 id="linode---a-personal-access-token-with-dns-manipulation-rights-can-be-the-same-value-as-token">linode - A personal access token with DNS manipulation rights (can be the same value as TOKEN)</h5>
-
-<h5 id="vultr---a-personal-access-token-with-dns-manipulation-rights-can-be-the-same-as-token">Vultr - A personal access token with DNS manipulation rights (can be the same as TOKEN)</h5>
-
-<hr />
-<p>Found a variable DNS_SECURITY_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-CCCC:DDDD
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="dns_choice">DNS_CHOICE</h3>
-
-<p>This can be set to one of these values</p>
-
-<h5 id="cloudflare">“cloudflare”</h5>
-<h5 id="digitalocean">“digitalocean”</h5>
-<h5 id="exoscale">“exoscale”</h5>
-<h5 id="linode">“linode”</h5>
-<h5 id="vultr">“vultr”</h5>
-
-<p>It defines which of the (supported) DNS service you would like to use with your deployment.</p>
-
-<hr />
-<p>Found a variable DNS_CHOICE what do you want to set it to?
-Its current value is “exoscale” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-Found a variable CLOUDHOST_EMAIL_ADDRESS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-testemail@testemail.com
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="buildos">BUILDOS</h3>
-
-<p>This is the BUILDOS you wish to use for your servers, it can be one of “ubutnu” or “debian”</p>
-
-<hr />
-<p>Found a variable BUILDOS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-debian
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="buildos_version">BUILDOS_VERSION</h3>
-
-<p>This is the BUILDOS_VERSION you are deploying for this can be “20.04” or “22.04” if BUILDOS is “ubuntu” and “10” or “11” if BUILDOS is “debian”</p>
-
-<hr />
-<p>Found a variable BUILDOS_VERSION what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-11
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="default_user">DEFAULT_USER</h3>
-
-<p>When you deploy to exoscale, the default user should be set to “ubuntu” if you are deploying Ubuntu and “debian” if you are deploying to Debian.
-When you deploy to AWS, the default user should be set to “ubuntu” if you are deploying Ubuntu and “admin” if you are deploying to Debian.
-For all other cases, the DEFAULT_USER should be set to “root”</p>
-
-<hr />
-<p>Found a variable DEFAULT_USER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-debian
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="build_identifier">BUILD_IDENTIFIER</h3>
-
-<p>This is a unique string to describe your build. If you have multiple builds that you want to give similar names you should call them, for example, “1-testbuild” or “2-testbuild” or “3-testbuild$</p>
-
-<hr />
-<p>Found a variable BUILD_IDENTIFIER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-nuocial
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="website_display_name">WEBSITE_DISPLAY_NAME</h3>
-
-<p>This is simply the display name of your application, for example, “My Social Network”, or “My Blog” and so on. It should be descriptive of your website and likely will be similar to the core part of the WEBSITE_URL described below</p>
-
-<hr />
-<p>Found a variable WEBSITE_DISPLAY_NAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-Test Social Network
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="website_name">WEBSITE_NAME</h3>
-
-<p>This HAS to be exactly the same of the core part of the URL name of your website. So, if your website is called www.nuocial.org.uk, then, this value MUST be “nuocial”</p>
-
-<hr />
-<p>Found a variable WEBSITE_NAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-testsocialnetwork
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="website_url">WEBSITE_URL</h3>
-
-<p>This is the URL of your website. It can be any valid URL</p>
-
-<hr />
-<p>Found a variable WEBSITE_URL what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-www.testsocialnetwork.org.uk
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_provider">APPLICATION_REPOSITORY_PROVIDER</h3>
-
-<p>This is the git service provider where your application repositories are hosted. It has to be one of “github”, “bitbucket” or “gitlab”. If you fill this variable with one of those three exact strings, then, that will tell us who your application code is hosted with. It may or may not be hosted with the same provider as the infrastructure code for the agile deployment toolkit</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_PROVIDER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-github
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_owner">APPLICATION_REPOSITORY_OWNER</h3>
-
-<p>This is the username of the user who owns (or created) your application repositories with your chosen git service provider</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_OWNER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-adt-demos
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_username">APPLICATION_REPOSITORY_USERNAME</h3>
-
-<p>This is the username of the user that you are currently using to access the application repositories. For example, the repositories might be owned by userA and are kept private but, userB is granted access. In this case the APPLICATION_REPOSITORY_OWNER would be userA and the APPLICATION_REPOSITORY_USERNAME would be userB. If you are the application repository owner, then this username and the owner name above will be the same.</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_USERNAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-adt-demos
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_password">APPLICATION_REPOSITORY_PASSWORD</h3>
-
-<p>This is the password for the APPLICATION_REPOSITORY_USERNAME or the application repository user. This is the password for your user account with your git provider. If the application repositories are public (be careful not to expose sensitive credentials if you make your application repos public), then a password is not needed in which case this value must be precisely written or set to <strong>“none”</strong></p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_PASSWORD what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_token">APPLICATION_REPOSITORY_TOKEN</h3>
-
-<p>Github and Gitlab prefer personal access tokens to passwords, so, if you wish to, you can generate personal access tokens at:</p>
-
-<p>Github: www.github.com/settings/tokens
-Gitlab: www.gitlab.com/profile/personal_access_tokens</p>
-
-<p>Make sure these tokens have the rights to create and destroy repositories as well as to read and write from them. Most likely, you want to have a separate git provider account for your associated deployments. This will override APPLICATION_REPOSITORY_PASSWORD</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_TOKEN what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-KKKKK
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_email_provider">SYSTEM_EMAIL_PROVIDER</h3>
-
-<p>At the moment, there are three SMTP email service providers. Enter the number value, “1”, “2” or “3” to select which provider you want to use for your SMTP service. If you leave these variables blank, you simply won’t receive any system emails to give status updated on build progression, server intialisations and so on. You are free to leave these variables blank, as you choose.</p>
-
-<p>Enter “1” - Sendpulse (www.sendpulse.com)
-Enter “2” - Google (gmail)
-Enter “3” - AWS SES</p>
-
-<hr />
-<p>Found a variable SYSTEM_EMAIL_PROVIDER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_toemail_address">SYSTEM_TOEMAIL_ADDRESS</h3>
-
-<p>The email address that system emails will be sent to this can be any email address that you have access to. MAYBE, the emails get marked as spam depending on your provider. If you take them out of the spam folder, then, the system should learn they are not spam. Most likely you will want to have a dedicated email address for your system emails for your deployed application as they will likely fill up your inbox otherwise.</p>
-
-<hr />
-<p>Found a variable SYSTEM_TOEMAIL_ADDRESS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_fromemail_address">SYSTEM_FROMEMAIL_ADDRESS</h3>
-
-<p>The email address that system emails will be sent from. This should be an email address that the system emails are sent from. In your SYSTEM_TOEMAIL_ADDRESS inbox, this will be the email address that the system messages are seen to be sent from or to have originated from.</p>
-
-<hr />
-<p>Found a variable SYSTEM_FROMEMAIL_ADDRESS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_email_username">SYSTEM_EMAIL_USERNAME</h3>
-
-<p>This is the username of your SMTP user. For Amazon SES, for example, this will be the username generated when you enable the SES service. This is the SMTP username.</p>
-
-<hr />
-<p>Found a variable SYSTEM_EMAIL_USERNAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_email_password">SYSTEM_EMAIL_PASSWORD</h3>
-
-<p>This is the password of your SMTP user. For Amazon SES, for example, this will be the password generated when you enable the SES service. This is the SMTP password.</p>
-
-<hr />
-<p>Found a variable SYSTEM_EMAIL_PASSWORD what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>###################################################################################################################################
-Do you want to review the rest of the variables that are being used or do you want to accept the default template values
-If you want to change machine sizes or regions for example, you need to change them here so that they override the templated values
-###################################################################################################################################
-Enter ‘y’ or ‘Y’ if you wish to review/override the rest of the variables used by this template, ‘N’ or ‘n’ will use the default settings
-N
-######################################################################################################################
-Cheers. Your configuration has been written to: /home/agile-deployer/new/agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl
-You should meticulously review this configuration file before deploying.
-You can edit and make changes to this configuration file as you desire but keep it with the same filename to deploy it
-######################################################################################################################
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# 
-exit
-Script done.
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# cat typescript
-Script started on 2021-12-05 23:21:38+00:00 [TERM=”xterm-256color” TTY=”/dev/pts/0” COLUMNS=”243” LINES=”60”]
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# sh GenerateOverrideTemplate.sh
-############################################################################################################
-WARNING: THERE IS NO SANITY CHECKING IF YOU USE THIS SCRIPT WHICH MEANS THAT IF YOU ENTER ANYTHING INCORRECT
-YOU WON’T FIND OUT ABOUT IT UNTIL YOU CONFIGURE A BUILD USING THE OUTPUT FROM THIS SCRIPT AND THE BUILD FAILS
-AT THE END, THIS SCRIPT WILL OUTPUT ITS CONFIGURATION AND YOU CAN TAKE A COPY OF THE OUTPUT AND STORE IT ON YOUR LAPTOP OR DESKTOP
-FOR USE IN CURRENT AND FUTURE DEPLOYMENTS
-BE AWARE THAT THE OUTPUT GENERATED WILL CONTAIN SENSITIVE INFORMATION WHICH YOU NEED TO KEEP SECURE
-############################################################################################################
-Press <enter> to continue</enter></p>
-
-<p>Which Cloudhost are you using? 1) Digital Ocean 2) Exoscale 3) Linode 4) Vultr 5)AWS. Please Enter the number for your cloudhost
-2
-Please tell us which template you wish to override</p>
-<ol>
-  <li>VIRGIN DEVELOPMENT MODE INSTALLATION OF JOOMLA, WORDPRESS, DRUPAL or MOODLE</li>
-  <li>BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION</li>
-  <li>TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
-Please input a number between 1 and 3 to select a template to override
-1
-###############################################################################
-YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
-###############################################################################
-Press <enter to="" begin=""></enter></li>
-</ol>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="joomla_version-1">JOOMLA_VERSION</h3>
-
-<p>If you are deploying a virgin joomla installation, you must give the version number of joomla that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.</p>
-
-<hr />
-<p>Found a variable JOOMLA_VERSION what do you want to set it to?
-Its current value is “3.9.22” press <enter> to retain, anything else to override
-4.0.4
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="drupal_version-1">DRUPAL_VERSION</h3>
-
-<p>If you are deploying a virgin drupal installation, you must give the version number of drupal that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.</p>
-
-<hr />
-<p>Found a variable DRUPAL_VERSION what do you want to set it to?
-Its current value is “9.2.1” press <enter> to retain, anything else to override
-N/A
-OK, thanks...</enter></p>
-
-<p>/bin/sed: -e expression #1, char 54: unknown option to <code class="language-plaintext highlighter-rouge">s'
-/bin/sed: -e expression #1, char 90: unknown option to </code>s’
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_baseline_sourcecode_repository-1">APPLICATION_BASELINE_SOURCECODE_REPOSITORY</h3>
-
-<p>If you are deploying a virgin application, you can set this to “JOOMLA:{latest_version}”, “WORDPRESS”, “DRUPAL:{latest_version}” or “MOODLE”</p>
-
-<hr />
-<p>Found a variable APPLICATION_BASELINE_SOURCECODE_REPOSITORY what do you want to set it to?
-Its current value is “JOOMLA:3.9.22” press <enter> to retain, anything else to override
-JOOMLA:4.0.4
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="s3_access_key-1">S3_ACCESS_KEY</h3>
-<h3 id="s3_secret_key-2">S3_SECRET_KEY</h3>
-
-<p>These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting.</p>
-
-<p>You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:</p>
-
-<h5 id="digital-ocean---login-to-your-digital-ocean-account-and-go-to-the-api-submenu-on-the-left-bottom-and-generate-digital-ocean-spaces-keys-this-will-give-you-an-access-key-which-you-can-paste-into-your-template-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-2">digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate “Digital Ocean Spaces Keys”. This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY</h5>
-
-<h5 id="exoscale---login-to-your-exoscale-account-and-go-to-the-iam-menu-on-the-right-and-generate-a-pair-of-api-keys-which-have-access-to-object-storage-capabilities-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-which-you-can-post-into-your-template-2">exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.</h5>
-
-<h5 id="linode---login-to-your-linode-account-and-go-to-the-object-storage-menu-on-the-right-then-select-the-access-key-menu-and-select-create-an-access-key-and-that-will-generate-an-access-key-and-a-secret-key-which-you-can-copy-into-your-template-as-s3_access_key-and-s3_secret_key-2">linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select “Create an Access Key” and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.</h5>
-
-<h5 id="vultr---you-need-to-subscribe-to-s3-object-storage-and-this-will-grant-you-a-pair-of-s3-access-keys-which-you-can-copy-and-paste-into-your-template-2">vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template.</h5>
-
-<h5 id="aws---under-your-iam-user-create-a-pair-of-keys-which-have-s3-manipulation-capabilities-and-paste-them-into-your-template-as-s3_access_key-and-s3_secret_key-2">AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY</h5>
-
-<hr />
-<p>Found a variable S3_ACCESS_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-AAAA
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="s3_secret_key-3">S3_SECRET_KEY</h3>
-
-<p>These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting.</p>
-
-<p>You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:</p>
-
-<h5 id="digital-ocean---login-to-your-digital-ocean-account-and-go-to-the-api-submenu-on-the-left-bottom-and-generate-digital-ocean-spaces-keys-this-will-give-you-an-access-key-which-you-can-paste-into-your-template-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-3">digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate “Digital Ocean Spaces Keys”. This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY</h5>
-
-<h5 id="exoscale---login-to-your-exoscale-account-and-go-to-the-iam-menu-on-the-right-and-generate-a-pair-of-api-keys-which-have-access-to-object-storage-capabilities-the-first-key-is-the-s3_access_key-and-the-second-key-is-the-s3_secret_key-which-you-can-post-into-your-template-3">exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.</h5>
-
-<h5 id="linode---login-to-your-linode-account-and-go-to-the-object-storage-menu-on-the-right-then-select-the-access-key-menu-and-select-create-an-access-key-and-that-will-generate-an-access-key-and-a-secret-key-which-you-can-copy-into-your-template-as-s3_access_key-and-s3_secret_key-3">linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select “Create an Access Key” and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.</h5>
-
-<h5 id="vultr---you-need-to-subscribe-to-s3-object-storage-and-this-will-grant-you-a-pair-of-s3-access-keys-which-you-can-copy-and-paste-into-your-template-3">vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template.</h5>
-
-<h5 id="aws---under-your-iam-user-create-a-pair-of-keys-which-have-s3-manipulation-capabilities-and-paste-them-into-your-template-as-s3_access_key-and-s3_secret_key-3">AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY</h5>
-
-<hr />
-<p>Found a variable S3_SECRET_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-BBBB
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="s3_host_base-1">S3_HOST_BASE</h3>
-
-<p>This parameter is the S3 endpoint for your deployment. It should be located as near as possible to where (in the world) you plan to run your VPS systems.</p>
-
-<h5 id="digital-ocean---available-endpoints-to-choose-from-2020---nyc3digitaloceanspacescom-ams3digitaloceanspacescom-sfo2digitaloceanspacescom-sgp1digitaloceanspacescom-fra1digitaloceanspacescom-1">digital ocean - Available endpoints to choose from (2020) - nyc3.digitaloceanspaces.com, ams3.digitaloceanspaces.com, sfo2.digitaloceanspaces.com, sgp1.digitaloceanspaces.com, fra1.digitaloceanspaces.com</h5>
-
-<h5 id="exoscale---available-endpoints-to-choose-from-2020---sos-ch-gva-2exoio-sos-ch-dk-2exoio-sos-de-fra-1exoio-sos-de-muc-1exoio-sos-at-vie-1exoio-sos-bg-sof-1-1">exoscale - Available endpoints to choose from (2020) - sos-ch-gva-2.exo.io, sos-ch-dk-2.exo.io, sos-de-fra-1.exo.io, sos-de-muc-1.exo.io, sos-at-vie-1.exo.io, sos-bg-sof-1</h5>
-
-<h5 id="linode---available-endpoints-to-choose-from-2020---us-east-1linodeobjectscom-eu-central-1linodeobjectscom-ap-south-1linodeobjectscom-1">linode - Available endpoints to choose from (2020) - us-east-1.linodeobjects.com, eu-central-1.linodeobjects.com, ap-south-1.linodeobjects.com</h5>
-
-<h5 id="vultr---available-endpints-to-choose-from-2020---ewr1vultrobjectscom-1">vultr - Available endpints to choose from (2020) - ewr1.vultrobjects.com,</h5>
-
-<h5 id="amazon---there-are-lots-of-s3-endpoints-to-choose-from-for-amazon-your-s3-endpoint-should-be-region-specific-for-example-if-you-are-in-eu-west-1-in-would-be-s3eu-west-1amazonawscom-1">Amazon - There are lots of S3 endpoints to choose from for Amazon. Your S3 endpoint should be region specific. For example if you are in eu-west-1 in would be, s3.eu-west-1.amazonaws.com</h5>
-
-<p>You can set your ${S3_HOST_BASE} parameter in your template to one of these listed endpoints depending on who your object storage is hosted with (which will likely be the ssame provider as your VPS systems).</p>
-
-<hr />
-<p>Found a variable S3_HOST_BASE what do you want to set it to?
-Its current value is “sos-ch-gva-2.exo.io” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="access_key-1">ACCESS_KEY</h3>
-<h3 id="secret_key-2">SECRET_KEY</h3>
-
-<p>Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively</p>
-
-<h5 id="digital-ocean---does-not-use-access-keys-and-secret-keys-see-token-2">digital ocean - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="exoscale---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys-2">exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<h5 id="linode---does-not-use-access-keys-and-secret-keys-see-token-2">linode - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="vultr---does-not-use-access-keys-and-secret-keys-see-token-2">Vultr - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="aws---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys-2">AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<hr />
-<p>Found a variable ACCESS_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-XXXX
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="secret_key-3">SECRET_KEY</h3>
-
-<p>Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively</p>
-
-<h5 id="digital-ocean---does-not-use-access-keys-and-secret-keys-see-token-3">digital ocean - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="exoscale---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys-3">exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<h5 id="linode---does-not-use-access-keys-and-secret-keys-see-token-3">linode - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="vultr---does-not-use-access-keys-and-secret-keys-see-token-3">Vultr - Does not use access keys and secret keys, see TOKEN</h5>
-
-<h5 id="aws---you-can-generate-access-keys-and-secret-keys-to-control-access-to-your-compute-resources-note-this-is-distinct-from-the-object-storage-access-keys-3">AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys</h5>
-
-<hr />
-<p>Found a variable SECRET_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-YYYY
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="dns_username-1">DNS_USERNAME</h3>
-
-<p>This will be the username for your DNS service provider</p>
-
-<h5 id="cloudflare---the-emal-address-of-username-of-your-cloudflare-account-1">cloudflare - the emal address of username of your cloudflare account</h5>
-
-<h5 id="digitalocean---your-digital-ocean-account-email-address-1">digitalocean - your digital ocean account email address</h5>
-
-<h5 id="exoscale---your-exoscale-account-email-address-1">exoscale - your exoscale account email address</h5>
-
-<h5 id="linode---your-linode-account-email-address-1">linode - your linode account email address</h5>
-
-<h5 id="vultr---your-vultr-account-email-address-1">vultr - your vultr account email address</h5>
-
-<hr />
-<p>Found a variable DNS_USERNAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-testemail@testemail.com
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="dns_security_key-1">DNS_SECURITY_KEY</h3>
-
-<p>This is the security key which will enable us to manipulate records as needed with your DNS provider. You can find this key as follows for each provider:</p>
-
-<h5 id="cloudflare---ths-is-the-global-api-key-for-your-cloudflare-account-which-you-can-find-by-clicking-on-your-profile-at-the-top-right-of-the-screen-1">cloudflare - Ths is the Global API key for your cloudflare account which you can find by clicking on your profile at the top right of the screen</h5>
-
-<h5 id="digital-ocean---the-access-token-for-your-digital-ocean-account-can-be-the-same-as-token-1">digital ocean - The access token for your digital ocean account, (can be the same as TOKEN)</h5>
-
-<h5 id="exoscale----the-access-key-and-secret-key-for-your-exoscale-account-you-need-to-enter-this-as-access_keysecret_key-you-can-use-the-same-access-key-and-secret-key-as-your-main-account-or-you-can-create-separate-ones-with-only-dns-manipulation-rights-1">exoscale  - The access key and secret key for your exoscale account. You need to enter this as ${ACCESS_KEY}:${SECRET_KEY}. You can use the same access key and secret key as your main account or you can create separate ones with only DNS manipulation rights.</h5>
-
-<h5 id="linode---a-personal-access-token-with-dns-manipulation-rights-can-be-the-same-value-as-token-1">linode - A personal access token with DNS manipulation rights (can be the same value as TOKEN)</h5>
-
-<h5 id="vultr---a-personal-access-token-with-dns-manipulation-rights-can-be-the-same-as-token-1">Vultr - A personal access token with DNS manipulation rights (can be the same as TOKEN)</h5>
-
-<hr />
-<p>Found a variable DNS_SECURITY_KEY what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-CCCC:DDDD
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="dns_choice-1">DNS_CHOICE</h3>
-
-<p>This can be set to one of these values</p>
-
-<h5 id="cloudflare-1">“cloudflare”</h5>
-<h5 id="digitalocean-1">“digitalocean”</h5>
-<h5 id="exoscale-1">“exoscale”</h5>
-<h5 id="linode-1">“linode”</h5>
-<h5 id="vultr-1">“vultr”</h5>
-
-<p>It defines which of the (supported) DNS service you would like to use with your deployment.</p>
-
-<hr />
-<p>Found a variable DNS_CHOICE what do you want to set it to?
-Its current value is “exoscale” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-Found a variable CLOUDHOST_EMAIL_ADDRESS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-testemail@testemail.com
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="buildos-1">BUILDOS</h3>
-
-<p>This is the BUILDOS you wish to use for your servers, it can be one of “ubutnu” or “debian”</p>
-
-<hr />
-<p>Found a variable BUILDOS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-debian
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="buildos_version-1">BUILDOS_VERSION</h3>
-
-<p>This is the BUILDOS_VERSION you are deploying for this can be “20.04” or “22.04” if BUILDOS is “ubuntu” and “10” or “11” if BUILDOS is “debian”</p>
-
-<hr />
-<p>Found a variable BUILDOS_VERSION what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-11
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="default_user-1">DEFAULT_USER</h3>
-
-<p>When you deploy to exoscale, the default user should be set to “ubuntu” if you are deploying Ubuntu and “debian” if you are deploying to Debian.
-When you deploy to AWS, the default user should be set to “ubuntu” if you are deploying Ubuntu and “admin” if you are deploying to Debian.
-For all other cases, the DEFAULT_USER should be set to “root”</p>
-
-<hr />
-<p>Found a variable DEFAULT_USER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-debian
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="build_identifier-1">BUILD_IDENTIFIER</h3>
-
-<p>This is a unique string to describe your build. If you have multiple builds that you want to give similar names you should call them, for example, “1-testbuild” or “2-testbuild” or “3-testbuild$</p>
-
-<hr />
-<p>Found a variable BUILD_IDENTIFIER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-nuocial
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="website_display_name-1">WEBSITE_DISPLAY_NAME</h3>
-
-<p>This is simply the display name of your application, for example, “My Social Network”, or “My Blog” and so on. It should be descriptive of your website and likely will be similar to the core part of the WEBSITE_URL described below</p>
-
-<hr />
-<p>Found a variable WEBSITE_DISPLAY_NAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-Test Social Network
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="website_name-1">WEBSITE_NAME</h3>
-
-<p>This HAS to be exactly the same of the core part of the URL name of your website. So, if your website is called www.nuocial.org.uk, then, this value MUST be “nuocial”</p>
-
-<hr />
-<p>Found a variable WEBSITE_NAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-testsocialnetwork
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="website_url-1">WEBSITE_URL</h3>
-
-<p>This is the URL of your website. It can be any valid URL</p>
-
-<hr />
-<p>Found a variable WEBSITE_URL what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-www.testsocialnetwork.org.uk
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_provider-1">APPLICATION_REPOSITORY_PROVIDER</h3>
-
-<p>This is the git service provider where your application repositories are hosted. It has to be one of “github”, “bitbucket” or “gitlab”. If you fill this variable with one of those three exact strings, then, that will tell us who your application code is hosted with. It may or may not be hosted with the same provider as the infrastructure code for the agile deployment toolkit</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_PROVIDER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-github
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_owner-1">APPLICATION_REPOSITORY_OWNER</h3>
-
-<p>This is the username of the user who owns (or created) your application repositories with your chosen git service provider</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_OWNER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-adt-demos
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_username-1">APPLICATION_REPOSITORY_USERNAME</h3>
-
-<p>This is the username of the user that you are currently using to access the application repositories. For example, the repositories might be owned by userA and are kept private but, userB is granted access. In this case the APPLICATION_REPOSITORY_OWNER would be userA and the APPLICATION_REPOSITORY_USERNAME would be userB. If you are the application repository owner, then this username and the owner name above will be the same.</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_USERNAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-adt-demos
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_password-1">APPLICATION_REPOSITORY_PASSWORD</h3>
-
-<p>This is the password for the APPLICATION_REPOSITORY_USERNAME or the application repository user. This is the password for your user account with your git provider. If the application repositories are public (be careful not to expose sensitive credentials if you make your application repos public), then a password is not needed in which case this value must be precisely written or set to <strong>“none”</strong></p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_PASSWORD what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="application_repository_token-1">APPLICATION_REPOSITORY_TOKEN</h3>
-
-<p>Github and Gitlab prefer personal access tokens to passwords, so, if you wish to, you can generate personal access tokens at:</p>
-
-<p>Github: www.github.com/settings/tokens
-Gitlab: www.gitlab.com/profile/personal_access_tokens</p>
-
-<p>Make sure these tokens have the rights to create and destroy repositories as well as to read and write from them. Most likely, you want to have a separate git provider account for your associated deployments. This will override APPLICATION_REPOSITORY_PASSWORD</p>
-
-<hr />
-<p>Found a variable APPLICATION_REPOSITORY_TOKEN what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override
-KKKKK
-OK, thanks...</enter></p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_email_provider-1">SYSTEM_EMAIL_PROVIDER</h3>
-
-<p>At the moment, there are three SMTP email service providers. Enter the number value, “1”, “2” or “3” to select which provider you want to use for your SMTP service. If you leave these variables blank, you simply won’t receive any system emails to give status updated on build progression, server intialisations and so on. You are free to leave these variables blank, as you choose.</p>
-
-<p>Enter “1” - Sendpulse (www.sendpulse.com)
-Enter “2” - Google (gmail)
-Enter “3” - AWS SES</p>
-
-<hr />
-<p>Found a variable SYSTEM_EMAIL_PROVIDER what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_toemail_address-1">SYSTEM_TOEMAIL_ADDRESS</h3>
-
-<p>The email address that system emails will be sent to this can be any email address that you have access to. MAYBE, the emails get marked as spam depending on your provider. If you take them out of the spam folder, then, the system should learn they are not spam. Most likely you will want to have a dedicated email address for your system emails for your deployed application as they will likely fill up your inbox otherwise.</p>
-
-<hr />
-<p>Found a variable SYSTEM_TOEMAIL_ADDRESS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_fromemail_address-1">SYSTEM_FROMEMAIL_ADDRESS</h3>
-
-<p>The email address that system emails will be sent from. This should be an email address that the system emails are sent from. In your SYSTEM_TOEMAIL_ADDRESS inbox, this will be the email address that the system messages are seen to be sent from or to have originated from.</p>
-
-<hr />
-<p>Found a variable SYSTEM_FROMEMAIL_ADDRESS what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_email_username-1">SYSTEM_EMAIL_USERNAME</h3>
-
-<p>This is the username of your SMTP user. For Amazon SES, for example, this will be the username generated when you enable the SES service. This is the SMTP username.</p>
-
-<hr />
-<p>Found a variable SYSTEM_EMAIL_USERNAME what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################</p>
-<h3 id="system_email_password-1">SYSTEM_EMAIL_PASSWORD</h3>
-
-<p>This is the password of your SMTP user. For Amazon SES, for example, this will be the password generated when you enable the SES service. This is the SMTP password.</p>
-
-<hr />
-<p>Found a variable SYSTEM_EMAIL_PASSWORD what do you want to set it to?
-Its current value is “” press <enter> to retain, anything else to override</enter></p>
-
-<p>OK, thanks…</p>
-
-<p>###################################################################################################################################
-Do you want to review the rest of the variables that are being used or do you want to accept the default template values
-If you want to change machine sizes or regions for example, you need to change them here so that they override the templated values
-###################################################################################################################################
-Enter ‘y’ or ‘Y’ if you wish to review/override the rest of the variables used by this template, ‘N’ or ‘n’ will use the default settings
-N
-######################################################################################################################
-Cheers. Your configuration has been written to: /home/agile-deployer/new/agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl
-You should meticulously review this configuration file before deploying.
-You can edit and make changes to this configuration file as you desire but keep it with the same filename to deploy it
-######################################################################################################################
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# 
-exit</p>
-
-<p>Script done on 2021-12-05 23:26:37+00:00 [COMMAND_EXIT_CODE=”0”]
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# ls -l
-total 220
--rwx—— 1 root root  5394 Dec  5 21:39 AdjustScaling.sh
--rwx—— 1 root root  2977 Dec  5 20:54 CleanBuildMachineBackups.sh
--rwx—— 1 root root  5217 Dec  5 20:54 ConnectToAutoscaler.sh
--rwx—— 1 root root  5030 Dec  5 20:54 ConnectToDB.sh
--rwx—— 1 root root  5161 Dec  5 20:54 ConnectToWebserver.sh
--rwx—— 1 root root  5018 Dec  5 20:54 CopyToAutoscaler.sh
--rwx—— 1 root root  5632 Dec  5 20:54 CopyToDatabase.sh
--rwx—— 1 root root  5701 Dec  5 20:54 CopyToWebserver.sh
--rwx—— 1 root root  5396 Dec  5 20:54 ExecuteOnAutoscaler.sh
--rwx—— 1 root root  5292 Dec  5 20:54 ExecuteOnDatabase.sh
--rwx—— 1 root root  5354 Dec  5 20:54 ExecuteOnWebserver.sh
--rwx—— 1 root root  3925 Dec  5 20:54 GenerateHardcoreUserDataScript.sh
--rwx—— 1 root root 10794 Dec  5 20:54 GenerateOverrideTemplate.sh
--rwx—— 1 root root  3746 Dec  5 20:54 ManuallyUpdateSSLCertificate.sh
--rwx—— 1 root root  2598 Dec  5 20:54 MonitorWebserver.sh
--rwx—— 1 root root  1730 Dec  5 20:54 ObtainGatewayGuardianPasswords.sh
--rwx—— 1 root root 11968 Dec  5 20:54 PerformDatabaseBackup.sh
--rwx—— 1 root root  9073 Dec  5 20:54 PerformDatabaseBaseline.sh
--rwx—— 1 root root 12346 Dec  5 20:54 PerformWebsiteBackup.sh
--rwx—— 1 root root  9472 Dec  5 20:54 PerformWebsiteBaseline.sh
--rwx—— 1 root root  1869 Dec  5 20:54 README
--rwx—— 1 root root  5449 Dec  5 20:54 RebootInfrastructure.sh
--rwx—— 1 root root  2637 Dec  5 20:54 ResetBuildKit.sh
--rwx—— 1 root root  7859 Dec  5 20:54 ShutdownInfrastructure.sh
--rw-r–r– 1 root root 29583 Dec  5 23:26 typescript
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# cp type* 1
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# vi 1
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# sed ‘s/^/&gt;     /g’ 1</p>
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Script started on 2021-12-05 23:21:38+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="243" LINES="60"]
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# sh GenerateOverrideTemplate.sh ############################################################################################################
-WARNING: THERE IS NO SANITY CHECKING IF YOU USE THIS SCRIPT WHICH MEANS THAT IF YOU ENTER ANYTHING INCORRECT
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WARNING: THERE IS NO SANITY CHECKING IF YOU USE THIS SCRIPT WHICH MEANS THAT IF YOU ENTER ANYTHING INCORRECT
 YOU WON'T FIND OUT ABOUT IT UNTIL YOU CONFIGURE A BUILD USING THE OUTPUT FROM THIS SCRIPT AND THE BUILD FAILS
 AT THE END, THIS SCRIPT WILL OUTPUT ITS CONFIGURATION AND YOU CAN TAKE A COPY OF THE OUTPUT AND STORE IT ON YOUR LAPTOP OR DESKTOP
 FOR USE IN CURRENT AND FUTURE DEPLOYMENTS
 BE AWARE THAT THE OUTPUT GENERATED WILL CONTAIN SENSITIVE INFORMATION WHICH YOU NEED TO KEEP SECURE
-############################################################################################################
+
 Press &lt;enter&gt; to continue
 
 Which Cloudhost are you using? 1) Digital Ocean 2) Exoscale 3) Linode 4) Vultr 5)AWS. Please Enter the number for your cloudhost
-2
+##2
 Please tell us which template you wish to override
 1.                   VIRGIN DEVELOPMENT MODE INSTALLATION OF JOOMLA, WORDPRESS, DRUPAL or MOODLE
 2.                   BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
 3.                   TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
 Please input a number between 1 and 3 to select a template to override
 1
-###############################################################################
+#
 YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
-###############################################################################
+#
 Press &lt;enter to begin&gt;
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### JOOMLA_VERSION
+###########################################################################
+ JOOMLA_VERSION
 
 If you are deploying a virgin joomla installation, you must give the version number of joomla that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.
 
@@ -1306,10 +253,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### DRUPAL_VERSION
+###########################################################################
+ DRUPAL_VERSION
 
 If you are deploying a virgin drupal installation, you must give the version number of drupal that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.
 
@@ -1322,12 +269,10 @@ OK, thanks...
 
 
 
-/bin/sed: -e expression #1, char 54: unknown option to `s'
-/bin/sed: -e expression #1, char 90: unknown option to `s'
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_BASELINE_SOURCECODE_REPOSITORY
+###########################################################################
+ APPLICATION_BASELINE_SOURCECODE_REPOSITORY
 
 If you are deploying a virgin application, you can set this to "JOOMLA:{latest_version}", "WORDPRESS", "DRUPAL:{latest_version}" or "MOODLE"
 
@@ -1340,25 +285,25 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### S3_ACCESS_KEY 
-### S3_SECRET_KEY
+###########################################################################
+ S3_ACCESS_KEY 
+ S3_SECRET_KEY
 
 These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting. 
 
 You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
 
-##### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
+########################################################################### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
 
-##### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
+########################################################################### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
 
-##### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
+########################################################################### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
 
-##### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
+########################################################################### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
 
-##### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
+########################################################################### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
 
 -----
 Found a variable S3_ACCESS_KEY what do you want to set it to?
@@ -1369,24 +314,24 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### S3_SECRET_KEY
+###########################################################################
+ S3_SECRET_KEY
 
 These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting. 
 
 You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
 
-##### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
+########################################################################### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
 
-##### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
+########################################################################### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
 
-##### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
+########################################################################### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
 
-##### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
+########################################################################### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
 
-##### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
+########################################################################### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
 
 -----
 Found a variable S3_SECRET_KEY what do you want to set it to?
@@ -1397,22 +342,22 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### S3_HOST_BASE 
+###########################################################################
+ S3_HOST_BASE 
 
 This parameter is the S3 endpoint for your deployment. It should be located as near as possible to where (in the world) you plan to run your VPS systems.
 
-##### digital ocean - Available endpoints to choose from (2020) - nyc3.digitaloceanspaces.com, ams3.digitaloceanspaces.com, sfo2.digitaloceanspaces.com, sgp1.digitaloceanspaces.com, fra1.digitaloceanspaces.com
+########################################################################### digital ocean - Available endpoints to choose from (2020) - nyc3.digitaloceanspaces.com, ams3.digitaloceanspaces.com, sfo2.digitaloceanspaces.com, sgp1.digitaloceanspaces.com, fra1.digitaloceanspaces.com
 
-##### exoscale - Available endpoints to choose from (2020) - sos-ch-gva-2.exo.io, sos-ch-dk-2.exo.io, sos-de-fra-1.exo.io, sos-de-muc-1.exo.io, sos-at-vie-1.exo.io, sos-bg-sof-1
+########################################################################### exoscale - Available endpoints to choose from (2020) - sos-ch-gva-2.exo.io, sos-ch-dk-2.exo.io, sos-de-fra-1.exo.io, sos-de-muc-1.exo.io, sos-at-vie-1.exo.io, sos-bg-sof-1
 
-##### linode - Available endpoints to choose from (2020) - us-east-1.linodeobjects.com, eu-central-1.linodeobjects.com, ap-south-1.linodeobjects.com
+########################################################################### linode - Available endpoints to choose from (2020) - us-east-1.linodeobjects.com, eu-central-1.linodeobjects.com, ap-south-1.linodeobjects.com
 
-##### vultr - Available endpints to choose from (2020) - ewr1.vultrobjects.com, 
+########################################################################### vultr - Available endpints to choose from (2020) - ewr1.vultrobjects.com, 
 
-##### Amazon - There are lots of S3 endpoints to choose from for Amazon. Your S3 endpoint should be region specific. For example if you are in eu-west-1 in would be, s3.eu-west-1.amazonaws.com
+########################################################################### Amazon - There are lots of S3 endpoints to choose from for Amazon. Your S3 endpoint should be region specific. For example if you are in eu-west-1 in would be, s3.eu-west-1.amazonaws.com
 
 You can set your ${S3_HOST_BASE} parameter in your template to one of these listed endpoints depending on who your object storage is hosted with (which will likely be the ssame provider as your VPS systems). 
 
@@ -1425,23 +370,23 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### ACCESS_KEY
-### SECRET_KEY
+###########################################################################
+ ACCESS_KEY
+ SECRET_KEY
 
 Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively
 
-##### digital ocean - Does not use access keys and secret keys, see TOKEN
+########################################################################### digital ocean - Does not use access keys and secret keys, see TOKEN
 
-##### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
+########################################################################### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
 
-##### linode - Does not use access keys and secret keys, see TOKEN
+########################################################################### linode - Does not use access keys and secret keys, see TOKEN
 
-##### Vultr - Does not use access keys and secret keys, see TOKEN
+########################################################################### Vultr - Does not use access keys and secret keys, see TOKEN
 
-##### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
+########################################################################### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
 
 -----
 Found a variable ACCESS_KEY what do you want to set it to?
@@ -1452,22 +397,22 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### SECRET_KEY
+###########################################################################
+ SECRET_KEY
 
 Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively
 
-##### digital ocean - Does not use access keys and secret keys, see TOKEN
+########################################################################### digital ocean - Does not use access keys and secret keys, see TOKEN
 
-##### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
+########################################################################### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
 
-##### linode - Does not use access keys and secret keys, see TOKEN
+########################################################################### linode - Does not use access keys and secret keys, see TOKEN
 
-##### Vultr - Does not use access keys and secret keys, see TOKEN
+########################################################################### Vultr - Does not use access keys and secret keys, see TOKEN
 
-##### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
+########################################################################### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
 
 -----
 Found a variable SECRET_KEY what do you want to set it to?
@@ -1478,22 +423,22 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### DNS_USERNAME
+###########################################################################
+ DNS_USERNAME
 
 This will be the username for your DNS service provider
 
-##### cloudflare - the emal address of username of your cloudflare account
+########################################################################### cloudflare - the emal address of username of your cloudflare account
 
-##### digitalocean - your digital ocean account email address
+########################################################################### digitalocean - your digital ocean account email address
 
-##### exoscale - your exoscale account email address
+########################################################################### exoscale - your exoscale account email address
 
-##### linode - your linode account email address
+########################################################################### linode - your linode account email address
 
-##### vultr - your vultr account email address
+########################################################################### vultr - your vultr account email address
 
 -----
 Found a variable DNS_USERNAME what do you want to set it to?
@@ -1504,23 +449,24 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### DNS_SECURITY_KEY 
+###########################################################################
+ DNS_SECURITY_KEY 
 
 This is the security key which will enable us to manipulate records as needed with your DNS provider. You can find this key as follows for each provider:
 
-##### cloudflare - Ths is the Global API key for your cloudflare account which you can find by clicking on your profile at the top right of the screen
+########################################################################### 
+cloudflare - Ths is the Global API key for your cloudflare account which you can find by clicking on your profile at the top right of the screen
 
-##### digital ocean - The access token for your digital ocean account, (can be the same as TOKEN)
+digital ocean - The access token for your digital ocean account, (can be the same as TOKEN)
 
-##### exoscale  - The access key and secret key for your exoscale account. You need to enter this as ${ACCESS_KEY}:${SECRET_KEY}. You can use the same access key and secret key as your main account or you can create separate ones with only DNS manipulation rights. 
+exoscale  - The access key and secret key for your exoscale account. You need to enter this as ${ACCESS_KEY}:${SECRET_KEY}. You can use the same access key and secret key as your main account or you can create separate ones with only DNS manipulation rights. 
 
-##### linode - A personal access token with DNS manipulation rights (can be the same value as TOKEN)
+linode - A personal access token with DNS manipulation rights (can be the same value as TOKEN)
 
-##### Vultr - A personal access token with DNS manipulation rights (can be the same as TOKEN)
-
+Vultr - A personal access token with DNS manipulation rights (can be the same as TOKEN)
+########################################################################### 
 ------
 Found a variable DNS_SECURITY_KEY what do you want to set it to?
 Its current value is "" press &lt;enter&gt; to retain, anything else to override
@@ -1530,19 +476,20 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### DNS_CHOICE  
+###########################################################################
+ DNS_CHOICE  
 
 This can be set to one of these values 
 
-##### "cloudflare" 
-##### "digitalocean" 
-##### "exoscale"
-##### "linode"
-##### "vultr"
-
+########################################################################### 
+"cloudflare" 
+"digitalocean" 
+"exoscale"
+"linode"
+ "vultr"
+############################################################################
 It defines which of the (supported) DNS service you would like to use with your deployment.
 
 ---------------
@@ -1554,9 +501,9 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
+###########################################################################
 Found a variable CLOUDHOST_EMAIL_ADDRESS what do you want to set it to?
 Its current value is "" press &lt;enter&gt; to retain, anything else to override
 testemail@testemail.com
@@ -1565,10 +512,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### BUILDOS
+###########################################################################
+ BUILDOS
 
 This is the BUILDOS you wish to use for your servers, it can be one of "ubutnu" or "debian"
 
@@ -1581,10 +528,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### BUILDOS_VERSION
+###########################################################################
+ BUILDOS_VERSION
 
 This is the BUILDOS_VERSION you are deploying for this can be "20.04" or "22.04" if BUILDOS is "ubuntu" and "10" or "11" if BUILDOS is "debian"
 
@@ -1597,10 +544,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### DEFAULT_USER
+###########################################################################
+ DEFAULT_USER
 
 When you deploy to exoscale, the default user should be set to "ubuntu" if you are deploying Ubuntu and "debian" if you are deploying to Debian.
 When you deploy to AWS, the default user should be set to "ubuntu" if you are deploying Ubuntu and "admin" if you are deploying to Debian.
@@ -1615,10 +562,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### BUILD_IDENTIFIER
+###########################################################################
+ BUILD_IDENTIFIER
 
 This is a unique string to describe your build. If you have multiple builds that you want to give similar names you should call them, for example, "1-testbuild" or "2-testbuild" or "3-testbuild$
 
@@ -1631,10 +578,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### WEBSITE_DISPLAY_NAME
+###########################################################################
+ WEBSITE_DISPLAY_NAME
 
 This is simply the display name of your application, for example, "My Social Network", or "My Blog" and so on. It should be descriptive of your website and likely will be similar to the core part of the WEBSITE_URL described below
 
@@ -1647,10 +594,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### WEBSITE_NAME
+###########################################################################
+ WEBSITE_NAME
 
 This HAS to be exactly the same of the core part of the URL name of your website. So, if your website is called www.nuocial.org.uk, then, this value MUST be "nuocial"
 
@@ -1663,10 +610,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### WEBSITE_URL
+###########################################################################
+ WEBSITE_URL
 
 This is the URL of your website. It can be any valid URL
 
@@ -1679,10 +626,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_PROVIDER
+###########################################################################
+ APPLICATION_REPOSITORY_PROVIDER
 
 This is the git service provider where your application repositories are hosted. It has to be one of "github", "bitbucket" or "gitlab". If you fill this variable with one of those three exact strings, then, that will tell us who your application code is hosted with. It may or may not be hosted with the same provider as the infrastructure code for the agile deployment toolkit
 
@@ -1695,10 +642,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_OWNER
+###########################################################################
+ APPLICATION_REPOSITORY_OWNER
 
 This is the username of the user who owns (or created) your application repositories with your chosen git service provider
 
@@ -1711,10 +658,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_USERNAME
+###########################################################################
+ APPLICATION_REPOSITORY_USERNAME
 
 This is the username of the user that you are currently using to access the application repositories. For example, the repositories might be owned by userA and are kept private but, userB is granted access. In this case the APPLICATION_REPOSITORY_OWNER would be userA and the APPLICATION_REPOSITORY_USERNAME would be userB. If you are the application repository owner, then this username and the owner name above will be the same.
 
@@ -1727,10 +674,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_PASSWORD  
+###########################################################################
+ APPLICATION_REPOSITORY_PASSWORD  
 
 This is the password for the APPLICATION_REPOSITORY_USERNAME or the application repository user. This is the password for your user account with your git provider. If the application repositories are public (be careful not to expose sensitive credentials if you make your application repos public), then a password is not needed in which case this value must be precisely written or set to **"none"**
 
@@ -1743,10 +690,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_TOKEN
+###########################################################################
+ APPLICATION_REPOSITORY_TOKEN
 
 Github and Gitlab prefer personal access tokens to passwords, so, if you wish to, you can generate personal access tokens at:
 
@@ -1764,10 +711,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_EMAIL_PROVIDER
+###########################################################################
+ SYSTEM_EMAIL_PROVIDER
 
 At the moment, there are three SMTP email service providers. Enter the number value, "1", "2" or "3" to select which provider you want to use for your SMTP service. If you leave these variables blank, you simply won't receive any system emails to give status updated on build progression, server intialisations and so on. You are free to leave these variables blank, as you choose.
 
@@ -1784,10 +731,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_TOEMAIL_ADDRESS 
+###########################################################################
+ SYSTEM_TOEMAIL_ADDRESS 
 
 The email address that system emails will be sent to this can be any email address that you have access to. MAYBE, the emails get marked as spam depending on your provider. If you take them out of the spam folder, then, the system should learn they are not spam. Most likely you will want to have a dedicated email address for your system emails for your deployed application as they will likely fill up your inbox otherwise.
 
@@ -1800,10 +747,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_FROMEMAIL_ADDRESS
+###########################################################################
+ SYSTEM_FROMEMAIL_ADDRESS
 
 The email address that system emails will be sent from. This should be an email address that the system emails are sent from. In your SYSTEM_TOEMAIL_ADDRESS inbox, this will be the email address that the system messages are seen to be sent from or to have originated from.
 
@@ -1816,10 +763,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_EMAIL_USERNAME
+###########################################################################
+ SYSTEM_EMAIL_USERNAME
 
 This is the username of your SMTP user. For Amazon SES, for example, this will be the username generated when you enable the SES service. This is the SMTP username. 
 
@@ -1832,10 +779,10 @@ OK, thanks...
 
 
 
-############################################################################################
+###########################################################################
 Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_EMAIL_PASSWORD
+###########################################################################
+ SYSTEM_EMAIL_PASSWORD
 
 This is the password of your SMTP user. For Amazon SES, for example, this will be the password generated when you enable the SES service. This is the SMTP password. 
 
@@ -1848,613 +795,17 @@ OK, thanks...
 
 
 
-###################################################################################################################################
+###########################################################################
 Do you want to review the rest of the variables that are being used or do you want to accept the default template values
 If you want to change machine sizes or regions for example, you need to change them here so that they override the templated values
-###################################################################################################################################
+###########################################################################
 Enter 'y' or 'Y' if you wish to review/override the rest of the variables used by this template, 'N' or 'n' will use the default settings
 N
-######################################################################################################################
+#
 Cheers. Your configuration has been written to: /home/agile-deployer/new/agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl
 You should meticulously review this configuration file before deploying.
 You can edit and make changes to this configuration file as you desire but keep it with the same filename to deploy it
-######################################################################################################################
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# 
-exit
-
-Script done on 2021-12-05 23:26:37+00:00 [COMMAND_EXIT_CODE="0"] root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# sed 's/^/\&gt;     /g' 1 &gt; 2 root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# vi 2 root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# cat 2
-Script started on 2021-12-05 23:21:38+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="243" LINES="60"]
-root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# sh GenerateOverrideTemplate.sh ############################################################################################################
-WARNING: THERE IS NO SANITY CHECKING IF YOU USE THIS SCRIPT WHICH MEANS THAT IF YOU ENTER ANYTHING INCORRECT
-YOU WON'T FIND OUT ABOUT IT UNTIL YOU CONFIGURE A BUILD USING THE OUTPUT FROM THIS SCRIPT AND THE BUILD FAILS
-AT THE END, THIS SCRIPT WILL OUTPUT ITS CONFIGURATION AND YOU CAN TAKE A COPY OF THE OUTPUT AND STORE IT ON YOUR LAPTOP OR DESKTOP
-FOR USE IN CURRENT AND FUTURE DEPLOYMENTS
-BE AWARE THAT THE OUTPUT GENERATED WILL CONTAIN SENSITIVE INFORMATION WHICH YOU NEED TO KEEP SECURE
-############################################################################################################
-Press &lt;enter&gt; to continue
-
-Which Cloudhost are you using? 1) Digital Ocean 2) Exoscale 3) Linode 4) Vultr 5)AWS. Please Enter the number for your cloudhost
-2
-Please tell us which template you wish to override
-1.                   VIRGIN DEVELOPMENT MODE INSTALLATION OF JOOMLA, WORDPRESS, DRUPAL or MOODLE
-2.                   BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
-3.                   TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
-Please input a number between 1 and 3 to select a template to override
-1
-###############################################################################
-YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
-###############################################################################
-Press &lt;enter to begin&gt;
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### JOOMLA_VERSION
-
-If you are deploying a virgin joomla installation, you must give the version number of joomla that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.
-
----- 
-Found a variable JOOMLA_VERSION what do you want to set it to?
-Its current value is "3.9.22" press &lt;enter&gt; to retain, anything else to override
-4.0.4
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### DRUPAL_VERSION
-
-If you are deploying a virgin drupal installation, you must give the version number of drupal that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.
-
----- 
-Found a variable DRUPAL_VERSION what do you want to set it to?
-Its current value is "9.2.1" press &lt;enter&gt; to retain, anything else to override
-N/A
-OK, thanks...
-
-
-
-
-/bin/sed: -e expression #1, char 54: unknown option to `s'
-/bin/sed: -e expression #1, char 90: unknown option to `s'
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_BASELINE_SOURCECODE_REPOSITORY
-
-If you are deploying a virgin application, you can set this to "JOOMLA:{latest_version}", "WORDPRESS", "DRUPAL:{latest_version}" or "MOODLE"
-
------
-Found a variable APPLICATION_BASELINE_SOURCECODE_REPOSITORY what do you want to set it to?
-Its current value is "JOOMLA:3.9.22" press &lt;enter&gt; to retain, anything else to override
-JOOMLA:4.0.4
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### S3_ACCESS_KEY 
-### S3_SECRET_KEY
-
-These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting. 
-
-You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
-
-##### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
-
-##### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
-
-##### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
-
-##### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
-
-##### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
-
------
-Found a variable S3_ACCESS_KEY what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-AAAA
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### S3_SECRET_KEY
-
-These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting. 
-
-You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
-
-##### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
-
-##### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
-
-##### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
-
-##### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
-
-##### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
-
------
-Found a variable S3_SECRET_KEY what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-BBBB
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### S3_HOST_BASE 
-
-This parameter is the S3 endpoint for your deployment. It should be located as near as possible to where (in the world) you plan to run your VPS systems.
-
-##### digital ocean - Available endpoints to choose from (2020) - nyc3.digitaloceanspaces.com, ams3.digitaloceanspaces.com, sfo2.digitaloceanspaces.com, sgp1.digitaloceanspaces.com, fra1.digitaloceanspaces.com
-
-##### exoscale - Available endpoints to choose from (2020) - sos-ch-gva-2.exo.io, sos-ch-dk-2.exo.io, sos-de-fra-1.exo.io, sos-de-muc-1.exo.io, sos-at-vie-1.exo.io, sos-bg-sof-1
-
-##### linode - Available endpoints to choose from (2020) - us-east-1.linodeobjects.com, eu-central-1.linodeobjects.com, ap-south-1.linodeobjects.com
-
-##### vultr - Available endpints to choose from (2020) - ewr1.vultrobjects.com, 
-
-##### Amazon - There are lots of S3 endpoints to choose from for Amazon. Your S3 endpoint should be region specific. For example if you are in eu-west-1 in would be, s3.eu-west-1.amazonaws.com
-
-You can set your ${S3_HOST_BASE} parameter in your template to one of these listed endpoints depending on who your object storage is hosted with (which will likely be the ssame provider as your VPS systems). 
-
------
-Found a variable S3_HOST_BASE what do you want to set it to?
-Its current value is "sos-ch-gva-2.exo.io" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### ACCESS_KEY
-### SECRET_KEY
-
-Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively
-
-##### digital ocean - Does not use access keys and secret keys, see TOKEN
-
-##### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
-
-##### linode - Does not use access keys and secret keys, see TOKEN
-
-##### Vultr - Does not use access keys and secret keys, see TOKEN
-
-##### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
-
------
-Found a variable ACCESS_KEY what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-XXXX
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### SECRET_KEY
-
-Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively
-
-##### digital ocean - Does not use access keys and secret keys, see TOKEN
-
-##### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
-
-##### linode - Does not use access keys and secret keys, see TOKEN
-
-##### Vultr - Does not use access keys and secret keys, see TOKEN
-
-##### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
-
------
-Found a variable SECRET_KEY what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-YYYY
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### DNS_USERNAME
-
-This will be the username for your DNS service provider
-
-##### cloudflare - the emal address of username of your cloudflare account
-
-##### digitalocean - your digital ocean account email address
-
-##### exoscale - your exoscale account email address
-
-##### linode - your linode account email address
-
-##### vultr - your vultr account email address
-
------
-Found a variable DNS_USERNAME what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-testemail@testemail.com
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### DNS_SECURITY_KEY 
-
-This is the security key which will enable us to manipulate records as needed with your DNS provider. You can find this key as follows for each provider:
-
-##### cloudflare - Ths is the Global API key for your cloudflare account which you can find by clicking on your profile at the top right of the screen
-
-##### digital ocean - The access token for your digital ocean account, (can be the same as TOKEN)
-
-##### exoscale  - The access key and secret key for your exoscale account. You need to enter this as ${ACCESS_KEY}:${SECRET_KEY}. You can use the same access key and secret key as your main account or you can create separate ones with only DNS manipulation rights. 
-
-##### linode - A personal access token with DNS manipulation rights (can be the same value as TOKEN)
-
-##### Vultr - A personal access token with DNS manipulation rights (can be the same as TOKEN)
-
-------
-Found a variable DNS_SECURITY_KEY what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-CCCC:DDDD
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### DNS_CHOICE  
-
-This can be set to one of these values 
-
-##### "cloudflare" 
-##### "digitalocean" 
-##### "exoscale"
-##### "linode"
-##### "vultr"
-
-It defines which of the (supported) DNS service you would like to use with your deployment.
-
----------------
-Found a variable DNS_CHOICE what do you want to set it to?
-Its current value is "exoscale" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-Found a variable CLOUDHOST_EMAIL_ADDRESS what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-testemail@testemail.com
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### BUILDOS
-
-This is the BUILDOS you wish to use for your servers, it can be one of "ubutnu" or "debian"
-
------
-Found a variable BUILDOS what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-debian
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### BUILDOS_VERSION
-
-This is the BUILDOS_VERSION you are deploying for this can be "20.04" or "22.04" if BUILDOS is "ubuntu" and "10" or "11" if BUILDOS is "debian"
-
------
-Found a variable BUILDOS_VERSION what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-11
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### DEFAULT_USER
-
-When you deploy to exoscale, the default user should be set to "ubuntu" if you are deploying Ubuntu and "debian" if you are deploying to Debian.
-When you deploy to AWS, the default user should be set to "ubuntu" if you are deploying Ubuntu and "admin" if you are deploying to Debian.
-For all other cases, the DEFAULT_USER should be set to "root"
-
------
-Found a variable DEFAULT_USER what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-debian
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### BUILD_IDENTIFIER
-
-This is a unique string to describe your build. If you have multiple builds that you want to give similar names you should call them, for example, "1-testbuild" or "2-testbuild" or "3-testbuild$
-
------
-Found a variable BUILD_IDENTIFIER what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-nuocial
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### WEBSITE_DISPLAY_NAME
-
-This is simply the display name of your application, for example, "My Social Network", or "My Blog" and so on. It should be descriptive of your website and likely will be similar to the core part of the WEBSITE_URL described below
-
------
-Found a variable WEBSITE_DISPLAY_NAME what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-Test Social Network
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### WEBSITE_NAME
-
-This HAS to be exactly the same of the core part of the URL name of your website. So, if your website is called www.nuocial.org.uk, then, this value MUST be "nuocial"
-
------
-Found a variable WEBSITE_NAME what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-testsocialnetwork
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### WEBSITE_URL
-
-This is the URL of your website. It can be any valid URL
-
------
-Found a variable WEBSITE_URL what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-www.testsocialnetwork.org.uk
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_PROVIDER
-
-This is the git service provider where your application repositories are hosted. It has to be one of "github", "bitbucket" or "gitlab". If you fill this variable with one of those three exact strings, then, that will tell us who your application code is hosted with. It may or may not be hosted with the same provider as the infrastructure code for the agile deployment toolkit
-
------
-Found a variable APPLICATION_REPOSITORY_PROVIDER what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-github
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_OWNER
-
-This is the username of the user who owns (or created) your application repositories with your chosen git service provider
-
------
-Found a variable APPLICATION_REPOSITORY_OWNER what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-adt-demos
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_USERNAME
-
-This is the username of the user that you are currently using to access the application repositories. For example, the repositories might be owned by userA and are kept private but, userB is granted access. In this case the APPLICATION_REPOSITORY_OWNER would be userA and the APPLICATION_REPOSITORY_USERNAME would be userB. If you are the application repository owner, then this username and the owner name above will be the same.
-
------
-Found a variable APPLICATION_REPOSITORY_USERNAME what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-adt-demos
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_PASSWORD  
-
-This is the password for the APPLICATION_REPOSITORY_USERNAME or the application repository user. This is the password for your user account with your git provider. If the application repositories are public (be careful not to expose sensitive credentials if you make your application repos public), then a password is not needed in which case this value must be precisely written or set to **"none"**
-
------
-Found a variable APPLICATION_REPOSITORY_PASSWORD what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### APPLICATION_REPOSITORY_TOKEN
-
-Github and Gitlab prefer personal access tokens to passwords, so, if you wish to, you can generate personal access tokens at:
-
-Github: www.github.com/settings/tokens
-Gitlab: www.gitlab.com/profile/personal_access_tokens
-
-Make sure these tokens have the rights to create and destroy repositories as well as to read and write from them. Most likely, you want to have a separate git provider account for your associated deployments. This will override APPLICATION_REPOSITORY_PASSWORD
-
-------
-Found a variable APPLICATION_REPOSITORY_TOKEN what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-KKKKK
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_EMAIL_PROVIDER
-
-At the moment, there are three SMTP email service providers. Enter the number value, "1", "2" or "3" to select which provider you want to use for your SMTP service. If you leave these variables blank, you simply won't receive any system emails to give status updated on build progression, server intialisations and so on. You are free to leave these variables blank, as you choose.
-
-Enter "1" - Sendpulse (www.sendpulse.com)
-Enter "2" - Google (gmail)
-Enter "3" - AWS SES 
-
------
-Found a variable SYSTEM_EMAIL_PROVIDER what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_TOEMAIL_ADDRESS 
-
-The email address that system emails will be sent to this can be any email address that you have access to. MAYBE, the emails get marked as spam depending on your provider. If you take them out of the spam folder, then, the system should learn they are not spam. Most likely you will want to have a dedicated email address for your system emails for your deployed application as they will likely fill up your inbox otherwise.
-
------
-Found a variable SYSTEM_TOEMAIL_ADDRESS what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_FROMEMAIL_ADDRESS
-
-The email address that system emails will be sent from. This should be an email address that the system emails are sent from. In your SYSTEM_TOEMAIL_ADDRESS inbox, this will be the email address that the system messages are seen to be sent from or to have originated from.
-
------
-Found a variable SYSTEM_FROMEMAIL_ADDRESS what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_EMAIL_USERNAME
-
-This is the username of your SMTP user. For Amazon SES, for example, this will be the username generated when you enable the SES service. This is the SMTP username. 
-
------
-Found a variable SYSTEM_EMAIL_USERNAME what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-############################################################################################
-Explanation from the specification regarding this variable:
-############################################################################################
-### SYSTEM_EMAIL_PASSWORD
-
-This is the password of your SMTP user. For Amazon SES, for example, this will be the password generated when you enable the SES service. This is the SMTP password. 
-
-----
-Found a variable SYSTEM_EMAIL_PASSWORD what do you want to set it to?
-Its current value is "" press &lt;enter&gt; to retain, anything else to override
-
-OK, thanks...
-
-
-
-
-###################################################################################################################################
-Do you want to review the rest of the variables that are being used or do you want to accept the default template values
-If you want to change machine sizes or regions for example, you need to change them here so that they override the templated values
-###################################################################################################################################
-Enter 'y' or 'Y' if you wish to review/override the rest of the variables used by this template, 'N' or 'n' will use the default settings
-N
-######################################################################################################################
-Cheers. Your configuration has been written to: /home/agile-deployer/new/agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl
-You should meticulously review this configuration file before deploying.
-You can edit and make changes to this configuration file as you desire but keep it with the same filename to deploy it
-######################################################################################################################
+#
 root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# 
 exit
 
