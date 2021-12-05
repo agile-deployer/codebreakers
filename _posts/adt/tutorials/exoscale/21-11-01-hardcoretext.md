@@ -1,8 +1,8 @@
 ---
 layout: post
-description: The Agile Deployment Toolkit Exoscale Tutorials Hardcore Text
-title: Exoscale ADT Tutorials Hardcore Text
-permalink: /adtexoscaletutorialshardcoretext/
+description: The Agile Deployment Toolkit Exoscale Tutorials Hardcore Virgin
+title: Exoscale ADT Tutorials Hardcore Virgin
+permalink: /adtexoscaletutorialshardcorevirginjoomla/
 hide: true
 category: agiledeploymenttoolkit
 ---
