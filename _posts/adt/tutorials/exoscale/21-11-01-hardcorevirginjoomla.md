@@ -390,6 +390,14 @@ where ${userdatascript} is the descriptive name you gave when prompted.
 >     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
 >     may not perfer.
 
+
+> At this point, your build machine should be up and running. Please review  
+>  
+> ./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
+> 
+>   At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+
+
 ---------------------------
 
 Assuming that you have your Joomla application online now after following that video, what I would do if I wanted to build a Wordpress, Moodle or Drupal installation would be to follow the same procedure with the same template, but, minimally change the template as follows:
