@@ -108,8 +108,10 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     2.                   BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
 >     3.                   TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
 >     Please input a number between 1 and 3 to select a template to override
-     
-     **1**
+
+-----------------
+**USER INPUT:     1**
+-----------------
 
 >     ##############################################################################
 >     YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
