@@ -1,7 +1,8 @@
 <p><strong>HARDCORE BUILD PROCESS</strong></p>
 
-<p>If you have followed the tutorial <a href="https://www.codebreakers.uk/adtexoscaletutorialshardcorevirgin">here</a>, then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser.
-What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on.</p>
+<p>If you have followed the tutorial <a href="https://www.codebreakers.uk/adtexoscaletutorialshardcorevirgin">here</a>, then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser. If you are using a baseline that someone else has developed or a baseline that you developed some time ago, then you might not have servers running yet.</p>
+
+<p>What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on.</p>
 
 <p>What I have done for this tutorial is install a very simple application using a tool called “Community Builder” which you can find here: <a href="https://www.joomlapolis.com">Community Builder</a>. Literally all I have done is install the latest version (at the time) into my Joomla installation that I installed earlier.</p>
 
@@ -116,4 +117,52 @@ export DIRECTORIES_TO_MOUNT="" #MANDATORY - this will define which directories i
 </blockquote>
 
 <p>You can make any other adjustments you want like if you want to choose APACHE instead of NGINX or change the size of the machines (you can find out about such things in the specification).</p>
+
+<p><strong>FOLLOW THESE STEPS IF YOU DON’T HAVE A BUILD SERVER RUNNING</strong></p>
+
+<p>You now need to copy your template as follows:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Then you need to run the script:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd helperscripts
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./GenerateHardcoreUserDataScript.sh
+</code></pre></div>  </div>
+</blockquote>
+
+<p>This will leave you with a script:</p>
+
+<blockquote>
+  <p>../userdatascripts/${userdatascript}</p>
+</blockquote>
+
+<p>where ${userdatascript} is the descriptive name you gave when prompted.</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)   
+instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
+The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
+may not perfer.
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>At this point, your build machine should be up and running. Please review  
+ 
+./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
+
+ At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+</code></pre></div>  </div>
+</blockquote>
+
+<p><strong>IF YOU DO HAVE A BUILD SERVER RUNNING FROM A PREVIOUS BUILD, THEN JUST DO THE FOLLOWING</strong></p>
 
