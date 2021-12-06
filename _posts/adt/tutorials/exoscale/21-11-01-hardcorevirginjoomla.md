@@ -381,9 +381,14 @@ Then you need to run the script:
 
 This will leave you with a script:
 
->    ../userdatascripts/${userdatascript}   where ${userdatascript} is the descriptive name you gave when prompted. 
+>    ../userdatascripts/${userdatascript}   
 
-Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)   instructions using the pasting the script you have just copied into the userdata area of your exoscale build machine. The build machine will then install **AND** run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
+where ${userdatascript} is the descriptive name you gave when prompted.  
+
+>     Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)   
+>     instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
+>     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
+>     may not perfer.
 
 ---------------------------
 
