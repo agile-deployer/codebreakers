@@ -15,6 +15,17 @@ category: agiledeploymenttoolkit
 
 >     git clone https://github.com/agile-deployer/agile-infrastructure-build-client-scripts.git
 
+>     cd agile-infrastructure-build-client-scripts
+
+We need several pieces of information from our cloud host and 3rd party services for a successful build to be possible:
+
+I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla
+
+---------------------------------------
+
+
+This will deploy the latest version of Joomla using template 1 which you can read about here: ./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description and the hardcore method.
+
 We need several pieces of information from our cloud host and 3rd party services for a successful build to be possible:
 
 I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla
@@ -25,7 +36,7 @@ To find the latest version of Joomla, I go to this URL in my browser:
 
 [Joomla Latest](https://downloads.joomla.org/)
 
-And I note the latest version in a **separate text file**:
+And I note the latest version in a separate text file:
 
 >     joomla_version="4.0.4"  
 
@@ -59,7 +70,7 @@ You now need to make a note of the email address that you have registered with y
 
 -----------------------------------
 
-You then need the url that you want to use for your website. If you don't have a DNS URL for your website, you need to purchase one and set the nameservers to exoscale as described [here](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/Nameservers.md)
+You then need the url that you want to use for your website. If you don't have a DNS URL for your website, you need to purchase one and set the nameservers to exoscale as described in ./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/Nameservers.md
 
 >     exoscale_dns_name="www.testsocialnetwork.org.uk"
 
@@ -78,626 +89,360 @@ Then create a "personal access token" by following:
 
 --------------------------------
 
-To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them [here](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md). If you wish to include SMTP credentials you will need to have a service offering set up with either sendpulse, mailjet or AWS SES.
+To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them ./agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md. If you wish to include SMTP credentials you will need to have a service offering set up with either sendpulse, mailjet or AWS SES.
 
 So, that should be all the core credentials that I need to make a deployment. I can save my text file now (and keep it secure) because I might want to use these credentials again for other deployments or redeployments. 
 
-2. Now do the following:
+--------------------------------------------
+--------------------------------------------
 
->     cd agile-infrastructure-build-client-scripts/helperscripts
+So, to begin an hardcore build process, I need to:
 
->     /bin/sh GenerateHardcoreUserDataScript.sh
+>     vi ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl
 
-What I have done is run a sample execution of GenerateHardcoreUserData.sh so you can get an idea of how I set the values. This is just a dump of an example run through and it only sets the mandatory values to set other values such as machine size or database type you need to answer "Y" to the last question and review all non-mandatory settings as well. 
+This file looks like this (I have put a dashes before each line I wish to modify for this deployment which is for illustrative purposes only):
 
->    root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# /bin/sh GenerateOverrideTemplate.sh
+>     ###############################################################################################  
+>     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
+>     ###############################################################################################  
+>     ------export APPLICATION=""  
+>     export JOOMLA_VERSION="" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
+>     export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal  
+>     ------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="" #MANDATORY  
+>     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
+>     # change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)  
+>     # change this to, WORDPRESS if you are deploying wordpress  
+>     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)  
+>     # change this to, MOODLE if you are deploying moodle  
+>     #############################################################################################  
+>     ------export S3_ACCESS_KEY=""  #MANDATORY  
+>     ------export S3_SECRET_KEY=""  #MANDATORY  
+>     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
+>     export S3_LOCATION="US" #For exoscale, this always needs to be set to "US"  
+>     export TOKEN="" #NOT REQUIRED  
+>     ------export ACCESS_KEY=""   #MANDATORY  
+>     ------export SECRET_KEY=""   #MANDATORY  
+>     ------export DNS_USERNAME=""  #MANDATORY  
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
+>     export DNS_CHOICE="exoscale" #MANDATORY - you will need to set your DNS nameservers according to this choice  
+>     ------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY  
+>     export BUILDOS="debian" #MANDATORY one of ubuntu|debian  
+>     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11  
+>     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian  
+>     ------export WEBSITE_DISPLAY_NAME="" #MANDATORY  
+>   
+>     ------export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
+>     ------export WEBSITE_URL=""  #MANDATORY
+>     export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
+>     ------export APPLICATION_REPOSITORY_OWNER="" #MANDATORY
+>     ------export APPLICATION_REPOSITORY_USERNAME="" #MANDATORY
+>     export APPLICATION_REPOSITORY_PASSWORD="" #MANDATORY
+>     ------export APPLICATION_REPOSITORY_TOKEN="" #MANDATORY
+>     export SYSTEM_EMAIL_PROVIDER="" #MANDATORY
+>     export SYSTEM_TOEMAIL_ADDRESS="" #MANDATORY
+>     export SYSTEM_FROMEMAIL_ADDRESS="" #MANDATORY
+>     export SYSTEM_EMAIL_USERNAME="" #MANDATORY
+>     export SYSTEM_EMAIL_PASSWORD="" #MANDATORY
+>     export DIRECTORIES_TO_MOUNT="" #This should always be unset for a virgin deployments
+>     export DB_PORT="2035"
+>     export SSH_PORT="1035"
+>     export GATEWAY_GUARDIAN="0"
+>     export PRODUCTION="0"
+>     export DEVELOPMENT="1"
+>     export BUILD_CHOICE="0"
+>     ------export WEBSERVER_CHOICE="APACHE"
+>     export NO_AUTOSCALERS="1"
+>     export NUMBER_WS="1"
+>     export SUPERSAFE_WEBROOT="1"
+>     export SUPERSAFE_DB="1"
+>     ------export DATABASE_INSTALLATION_TYPE="MySQL"
+>     export PERSIST_ASSETS_TO_CLOUD="0" #This should always be set to 0 for a virgin deployment
+>     export DISABLE_HOURLY="0"
+>     export SERVER_TIMEZONE_CONTINENT="Europe"
+>     export SERVER_TIMEZONE_CITY="London"
+>     export BASELINE_DB_REPOSITORY="VIRGIN"
+>     export BUILD_ARCHIVE_CHOICE="virgin"
+>     export APPLICATION_LANGUAGE="PHP"
+>     ------export APPLICATION_IDENTIFIER="3"
+>     ------export PHP_VERSION="7.4"
+>     export REGION=""
+>     export REGION_ID="1128bd56-b4d9-4ac6-a7b9-c715b187ce11"
+>     export DB_SIZE="10G"
+>     export DB_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export WS_SIZE="10G"
+>     export WS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export AS_SIZE="10G"
+>     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export CLOUDHOST="exoscale"
+>     export MACHINE_TYPE="EXOSCALE"
+>     export ALGORITHM="rsa"
+>     export USER="root"
+>     export CLOUDHOST_USERNAME="root"
+>     export CLOUDHOST_PASSWORD=""
+>     export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
+>     export PREVIOUS_BUILD_CONFIG="0"
+>     export GIT_USER="Templated User"
+>     export GIT_EMAIL_ADDRESS="templateduser@dummyemailZ123.com"
+>     export INFRASTRUCTURE_REPOSITORY_PROVIDER="github"
+>     export INFRASTRUCTURE_REPOSITORY_OWNER="agile-deployer"
+>     export INFRASTRUCTURE_REPOSITORY_USERNAME="agile-deployer"
+>     export INFRASTRUCTURE_REPOSITORY_PASSWORD="none"
+>     export DATASTORE_CHOICE="exoscale"
+>     export SSL_GENERATION_METHOD="AUTOMATIC"
+>     export SSL_GENERATION_SERVICE="LETSENCRYPT"
+>     export BYPASS_DB_LAYER="0"
+>     export DBaaS_HOSTNAME=""
+>     export DBaaS_USERNAME=""
+>     export DBaaS_PASSWORD=""
+>     export DBaaS_DBNAME=""
+>     export DATABASE_DBaaS_INSTALLATION_TYPE=""
+>     export DBaaSDBSECURITYGROUP=""
+>     export DBIP=""
+>     export DBIP_PRIVATE=""
+>     export WSIP=""
+>     export WSIP_PRIVATE=""
+>     export ASIP=""
+>     export ASIP_PRIVATE=""
+>     export APPLICATION_NAME=""
+>     export MAPS_API_KEY=""
+>     export PHP_MODE=""
+>     export PHP_MAX_CHILDREN=""
+>     export PHP_START_SERVERS=""
+>     export PHP_MIN_SPARE_SERVERS=""
+>     export PHP_MAX_SPARE_SERVERS=""
+>     export PHP_PROCESS_IDLE_TIMEOUT=""
+>     export IN_MEMORY_CACHING=""
+>     export IN_MEMORY_CACHING_PORT=""
+>     export IN_MEMORY_CACHING_HOST=""
+>     export IN_MEMORY_CACHING_SECURITY_GROUP=""
+>     export ENABLE_EFS=""
+>     export SUBNET_ID=""
+>     export AUTOSCALE_FROM_SNAPSHOTS=""
+>     export GENERATE_SNAPSHOTS=""
+>     export SNAPSHOT_ID=""
+>     export WEBSERVER_IMAGE_ID=""
+>     export AUTOSCALER_IMAGE_ID=""
+>     export DATABASE_IMAGE_ID=""
+>     export BUILD_HOME="/home/agile-deployer/agile-infrastructure-build-client-scripts"
+>     export BUILD_CLIENT_IP="185.19.29.134"
+>     export BUILD_IDENTIFIER="nuocial"
+>     export PUBLIC_KEY_ID="AGILE_TOOLKIT_PUBLIC_KEY-nuocial"
 
->     
->     WARNING: THERE IS NO SANITY CHECKING IF YOU USE THIS SCRIPT WHICH MEANS THAT IF YOU ENTER ANYTHING INCORRECT
->     YOU WON'T FIND OUT ABOUT IT UNTIL YOU CONFIGURE A BUILD USING THE OUTPUT FROM THIS SCRIPT AND THE BUILD FAILS
->     AT THE END, THIS SCRIPT WILL OUTPUT ITS CONFIGURATION AND YOU CAN TAKE A COPY OF THE OUTPUT AND STORE IT ON YOUR LAPTOP OR DESKTOP
->     FOR USE IN CURRENT AND FUTURE DEPLOYMENTS
->     BE AWARE THAT THE OUTPUT GENERATED WILL CONTAIN SENSITIVE INFORMATION WHICH YOU NEED TO KEEP SECURE
->     
->     Press <enter> to continue
->     
->     Which Cloudhost are you using? 1) Digital Ocean 2) Exoscale 3) Linode 4) Vultr 5)AWS. Please Enter the number for your cloudhost
->     ##2
->     Please tell us which template you wish to override
->     1.                   VIRGIN DEVELOPMENT MODE INSTALLATION OF JOOMLA, WORDPRESS, DRUPAL or MOODLE
->     2.                   BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
->     3.                   TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
->     Please input a number between 1 and 3 to select a template to override
+So, I have referred to the specification and I have freely chosen to modify the  
 
------------------
-     
-**USER INPUT:     1**
-     
------------------
+**WEBSERVER_CHOICE to "NGINX"**  
+**PHP_VERSION to "8.0"**  
+**APPLICATION_IDENTIFIER to "1"**  
+**DATABASE_INSTALLATION_TYPE to "Postgres"**  
 
->     ##############################################################################
->     YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
->     ###############################################################################
->     Press <enter to begin>
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      JOOMLA_VERSION
->     
->     If you are deploying a virgin joomla installation, you must give the version number of joomla that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.
->     
->     ---- 
->     Found a variable JOOMLA_VERSION what do you want to set it to?
->     Its current value is "3.9.22" press <enter> to retain, anything else to override
-     
-      **4.0.4**
+So, editing  
 
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      DRUPAL_VERSION
->     
->     If you are deploying a virgin drupal installation, you must give the version number of drupal that you are deploying here. In such a template, you will likely want to update this version number to be the latest available.
->     
->     ---- 
->     Found a variable DRUPAL_VERSION what do you want to set it to?
->     Its current value is "9.2.1" press <enter> to retain, anything else to override
-     
-     **N/A**
+**./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl**  
 
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      APPLICATION_BASELINE_SOURCECODE_REPOSITORY
->     
->     If you are deploying a virgin application, you can set this to "JOOMLA:{latest_version}", "WORDPRESS", "DRUPAL:{latest_version}" or "MOODLE"
->     
->     -----
->     Found a variable APPLICATION_BASELINE_SOURCECODE_REPOSITORY what do you want to set it to?
->     Its current value is "JOOMLA:3.9.22" press <enter> to retain, anything else to override
->     JOOMLA:4.0.4
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      S3_ACCESS_KEY 
->      S3_SECRET_KEY
->     
->     These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting. 
->     
->     You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
->     
->     ########################################################################### 
->      digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
->     
->      exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
->     
->      linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
->  
->      vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
->     
->      AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
->     ################################################################################
->     -----
->     Found a variable S3_ACCESS_KEY what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     AAAA
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      S3_SECRET_KEY
->     
->     These grant you access to manipulate an object store. Under the principle of least privileges, you should grant as few privileges to these keys wen you create them as possible. The DATASTORE_CHOICE setting (see below) will determine which Object Storage you are using and you will need to generate access keys appropriate to that setting. 
->     
->     You can get your S3_ACCESS_KEY and S3_SECRET KEY as follows:
->     
->     ########################################################################### digital ocean - Login to your digital ocean account and go to the API submenu (on the left bottom) and generate "Digital Ocean Spaces Keys". This will give you an access key which you can paste into your template. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY
->     
->     ########################################################################### exoscale - Login to your exoscale account and go to the IAM menu (on the right) and generate a pair of API keys which have access to object storage capabilities. The first key is the S3_ACCESS_KEY and the second key is the S3_SECRET_KEY which you can post into your template.
->     
->     ########################################################################### linode - Login to your Linode account and go to the Object Storage menu on the right then select the Access Key menu and select "Create an Access Key" and that will generate an access key and a secret key which you can copy into your template as S3_ACCESS_KEY and S3_SECRET_KEY.
->     
->     ########################################################################### vultr - You need to subscribe to S3 Object Storage and this will grant you a pair of S3 access keys which you can copy and paste into your template. 
->     
->     ########################################################################### AWS - Under your IAM user, create a pair of keys which have S3 manipulation capabilities and paste them into your template as S3_ACCESS_KEY and S3_SECRET_KEY
->     
->     -----
->     Found a variable S3_SECRET_KEY what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     BBBB
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      S3_HOST_BASE 
->     
->     This parameter is the S3 endpoint for your deployment. It should be located as near as possible to where (in the world) you plan to run your VPS systems.
->     
->     ########################################################################### digital ocean - Available endpoints to choose from (2020) - nyc3.digitaloceanspaces.com, ams3.digitaloceanspaces.com, sfo2.digitaloceanspaces.com, sgp1.digitaloceanspaces.com, fra1.digitaloceanspaces.com
->     
->     ########################################################################### exoscale - Available endpoints to choose from (2020) - sos-ch-gva-2.exo.io, sos-ch-dk-2.exo.io, sos-de-fra-1.exo.io, sos-de-muc-1.exo.io, sos-at-vie-1.exo.io, sos-bg-sof-1
->     
->     ########################################################################### linode - Available endpoints to choose from (2020) - us-east-1.linodeobjects.com, eu-central-1.linodeobjects.com, ap-south-1.linodeobjects.com
->     
->     ########################################################################### vultr - Available endpints to choose from (2020) - ewr1.vultrobjects.com, 
->     
->     ########################################################################### Amazon - There are lots of S3 endpoints to choose from for Amazon. Your S3 endpoint should be region specific. For example if you are in eu-west-1 in would be, s3.eu-west-1.amazonaws.com
->     
->     You can set your ${S3_HOST_BASE} parameter in your template to one of these listed endpoints depending on who your object storage is hosted with (which will likely be the ssame provider as your VPS systems). 
->     
->     -----
->     Found a variable S3_HOST_BASE what do you want to set it to?
->     Its current value is "sos-ch-gva-2.exo.io" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      ACCESS_KEY
->      SECRET_KEY
->     
->     Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively
->     
->     ########################################################################### digital ocean - Does not use access keys and secret keys, see TOKEN
->     
->     ########################################################################### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
->     
->     ########################################################################### linode - Does not use access keys and secret keys, see TOKEN
->     
->     ########################################################################### Vultr - Does not use access keys and secret keys, see TOKEN
->     
->     ########################################################################### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
->     
->     -----
->     Found a variable ACCESS_KEY what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     XXXX
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      SECRET_KEY
->     
->     Some providers use an access key and a secret key to control access to their compute resources. You need to generate an access and secret key for your provider and use them here as ACCESS_KEY and SECRET_KEY respectively
->     
->     ########################################################################### digital ocean - Does not use access keys and secret keys, see TOKEN
->     
->     ########################################################################### exoscale - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
->     
->     ########################################################################### linode - Does not use access keys and secret keys, see TOKEN
->     
->     ########################################################################### Vultr - Does not use access keys and secret keys, see TOKEN
->     
->     ########################################################################### AWS - You can generate access keys and secret keys to control access to your compute resources. Note, this is distinct from the object storage access keys
->     
->     -----
->     Found a variable SECRET_KEY what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     YYYY
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      DNS_USERNAME
->     
->     This will be the username for your DNS service provider
->     
->     ########################################################################### cloudflare - the emal address of username of your cloudflare account
->     
->     ########################################################################### digitalocean - your digital ocean account email address
->     
->     ########################################################################### exoscale - your exoscale account email address
->     
->     ########################################################################### linode - your linode account email address
->     
->     ########################################################################### vultr - your vultr account email address
->     
->     -----
->     Found a variable DNS_USERNAME what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     testemail@testemail.com
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      DNS_SECURITY_KEY 
->     
->     This is the security key which will enable us to manipulate records as needed with your DNS provider. You can find this key as follows for each provider:
->     
->     ########################################################################### 
->     cloudflare - Ths is the Global API key for your cloudflare account which you can find by clicking on your profile at the top right of the screen
->     
->     digital ocean - The access token for your digital ocean account, (can be the same as TOKEN)
->     
->     exoscale  - The access key and secret key for your exoscale account. You need to enter this as ${ACCESS_KEY}:${SECRET_KEY}. You can use the same access key and secret key as your main account or you can create separate ones with only DNS manipulation rights. 
->     
->     linode - A personal access token with DNS manipulation rights (can be the same value as TOKEN)
->     
->     Vultr - A personal access token with DNS manipulation rights (can be the same as TOKEN)
->     ########################################################################### 
->     ------
->     Found a variable DNS_SECURITY_KEY what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     CCCC:DDDD
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      DNS_CHOICE  
->     
->     This can be set to one of these values 
->     
->     ########################################################################### 
->     "cloudflare" 
->     "digitalocean" 
->     "exoscale"
->     "linode"
->      "vultr"
->     ############################################################################
->     It defines which of the (supported) DNS service you would like to use with your deployment.
->     
->     ---------------
->     Found a variable DNS_CHOICE what do you want to set it to?
->     Its current value is "exoscale" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->     Found a variable CLOUDHOST_EMAIL_ADDRESS what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     testemail@testemail.com
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      BUILDOS
->     
->     This is the BUILDOS you wish to use for your servers, it can be one of "ubutnu" or "debian"
->     
->     -----
->     Found a variable BUILDOS what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     debian
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      BUILDOS_VERSION
->     
->     This is the BUILDOS_VERSION you are deploying for this can be "20.04" or "22.04" if BUILDOS is "ubuntu" and "10" or "11" if BUILDOS is "debian"
->     
->     -----
->     Found a variable BUILDOS_VERSION what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     11
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      DEFAULT_USER
->     
->     When you deploy to exoscale, the default user should be set to "ubuntu" if you are deploying Ubuntu and "debian" if you are deploying to Debian.
->     When you deploy to AWS, the default user should be set to "ubuntu" if you are deploying Ubuntu and "admin" if you are deploying to Debian.
->     For all other cases, the DEFAULT_USER should be set to "root"
->     
->     -----
->     Found a variable DEFAULT_USER what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     debian
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      BUILD_IDENTIFIER
->     
->     This is a unique string to describe your build. If you have multiple builds that you want to give similar names you should call them, for example, "1-testbuild" or "2-testbuild" or "3-testbuild$
->     
->     -----
->     Found a variable BUILD_IDENTIFIER what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     nuocial
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      WEBSITE_DISPLAY_NAME
->     
->     This is simply the display name of your application, for example, "My Social Network", or "My Blog" and so on. It should be descriptive of your website and likely will be similar to the core part of the WEBSITE_URL described below
->     
->     -----
->     Found a variable WEBSITE_DISPLAY_NAME what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     Test Social Network
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      WEBSITE_NAME
->     
->     This HAS to be exactly the same of the core part of the URL name of your website. So, if your website is called www.nuocial.org.uk, then, this value MUST be "nuocial"
->     
->     -----
->     Found a variable WEBSITE_NAME what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     testsocialnetwork
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      WEBSITE_URL
->     
->     This is the URL of your website. It can be any valid URL
->     
->     -----
->     Found a variable WEBSITE_URL what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     www.testsocialnetwork.org.uk
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      APPLICATION_REPOSITORY_PROVIDER
->     
->     This is the git service provider where your application repositories are hosted. It has to be one of "github", "bitbucket" or "gitlab". If you fill this variable with one of those three exact strings, then, that will tell us who your application code is hosted with. It may or may not be hosted with the same provider as the infrastructure code for the agile deployment toolkit
->     
->     -----
->     Found a variable APPLICATION_REPOSITORY_PROVIDER what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     github
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      APPLICATION_REPOSITORY_OWNER
->     
->     This is the username of the user who owns (or created) your application repositories with your chosen git service provider
->     
->     -----
->     Found a variable APPLICATION_REPOSITORY_OWNER what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     adt-demos
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      APPLICATION_REPOSITORY_USERNAME
->     
->     This is the username of the user that you are currently using to access the application repositories. For example, the repositories might be owned by userA and are kept private but, userB is granted access. In this case the APPLICATION_REPOSITORY_OWNER would be userA and the APPLICATION_REPOSITORY_USERNAME would be userB. If you are the application repository owner, then this username and the owner name above will be the same.
->     
->     -----
->     Found a variable APPLICATION_REPOSITORY_USERNAME what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     adt-demos
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      APPLICATION_REPOSITORY_PASSWORD  
->     
->     This is the password for the APPLICATION_REPOSITORY_USERNAME or the application repository user. This is the password for your user account with your git provider. If the application repositories are public (be careful not to expose sensitive credentials if you make your application repos public), then a password is not needed in which case this value must be precisely written or set to **"none"**
->     
->     -----
->     Found a variable APPLICATION_REPOSITORY_PASSWORD what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      APPLICATION_REPOSITORY_TOKEN
->     
->     Github and Gitlab prefer personal access tokens to passwords, so, if you wish to, you can generate personal access tokens at:
->     
->     Github: www.github.com/settings/tokens
->     Gitlab: www.gitlab.com/profile/personal_access_tokens
->     
->     Make sure these tokens have the rights to create and destroy repositories as well as to read and write from them. Most likely, you want to have a separate git provider account for your associated deployments. This will override APPLICATION_REPOSITORY_PASSWORD
->     
->     ------
->     Found a variable APPLICATION_REPOSITORY_TOKEN what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     KKKKK
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      SYSTEM_EMAIL_PROVIDER
->     
->     At the moment, there are three SMTP email service providers. Enter the number value, "1", "2" or "3" to select which provider you want to use for your SMTP service. If you leave these variables blank, you simply won't receive any system emails to give status updated on build progression, server intialisations and so on. You are free to leave these variables blank, as you choose.
->     
->     Enter "1" - Sendpulse (www.sendpulse.com)
->     Enter "2" - Google (gmail)
->     Enter "3" - AWS SES 
->     
->     -----
->     Found a variable SYSTEM_EMAIL_PROVIDER what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      SYSTEM_TOEMAIL_ADDRESS 
->     
->     The email address that system emails will be sent to this can be any email address that you have access to. MAYBE, the emails get marked as spam depending on your provider. If you take them out of the spam folder, then, the system should learn they are not spam. Most likely you will want to have a dedicated email address for your system emails for your deployed application as they will likely fill up your inbox otherwise.
->     
->     -----
->     Found a variable SYSTEM_TOEMAIL_ADDRESS what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      SYSTEM_FROMEMAIL_ADDRESS
->     
->     The email address that system emails will be sent from. This should be an email address that the system emails are sent from. In your SYSTEM_TOEMAIL_ADDRESS inbox, this will be the email address that the system messages are seen to be sent from or to have originated from.
->     
->     -----
->     Found a variable SYSTEM_FROMEMAIL_ADDRESS what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      SYSTEM_EMAIL_USERNAME
->     
->     This is the username of your SMTP user. For Amazon SES, for example, this will be the username generated when you enable the SES service. This is the SMTP username. 
->     
->     -----
->     Found a variable SYSTEM_EMAIL_USERNAME what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Explanation from the specification regarding this variable:
->     ###########################################################################
->      SYSTEM_EMAIL_PASSWORD
->     
->     This is the password of your SMTP user. For Amazon SES, for example, this will be the password generated when you enable the SES service. This is the SMTP password. 
->     
->     ----
->     Found a variable SYSTEM_EMAIL_PASSWORD what do you want to set it to?
->     Its current value is "" press <enter> to retain, anything else to override
->     
->     OK, thanks...
->     
->     
->     
->     
->     ###########################################################################
->     Do you want to review the rest of the variables that are being used or do you want to accept the default template values
->     If you want to change machine sizes or regions for example, you need to change them here so that they override the templated values
->     ###########################################################################
->     Enter 'y' or 'Y' if you wish to review/override the rest of the variables used by this template, 'N' or 'n' will use the default settings
->     N
->     #
->     Cheers. Your configuration has been written to: /home/agile-deployer/new/agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl
->     You should meticulously review this configuration file before deploying.
->     You can edit and make changes to this configuration file as you desire but keep it with the same filename to deploy it
->     #
->     root@VM-cec31855-4825-4c91-aff7-ee0656518555:/home/agile-deployer/new/agile-infrastructure-build-client-scripts/helperscripts# 
->     exit
->     
->     Script done on 2021-12-05 23:26:37+00:00 [COMMAND_EXIT_CODE="0"]
+and using the values I recorded in my text file earlier, I modify the file as follows, the lines beginning with dashes have been modified
+
+
+>     ###############################################################################################
+>     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md
+>     ###############################################################################################
+>     ------export APPLICATION="joomla"
+>     ------export JOOMLA_VERSION="4.0.4" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla
+>     export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal
+>     -------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="JOOMLA:4.0.4" #MANDATORY 
+>     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     # change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)
+>     # change this to, WORDPRESS if you are deploying wordpress
+>     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
+>     # change this to, MOODLE if you are deploying moodle
+>     #############################################################################################
+>     ------export S3_ACCESS_KEY="AAAAA"  #MANDATORY
+>     ------export S3_SECRET_KEY="BBBBB"  #MANDATORY
+>     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
+>     export S3_LOCATION="US" #For exoscale, this always needs to be set to "US"
+>     export TOKEN="" #NOT REQUIRED
+>     ------export ACCESS_KEY="XXXXX"   #MANDATORY
+>     ------export SECRET_KEY="YYYYY"   #MANDATORY
+>     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
+>     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     export DNS_CHOICE="exoscale" #MANDATORY - you will need to set your DNS nameservers according to this choice
+>     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
+>     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
+>     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11
+>     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian
+>     ------export WEBSITE_DISPLAY_NAME="Test Social Network" #MANDATORY
+>     ------export WEBSITE_NAME="testsocialnetwork" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
+>     ------export WEBSITE_URL="www.testsocialnetwork.org.uk"  #MANDATORY
+>     export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
+>     ------export APPLICATION_REPOSITORY_OWNER="mytestgituser" #MANDATORY
+>     ------export APPLICATION_REPOSITORY_USERNAME="mytestgituser" #MANDATORY
+>     export APPLICATION_REPOSITORY_PASSWORD="" #MANDATORY
+>     ------export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
+>     export SYSTEM_EMAIL_PROVIDER="" #MANDATORY
+>     export SYSTEM_TOEMAIL_ADDRESS="" #MANDATORY
+>     export SYSTEM_FROMEMAIL_ADDRESS="" #MANDATORY
+>     export SYSTEM_EMAIL_USERNAME="" #MANDATORY
+>     export SYSTEM_EMAIL_PASSWORD="" #MANDATORY
+>     export DIRECTORIES_TO_MOUNT="" #This should always be unset for a virgin deployments
+>     export DB_PORT="2035"
+>     export SSH_PORT="1035"
+>     export GATEWAY_GUARDIAN="0"
+>     export PRODUCTION="0"
+>     export DEVELOPMENT="1"
+>     export BUILD_CHOICE="0"
+>     ------export WEBSERVER_CHOICE="NGINX"
+>     export NO_AUTOSCALERS="1"
+>     export NUMBER_WS="1"
+>     export SUPERSAFE_WEBROOT="1"
+>     export SUPERSAFE_DB="1"
+>     ------export DATABASE_INSTALLATION_TYPE="Postgres"
+>     export PERSIST_ASSETS_TO_CLOUD="0" #This should always be set to 0 for a virgin deployment
+>     export DISABLE_HOURLY="0"
+>     export SERVER_TIMEZONE_CONTINENT="Europe"
+>     export SERVER_TIMEZONE_CITY="London"
+>     export BASELINE_DB_REPOSITORY="VIRGIN"
+>     export BUILD_ARCHIVE_CHOICE="virgin"
+>     export APPLICATION_LANGUAGE="PHP"
+>     ------export APPLICATION_IDENTIFIER="1"**
+>     ------export PHP_VERSION="8.0"**
+>     export REGION=""
+>     export REGION_ID="1128bd56-b4d9-4ac6-a7b9-c715b187ce11"
+>     export DB_SIZE="10G"
+>     export DB_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export WS_SIZE="10G"
+>     export WS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export AS_SIZE="10G"
+>     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export CLOUDHOST="exoscale"
+>     export MACHINE_TYPE="EXOSCALE"
+>     export ALGORITHM="rsa"
+>     export USER="root"
+>     export CLOUDHOST_USERNAME="root"
+>     export CLOUDHOST_PASSWORD=""
+>     export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
+>     export PREVIOUS_BUILD_CONFIG="0"
+>     export GIT_USER="Templated User"
+>     export GIT_EMAIL_ADDRESS="templateduser@dummyemailZ123.com"
+>     export INFRASTRUCTURE_REPOSITORY_PROVIDER="github"
+>     export INFRASTRUCTURE_REPOSITORY_OWNER="agile-deployer"
+>     export INFRASTRUCTURE_REPOSITORY_USERNAME="agile-deployer"
+>     export INFRASTRUCTURE_REPOSITORY_PASSWORD="none"
+>     export DATASTORE_CHOICE="exoscale"
+>     export SSL_GENERATION_METHOD="AUTOMATIC"
+>     export SSL_GENERATION_SERVICE="LETSENCRYPT"
+>     export BYPASS_DB_LAYER="0"
+>     export DBaaS_HOSTNAME=""
+>     export DBaaS_USERNAME=""
+>     export DBaaS_PASSWORD=""
+>     export DBaaS_DBNAME=""
+>     export DATABASE_DBaaS_INSTALLATION_TYPE=""
+>     export DBaaSDBSECURITYGROUP=""
+>     export DBIP=""
+>     export DBIP_PRIVATE=""
+>     export WSIP=""
+>     export WSIP_PRIVATE=""
+>     export ASIP=""
+>     export ASIP_PRIVATE=""
+>     export APPLICATION_NAME=""
+>     export MAPS_API_KEY=""
+>     export PHP_MODE=""
+>     export PHP_MAX_CHILDREN=""
+>     export PHP_START_SERVERS=""
+>     export PHP_MIN_SPARE_SERVERS=""
+>     export PHP_MAX_SPARE_SERVERS=""
+>     export PHP_PROCESS_IDLE_TIMEOUT=""
+>     export IN_MEMORY_CACHING=""
+>     export IN_MEMORY_CACHING_PORT=""
+>     export IN_MEMORY_CACHING_HOST=""
+>     export IN_MEMORY_CACHING_SECURITY_GROUP=""
+>     export ENABLE_EFS=""
+>     export SUBNET_ID=""
+>     export AUTOSCALE_FROM_SNAPSHOTS=""
+>     export GENERATE_SNAPSHOTS=""
+>     export SNAPSHOT_ID=""
+>     export WEBSERVER_IMAGE_ID=""
+>     export AUTOSCALER_IMAGE_ID=""
+>     export DATABASE_IMAGE_ID=""
+>     export BUILD_HOME="/home/agile-deployer/agile-infrastructure-build-client-scripts"
+>     export BUILD_CLIENT_IP="185.19.29.134"
+>     export BUILD_IDENTIFIER="nuocial"
+>     export PUBLIC_KEY_ID="AGILE_TOOLKIT_PUBLIC_KEY-nuocial"
+
+If all the dashes I have added are removed, then this file (with live values and not symbolic ones) would be ready for deployment.  
+
+You now need to copy your template as follows:  
+
+**/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl**  
+
+Then you need to run the script:
+
+>     cd helperscripts
+
+>     ./GenerateHardcoreUserDataScript.sh
+
+This will leave you with a script:
+
+>    ../userdatascripts/${userdatascript}   where ${userdatascript} is the descriptive name you gave when prompted. 
+
+Now you have your userdata script take a copy of it using copy and paste and then follow these instructions using the pasting the script you have just copied into the userdata area of your exoscale build machine. The build machine will then install **AND** run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
+
+---------------------------
+
+Assuming that you have your Joomla application online now after following that video, what I would do if I wanted to build a Wordpress, Moodle or Drupal installation would be to follow the same procedure with the same template, but, minimally change the template as follows:
+
+#### For Wordpress:
+
+>     export APPLICATION="wordpress"
+>     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="WORDPRESS" #MANDATORY 
+>     export APPLICATION_IDENTIFIER="2"
+>     export DATABASE_INSTALLATION_TYPE="MySQL" #I don't support Wordpress using Postgres
+
+#### For Drupal:
+
+>     export APPLICATION="drupal"
+>     export DRUPAL_VERSION="9.2.6" 
+>     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="DRUPAL:9.2.6" #MANDATORY 
+>     export APPLICATION_IDENTIFIER="3"
+
+#### For Moodle:
+
+>     export APPLICATION="moodle"
+>     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="MOODLE" #MANDATORY 
+>     export APPLICATION_IDENTIFIER="4"
+
+So, you have a template now that you can use over and over again for deploying different installations of these CMS systems. You can study the spec and learn how to modify the template in order to change machine sizes, regions, PHP settings and so on. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
