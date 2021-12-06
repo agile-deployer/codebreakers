@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Exoscale Build Machine Method
 title: Exoscale ADT Tutorials Build Machine Method
-permalink: /adtexoscaletutorialsbuildmachine/
+permalink: /adtexoscaletutorialsbuildmachineexpedited/
 hide: true
 category: agiledeploymenttoolkit
 ---
