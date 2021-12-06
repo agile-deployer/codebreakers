@@ -1,3 +1,13 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Exoscale Tutorials Hardcore Baseline Joomla
+title: Exoscale ADT Tutorials Hardcore Baseline Joomla
+permalink: /adtexoscaletutorialshardcorebaseline/
+hide: true
+category: agiledeploymenttoolkit
+---
+
+
 **HARDCORE BUILD PROCESS**
 
 If you have followed the tutorial [here](https://www.codebreakers.uk/adtexoscaletutorialshardcorevirgin), then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser. If you are using a baseline that someone else has developed or a baseline that you developed some time ago, then you might not have servers running yet. 
