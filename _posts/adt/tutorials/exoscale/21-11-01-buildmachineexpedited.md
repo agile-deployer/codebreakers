@@ -178,10 +178,23 @@ Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" or some
 &nbsp;  
 &nbsp;
 You can then see your new security Group "adt-build-machine" listed
-
+	
+6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.
+	
+	So you will need to add 2 rules 
+	
+	1) Ping  
+	2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop
+            If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image17.png "Exoscale Tutorial Image 17") 
+&nbsp;  
+&nbsp;
+	
+	
 ---------------
 
-6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
+7) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
 
 >     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
 >     2. Select which zone you want to deploy to, for example, CH-GVA-2
@@ -207,7 +220,7 @@ Graphically you can see what I have described in these 8 steps here:
 	
 ---------------
 
-7) Once the machine has built you can access it as follows:
+8) Once the machine has built you can access it as follows:
 	
 &nbsp;  
 &nbsp; 
