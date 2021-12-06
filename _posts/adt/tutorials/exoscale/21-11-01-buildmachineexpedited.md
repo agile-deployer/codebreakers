@@ -172,39 +172,12 @@ Click on the security groups option of your exoscale GUI
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it "ADT Build Machine" or something to your liking and then click "Create Group"
+Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" or something to your liking and then click "Create Group"
 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
 &nbsp;  
 &nbsp;
-You can then see your new security Group "adt build machine" listed
-
-![](https://www.codebreakers.uk/images/exoscaletutorial/image6.png "Exoscale Tutorial Image 6")  
-&nbsp;  
-&nbsp;
-Click on the "adt build machine" security group
-
-![](https://www.codebreakers.uk/images/exoscaletutorial/image7.png "Exoscale Tutorial Image 7")  
-&nbsp;  
-&nbsp;
-Click "Add Rule" and click on "Ping" to make the machine pingable and then click on "custom rule"
-
-![](https://www.codebreakers.uk/images/exoscaletutorial/image8.png "Exoscale Tutorial Image 8")  
-&nbsp;  
-&nbsp;	
-This is what it looks like once you have cliked "Custom Rule"
-	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image9.png "Exoscale Tutorial Image 9")  
-&nbsp;  
-&nbsp;
-Put in a CIDR of 0.0.0.0/0 for the source and 1035 for start port and 1035 for end port (note 1035 is what I set the ssh port to earlier, yours may be different)
-![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10") 	
-	
-Click "Create" and the rules you have set will be added to your security group
-&nbsp;  
-&nbsp;  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
-
+You can then see your new security Group "adt-build-machine" listed
 
 ---------------
 
@@ -215,7 +188,7 @@ Click "Create" and the rules you have set will be added to your security group
 >     3. Select instance type "Tiny" for example
 >     4. Select disk size (50GB)
 >     5. Ignore SSH KEY
->     6. Make sure your default security group is set
+>     6. Make sure your security group "adt-build-machine" is set for this machine
 >     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
 >     8. Click Create and wait for your machine to build
 
