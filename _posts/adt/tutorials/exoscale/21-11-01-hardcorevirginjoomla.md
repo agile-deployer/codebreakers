@@ -111,7 +111,7 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 
 -----------------
      
-USER INPUT:     1
+**USER INPUT:     1**
      
 -----------------
 
