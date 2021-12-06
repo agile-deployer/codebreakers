@@ -371,7 +371,7 @@ If all the dashes I have added are removed, then this file (with live values and
 
 You now need to copy your template as follows:  
 
-**/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl**  
+>     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
 
 Then you need to run the script:
 
