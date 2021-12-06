@@ -87,9 +87,9 @@ There are some other values that I need to change in /home/agile-deployer/agile-
 
 You can make any other adjustments you want like if you want to choose APACHE instead of NGINX or change the size of the machines (you can find out about such things in the specification).
 
-**FOLLOW THESE STEPS IF YOU DON'T HAVE A BUILD SERVER RUNNING**
+**FOLLOW THESE STEPS ON YOUR LAPTOP IF YOU DON'T HAVE A BUILD SERVER RUNNING**
 
-You now need to copy your template as follows:  
+You now need to copy your template as follows on your laptop:  
 
 >     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale2override.tmpl  
 
@@ -105,7 +105,7 @@ This will leave you with a script:
 
 where ${userdatascript} is the descriptive name you gave when prompted.  
 
->     Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)   
+>     Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachinehardcore/)   
 >     instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
 >     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
 >     may not perfer.
