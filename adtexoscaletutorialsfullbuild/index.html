@@ -93,7 +93,42 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    
+    <p><strong>PREBUILD NECESSITIES</strong></p>
+
+<p>If you don’t already have a build machine running in the Exoscale cloud, follow these steps to get ready for the main build)</p>
+
+<ol>
+  <li>
+    <p>Begin by following this: <a href="https://www.codebreakers.uk/adtexoscaletutorialsbuildmachineexpedited/">Build Machine Setup</a></p>
+  </li>
+  <li>
+    <p>At this point, your build machine should be up and running. Please review <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md">Tightening Build Machine Firewall</a>. At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in “Tightening Build Machine Firewall” to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily.</p>
+  </li>
+</ol>
+
+<hr />
+
+<p><strong>FULL BUILD PROCESS</strong></p>
+
+<p>The full build process is interactive and guided so you need to answer the questions it posits when it posits them to perform a full build:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh onto the build machine you started in 1. from your laptop.
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/&lt;username&gt;/agile-infrastructure-build-client-scripts/
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/sh AgileDeploymentToolkit.sh
+</code></pre></div>  </div>
+</blockquote>
+
+<p>The video below is an admittedly old run through of a full build process, but, it gives you the idea of what you need to do to perform a full build.</p>
+
 
   </div><a class="u-url" href="/adtexoscaletutorialsfullbuild/" hidden></a>
 </article>
