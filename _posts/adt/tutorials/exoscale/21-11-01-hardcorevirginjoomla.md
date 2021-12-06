@@ -11,7 +11,7 @@ category: agiledeploymenttoolkit
 
 **HARDCORE BUILD PROCESS**
 
-1. On your laptop perform the following command:
+1. On your laptop perform the following command:  
 
 >     git clone https://github.com/agile-deployer/agile-infrastructure-build-client-scripts.git
 
@@ -21,14 +21,9 @@ We need several pieces of information from our cloud host and 3rd party services
 
 I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla
 
----------------------------------------
+This will deploy the latest version of Joomla using template 1 which you can read about here with the clone you have just made onto your laptop:  
 
-
-This will deploy the latest version of Joomla using template 1 which you can read about here: ./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description and the hardcore method.
-
-We need several pieces of information from our cloud host and 3rd party services for a successful build to be possible:
-
-I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla
+>     ./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description and the hardcore method.
 
 ---------------------------------------
 
@@ -371,6 +366,7 @@ If all the dashes I have added are removed, then this file (with live values and
 
 You now need to copy your template as follows:  
 
+>     /bin/mkdir ./agile-infrastructure-build-client-scripts/overridescripts/
 >     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
 
 Then you need to run the script:
