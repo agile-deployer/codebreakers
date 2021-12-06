@@ -296,26 +296,21 @@ You can then see your new security Group “adt build machine” listed</p>
  
 Click on the “adt build machine” security group</p>
 
-<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image7.png" alt="" title="Exoscale Tutorial Image 7" /><br />
- <br />
- 
-Click “Add Rule” and click on “Ping” to make the machine pingable and then click on “custom rule”</p>
+<p>Add rules to the “adt-build-machine” security group to allow pinging and your build client to connect.</p>
 
-<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image8.png" alt="" title="Exoscale Tutorial Image 8" /><br />
- <br />
- 	
-This is what it looks like once you have cliked “Custom Rule”</p>
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image8.png" alt="" title="Exoscale Tutorial Image 8" /></p>
 
-<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image9.png" alt="" title="Exoscale Tutorial Image 9" /><br />
- <br />
- 
-Put in a CIDR of 0.0.0.0/0 for the source and 1035 for start port and 1035 for end port (note 1035 is what I set the ssh port to earlier, yours may be different)
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image10.png" alt="" title="Exoscale Tutorial Image 10" /></p>
+<p>So you will need to add 2 rules</p>
 
-<p>Click “Create” and the rules you have set will be added to your security group
+<p>1) Ping<br />
+2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.<br />
+   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”</p>
+
+<p>You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32</p>
+
+<p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image17.png" alt="" title="Exoscale Tutorial Image 17" /> 
  <br />
- <br />
-<img src="https://www.codebreakers.uk/images/exoscaletutorial/image11.png" alt="" title="Exoscale Tutorial Image 11" /></p>
+ </p>
 
 <hr />
 
