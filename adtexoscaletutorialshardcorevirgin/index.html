@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      10 min read
     
 </span></p>
 
@@ -113,13 +113,12 @@ window.onload = wrap_img;
 
 <p>I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla</p>
 
-<hr />
+<p>This will deploy the latest version of Joomla using template 1 which you can read about here with the clone you have just made onto your laptop:</p>
 
-<p>This will deploy the latest version of Joomla using template 1 which you can read about here: ./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description and the hardcore method.</p>
-
-<p>We need several pieces of information from our cloud host and 3rd party services for a successful build to be possible:</p>
-
-<p>I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla</p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description and the hardcore method.
+</code></pre></div>  </div>
+</blockquote>
 
 <hr />
 
@@ -497,7 +496,8 @@ export PUBLIC_KEY_ID="AGILE_TOOLKIT_PUBLIC_KEY-nuocial"
 <p>You now need to copy your template as follows:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/mkdir ./agile-infrastructure-build-client-scripts/overridescripts/
+/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
 </code></pre></div>  </div>
 </blockquote>
 
