@@ -181,26 +181,21 @@ You can then see your new security Group "adt build machine" listed
 &nbsp;
 Click on the "adt build machine" security group
 
-![](https://www.codebreakers.uk/images/exoscaletutorial/image7.png "Exoscale Tutorial Image 7")  
-&nbsp;  
-&nbsp;
-Click "Add Rule" and click on "Ping" to make the machine pingable and then click on "custom rule"
-
+Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect. 
+	
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image8.png "Exoscale Tutorial Image 8")  
-&nbsp;  
-&nbsp;	
-This is what it looks like once you have cliked "Custom Rule"
 	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image9.png "Exoscale Tutorial Image 9")  
+So you will need to add 2 rules  
+	
+1) Ping  
+2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
+   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+
+You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
+	
+![](https://www.codebreakers.uk/images/exoscaletutorial/image17.png "Exoscale Tutorial Image 17") 
 &nbsp;  
 &nbsp;
-Put in a CIDR of 0.0.0.0/0 for the source and 1035 for start port and 1035 for end port (note 1035 is what I set the ssh port to earlier, yours may be different)
-![](https://www.codebreakers.uk/images/exoscaletutorial/image10.png "Exoscale Tutorial Image 10") 	
-	
-Click "Create" and the rules you have set will be added to your security group
-&nbsp;  
-&nbsp;  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image11.png "Exoscale Tutorial Image 11")  
 
 
 ---------------
