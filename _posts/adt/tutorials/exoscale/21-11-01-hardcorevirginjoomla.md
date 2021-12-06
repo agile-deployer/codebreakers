@@ -108,10 +108,12 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     2.                   BASELINED DEVELOPMENT MODE DEPLOY OF A BASELINED JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
 >     3.                   TEMPORAL PRODUCTION MODE DEPLOY OF A BACKED UP JOOMLA WORDPRESS DRUPAL OR MOODLE APPLICATION
 >     Please input a number between 1 and 3 to select a template to override
->     1
->     #
+     
+     **1**
+
+>     ##############################################################################
 >     YOU NEED TO SET ALL OF THESE VARIABLES TO SANE VALUES FOR THE BUILD TO FUNCTION
->     #
+>     ###############################################################################
 >     Press <enter to begin>
 >     
 >     ###########################################################################
@@ -124,7 +126,9 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     ---- 
 >     Found a variable JOOMLA_VERSION what do you want to set it to?
 >     Its current value is "3.9.22" press <enter> to retain, anything else to override
+     
       **4.0.4**
+
 >     OK, thanks...
 >     
 >     
@@ -140,7 +144,9 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     ---- 
 >     Found a variable DRUPAL_VERSION what do you want to set it to?
 >     Its current value is "9.2.1" press <enter> to retain, anything else to override
->     N/A
+     
+     **N/A**
+
 >     OK, thanks...
 >     
 >     
