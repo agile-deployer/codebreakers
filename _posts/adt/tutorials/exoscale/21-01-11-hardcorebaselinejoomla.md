@@ -1,6 +1,7 @@
 **HARDCORE BUILD PROCESS**
 
-If you have followed the tutorial [here](https://www.codebreakers.uk/adtexoscaletutorialshardcorevirgin), then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser.
+If you have followed the tutorial [here](https://www.codebreakers.uk/adtexoscaletutorialshardcorevirgin), then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser. If you are using a baseline that someone else has developed or a baseline that you developed some time ago, then you might not have servers running yet. 
+
 What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on. 
 
 What I have done for this tutorial is install a very simple application using a tool called "Community Builder" which you can find here: [Community Builder](https://www.joomlapolis.com). Literally all I have done is install the latest version (at the time) into my Joomla installation that I installed earlier. 
@@ -85,4 +86,36 @@ There are some other values that I need to change in /home/agile-deployer/agile-
 >     export DIRECTORIES_TO_MOUNT="" #MANDATORY - this will define which directories in your webroot will be mounted from S3, if PERSIST_ASSETS_TO_CLOUD=1
 
 You can make any other adjustments you want like if you want to choose APACHE instead of NGINX or change the size of the machines (you can find out about such things in the specification).
+
+**FOLLOW THESE STEPS IF YOU DON'T HAVE A BUILD SERVER RUNNING**
+
+You now need to copy your template as follows:  
+
+>     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
+
+Then you need to run the script:
+
+>     cd helperscripts
+
+>     ./GenerateHardcoreUserDataScript.sh
+
+This will leave you with a script:
+
+>    ../userdatascripts/${userdatascript}   
+
+where ${userdatascript} is the descriptive name you gave when prompted.  
+
+>     Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/)   
+>     instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
+>     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
+>     may not perfer.
+
+
+>     At this point, your build machine should be up and running. Please review  
+>  
+>     ./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
+> 
+>      At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+
+**IF YOU DO HAVE A BUILD SERVER RUNNING FROM A PREVIOUS BUILD, THEN JUST DO THE FOLLOWING**
 
