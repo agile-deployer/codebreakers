@@ -237,7 +237,7 @@ So, I have referred to the specification and I have freely chosen to modify the
 
 So, editing  
 
-**./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl**  
+>     vi ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl   
 
 and using the values I recorded in my text file earlier, I modify the file as follows, the lines beginning with dashes have been modified
 
