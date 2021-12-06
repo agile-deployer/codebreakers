@@ -26,4 +26,4 @@ This tutorial set needs to be followed sequentially in numeric order.
 
 #### 3. The Full Build Method (interactively guided)  
 
->    [Tutorial Set 1 : Full Build](https://www.codebreakers.uk/adtexoscaletutorialsfullbuild)  
+>    [Tutorial Set 1 : (Full Build)](https://www.codebreakers.uk/adtexoscaletutorialsfullbuild)  
