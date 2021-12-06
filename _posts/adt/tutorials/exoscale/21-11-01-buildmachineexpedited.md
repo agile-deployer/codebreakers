@@ -203,7 +203,7 @@ You can see in this image that port 1035 is about to be opened up to the ip addr
 >     3. Select instance type "Tiny" for example
 >     4. Select disk size (50GB)
 >     5. Ignore SSH KEY
->     6. Make sure your security group "adt-build-machine" is set for this machine
+>     6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
 >     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
 >     8. Click Create and wait for your machine to build
 
