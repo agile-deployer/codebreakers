@@ -169,17 +169,17 @@ Click on the security groups option of your exoscale GUI
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it "ADT Build Machine" or something to your liking and then click "Create Group"
+Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" or something to your liking and then click "Create Group"
 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
 &nbsp;  
 &nbsp;
-You can then see your new security Group "adt build machine" listed
+You can then see your new security Group "adt-build-machine" listed
 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image6.png "Exoscale Tutorial Image 6")  
 &nbsp;  
 &nbsp;
-Click on the "adt build machine" security group
+Click on the "adt-build-machine" security group
 
 Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect. 
 	
@@ -197,7 +197,6 @@ You can see in this image that port 1035 is about to be opened up to the ip addr
 &nbsp;  
 &nbsp;
 
-
 ---------------
 
 6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
@@ -207,7 +206,7 @@ You can see in this image that port 1035 is about to be opened up to the ip addr
 >     3. Select instance type "Tiny" for example
 >     4. Select disk size (50GB)
 >     5. Ignore SSH KEY
->     6. Make sure your default security group is set
+>     6. Make sure your "adt-build-machine" security group is set
 >     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
 >     8. Click Create and wait for your machine to build
 
