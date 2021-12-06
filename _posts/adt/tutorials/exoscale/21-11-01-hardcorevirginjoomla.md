@@ -110,7 +110,7 @@ What I have done is run a sample execution of GenerateHardcoreUserData.sh so you
 >     Please input a number between 1 and 3 to select a template to override
 
 -----------------
-**USER INPUT:     1**
+USER INPUT:     1
 -----------------
 
 >     ##############################################################################
