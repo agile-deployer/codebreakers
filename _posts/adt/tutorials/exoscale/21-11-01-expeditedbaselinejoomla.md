@@ -19,7 +19,7 @@ If you don't already have a build machine running in the Exoscale cloud, follow 
 
 **EXPEDITED BUILD PROCESS**
 
-If you have followed the tutorial here, then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser.
+If you have followed the tutorial [here](https://www.codebreakers.uk/adtexoscaletutorialsexpeditedvirgin), then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser.
 What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on. 
 
 What I have done for this tutorial is install a very simple application using a tool called "Community Builder" which you can find here: [Community Builder](https://www.joomlapolis.com). Literally all I have done is install the latest version (at the time) into my Joomla installation that I installed earlier. 
