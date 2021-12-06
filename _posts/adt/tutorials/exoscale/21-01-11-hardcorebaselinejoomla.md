@@ -50,7 +50,7 @@ So, template 2 is located here on my build machine:
 
 >     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl
 
-I can copy the credentials that I need from the values that I set them to previously in template1. So, looking in template1,
+I can copy the credentials that I need from the values that I set them to previously in template1. So, looking in template1 if it is available from a previous build,
 
 >     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl
 
@@ -91,7 +91,7 @@ You can make any other adjustments you want like if you want to choose APACHE in
 
 You now need to copy your template as follows:  
 
->     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale1override.tmpl  
+>     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale2override.tmpl  
 
 Then you need to run the script:
 
