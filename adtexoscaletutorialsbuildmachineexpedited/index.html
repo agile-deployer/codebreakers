@@ -297,12 +297,13 @@ You can then see your new security Group “adt-build-machine” listed</p>
 
 <p>6) Add rules to the “adt-build-machine” security group to allow pinging and your build client to connect.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>So you will need to add 2 rules 
+<p>So you will need to add 2 rules</p>
 
-1) Ping  
-2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop
-        If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
-</code></pre></div></div>
+<p>1) Ping<br />
+2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.<br />
+   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”</p>
+
+<p>You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32</p>
 
 <p><img src="https://www.codebreakers.uk/images/exoscaletutorial/image17.png" alt="" title="Exoscale Tutorial Image 17" /> 
  <br />
