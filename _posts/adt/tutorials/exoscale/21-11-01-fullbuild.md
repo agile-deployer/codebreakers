@@ -27,9 +27,6 @@ The full build process is interactive and guided so you need to answer the quest
   
 >     /bin/sh AgileDeploymentToolkit.sh
   
-The video below is an admittedly old run through of a full build process, but, it gives you the idea of what you need to do to perform a full build.
-  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mXpIRB_7O_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Once you run this script you will prompted to enter various credentials as required. 
 
 
