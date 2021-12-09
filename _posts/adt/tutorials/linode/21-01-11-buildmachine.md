@@ -65,15 +65,16 @@ This will give you your **public** key which you need later so, take a copy of t
 	
 Once you deploy your linode using the stack script from 2 it will look something like the following and you need to populate the variables required as you would for any other Stack Script on Linode.
 	
-  ![](https://www.codebreakers.uk/images/linodetutorial/image2.png "Linode Tutorial Image 2") 
+![](https://www.codebreakers.uk/images/linodetutorial/image2.png "Linode Tutorial Image 2")
 	
-	  ![](https://www.codebreakers.uk/images/linodetutorial/image3.png "Linode Tutorial Image 3")
-	
-	
-  ![](https://www.codebreakers.uk/images/linodetutorial/image4.png "Linode Tutorial Image 4") 
+
+![](https://www.codebreakers.uk/images/linodetutorial/image3.png "Linode Tutorial Image 3")
 	
 	
-  ![](https://www.codebreakers.uk/images/linodetutorial/image5.png "Linode Tutorial Image 5") 
+![](https://www.codebreakers.uk/images/linodetutorial/image4.png "Linode Tutorial Image 4") 
+	
+	
+![](https://www.codebreakers.uk/images/linodetutorial/image5.png "Linode Tutorial Image 5") 
 
 	
 3)  If you are sure that all your variables are set correctly in the stack script you have created, you can now actually deploy a Linode using it and it will install the agile deployment toolkit on it.  
