@@ -90,12 +90,12 @@ Then switch on private networking
 	
 6) Add a firewall to your build machine linode cutting off all but the SSH port and Ping from the ip address of your laptop. In other words, the only machine which has any access to your build machine linode is your own laptop through ssh and ping.
 	
-For SSH, do as follows:  
+For SSH, do as follows for the ip address of your laptop:  
 
 ![](https://www.codebreakers.uk/images/linodetutorial/image6.png "Linode Tutorial Image 6") 
 
 	
-For Ping, do as follows:  
+For Ping, do as follows for the ip address of your laptop:  
 
 ![](https://www.codebreakers.uk/images/linodetutorial/image7.png "Linode Tutorial Image 7")  
 	
