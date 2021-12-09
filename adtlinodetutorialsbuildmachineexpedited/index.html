@@ -134,7 +134,7 @@ This will give you your <strong>public</strong> key which you need later so, tak
 
 <p>2) Take a copy of the script: <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScriptLinode.sh">Initial Script</a> and make a stack sript out of it which will look like:</p>
 
-<p><img src="https://www.codebreakers.uk/images/linodetutorial/image1.png" alt="" title="Linode Tutorial Image 17" /></p>
+<p><img src="https://www.codebreakers.uk/images/linodetutorial/image1.png" alt="" title="Linode Tutorial Image 1" /></p>
 
 <p> <br />
  <br />
@@ -142,7 +142,7 @@ This will give you your <strong>public</strong> key which you need later so, tak
 
 <hr />
 
-<p>3) If you deploy a machine (debian of ubuntu) using the stack script that you made in 2, you need to populate the following variables in your copy:</p>
+<p>3) If you want to deploy a machine (debian of ubuntu) using the stack script that you made in 2, you need to populate the following variables in your copy:</p>
 
 <p> <br />
  </p>
@@ -160,13 +160,11 @@ LAPTOP_IP=""   (www.whatsmyip.com)
 </code></pre></div>  </div>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>################REVIEW FIREWALL
-################# SPIN UP LINODE
+<p>Once you deploy your linode using the stack script from 2 it will look something like the following and you need to populate the variables required as you would for any other Stack Script on Linode.</p>
 
-**********************************
-</code></pre></div></div>
+<p><img src="https://www.codebreakers.uk/images/linodetutorial/image2.png" alt="" title="Linode Tutorial Image 2" /></p>
 
-<p>3)  If you are sure that all your variables are set correctly in the stack script you have created, you can now deploy a machine using it and it will install the agile deployment toolkit on it.</p>
+<p>3)  If you are sure that all your variables are set correctly in the stack script you have created, you can now actually deploy a Linode using it and it will install the agile deployment toolkit on it.</p>
 
 <p> <br />
  <br />
@@ -174,7 +172,10 @@ LAPTOP_IP=""   (www.whatsmyip.com)
 
 <hr />
 
-<p>6) Add rules to the “adt-build-machine” security group to allow pinging and your build client to connect.</p>
+<p>6)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
+</code></pre></div></div>
 
 <p>So you will need to add 2 rules</p>
 
