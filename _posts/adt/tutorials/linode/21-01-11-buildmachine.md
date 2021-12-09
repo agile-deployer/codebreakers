@@ -80,7 +80,7 @@ Then switch on private networking
 ![](https://www.codebreakers.uk/images/linodetutorial/image5.png "Linode Tutorial Image 5") 
 
 	
-3)  If you are sure that all your variables are set correctly in the stack script you have created, you can now actually deploy a Linode using it and it will install the agile deployment toolkit on it.  
+4)  If you are sure that all your variables are set correctly in the stack script you have created, you can now actually deploy a Linode using it and it will install the agile deployment toolkit on it.  
 
 &nbsp;  
 &nbsp;  
@@ -88,69 +88,27 @@ Then switch on private networking
 
 --------------- 
 	
-6) 
+6) Add a firewall to your build machine linode cutting off all but the SSH port and Ping from the ip address of your laptop. In other words, the only machine which has any access to your build machine linode is your own laptop through ssh and ping.
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
-	
-So you will need to add 2 rules  
-	
-1) Ping  
-2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
-   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+For SSH, do as follows:  
 
-You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
+![](https://www.codebreakers.uk/images/linodetutorial/image5.png "Linode Tutorial Image 5") 
+
 	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image17.png "Exoscale Tutorial Image 17") 
-&nbsp;  
-&nbsp;
+For Ping, do as follows:  
+
+![](https://www.codebreakers.uk/images/linodetutorial/image6.png "Linode Tutorial Image 6")  
 	
-	
----------------
+--------------------
 
-7) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
-
->     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
->     2. Select which zone you want to deploy to, for example, CH-GVA-2
->     3. Select instance type "Tiny" for example
->     4. Select disk size (50GB)
->     5. Ignore SSH KEY
->     6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
->     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
->     8. Click Create and wait for your machine to build
-
-Graphically you can see what I have described in these 8 steps here:
-
-&nbsp;  
-&nbsp;  
-&nbsp;
-	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image12.png "Exoscale Tutorial Image 12")  
-![](https://www.codebreakers.uk/images/exoscaletutorial/image13.png "Exoscale Tutorial Image 13")  
-
-&nbsp;  
-&nbsp;  
-&nbsp;
-	
----------------
-
-8) Once the machine has built you can access it as follows:
+5) You can access your build machine now as follows:
 	
 &nbsp;  
 &nbsp; 
 	
->     Discover what the machine's IP address is by looking at the Exoscale GUI system for the IP address of the build machine - In this case: 185.19.29.134
+>     Discover what the machine's IP address is by looking at the Linode GUI system for the IP address of the build machine - 212.71.248.95
+	
+![](https://www.codebreakers.uk/images/linodetutorial/image7.png "Linode Tutorial Image 7") 
 
 &nbsp;  
 &nbsp;
