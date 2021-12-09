@@ -154,23 +154,10 @@ And then enter your build machine password
 &nbsp;  
 &nbsp;		
 	
-In Graphical form, it looks like this:
+On the command line of your laptop it looks like the following:
+	
+![](https://www.codebreakers.uk/images/linodetutorial/image9.png "Linode Tutorial Image 9") 
 
-&nbsp;  
-&nbsp;
-	
-Grab your build machine's IP address (third column)
-![](https://www.codebreakers.uk/images/exoscaletutorial/image15.png "Exoscale Tutorial Image 15")
-	
-&nbsp;  
-&nbsp;
-	
-Run through the commands as shown on your laptop to access your build machine
-
-&nbsp;  
-&nbsp;
-	
-![](https://www.codebreakers.uk/images/exoscaletutorial/image16.png "Exoscale Tutorial Image 16")
 		
 --------------------------------------
 	
