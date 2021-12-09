@@ -390,7 +390,7 @@ It is mandatory to edit your userdata script and modify these values within it t
 
 ------------------------------------------
 
-Now you have your userdata script take a copy of the entirity of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachine/) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
+Now you have your userdata script take a copy of the entirity of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachinehardcore/) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
 
 
 At this point, your build machine should be up and running. Please review  
