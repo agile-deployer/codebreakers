@@ -92,12 +92,12 @@ Then switch on private networking
 	
 For SSH, do as follows:  
 
-![](https://www.codebreakers.uk/images/linodetutorial/image5.png "Linode Tutorial Image 5") 
+![](https://www.codebreakers.uk/images/linodetutorial/image6.png "Linode Tutorial Image 6") 
 
 	
 For Ping, do as follows:  
 
-![](https://www.codebreakers.uk/images/linodetutorial/image6.png "Linode Tutorial Image 6")  
+![](https://www.codebreakers.uk/images/linodetutorial/image7.png "Linode Tutorial Image 7")  
 	
 --------------------
 
@@ -108,7 +108,7 @@ For Ping, do as follows:
 	
 >     Discover what the machine's IP address is by looking at the Linode GUI system for the IP address of the build machine - 212.71.248.95
 	
-![](https://www.codebreakers.uk/images/linodetutorial/image7.png "Linode Tutorial Image 7") 
+![](https://www.codebreakers.uk/images/linodetutorial/image8.png "Linode Tutorial Image 8") 
 
 &nbsp;  
 &nbsp;
