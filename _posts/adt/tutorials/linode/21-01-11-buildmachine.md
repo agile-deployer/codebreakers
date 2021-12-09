@@ -42,7 +42,7 @@ This will give you your **public** key which you need later so, take a copy of t
 	
 2) Take a copy of the script: [Initial Script](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScriptLinode.sh) and make a stack sript out of it which will look like:
   
-  ![](https://www.codebreakers.uk/images/linodetutorial/image1.png "Linode Tutorial Image 17") 
+  ![](https://www.codebreakers.uk/images/linodetutorial/image1.png "Linode Tutorial Image 1") 
 
 	
 &nbsp;  
@@ -51,7 +51,7 @@ This will give you your **public** key which you need later so, take a copy of t
 
 ------------------
 	
-3) If you deploy a machine (debian of ubuntu) using the stack script that you made in 2, you need to populate the following variables in your copy:
+3) If you want to deploy a machine (debian of ubuntu) using the stack script that you made in 2, you need to populate the following variables in your copy:
 
 &nbsp;  
 &nbsp;
@@ -62,14 +62,12 @@ This will give you your **public** key which you need later so, take a copy of t
 >     LAPTOP_IP=""   (www.whatsmyip.com)
 	
 >     SSH=\"\"  (the public key that you installed on your laptop as a key pair in 1)
-
 	
-	################REVIEW FIREWALL
-	################# SPIN UP LINODE
+Once you deploy your linode using the stack script from 2 it will look something like the following and you need to populate the variables required as you would for any other Stack Script on Linode.
 	
-	**********************************
-
-3)  If you are sure that all your variables are set correctly in the stack script you have created, you can now deploy a machine using it and it will install the agile deployment toolkit on it.  
+  ![](https://www.codebreakers.uk/images/linodetutorial/image2.png "Linode Tutorial Image 2") 
+	
+3)  If you are sure that all your variables are set correctly in the stack script you have created, you can now actually deploy a Linode using it and it will install the agile deployment toolkit on it.  
 
 &nbsp;  
 &nbsp;  
@@ -77,7 +75,21 @@ This will give you your **public** key which you need later so, take a copy of t
 
 --------------- 
 	
-6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
+6) 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
 	
 So you will need to add 2 rules  
 	
