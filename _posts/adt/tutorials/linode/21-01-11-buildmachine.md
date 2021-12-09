@@ -67,12 +67,15 @@ Once you deploy your linode using the stack script from 2 it will look something
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image2.png "Linode Tutorial Image 2")
 	
+Select a machine image to build, a region and a machine size (most probably quite a small machine)
 
 ![](https://www.codebreakers.uk/images/linodetutorial/image3.png "Linode Tutorial Image 3")
 	
+Then enter a root password, make sure it is complex enough to satisfy any strength checks built into the OS
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image4.png "Linode Tutorial Image 4") 
-	
+
+Then switch on private networking
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image5.png "Linode Tutorial Image 5") 
 
