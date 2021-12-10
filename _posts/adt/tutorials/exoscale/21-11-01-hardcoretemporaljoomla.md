@@ -48,7 +48,7 @@ I can extract the values for the following variables from template 1 or template
   
 What I then do is adjust  
 
-**/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl**  
+>     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl  
   
 to contain these values instead of its defaults.
   
