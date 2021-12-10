@@ -37,7 +37,11 @@ This will give you your **public** key which you need later so, take a copy of t
 
 --------------------
 	
-2) Take on your laptop, take a copy of your userdata script that you should have previously generated on ${BUILD_HOME}/agile-infrastructure-build-client-scripts/userdata/${userdatascript}) - where ${userdatascript} is the name you have given to your userdata script. 
+2) Take on your laptop, take a copy of your userdata script that you should have previously generated from  
+
+>     ${BUILD_HOME}/agile-infrastructure-build-client-scripts/userdata/${userdatascript})  
+	
+where ${userdatascript} is the name you have given to your userdata script. 
 	
 &nbsp;  
 &nbsp;  
