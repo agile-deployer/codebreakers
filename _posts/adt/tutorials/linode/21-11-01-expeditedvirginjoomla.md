@@ -327,7 +327,7 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
->     -----export CLOUDHOST_PASSWORD="kwshf934^Gyd"£" #You can set this to whatever you like as long as it is secure and set
+>     -----export CLOUDHOST_PASSWORD="kwshf934^Gyd£" #You can set this to whatever you like as long as it is secure and set
 >     export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
 >     export PREVIOUS_BUILD_CONFIG="0"
 >     export GIT_USER="Templated User"
