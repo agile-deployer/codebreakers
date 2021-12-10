@@ -1,7 +1,7 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit Linode Tutorials Expedited Virgin  
-title: Exoscale ADT Tutorials Linode Virgin
+title: Linode ADT Tutorials Linode Virgin
 permalink: /adtlinodetutorialsexpeditedvirgin/
 hide: true
 category: agiledeploymenttoolkit
