@@ -380,7 +380,7 @@ If all the dashes I have added are removed, then this file (with live values and
 
 You should now be at a point where your build machine is running and configured ready to deploy Joomla in a virgin (or uncustomised) configuration. I will show you what this will likely look like in a video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XI3z8cScN48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GsG7MkZfPNc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---------------------------
 
