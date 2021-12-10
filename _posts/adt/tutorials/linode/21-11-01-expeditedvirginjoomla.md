@@ -127,6 +127,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     ----- export DNS_SECURITY_KEY=""   #MANDATORY
 >     export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ----- export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY
+>     ----- export CLOUDHOST_PASSWORD="" #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
 >     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10
 >     export DEFAULT_USER="root" #MANDATORY - This should always be 'root' on linode
@@ -262,6 +263,7 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     ----- export DNS_SECURITY_KEY="AAAAA"   #MANDATORY
 >     export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ----- export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
+>     ----- export CLOUDHOST_PASSWORD="uIjfnY5H%gfds" #MANDATORY (set this to whatever you like as long as it is secure and set)
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
 >     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10
 >     export DEFAULT_USER="root" #MANDATORY - This should always be 'root' on linode
