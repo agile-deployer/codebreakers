@@ -86,7 +86,7 @@ To keep this as simple as possible, I have missed out the SMTP credentials, but,
 
 --------------------------
 
-**NOTE** 
+**NOTE:** 
 The CLOUDHOST_PASSWORD value must be set for a linode based build to succeed. 
 
 --------------------------
