@@ -80,7 +80,11 @@ I can extract the values for the following variables:
 >     export APPLICATION_REPOSITORY_USERNAME="mytestgituser" #MANDATORY
 >     export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
 
-What I then do is adjust /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl to contain these values instead of its defaults. 
+What I then do is adjust  
+
+>     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl  
+
+to contain these values instead of its defaults. 
 
 With that done, because I used "Postgres" which from the file dbe.dat in the webroot of my baseline when I deployed Joomla originally, I need to make sure that I set the database to use as follows:
 
