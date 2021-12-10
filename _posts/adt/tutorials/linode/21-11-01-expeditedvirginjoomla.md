@@ -41,7 +41,11 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
-I then need a set of compute access keys so, I go to the top right and select "API Keys" and generate a personal access token with "Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes" enabled. This personal access token I shall call "AAAAA"
+> I then need a set of compute access keys so, I go to the top right and select "API Keys" and generate a personal access token with 
+
+> **Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes**
+
+> enabled. This personal access token I shall call "AAAAA"
 
 >     linode_personal_access_token="AAAAA"  where AAAAA is the actual values generated when I click "Create Token"
 
