@@ -65,8 +65,6 @@ This will give you your **public** key which you need later so, take a copy of t
 	
 Once you deploy your linode using the stack script from 2 it will look something like the following and you need to populate the variables required as you would for any other Stack Script on Linode.
 	
-**CORRECTION: You must call your build machine, PRECISELY, "adt-build-machine-<qualifier>" for example, "adt-build-machine-nuocial"** The firewalling for linode won't work properly otherwise
-	
 ![](https://www.codebreakers.uk/images/linodetutorial/image2.png "Linode Tutorial Image 2")
 	
 Select a machine image to build, a region and a machine size (most probably quite a small machine)
