@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Linode Tutorials Expedited Baseline Joomla
 title: Linode ADT Tutorials Expedited Baseline Joomla
-permalink: /adtlinodetutorialsexpeditedbaseline/
+permalink: /adtlinodetutorialsexpeditedbaseline
 hide: true
 category: agiledeploymenttoolkit
 ---
