@@ -44,8 +44,7 @@ I can extract the values for the following variables from template 1 or template
 >     export APPLICATION_REPOSITORY_OWNER="mytestgituser" #MANDATORY
 >     export APPLICATION_REPOSITORY_USERNAME="mytestgituser" #MANDATORY
 >     export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
->     export CLOUDHOST_PASSWORD="hkenfio4fbc9u" #MANDATORY  
-  
+>     export CLOUDHOST_PASSWORD="kwshf934^Gyd£"  
   
 What I then do is adjust  
 
