@@ -1,3 +1,12 @@
+---
+layout: post
+description: The Agile Deployment Toolkit The Vision
+title: Background Philosophy
+permalink: /thevision/
+hide: true
+category: agiledeploymenttoolkit
+---
+
 #### THE VISION
 
 What I am trying to achieve here is to treat fully featured applications as reusable encapsulated components. What this means is that if a development team develops an application using a CMS, say joomla, that using this toolkit that application can be deployed or "instantiated" as a reusable component at an application level. This is similar to how plugins and extensions are used as components with the CMS itself except the application itself is the component or the building block. The ulitmate vision I have for this is that for a given town, you can deploy an application once for each postcode. Lets use Slough Town as an example. You could have
