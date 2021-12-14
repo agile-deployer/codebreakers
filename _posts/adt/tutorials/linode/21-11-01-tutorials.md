@@ -20,7 +20,7 @@ This tutorial set needs to be followed sequentially in numeric order.
 #### 2. Hardcore Build Method (expert)
 
 >    [Tutorial Set 1 (Virgin CMS Installation)](https://www.codebreakers.uk/adtlinodetutorialshardcorevirgin)   
->    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk//adtlinodetutorialshardcorebaseline/)  
+>    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk//adtlinodetutorialshardcorebaseline)  
 >    [Tutorial Set 3 (Temporal CMS Installation)](https://www.codebreakers.uk/adtlinodetutorialshardcoretemporal)
 
 
