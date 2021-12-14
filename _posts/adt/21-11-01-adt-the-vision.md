@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit The Vision
 title: The Vision
-permalink: /thevision
+permalink: /thevision/
 hide: true
 category: agiledeploymenttoolkit
 ---
