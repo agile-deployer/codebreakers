@@ -1,8 +1,8 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit The Vision
-title: Background Philosophy
-permalink: /thevision/
+title: The Vision
+permalink: /thevision
 hide: true
 category: agiledeploymenttoolkit
 ---
