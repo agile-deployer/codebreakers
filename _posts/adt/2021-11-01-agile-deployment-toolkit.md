@@ -13,4 +13,6 @@ category: agiledeploymenttoolkit
 
 ### [Background Philosophy](https://www.codebreakers.uk/backgroundphilosophy/)
 
+### [Background Philosophy](https://www.codebreakers.uk/thevision/)
+
 ### [Tutorials](https://www.codebreakers.uk/tutorials/)
