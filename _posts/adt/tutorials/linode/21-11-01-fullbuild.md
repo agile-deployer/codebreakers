@@ -31,25 +31,28 @@ And I note the latest version in a separate text file:
 
 You can of course use a legacy version of joomla also by choosing a different version numnber. 
 
+
 -------------------------------------
 
-I then need a set of compute access keys so, I go to the IAM option on my linode dashboard and generate an IAM key with compute access. In my separate text file, I record:
+> I then need a set of compute access keys so, I go to the top right and select "API Keys" and generate a personal access token with 
 
->     linode_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
->     linode_secret_key_compute="YYYYY"
+> Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes
 
-I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my linode dashboard and generate an IAM key with S3 access. In my separate text file, I record:
+> enabled. This personal access token I shall call "AAAAA"
 
->     linode_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
->     linode_secret_key_s3="BBBBB"
+**IMPORTANT EDIT: To use the native firewalling system the linode-cli tool seems to only accept personal access tokens with full access rights, so, whilst that is the case, you will need to ignore the above scoping and just chose "Select All" with "Read and Write" access when you create your personal access token.** 
 
+>     linode_personal_access_token="AAAAA"  where AAAAA is the actual values generated when I click "Create Token"
 
-I then need a set of DNS access keys so, I go to the IAM option on my linode dashboard and generate an IAM key with DNS access. In my separate text file, I record:
+-------------------------
 
->     linode_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
->     linode_secret_key_dns="DDDDD"
+You now need to set up Object Storage and obtain Object Storage Keys. You can do this by Selecting Object Storage on the left hand side of your Linode console. 
 
-**NOTE:** Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn't have to juggle three set of keys then and could use the same key pair in all three cases.
+You then click "Access Key" and then, "Create Access Key" and this will display an "Access Key" and a "Secret Key" which you need to make a note of and keep safe:
+
+>     linode_S3_access_key="BBBBB"
+>     linode_S3_secret_key="CCCCC"
+
 
 -----------------------------------
 
