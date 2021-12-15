@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      10 min read
     
 </span></p>
 
@@ -137,31 +137,36 @@ window.onload = wrap_img;
 
 <hr />
 
-<p>I then need a set of compute access keys so, I go to the IAM option on my linode dashboard and generate an IAM key with compute access. In my separate text file, I record:</p>
+<blockquote>
+  <p>I then need a set of compute access keys so, I go to the top right and select “API Keys” and generate a personal access token with</p>
+</blockquote>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linode_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
-linode_secret_key_compute="YYYYY"
+  <p>Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes</p>
+</blockquote>
+
+<blockquote>
+  <p>enabled. This personal access token I shall call “AAAAA”</p>
+</blockquote>
+
+<p><strong>IMPORTANT EDIT: To use the native firewalling system the linode-cli tool seems to only accept personal access tokens with full access rights, so, whilst that is the case, you will need to ignore the above scoping and just chose “Select All” with “Read and Write” access when you create your personal access token.</strong></p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linode_personal_access_token="AAAAA"  where AAAAA is the actual values generated when I click "Create Token"
 </code></pre></div>  </div>
 </blockquote>
 
-<p>I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my linode dashboard and generate an IAM key with S3 access. In my separate text file, I record:</p>
+<hr />
+
+<p>You now need to set up Object Storage and obtain Object Storage Keys. You can do this by Selecting Object Storage on the left hand side of your Linode console.</p>
+
+<p>You then click “Access Key” and then, “Create Access Key” and this will display an “Access Key” and a “Secret Key” which you need to make a note of and keep safe:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linode_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
-linode_secret_key_s3="BBBBB"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linode_S3_access_key="BBBBB"
+linode_S3_secret_key="CCCCC"
 </code></pre></div>  </div>
 </blockquote>
-
-<p>I then need a set of DNS access keys so, I go to the IAM option on my linode dashboard and generate an IAM key with DNS access. In my separate text file, I record:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>linode_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
-linode_secret_key_dns="DDDDD"
-</code></pre></div>  </div>
-</blockquote>
-
-<p><strong>NOTE:</strong> Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn’t have to juggle three set of keys then and could use the same key pair in all three cases.</p>
 
 <hr />
 
@@ -236,9 +241,9 @@ export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to de
 ------export S3_SECRET_KEY=""  #MANDATORY  
 export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
 export S3_LOCATION="US" #For linode, this always needs to be set to "US"  
-export TOKEN="" #NOT REQUIRED  
-------export ACCESS_KEY=""   #MANDATORY  
-------export SECRET_KEY=""   #MANDATORY  
+------export TOKEN="" #MANDATORY
+export ACCESS_KEY=""   #NOT REQUIRED  
+export SECRET_KEY=""   #NOT REQUIRED  
 ------export DNS_USERNAME=""  #MANDATORY  
 ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
 export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice  
@@ -295,7 +300,7 @@ export MACHINE_TYPE="EXOSCALE"
 export ALGORITHM="rsa"
 export USER="root"
 export CLOUDHOST_USERNAME="root"
-export CLOUDHOST_PASSWORD=""
+------export CLOUDHOST_PASSWORD=""
 export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
 export PREVIOUS_BUILD_CONFIG="0"
 export GIT_USER="Templated User"
@@ -381,9 +386,9 @@ export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to de
 ------export S3_SECRET_KEY="BBBBB"  #MANDATORY
 export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
 export S3_LOCATION="US" #For linode, this always needs to be set to "US"
-export TOKEN="" #NOT REQUIRED
-------export ACCESS_KEY="XXXXX"   #MANDATORY
-------export SECRET_KEY="YYYYY"   #MANDATORY
+------export TOKEN="" #MANDATORY
+export ACCESS_KEY="XXXXX"   #NOT REQUIRED
+export SECRET_KEY="YYYYY"   #NOT REQUIRED
 ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
 ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
 export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice
@@ -439,7 +444,7 @@ export MACHINE_TYPE="EXOSCALE"
 export ALGORITHM="rsa"
 export USER="root"
 export CLOUDHOST_USERNAME="root"
-export CLOUDHOST_PASSWORD=""
+------export CLOUDHOST_PASSWORD=""
 export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
 export PREVIOUS_BUILD_CONFIG="0"
 export GIT_USER="Templated User"
