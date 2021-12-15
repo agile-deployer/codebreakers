@@ -66,11 +66,11 @@ I can copy the credentials that I need from the values that I set them to previo
 
 I can extract the values for the following variables:
 
->     export S3_ACCESS_KEY="BBBB"  #MANDATORY
->     export S3_SECRET_KEY="CCCC"  #MANDATORY
+>     export S3_ACCESS_KEY="BBBBB"  #MANDATORY
+>     export S3_SECRET_KEY="CCCCC"  #MANDATORY
 >     export TOKEN="AAAAA"   #MANDATORY
 >     export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
->     export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     export DNS_SECURITY_KEY="BBBBB:CCCCC"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
 >     export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
 >     export WEBSITE_DISPLAY_NAME="Test Social Network" #MANDATORY
 >     export WEBSITE_NAME="testsocialnetwork" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
