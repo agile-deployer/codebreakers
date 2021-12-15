@@ -85,6 +85,13 @@ Then create a "personal access token" by following:
 
 To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them ./agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md. If you wish to include SMTP credentials you will need to have a service offering set up with either sendpulse, mailjet or AWS SES.
 
+--------------------------
+
+**NOTE:** 
+The CLOUDHOST_PASSWORD value must be set for a linode based build to succeed. 
+
+--------------------------
+
 So, that should be all the core credentials that I need to make a deployment. I can save my text file now (and keep it secure) because I might want to use these credentials again for other deployments or redeployments. 
 
 --------------------------------------------
