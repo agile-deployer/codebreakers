@@ -200,6 +200,21 @@ export DIRECTORIES_TO_MOUNT="images" #MANDATORY - this will define which directo
 
 <p>where ${userdatascript} is the descriptive name you gave when prompted.</p>
 
+<p>It is mandatory to edit your userdata script and modify these values within it to your liking:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-user"
+export BUILDMACHINE_PASSWORD="Hjdhfb34hd£" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+export BUILDMACHINE_SSH_PORT="1035"
+export LAPTOP_IP="111.111.111.111"
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\" #paste your public key here
+</code></pre></div>  </div>
+</blockquote>
+
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachinehardcore)   
 instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
@@ -208,14 +223,14 @@ may not perfer.
 </code></pre></div>  </div>
 </blockquote>
 
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>At this point, your build machine should be up and running. Please review  
- 
-./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
+<p>At this point, your build machine should be up and running. Please review</p>
 
- At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
 </code></pre></div>  </div>
 </blockquote>
+
+<p>At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in “Tightening Build Machine Access” to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily.</p>
 
 <p><strong>IF YOU DO HAVE A BUILD SERVER RUNNING FROM A PREVIOUS BUILD, THEN JUST DO THE FOLLOWING</strong></p>
 
