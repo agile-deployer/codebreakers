@@ -41,11 +41,11 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
-> I then need a set of compute access keys so, I go to the top right and select "API Keys" and generate a personal access token with 
+> I then need personal acccess token so, I go to the top right and select "API Keys" and generate a personal access token with 
 
-> Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes
+> Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes scope
 
-> enabled. This personal access token I shall call "AAAAA"
+> enabled. For convenience I will say this personal access token has a value "AAAAA"
 
 **IMPORTANT EDIT: To use the native firewalling system the linode-cli tool seems to only accept personal access tokens with full access rights, so, whilst that is the case, you will need to ignore the above scoping and just chose "Select All" with "Read and Write" access when you create your personal access token.** 
 
@@ -75,12 +75,13 @@ You then need the url that you want to use for your website. If you don't have a
 
 -------------------------------
 
-You then need the username and owner of you git provider application repositories.
+You then need the username and owner of you git provider application repositories.  
+
 To do this, if you don't have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:
 
 >     gitusername="mytestgituser"
 
-Then create a "personal access token" by following: 
+Then create a github "personal access token" by following: 
 
 [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) making sure you give it all "repo" permissions
 
@@ -93,7 +94,7 @@ To keep this as simple as possible, I have missed out the SMTP credentials, but,
 --------------------------
 
 **NOTE:** 
-The CLOUDHOST_PASSWORD value must be set for a linode based build to succeed. 
+The CLOUDHOST_PASSWORD value must be set in your template for a Linode based build to succeed. 
 
 --------------------------
 
