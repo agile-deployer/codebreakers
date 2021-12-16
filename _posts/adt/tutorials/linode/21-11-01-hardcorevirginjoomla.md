@@ -318,7 +318,7 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
->     ----- export CLOUDHOST_PASSWORD=""
+>     ----- export CLOUDHOST_PASSWORD="kwshf934^Gyd£" #You can set this to whatever you like as long as it is secure and set
 >     export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
 >     export PREVIOUS_BUILD_CONFIG="0"
 >     export GIT_USER="Templated User"
