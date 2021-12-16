@@ -34,11 +34,11 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
-> I then need a set of compute access keys so, I go to the top right and select "API Keys" and generate a personal access token with 
+> I then need a personal access token so I go to the top right and select "API Keys" and generate a personal access token with 
 
 > Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes
 
-> enabled. This personal access token I shall call "AAAAA"
+> scope enabled. This personal access token I shall give a value of "AAAAA"
 
 **IMPORTANT EDIT: To use the native firewalling system the linode-cli tool seems to only accept personal access tokens with full access rights, so, whilst that is the case, you will need to ignore the above scoping and just chose "Select All" with "Read and Write" access when you create your personal access token.** 
 
