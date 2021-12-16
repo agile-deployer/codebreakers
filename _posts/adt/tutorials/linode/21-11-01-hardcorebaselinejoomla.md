@@ -7,7 +7,6 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-
 **HARDCORE BUILD PROCESS**
 
 If you have followed the tutorial [here](https://www.codebreakers.uk/adtlinodetutorialshardcorevirgin), then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser. If you are using a baseline that someone else has developed or a baseline that you developed some time ago, then you might not have servers running yet. 
@@ -110,7 +109,9 @@ Then you need to run the script:
 
 >     cd helperscripts
 
->     ./GenerateHardcoreUserDataScript.sh
+>     ./GenerateOverrideTemplate.sh
+
+>     ./GenerateHardcoreUserDataScript.sh stack
 
 This will leave you with a script:
 
