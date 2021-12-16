@@ -5,7 +5,7 @@ title: Linode ADT Tutorials Hardcore Temporal Joomla
 permalink: /adtlinodetutorialshardcoretemporal/
 hide: true
 category: agiledeploymenttoolkit
----
+--- 
 
 **YOU MUST HAVE THE MACHINES STILL RUNNING FROM THE PREVIOUS TUTORIAL TO COMPLETE THIS TUTORIAL SUCCESSFULLY**
 
