@@ -256,15 +256,15 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
 >     # change this to, MOODLE if you are deploying moodle
 >     #############################################################################################
->     ------export S3_ACCESS_KEY="AAAAA"  #MANDATORY
->     ------export S3_SECRET_KEY="BBBBB"  #MANDATORY
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
+>     ----- export S3_ACCESS_KEY="BBBBB"  #MANDATORY
+>     ----- export S3_SECRET_KEY="CCCCC"  #MANDATORY
+>     export S3_HOST_BASE="eu-central-1.linodeobjects.com" #MANDATORY
 >     export S3_LOCATION="US" #For linode, this always needs to be set to "US"
->     ------export TOKEN="" #MANDATORY
->     export ACCESS_KEY="XXXXX"   #NOT REQUIRED
->     export SECRET_KEY="YYYYY"   #NOT REQUIRED
+>     ------ export TOKEN="AAAAA" #MANDATORY this is your linode personal access token
+>     export ACCESS_KEY=""   #NOT REQUIRED
+>     export SECRET_KEY=""   #NOT REQUIRED
 >     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
->     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     ------export DNS_SECURITY_KEY="AAAAA" 
 >     export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
