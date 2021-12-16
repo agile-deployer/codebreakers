@@ -119,6 +119,16 @@ This will leave you with a script:
 
 where ${userdatascript} is the descriptive name you gave when prompted.  
 
+It is mandatory to edit your userdata script and modify these values within it to your liking:
+
+>     export BUILDMACHINE_USER="agile-user"
+>     export BUILDMACHINE_PASSWORD="Hjdhfb34hd£" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+>     export BUILDMACHINE_SSH_PORT="1035"
+>     export LAPTOP_IP="111.111.111.111"
+
+>     export SSH=\"\" #paste your public key here
+
+
 Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtlinodetutorialsbuildmachineexpedited/) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR LINODE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
 
 >     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
