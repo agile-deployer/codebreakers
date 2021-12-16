@@ -80,7 +80,17 @@ This will leave you with a script:
 
 >    ../userdatascripts/${userdatascript}   
 
-where ${userdatascript} is the descriptive name you gave when prompted.  
+where ${userdatascript} is the descriptive name you gave when prompted.
+  
+It is mandatory to edit your userdata script and modify these values within it to your liking:
+
+>     export BUILDMACHINE_USER="agile-user"
+>     export BUILDMACHINE_PASSWORD="Hjdhfb34hd£" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+>     export BUILDMACHINE_SSH_PORT="1035"
+>     export LAPTOP_IP="111.111.111.111"
+
+>     export SSH=\"\" #paste your public key here
+
 
 >     Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachinehardcore)   
 >     instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR EXOSCALE MACHINE INSTEAD OF THE MODIFIED TEMPLATE. 
@@ -88,11 +98,11 @@ where ${userdatascript} is the descriptive name you gave when prompted.
 >     may not perfer.
 
 
->     At this point, your build machine should be up and running. Please review  
->  
+At this point, your build machine should be up and running. Please review  
+  
 >     ./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
-> 
->      At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
+ 
+At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
 
 **IF YOU DO HAVE A BUILD SERVER RUNNING FROM A PREVIOUS BUILD, THEN JUST DO THE FOLLOWING**
   
