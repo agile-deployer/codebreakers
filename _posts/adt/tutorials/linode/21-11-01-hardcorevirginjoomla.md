@@ -175,7 +175,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export AS_SIZE="10G"
 >     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
 >     export CLOUDHOST="linode"
->     export MACHINE_TYPE="EXOSCALE"
+>     export MACHINE_TYPE="LINODE"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
