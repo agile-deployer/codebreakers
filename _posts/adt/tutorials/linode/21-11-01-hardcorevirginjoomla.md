@@ -103,42 +103,43 @@ So, to begin an hardcore build process, I need to:
 
 This file looks like this (I have put a dashes before each line I wish to modify for this deployment which is for illustrative purposes only):
 
->     ###############################################################################################  
->     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
->     ###############################################################################################  
->     ------export APPLICATION=""  
->     export JOOMLA_VERSION="" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
->     export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal  
->     ------export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="" #MANDATORY  
->     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  
->     # change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)  
->     # change this to, WORDPRESS if you are deploying wordpress  
->     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)  
->     # change this to, MOODLE if you are deploying moodle  
->     #############################################################################################  
->     ------export S3_ACCESS_KEY=""  #MANDATORY  
->     ------export S3_SECRET_KEY=""  #MANDATORY  
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
->     export S3_LOCATION="US" #For linode, this always needs to be set to "US"  
->     ------export TOKEN="" #MANDATORY
->     export ACCESS_KEY=""   #NOT REQUIRED  
->     export SECRET_KEY=""   #NOT REQUIRED  
->     ------export DNS_USERNAME=""  #MANDATORY  
->     ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
->     export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice  
->     ------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY  
->     export BUILDOS="debian" #MANDATORY one of ubuntu|debian  
->     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11  
->     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian  
->     ------export WEBSITE_DISPLAY_NAME="" #MANDATORY  
->   
->     ------export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
->     ------export WEBSITE_URL=""  #MANDATORY
->     export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
->     ------export APPLICATION_REPOSITORY_OWNER="" #MANDATORY
->     ------export APPLICATION_REPOSITORY_USERNAME="" #MANDATORY
+
+>     ###############################################################################################
+>     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md
+>     ###############################################################################################
+>     ----- export APPLICATION=""
+>     ----- export JOOMLA_VERSION="" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla
+>     export DRUPAL_VERSION="9.2.1"  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal
+>     ----- export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="" #MANDATORY 
+>     #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>     # change this to, for example, JOOMLA:4.0.3 if you are deploying drupal (APPLICATION=joomla)
+>     # change this to, WORDPRESS if you are deploying wordpress
+>     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
+>     # change this to, MOODLE if you are deploying moodle
+>     #############################################################################################
+>     ----- export S3_ACCESS_KEY=""  #MANDATORY
+>     ----- export S3_SECRET_KEY=""  #MANDATORY
+>     export S3_HOST_BASE="eu-central-1.linodeobjects.com" #MANDATORY
+>     export S3_LOCATION="US" #For linode, this always needs to be set to "US"
+>     ------ export TOKEN="" #MANDATORY this is your linode personal access token
+>     export ACCESS_KEY=""   #NOT REQUIRED
+>     export SECRET_KEY=""   #NOT REQUIRED
+>     ----- export DNS_USERNAME=""  #MANDATORY
+>     ----- export DNS_SECURITY_KEY=""   #MANDATORY
+>     export DNS_CHOICE="linode" #MANDATORY - you will need to set your DNS nameservers according to this choice
+>     ----- export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY
+>     export BUILDOS="" #MANDATORY one of ubuntu|debian
+>     export BUILDOS_VERSION="" #MANDATORY one of 20.04|10
+>     export DEFAULT_USER="root" #MANDATORY - This should always be 'root' on linode
+>     ----- export BUILD_IDENTIFIER="" #MANDATORY
+>     ----- export WEBSITE_DISPLAY_NAME="" #MANDATORY
+>     ----- export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
+>     ----- export WEBSITE_URL=""  #MANDATORY
+>     ----- export APPLICATION_REPOSITORY_PROVIDER="" #MANDATORY
+>     ----- export APPLICATION_REPOSITORY_OWNER="" #MANDATORY
+>     ----- export APPLICATION_REPOSITORY_USERNAME="" #MANDATORY
 >     export APPLICATION_REPOSITORY_PASSWORD="" #MANDATORY
->     ------export APPLICATION_REPOSITORY_TOKEN="" #MANDATORY
+>     ----- export APPLICATION_REPOSITORY_TOKEN="" #MANDATORY
 >     export SYSTEM_EMAIL_PROVIDER="" #MANDATORY
 >     export SYSTEM_TOEMAIL_ADDRESS="" #MANDATORY
 >     export SYSTEM_FROMEMAIL_ADDRESS="" #MANDATORY
@@ -151,12 +152,12 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export PRODUCTION="0"
 >     export DEVELOPMENT="1"
 >     export BUILD_CHOICE="0"
->     ------export WEBSERVER_CHOICE="APACHE"
+>     ----- export WEBSERVER_CHOICE="APACHE"
 >     export NO_AUTOSCALERS="1"
 >     export NUMBER_WS="1"
 >     export SUPERSAFE_WEBROOT="1"
 >     export SUPERSAFE_DB="1"
->     ------export DATABASE_INSTALLATION_TYPE="MySQL"
+>     ----- export DATABASE_INSTALLATION_TYPE="MySQL"
 >     export PERSIST_ASSETS_TO_CLOUD="0" #This should always be set to 0 for a virgin deployment
 >     export DISABLE_HOURLY="0"
 >     export SERVER_TIMEZONE_CONTINENT="Europe"
@@ -164,22 +165,22 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export BASELINE_DB_REPOSITORY="VIRGIN"
 >     export BUILD_ARCHIVE_CHOICE="virgin"
 >     export APPLICATION_LANGUAGE="PHP"
->     ------export APPLICATION_IDENTIFIER="3"
->     ------export PHP_VERSION="7.4"
+>     ----- export APPLICATION_IDENTIFIER="0"
+>     export PHP_VERSION="7.4"
 >     export REGION=""
->     export REGION_ID="1128bd56-b4d9-4ac6-a7b9-c715b187ce11"
->     export DB_SIZE="10G"
->     export DB_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
->     export WS_SIZE="10G"
->     export WS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
->     export AS_SIZE="10G"
->     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export REGION_ID="eu-central"
+>     export DB_SIZE="g6-nanode-1"
+>     export DB_SERVER_TYPE="g6-nanode-1"
+>     export WS_SIZE="g6-nanode-1"
+>     export WS_SERVER_TYPE="g6-nanode-1"
+>     export AS_SIZE="g6-nanode-1"
+>     export AS_SERVER_TYPE="g6-nanode-1"
 >     export CLOUDHOST="linode"
 >     export MACHINE_TYPE="LINODE"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
->     ------export CLOUDHOST_PASSWORD=""
+>     ----- export CLOUDHOST_PASSWORD=""
 >     export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
 >     export PREVIOUS_BUILD_CONFIG="0"
 >     export GIT_USER="Templated User"
@@ -224,10 +225,9 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export WEBSERVER_IMAGE_ID=""
 >     export AUTOSCALER_IMAGE_ID=""
 >     export DATABASE_IMAGE_ID=""
->     export BUILD_HOME="/home/agile-deployer/agile-infrastructure-build-client-scripts"
->     export BUILD_CLIENT_IP="185.19.29.134"
->     export BUILD_IDENTIFIER="nuocial"
->     export PUBLIC_KEY_ID="AGILE_TOOLKIT_PUBLIC_KEY-nuocial"
+>     export BUILD_HOME=""
+>     export BUILD_CLIENT_IP=""
+>     export PUBLIC_KEY_ID=""
 
 So, I have referred to the specification and I have freely chosen to modify the  
 
@@ -290,12 +290,12 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     export PRODUCTION="0"
 >     export DEVELOPMENT="1"
 >     export BUILD_CHOICE="0"
->     ------export WEBSERVER_CHOICE="NGINX"
+>     ----- export WEBSERVER_CHOICE="NGINX"
 >     export NO_AUTOSCALERS="1"
 >     export NUMBER_WS="1"
 >     export SUPERSAFE_WEBROOT="1"
 >     export SUPERSAFE_DB="1"
->     ------export DATABASE_INSTALLATION_TYPE="Postgres"
+>     ----- export DATABASE_INSTALLATION_TYPE="Postgres"
 >     export PERSIST_ASSETS_TO_CLOUD="0" #This should always be set to 0 for a virgin deployment
 >     export DISABLE_HOURLY="0"
 >     export SERVER_TIMEZONE_CONTINENT="Europe"
@@ -303,22 +303,22 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     export BASELINE_DB_REPOSITORY="VIRGIN"
 >     export BUILD_ARCHIVE_CHOICE="virgin"
 >     export APPLICATION_LANGUAGE="PHP"
->     ------export APPLICATION_IDENTIFIER="1"**
->     ------export PHP_VERSION="8.0"**
+>     ----- export APPLICATION_IDENTIFIER="1"
+>     ----- export PHP_VERSION="8.0"
 >     export REGION=""
->     export REGION_ID="1128bd56-b4d9-4ac6-a7b9-c715b187ce11"
->     export DB_SIZE="10G"
->     export DB_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
->     export WS_SIZE="10G"
->     export WS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
->     export AS_SIZE="10G"
->     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export REGION_ID="eu-central"
+>     export DB_SIZE="g6-nanode-1"
+>     export DB_SERVER_TYPE="g6-nanode-1"
+>     export WS_SIZE="g6-nanode-1"
+>     export WS_SERVER_TYPE="g6-nanode-1"
+>     export AS_SIZE="g6-nanode-1"
+>     export AS_SERVER_TYPE="g6-nanode-1"
 >     export CLOUDHOST="linode"
->     export MACHINE_TYPE="EXOSCALE"
+>     export MACHINE_TYPE="LINODE"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
->     ------export CLOUDHOST_PASSWORD=""
+>     ----- export CLOUDHOST_PASSWORD=""
 >     export PUBLIC_KEY_NAME="AGILE_TOOLKIT_PUBLIC_KEY"
 >     export PREVIOUS_BUILD_CONFIG="0"
 >     export GIT_USER="Templated User"
@@ -363,10 +363,9 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     export WEBSERVER_IMAGE_ID=""
 >     export AUTOSCALER_IMAGE_ID=""
 >     export DATABASE_IMAGE_ID=""
->     export BUILD_HOME="/home/agile-deployer/agile-infrastructure-build-client-scripts"
->     export BUILD_CLIENT_IP="185.19.29.134"
->     export BUILD_IDENTIFIER="nuocial"
->     export PUBLIC_KEY_ID="AGILE_TOOLKIT_PUBLIC_KEY-nuocial"
+>     export BUILD_HOME=""
+>     export BUILD_CLIENT_IP=""
+>     export PUBLIC_KEY_ID=""
 
 If all the dashes I have added are removed, then this file (with live values and not symbolic ones) would be ready for deployment.  
 
