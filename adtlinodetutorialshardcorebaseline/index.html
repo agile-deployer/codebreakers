@@ -253,6 +253,21 @@ export DIRECTORIES_TO_MOUNT="" #MANDATORY - this will define which directories i
 
 <p>where ${userdatascript} is the descriptive name you gave when prompted.</p>
 
+<p>It is mandatory to edit your userdata script and modify these values within it to your liking:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-user"
+export BUILDMACHINE_PASSWORD="Hjdhfb34hd£" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+export BUILDMACHINE_SSH_PORT="1035"
+export LAPTOP_IP="111.111.111.111"
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\" #paste your public key here
+</code></pre></div>  </div>
+</blockquote>
+
 <p>Now you have your userdata script take a copy of it using copy and paste and then follow <a href="https://www.codebreakers.uk/adtlinodetutorialsbuildmachineexpedited/">these</a> instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR LINODE MACHINE INSTEAD OF THE MODIFIED TEMPLATE.</p>
 
 <blockquote>
