@@ -136,15 +136,15 @@ window.onload = wrap_img;
 <hr />
 
 <blockquote>
-  <p>I then need a set of compute access keys so, I go to the top right and select “API Keys” and generate a personal access token with</p>
+  <p>I then need personal acccess token so, I go to the top right and select “API Keys” and generate a personal access token with</p>
 </blockquote>
 
 <blockquote>
-  <p>Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes</p>
+  <p>Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes scope</p>
 </blockquote>
 
 <blockquote>
-  <p>enabled. This personal access token I shall call “AAAAA”</p>
+  <p>enabled. For convenience I will say this personal access token has a value “AAAAA”</p>
 </blockquote>
 
 <p><strong>IMPORTANT EDIT: To use the native firewalling system the linode-cli tool seems to only accept personal access tokens with full access rights, so, whilst that is the case, you will need to ignore the above scoping and just chose “Select All” with “Read and Write” access when you create your personal access token.</strong></p>
@@ -186,15 +186,16 @@ linode_S3_secret_key="CCCCC"
 
 <hr />
 
-<p>You then need the username and owner of you git provider application repositories.
-To do this, if you don’t have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:</p>
+<p>You then need the username and owner of you git provider application repositories.</p>
+
+<p>To do this, if you don’t have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:</p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gitusername="mytestgituser"
 </code></pre></div>  </div>
 </blockquote>
 
-<p>Then create a “personal access token” by following:</p>
+<p>Then create a github “personal access token” by following:</p>
 
 <p><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal Access Token</a> making sure you give it all “repo” permissions</p>
 
@@ -210,7 +211,7 @@ To do this, if you don’t have a git account sign up with one (in this case usi
 <hr />
 
 <p><strong>NOTE:</strong> 
-The CLOUDHOST_PASSWORD value must be set for a linode based build to succeed.</p>
+The CLOUDHOST_PASSWORD value must be set in your template for a Linode based build to succeed.</p>
 
 <hr />
 
