@@ -6,7 +6,7 @@ permalink: /adtlinodetutorialshardcoretemporal/
 hide: true
 category: agiledeploymenttoolkit
 --- 
-
+ 
 **YOU MUST HAVE THE MACHINES STILL RUNNING FROM THE PREVIOUS TUTORIAL TO COMPLETE THIS TUTORIAL SUCCESSFULLY**
 
 On your build machine, you need to now make temporal backups of your application sourcecode and your application database.
