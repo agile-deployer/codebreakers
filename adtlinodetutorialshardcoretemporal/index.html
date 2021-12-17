@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -202,24 +202,7 @@ export DIRECTORIES_TO_MOUNT="images" #MANDATORY - this will define which directo
 
 <p>where ${userdatascript} is the descriptive name you gave when prompted.</p>
 
-<p>This is a Stack Script. You first need to edit these values directly in the script:</p>
-
-<p>It is mandatory to edit your stack script to directly modify these values within it to your liking:</p>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-user"
-export BUILDMACHINE_PASSWORD="Hjdhfb34hd£" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
-export BUILDMACHINE_SSH_PORT="1035"
-export LAPTOP_IP="111.111.111.111"
-</code></pre></div>  </div>
-</blockquote>
-
-<blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\" #paste your public key here
-</code></pre></div>  </div>
-</blockquote>
-
-<p>You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script.</p>
+<p>This is a Stack Script. You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script.</p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
