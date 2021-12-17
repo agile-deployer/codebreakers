@@ -113,7 +113,7 @@ Then you need to run the script:
 
 >     cd helperscripts
 
->     ./GenerateOverrideTemplate.sh
+>     ./GenerateOverrideTemplate.sh  (make sure you review and set all settings)
 
 >     ./GenerateHardcoreUserDataScript.sh stack
 
