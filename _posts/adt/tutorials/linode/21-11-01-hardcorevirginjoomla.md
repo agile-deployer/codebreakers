@@ -7,6 +7,10 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+----------------------
+### IT IS NOT RECOMMENDED TO USE HARDCORE BUILDS ON LINODE, YOU COULD HAVE A GO AT IT BY FOLLOWING THE BELOW, BUT, IT IS MUCH BETTER TO JUST USE THE EXPEDITED METHOD
+---------------------- 
+
 **HARDCORE BUILD PROCESS**
 
 1. On your laptop perform the following command:  
