@@ -7,6 +7,10 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+----------------------
+### IT IS NOT RECOMMENDED TO USE HARDCORE BUILDS ON LINODE, YOU COULD HAVE A GO AT IT BY FOLLOWING THE BELOW, BUT, IT IS MUCH BETTER TO JUST USE THE EXPEDITED METHOD
+---------------------- 
+
 **HARDCORE BUILD PROCESS** 
 
 If you have followed the tutorial [here](https://www.codebreakers.uk/adtlinodetutorialshardcorevirgin), then you will have an active Joomla, or possibly Wordpress, Drupal or Moodle installation active through your web browser. If you are using a baseline that someone else has developed or a baseline that you developed some time ago, then you might not have servers running yet. 
