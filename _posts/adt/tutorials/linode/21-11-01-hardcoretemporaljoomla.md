@@ -6,7 +6,9 @@ permalink: /adtlinodetutorialshardcoretemporal/
 hide: true
 category: agiledeploymenttoolkit
 --- 
- 
+----------------------
+### IT IS NOT RECOMMENDED TO USE HARDCORE BUILDS ON LINODE, YOU COULD HAVE A GO AT IT BY FOLLOWING THE BELOW, BUT, IT IS MUCH BETTER TO JUST USE THE EXPEDITED METHOD
+---------------------- 
 **YOU MUST HAVE THE MACHINES STILL RUNNING FROM THE PREVIOUS TUTORIAL TO COMPLETE THIS TUTORIAL SUCCESSFULLY**
 
 On your build machine, you need to now make temporal backups of your application sourcecode and your application database.
