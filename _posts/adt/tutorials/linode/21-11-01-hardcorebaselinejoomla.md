@@ -8,7 +8,7 @@ category: agiledeploymenttoolkit
 ---
 
 ----------------------
-### IT IS NOT RECOMMENDED TO USE HARDCORE BUILDS ON LINODE, YOU COULD HAVE A GO AT IT BY FOLLOWING THE BELOW, BUT, IT IS MUCH BETTER TO JUST USE THE EXPEDITED METHOD
+### IT IS A BIT MORE EFFORT TO GET A HARDCORE BUILD COMPLETED, BUT, ONCE IT IS DONE YOU WILL HAVE A STACKSCRIPT WHICH YOU CAN CONFIGURE DIRECTLY FOR YOUR USES
 ---------------------- 
 
 **HARDCORE BUILD PROCESS** 
@@ -17,7 +17,7 @@ If you have followed the tutorial [here](https://www.codebreakers.uk/adtlinodetu
 
 What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on. 
 
-What I have done for this tutorial is install a very simple application using a tool called "Community Builder" which you can find here: [Community Builder](https://www.joomlapolis.com). Literally all I have done is install the latest version (at the time) into my Joomla installation that I installed earlier. 
+What I have done for this tutorial is install a very simple application using a tool called "Community Builder" which you can find here: [Community Builder](https://www.joomlapolis.com). Literally all I have done is install the latest version (at the time) of community builder into my virgin Joomla CMS installation. 
 
 The next thing I have to do is to generate a baseline of my application so that the baseline can be redeployed. A baseline is stored with whatever git provider you have set in your template when you made your deployment. In my case my git account is my "adt-demos" account with Github. 
 
@@ -113,7 +113,7 @@ Then you need to run the script:
 
 >     cd helperscripts
 
->     ./GenerateOverrideTemplate.sh  (make sure you review and set all settings)
+>     ./GenerateOverrideTemplate.sh  (make sure you review and set all **ALL** of the settings - reviewing them generates the stackscript)
 
 >     ./GenerateHardcoreUserDataScript.sh stack
 
