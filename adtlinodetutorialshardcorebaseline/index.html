@@ -94,7 +94,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <hr />
-<h3 id="it-is-not-recommended-to-use-hardcore-builds-on-linode-you-could-have-a-go-at-it-by-following-the-below-but-it-is-much-better-to-just-use-the-expedited-method">IT IS NOT RECOMMENDED TO USE HARDCORE BUILDS ON LINODE, YOU COULD HAVE A GO AT IT BY FOLLOWING THE BELOW, BUT, IT IS MUCH BETTER TO JUST USE THE EXPEDITED METHOD</h3>
+<h3 id="it-is-a-bit-more-effort-to-get-a-hardcore-build-completed-but-once-it-is-done-you-will-have-a-stackscript-which-you-can-configure-directly-for-your-uses">IT IS A BIT MORE EFFORT TO GET A HARDCORE BUILD COMPLETED, BUT, ONCE IT IS DONE YOU WILL HAVE A STACKSCRIPT WHICH YOU CAN CONFIGURE DIRECTLY FOR YOUR USES</h3>
 <hr />
 
 <p><strong>HARDCORE BUILD PROCESS</strong></p>
@@ -103,7 +103,7 @@ window.onload = wrap_img;
 
 <p>What you need to do now is to customise your version of (Joomla) so that it is a specialised application for example a blog or a social network and so on.</p>
 
-<p>What I have done for this tutorial is install a very simple application using a tool called “Community Builder” which you can find here: <a href="https://www.joomlapolis.com">Community Builder</a>. Literally all I have done is install the latest version (at the time) into my Joomla installation that I installed earlier.</p>
+<p>What I have done for this tutorial is install a very simple application using a tool called “Community Builder” which you can find here: <a href="https://www.joomlapolis.com">Community Builder</a>. Literally all I have done is install the latest version (at the time) of community builder into my virgin Joomla CMS installation.</p>
 
 <p>The next thing I have to do is to generate a baseline of my application so that the baseline can be redeployed. A baseline is stored with whatever git provider you have set in your template when you made your deployment. In my case my git account is my “adt-demos” account with Github.</p>
 
@@ -240,7 +240,7 @@ export DIRECTORIES_TO_MOUNT="" #MANDATORY - this will define which directories i
 </blockquote>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./GenerateOverrideTemplate.sh  (make sure you review and set all settings)
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./GenerateOverrideTemplate.sh  (make sure you review and set all **ALL** of the settings - reviewing them generates the stackscript)
 </code></pre></div>  </div>
 </blockquote>
 
