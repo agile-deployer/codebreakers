@@ -19,7 +19,7 @@ We need several pieces of information from our cloud host and 3rd party services
 
 I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla
 
-This will deploy the latest version of Joomla using template 1 which you can read about here with the clone you have just made onto your laptop:  
+This tutorial will deploy the latest version of Joomla using template 1 which you can read about here with the clone you have just made onto your laptop:  
 
 >     ./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/exoscale/exoscale1.description and the hardcore method.
 
