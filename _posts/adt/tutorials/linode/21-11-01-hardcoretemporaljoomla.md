@@ -109,7 +109,7 @@ At this point, your build machine will only accept connections from your laptop.
   ------------------------
   **OTHER APPLICATION TYPES**
   
-In order to do a temporaly build from backups you have made for a different application type (wordpress, drupal or moodle) you will need to alter the following variables in your template compared to what you have used above:
+In order to do a temporaly build from backups you have made for a different application type (wordpress, drupal or moodle) you will need to alter the following variables in your stackscript compared to what you have used above:
   
   For Wordpress:
   
