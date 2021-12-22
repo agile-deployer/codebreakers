@@ -103,7 +103,7 @@ There are some other values that I need to change in /home/agile-deployer/agile-
 
 You can make any other adjustments you want like if you want to choose APACHE instead of NGINX or change the size of the machines (you can find out about such things in the specification).
 
-**FOLLOW THESE STEPS ON YOUR LAPTOP IF YOU DON'T HAVE A BUILD SERVER RUNNING**
+**FOLLOW THESE STEPS USING A COPY OF THE ADT ON YOUR LAPTOP IF YOU DON'T HAVE A BUILD SERVER RUNNING**
 
 You now need to copy your template as follows on your laptop:  
 
@@ -123,17 +123,16 @@ This will leave you with a script:
 
 where ${userdatascript} is the descriptive name you gave when prompted.  
 
-This is a Stack Script. You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script. 
+This is a Stack Script - if you don't understand Stack Scripts you can read:  
 
->     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
->     may not perfer.
+[Stack Script Tutorial](https://www.linode.com/docs/guides/writing-scripts-for-use-with-linode-stackscripts-a-tutorial/).  
 
+You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script. 
 
->     At this point, your build machine should be up and running. Please review  
->  
->     ./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
-> 
->      At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
-
+At this point, your build machine should be up and running. Please review  
+  
+[Tighten Build Machine](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md) 
+ 
+At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
 
 If you follow these steps, then, you will have a copy of your customised Joomla application running in the cloud. Leave the servers you have deployed running for use in the next tutorial in the series.
