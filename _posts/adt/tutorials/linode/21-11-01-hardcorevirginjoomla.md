@@ -17,17 +17,17 @@ category: agiledeploymenttoolkit
 
 >     git clone https://github.com/agile-deployer/agile-infrastructure-build-client-scripts.git
 
->     cd agile-infrastructure-build-client-scripts
-
 We need several pieces of information from our cloud host and 3rd party services for a successful build to be possible:
 
 I am going to use the example of joomla to build from and so this example will build a virgin installation of the latest version of joomla
 
-This will deploy the latest version of Joomla using template 1 which you can read about here with the clone you have just made onto your laptop:  
+This tutorial will deploy the latest version of Joomla using template 1 which you can read about here with the clone you have just made onto your laptop:  
 
->     ./agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templates/linode/linode1.description and the hardcore method.
+>     ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/linode/linode1.description and the hardcore method.
 
 ---------------------------------------
+
+**Record and save the credentials you are about to create in a secure file on your laptop**
 
 To find the latest version of Joomla, I go to this URL in my browser:
 
@@ -74,7 +74,8 @@ You then need the url that you want to use for your website. If you don't have a
 
 -------------------------------
 
-You then need the username and owner of you git provider application repositories.
+You then need the username and owner of you git provider application repositories.  
+
 To do this, if you don't have a git account sign up with one (in this case using github, but, you have the choice of bitbucket and gitlab as well) and record the username that you sign up with:
 
 >     gitusername="mytestgituser"
@@ -87,12 +88,16 @@ Then create a "personal access token" by following:
 
 --------------------------------
 
-To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them ./agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md. If you wish to include SMTP credentials you will need to have a service offering set up with either sendpulse, mailjet or AWS SES.
+To keep this as simple as possible, I have missed out the SMTP credentials, but, you can find out more about them  
+
+[Deploying SMTP Service](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/DeployingSMTPService.md)  
+
+If you wish to include SMTP credentials you will need to have a service offering set up with either sendpulse, mailjet or AWS SES.
 
 --------------------------
 
 **NOTE:** 
-The CLOUDHOST_PASSWORD value must be set in your template for a linode based build to succeed. 
+**The CLOUDHOST_PASSWORD value must be set in your template for a linode based build to succeed.** 
 
 --------------------------
 
@@ -382,7 +387,7 @@ Then you need to run the script:
 
 >     cd helperscripts
 
->     ./GenerateOverrideTemplate.sh  (make sure you review and set all settings)
+>     ./GenerateOverrideTemplate.sh  (make sure you select the template you have just copied and review and set all settings)
 
 >     ./GenerateHardcoreUserDataScript.sh stack
 
