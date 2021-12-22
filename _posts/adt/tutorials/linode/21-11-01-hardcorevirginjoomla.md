@@ -387,7 +387,7 @@ Then you need to run the script:
 
 >     cd helperscripts
 
->     ./GenerateOverrideTemplate.sh  (make sure you select the template you have just copied and review and set all settings)  
+>     ./GenerateOverrideTemplate.sh  (make sure you review and set all **ALL** of the settings - reviewing them generates the stackscript)
 **ESSENTIAL NOTE: with the GenerateOverrideTemplate scipt above, you need to review every setting for the stack script to be generated**
 
 >     ./GenerateHardcoreUserDataScript.sh stack
@@ -398,7 +398,7 @@ This will leave you with a script:
 
 where ${userdatascript} is the descriptive name you gave when prompted.  
 
-This is a Stack Script (if you don't understand Stack Scripts you can read:  
+This is a Stack Script - if you don't understand Stack Scripts you can read:  
 
 [Stack Script Tutorial](https://www.linode.com/docs/guides/writing-scripts-for-use-with-linode-stackscripts-a-tutorial/).  
 
@@ -406,7 +406,7 @@ You need to take the whole thing by copying it and create a Stack Script out of 
 
 At this point, your build machine should be up and running. Please review  
   
->     [Tighten Build Machine](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md) 
+[Tighten Build Machine](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md) 
  
 At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
 
