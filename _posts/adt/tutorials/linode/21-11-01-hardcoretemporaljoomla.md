@@ -83,19 +83,17 @@ This will leave you with a script:
 
 where ${userdatascript} is the descriptive name you gave when prompted. 
   
-This is a Stack Script. You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script. 
+This is a Stack Script - if you don't understand Stack Scripts you can read:  
 
->     The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or
->     may not perfer.
+[Stack Script Tutorial](https://www.linode.com/docs/guides/writing-scripts-for-use-with-linode-stackscripts-a-tutorial/).  
 
+You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script. 
 
-At this point, your build machine should be up and running. Please review:  
+At this point, your build machine should be up and running. Please review  
   
->     ./agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md.  
-
+[Tighten Build Machine](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md) 
+ 
 At this point, your build machine will only accept connections from your laptop. If you need access from other ip addresses you need to use the technique described in "Tightening Build Machine Access" to grant access to additional IP addresses. This will be the case every time your laptop changes its IP address as you travel about, so, you might want to setup and configure an S3 client on your laptop to enable you to grant access to new IP addresses easily. 
-    
-If all has gone according to plan, you will have seen a full deployment of your temporal backup. 
   
   ------------------------
   **DEPLOYMENT USING MANAGED DATABASES**
@@ -114,15 +112,15 @@ In order to do a temporaly build from backups you have made for a different appl
   
   For Wordpress:
   
->     export APPLICATION="wordpress"
->     export DIRECTORIES_TO_MOUNT="wp-content.uploads"
+>     APPLICATION="wordpress"
+>     DIRECTORIES_TO_MOUNT="wp-content.uploads"
   
   For Drupal:
   
->     export APPLICATION="drupal"
->     export DIRECTORIES_TO_MOUNT="sites.default.files"
+>     APPLICATION="drupal"
+>     DIRECTORIES_TO_MOUNT="sites.default.files"
   
   For Moodle:
   
->     export APPLICATION="moodle"
->     export DIRECTORIES_TO_MOUNT="moodledata.filedir"
+>     APPLICATION="moodle"
+>     DIRECTORIES_TO_MOUNT="moodledata.filedir"
