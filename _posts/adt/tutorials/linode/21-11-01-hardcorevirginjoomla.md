@@ -8,7 +8,7 @@ category: agiledeploymenttoolkit
 ---
 
 ----------------------
-### IT IS NOT RECOMMENDED TO USE HARDCORE BUILDS ON LINODE, YOU COULD HAVE A GO AT IT BY FOLLOWING THE BELOW, BUT, IT IS MUCH BETTER TO JUST USE THE EXPEDITED METHOD
+### IT IS A BIT MORE EFFORT TO GET A HARDCORE BUILD COMPLETED, BUT, ONCE IT IS DONE YOU WILL HAVE A STACKSCRIPT WHICH YOU CAN CONFIGURE DIRECTLY FOR YOUR USES
 ---------------------- 
 
 **HARDCORE BUILD PROCESS**
@@ -413,26 +413,26 @@ At this point, your build machine will only accept connections from your laptop.
 
 ---------------------------
 
-Assuming that you have your Joomla application online now after following that video, what I would do if I wanted to build a Wordpress, Moodle or Drupal installation would be to follow the same procedure with the same template, but, minimally change the template as follows:
+Assuming that you have your Joomla application online now after following that video, what I would do if I wanted to build a Wordpress, Moodle or Drupal installation would be to follow the same procedure with the same template, but, minimally change the stackscript parameters as follows:
 
 #### For Wordpress:
 
->     export APPLICATION="wordpress"
->     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="WORDPRESS" #MANDATORY 
->     export APPLICATION_IDENTIFIER="2"
->     export DATABASE_INSTALLATION_TYPE="MySQL" #I don't support Wordpress using Postgres
+>     APPLICATION="wordpress"
+>     APPLICATION_BASELINE_SOURCECODE_REPOSITORY="WORDPRESS" #MANDATORY 
+>     APPLICATION_IDENTIFIER="2"
+>     DATABASE_INSTALLATION_TYPE="MySQL" #I don't support Wordpress using Postgres
 
 #### For Drupal:
 
->     export APPLICATION="drupal"
->     export DRUPAL_VERSION="9.2.6" 
->     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="DRUPAL:9.2.6" #MANDATORY 
->     export APPLICATION_IDENTIFIER="3"
+>     APPLICATION="drupal"
+>     DRUPAL_VERSION="9.2.6" 
+>     APPLICATION_BASELINE_SOURCECODE_REPOSITORY="DRUPAL:9.2.6" #MANDATORY 
+>     APPLICATION_IDENTIFIER="3"
 
 #### For Moodle:
 
->     export APPLICATION="moodle"
->     export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="MOODLE" #MANDATORY 
->     export APPLICATION_IDENTIFIER="4"
+>     APPLICATION="moodle"
+>     APPLICATION_BASELINE_SOURCECODE_REPOSITORY="MOODLE" #MANDATORY 
+>     APPLICATION_IDENTIFIER="4"
 
-So, you have a template now that you can use over and over again for deploying different installations of these CMS systems. You can study the spec and learn how to modify the template in order to change machine sizes, regions, PHP settings and so on. 
+So, you have a stackscript now that you can use over and over again for deploying different installations of these CMS systems. You can study the spec and learn how to modify the stackscript in order to change machine sizes, regions, PHP settings and so on. 
