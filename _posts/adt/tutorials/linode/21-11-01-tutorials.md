@@ -11,13 +11,15 @@ There's a few options here for learning how to use this toolkit with the Linode 
 
 #### 1. Expedited Build Method (recommended)  
 
-This tutorial set needs to be followed sequentially in numeric order.
+This tutorial set needs to be followed sequentially in numeric order.  
 
 >    [Tutorial Set 1 (Virgin CMS Installation)](https://www.codebreakers.uk/adtlinodetutorialsexpeditedvirgin)   
 >    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk/adtlinodetutorialsexpeditedbaseline)  
 >    [Tutorial Set 3 (Temporal CMS Installation)](https://www.codebreakers.uk/adtlinodetutorialsexpeditedtemporal)
 
 #### 2. Hardcore Build Method (expert)
+
+This tutorial set needs to be followed sequentially in numeric order.  
 
 >    [Tutorial Set 1 (Virgin CMS Installation)](https://www.codebreakers.uk/adtlinodetutorialshardcorevirgin)   
 >    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk//adtlinodetutorialshardcorebaseline)  
