@@ -127,9 +127,13 @@ This is a Stack Script - if you don't understand Stack Scripts you can read:
 
 [Stack Script Tutorial](https://www.linode.com/docs/guides/writing-scripts-for-use-with-linode-stackscripts-a-tutorial/).  
 
-You need to take the whole thing by copying it and create a Stack Script out of it. You then need to populate the Stack Script as you ususally would. You then need to create a linode from your Stack Script. 
+**You need to:**  
 
-At this point, your build machine should be up and running. Please review  
+1. take a copy of the userdata script (the whole thing) by copying it and pasting it to create a Stack Script out of it. 
+2. You then need to populate the main variables and modify (if you need to, the advanced ones) of the Stack Script as you ususally would. 
+3. You then need to create a linode from your Stack Script. 
+
+At this point, your build machine should be up and running and it will be progressing with your build which you can examine in the logs. Please review  
   
 [Tighten Build Machine](https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/doco/AgileToolkitDeployment/TightenBuildMachineAccess.md) 
  
