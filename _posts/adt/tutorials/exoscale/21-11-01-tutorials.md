@@ -19,6 +19,8 @@ This tutorial set needs to be followed sequentially in numeric order.
 
 #### 2. Hardcore Build Method (expert)
 
+This tutorial set needs to be followed sequentially in numeric order.  
+
 >    [Tutorial Set 1 (Virgin CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialshardcorevirgin)   
 >    [Tutorial Set 2 (Baseline CMS Installation)](https://www.codebreakers.uk//adtexoscaletutorialshardcorebaseline/)  
 >    [Tutorial Set 3 (Temporal CMS Installation)](https://www.codebreakers.uk/adtexoscaletutorialshardcoretemporal)
