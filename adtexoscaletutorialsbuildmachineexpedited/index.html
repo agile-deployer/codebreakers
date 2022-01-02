@@ -359,7 +359,7 @@ You can then see your new security Group “adt-build-machine” listed</p>
  </p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildmachineip&gt;
 </code></pre></div>  </div>
 </blockquote>
 
@@ -372,7 +372,7 @@ You can then see your new security Group “adt-build-machine” listed</p>
  </p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;	
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildmachineip&gt;	
 </code></pre></div>  </div>
 </blockquote>
 
