@@ -99,7 +99,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     #############################################################################################  
 >     ------export S3_ACCESS_KEY=""  #MANDATORY  
 >     ------export S3_SECRET_KEY=""  #MANDATORY  
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
+>     export S3_HOST_BASE="ams3.digitaloceanspaces.com" #MANDATORY  
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"  
 >     ------export TOKEN="" #MANDATORY  
 >     export ACCESS_KEY=""   #NOT REQUIRED  
@@ -155,7 +155,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export AS_SIZE="10G"
 >     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
 >     export CLOUDHOST="digitalocean"
->     export MACHINE_TYPE="DIGITALOCEAN"
+>     export MACHINE_TYPE="DROPLET"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
@@ -238,7 +238,7 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     #############################################################################################
 >     ------export S3_ACCESS_KEY="BBBBB"  #MANDATORY
 >     ------export S3_SECRET_KEY="CCCCC"  #MANDATORY
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
+>     export S3_HOST_BASE="ams3.digitaloceanspaces.com" #MANDATORY
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"
 >     ------export TOKEN="AAAAA" #MANDATORY
 >     export ACCESS_KEY=""   #NOT REQUIRED
@@ -294,7 +294,7 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     export AS_SIZE="10G"
 >     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
 >     export CLOUDHOST="digitalocean"
->     export MACHINE_TYPE="DIGITALOCEAN"
+>     export MACHINE_TYPE="DROPLET"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
