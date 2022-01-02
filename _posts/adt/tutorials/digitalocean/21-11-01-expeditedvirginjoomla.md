@@ -43,13 +43,12 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 I then need a set of compute access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with compute access. In my separate text file, I record:
 
->     digitalocean_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
->     digitalocean_secret_key_compute="YYYYY"
+>     digitalocean_token_compute="AAAAA"  where AAAAA are the actual values generated when I click "Add Key"
 
 I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with S3 access. In my separate text file, I record:
 
->     digitalocean_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
->     digitalocean_secret_key_s3="BBBBB"
+>     digitalocean_access_key_s3="BBBBB"  where BBBBB and CCCCC are the actual values generated when I click "Add Key"
+>     digitalocean_secret_key_s3="CCCCC"
 
 
 -----------------------------------
@@ -115,7 +114,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     #############################################################################################  
 >     ------export S3_ACCESS_KEY=""  #MANDATORY  
 >     ------export S3_SECRET_KEY=""  #MANDATORY  
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
+>     export S3_HOST_BASE="ams3.digitaloceanspaces.com" #MANDATORY  
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"  
 >     ------export TOKEN="" #NOT REQUIRED  
 >     export ACCESS_KEY=""   #NOT REQUIRED  
@@ -171,7 +170,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export AS_SIZE="10G"
 >     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
 >     export CLOUDHOST="digitalocean"
->     export MACHINE_TYPE="DIGITALOCEAN"
+>     export MACHINE_TYPE="DROPLET"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
@@ -250,7 +249,7 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     #############################################################################################
 >     ------export S3_ACCESS_KEY="BBBBB"  #MANDATORY
 >     ------export S3_SECRET_KEY="CCCCC"  #MANDATORY
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
+>     export S3_HOST_BASE="ams3.digitaloceanspaces.com" #MANDATORY
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"
 >     ------export TOKEN="AAAAA" #NOT REQUIRED
 >     export ACCESS_KEY=""   #NOT REQUIRED
@@ -306,7 +305,7 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     export AS_SIZE="10G"
 >     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
 >     export CLOUDHOST="digitalocean"
->     export MACHINE_TYPE="DIGITALOCEAN"
+>     export MACHINE_TYPE="DROPLET"
 >     export ALGORITHM="rsa"
 >     export USER="root"
 >     export CLOUDHOST_USERNAME="root"
