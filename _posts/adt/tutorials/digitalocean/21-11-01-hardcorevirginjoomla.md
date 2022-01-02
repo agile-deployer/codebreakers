@@ -37,21 +37,12 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 I then need a set of compute access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with compute access. In my separate text file, I record:
 
->     digitalocean_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
->     digitalocean_secret_key_compute="YYYYY"
+>     digitalocean_token_compute="AAAAA"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
 
 I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with S3 access. In my separate text file, I record:
 
->     digitalocean_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
->     digitalocean_secret_key_s3="BBBBB"
-
-
-I then need a set of DNS access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with DNS access. In my separate text file, I record:
-
->     digitalocean_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
->     digitalocean_secret_key_dns="DDDDD"
-
-**NOTE:** Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn't have to juggle three set of keys then and could use the same key pair in all three cases.
+>     digitalocean_access_key_s3="BBBBB"  where BBBBB and CCCCC are the actual values generated when I click "Add Key"
+>     digitalocean_secret_key_s3="CCCCC"
 
 -----------------------------------
 
@@ -110,9 +101,9 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     ------export S3_SECRET_KEY=""  #MANDATORY  
 >     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"  
->     export TOKEN="" #NOT REQUIRED  
->     ------export ACCESS_KEY=""   #MANDATORY  
->     ------export SECRET_KEY=""   #MANDATORY  
+>     ------export TOKEN="" #MANDATORY  
+>     export ACCESS_KEY=""   #NOT REQUIRED  
+>     export SECRET_KEY=""   #NOT REQUIRED
 >     ------export DNS_USERNAME=""  #MANDATORY  
 >     ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
 >     export DNS_CHOICE="digitalocean" #MANDATORY - you will need to set your DNS nameservers according to this choice  
@@ -121,7 +112,6 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11  
 >     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian  
 >     ------export WEBSITE_DISPLAY_NAME="" #MANDATORY  
->   
 >     ------export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
 >     ------export WEBSITE_URL=""  #MANDATORY
 >     export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
@@ -246,15 +236,15 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
 >     # change this to, MOODLE if you are deploying moodle
 >     #############################################################################################
->     ------export S3_ACCESS_KEY="AAAAA"  #MANDATORY
->     ------export S3_SECRET_KEY="BBBBB"  #MANDATORY
+>     ------export S3_ACCESS_KEY="BBBBB"  #MANDATORY
+>     ------export S3_SECRET_KEY="CCCCC"  #MANDATORY
 >     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"
->     export TOKEN="" #NOT REQUIRED
->     ------export ACCESS_KEY="XXXXX"   #MANDATORY
->     ------export SECRET_KEY="YYYYY"   #MANDATORY
+>     ------export TOKEN="AAAAA" #MANDATORY
+>     export ACCESS_KEY=""   #NOT REQUIRED
+>     export SECRET_KEY=""   #NOT REQUIRED
 >     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
->     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     ------export DNS_SECURITY_KEY="AAAAA"   #MANDATORY - This is your personal access token, DNS_SECURITY_KEY=${TOKEN}
 >     export DNS_CHOICE="digitalocean" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
