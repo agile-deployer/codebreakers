@@ -124,7 +124,7 @@ You do this as follows:</p>
 <p>What we are then interested in is template 3 which is at:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean3.tmpl
 </code></pre></div>  </div>
 </blockquote>
 
@@ -150,7 +150,7 @@ export APPLICATION_REPOSITORY_TOKEN="KKKKK" #MANDATORY
 <p>What I then do is adjust</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl  
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean3.tmpl  
 </code></pre></div>  </div>
 </blockquote>
 
@@ -176,7 +176,7 @@ export DIRECTORIES_TO_MOUNT="images" #MANDATORY - this will define which directo
 <p>You now need to copy your template as follows on your laptop:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale2override.tmpl  
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean2.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/digitalocean2override.tmpl  
 </code></pre></div>  </div>
 </blockquote>
 
@@ -215,7 +215,7 @@ export LAPTOP_IP="111.111.111.111"
 </code></pre></div>  </div>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachinehardcore) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR DIGITALOCEAN MACHINE INSTEAD OF THE MODIFIED TEMPLATE. The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtdigitaloceantutorialsbuildmachinehardcore) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR DIGITALOCEAN MACHINE INSTEAD OF THE MODIFIED TEMPLATE. The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
 </code></pre></div></div>
 
 <p>At this point, your build machine should be up and running. Please review</p>
