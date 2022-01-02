@@ -28,7 +28,7 @@ Making sure you pick the same periodicity as for the temporal database backup, f
   
 What we are then interested in is template 3 which is at:
   
->     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl
+>     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean3.tmpl
   
 I can extract the values for the following variables from template 1 or template 2 which I used in the previous tutorial and set them in template 3, replace these with your own live values:
 
@@ -48,7 +48,7 @@ I can extract the values for the following variables from template 1 or template
   
 What I then do is adjust  
 
->     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl  
+>     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean3.tmpl  
   
 to contain these values instead of its defaults.
   
@@ -68,7 +68,7 @@ You can make any other adjustments you want like if you want to choose APACHE in
 
 You now need to copy your template as follows on your laptop:  
 
->     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/exoscale2override.tmpl  
+>     /bin/cp ./agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean2.tmpl ./agile-infrastructure-build-client-scripts/overridescripts/digitalocean2override.tmpl  
 
 Then you need to run the script:
 
@@ -91,7 +91,7 @@ It is mandatory to edit your userdata script and modify these values within it t
 
 >     export SSH=\"\" #paste your public key here
 
-    Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtexoscaletutorialsbuildmachinehardcore) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR DIGITALOCEAN MACHINE INSTEAD OF THE MODIFIED TEMPLATE. The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
+    Now you have your userdata script take a copy of it using copy and paste and then follow [these](https://www.codebreakers.uk/adtdigitaloceantutorialsbuildmachinehardcore) instructions PASTING THE SCRIPT YOU HAVE JUST COPIED INTO THE USERDATA AREA OF YOUR DIGITALOCEAN MACHINE INSTEAD OF THE MODIFIED TEMPLATE. The build machine will then install **AND**  run the agile deployment toolkit. This is just an alternative method to the expedited build process which you may or may not perfer.
 
 
 At this point, your build machine should be up and running. Please review  
