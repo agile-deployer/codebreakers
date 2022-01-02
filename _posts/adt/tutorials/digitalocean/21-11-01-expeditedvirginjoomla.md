@@ -124,9 +124,9 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     ------export S3_SECRET_KEY=""  #MANDATORY  
 >     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"  
->     export TOKEN="" #NOT REQUIRED  
->     ------export ACCESS_KEY=""   #MANDATORY  
->     ------export SECRET_KEY=""   #MANDATORY  
+>     ------export TOKEN="" #NOT REQUIRED  
+>     export ACCESS_KEY=""   #NOT REQUIRED  
+>     export SECRET_KEY=""   #NOT REQUIRED
 >     ------export DNS_USERNAME=""  #MANDATORY  
 >     ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
 >     export DNS_CHOICE="digitalocean" #MANDATORY - you will need to set your DNS nameservers according to this choice  
@@ -135,7 +135,6 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11  
 >     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian  
 >     ------export WEBSITE_DISPLAY_NAME="" #MANDATORY  
->   
 >     ------export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
 >     ------export WEBSITE_URL=""  #MANDATORY
 >     export APPLICATION_REPOSITORY_PROVIDER="github" #MANDATORY
@@ -256,13 +255,13 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     # change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)
 >     # change this to, MOODLE if you are deploying moodle
 >     #############################################################################################
->     ------export S3_ACCESS_KEY="AAAAA"  #MANDATORY
->     ------export S3_SECRET_KEY="BBBBB"  #MANDATORY
+>     ------export S3_ACCESS_KEY="BBBBB"  #MANDATORY
+>     ------export S3_SECRET_KEY="CCCCC"  #MANDATORY
 >     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY
 >     export S3_LOCATION="US" #For digitalocean, this always needs to be set to "US"
->     export TOKEN="" #NOT REQUIRED
->     ------export ACCESS_KEY="XXXXX"   #MANDATORY
->     ------export SECRET_KEY="YYYYY"   #MANDATORY
+>     ------export TOKEN="AAAAA" #NOT REQUIRED
+>     export ACCESS_KEY=""   #NOT REQUIRED
+>     export SECRET_KEY=""   #NOT REQUIRED
 >     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
 >     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
 >     export DNS_CHOICE="digitalocean" #MANDATORY - you will need to set your DNS nameservers according to this choice
