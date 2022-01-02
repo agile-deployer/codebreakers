@@ -73,11 +73,9 @@ I can copy the credentials that I need from the values that I set them to previo
 >     /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean1.tmpl
 
 I can extract the values for the following variables:
-
->     export S3_ACCESS_KEY="AAAAA"  #MANDATORY
->     export S3_SECRET_KEY="BBBBB"  #MANDATORY
->     export ACCESS_KEY="XXXXX"   #MANDATORY
->     export SECRET_KEY="YYYYY"   #MANDATORY
+>     export TOKEN="AAAAA"   #MANDATORY
+>     export S3_ACCESS_KEY="BBBBB"  #MANDATORY
+>     export S3_SECRET_KEY="CCCCC"  #MANDATORY
 >     export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
 >     export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
 >     export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
