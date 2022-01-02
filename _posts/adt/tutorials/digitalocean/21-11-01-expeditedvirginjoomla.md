@@ -52,13 +52,6 @@ I then need a set of Object Storage (S3) access keys so, I go to the IAM option 
 >     digitalocean_secret_key_s3="BBBBB"
 
 
-I then need a set of DNS access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with DNS access. In my separate text file, I record:
-
->     digitalocean_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
->     digitalocean_secret_key_dns="DDDDD"
-
-**NOTE:** Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn't have to juggle three set of keys then and could use the same key pair in all three cases.
-
 -----------------------------------
 
 You now need to make a note of the email address that you have registered with your digitalocean account:
@@ -263,7 +256,7 @@ So, editing /home/agile-deployer/agile-infrastructure-build-client-scripts/templ
 >     export ACCESS_KEY=""   #NOT REQUIRED
 >     export SECRET_KEY=""   #NOT REQUIRED
 >     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
->     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     ------export DNS_SECURITY_KEY="AAAAA"   #MANDATORY - This is your personal access token, DNS_SECURITY_KEY=${TOKEN}
 >     export DNS_CHOICE="digitalocean" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
