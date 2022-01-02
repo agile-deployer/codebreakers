@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit DigitalOcean Tutorials Hardcore Temporal Joomla
 title: DigitalOcean ADT Tutorials Hardcore Temporal Joomla
-permalink: /adtexoscaletutorialshardcoretemporal/
+permalink: /adtdigitaloceantutorialshardcoretemporal/
 hide: true
 category: agiledeploymenttoolkit
 ---
