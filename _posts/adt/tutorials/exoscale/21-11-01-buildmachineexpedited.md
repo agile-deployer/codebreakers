@@ -237,7 +237,7 @@ Now on your laptop issue the command:
 &nbsp;  
 &nbsp;
 
->     ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>
+>     ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildmachineip>
 
 &nbsp;  
 &nbsp;
@@ -247,7 +247,7 @@ or yours might be:
 &nbsp;  
 &nbsp;
 	
->     ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildclientip>	
+>     ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@<buildmachineip>	
 
 &nbsp;  
 &nbsp;
