@@ -32,10 +32,9 @@ What we are then interested in is template 3 which is at:
   
 I can extract the values for the following variables from template 1 or template 2 which I used in the previous tutorial and set them in template 3, replace these with your own live values:
 
->     export S3_ACCESS_KEY="AAAAA"  #MANDATORY
->     export S3_SECRET_KEY="BBBBB"  #MANDATORY
->     export ACCESS_KEY="XXXXX"   #MANDATORY
->     export SECRET_KEY="YYYYY"   #MANDATORY
+>     export TOKEN="AAAAA"   #MANDATORY
+>     export S3_ACCESS_KEY="BBBBB"  #MANDATORY
+>     export S3_SECRET_KEY="CCCCC"  #MANDATORY
 >     export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
 >     export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
 >     export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
