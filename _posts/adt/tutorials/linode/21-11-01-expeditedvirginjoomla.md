@@ -41,7 +41,7 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
-> I then need personal acccess token so, I go to the top right and select "API Keys" and generate a personal access token with 
+> I then need personal acccess token for linode so, I go to the top right and select "API Keys" and generate a personal access token with 
 
 > Account,Domains, Images, IPs, Linodes, Object Storage, Stackscripts and Volumes scope
 
