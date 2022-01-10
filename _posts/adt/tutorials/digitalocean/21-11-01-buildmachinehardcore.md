@@ -163,56 +163,56 @@ The top part of the copy that you made in 2 will now look like this:
 
 ---------------
 
+---------------
+
 5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.
 
-You will need to create a security group for your build machine. You can do this as follows:
+You will need to create a firewall for your build machine. You can do this by creating a firewall on this page:
 &nbsp;  
 &nbsp; 
 
-Click on the security groups option of your digitalocean GUI
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image3.png "Digital Ocean Tutorial Image 3")
+Click on the Networking main option and the "firewalls" sub option of your digitalocean GUI
+         
+![](https://www.codebreakers.uk/images/dotutorial/image1.png "Digital Ocean Tutorial Image 1")
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" or something to your liking and then click "Create Group"
+Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove all inbound rules and keep the outbound rules as they are set
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image5.png "Digital Ocean Tutorial Image 5") 
+![](https://www.codebreakers.uk/images/dotutorial/image2.png "Digital Ocean Tutorial Image 2") 
 &nbsp;  
 &nbsp;
-You can then see your new security Group "adt-build-machine" listed
+You can then see your new security Group "adt-build-machine" listed  
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image6.png "Digital Ocean Tutorial Image 6")  
+![](https://www.codebreakers.uk/images/dotutorial/image3.png "Digital Ocean Tutorial Image 3") 
 &nbsp;  
 &nbsp;
-Click on the "adt-build-machine" security group
-
-Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect. 
-
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image8.png "Digital Ocean Tutorial Image 8")  
+--------------------
+6) Add rules to the "adt-build-machine" firewall to allow pinging and your build client to connect.  
 
 So you will need to add 2 rules  
 
 1) Ping  
 2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
-   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
 
 You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image17.png "Digital Ocean Tutorial Image 17") 
+![](https://www.codebreakers.uk/images/dotutorial/image4.png "Digital Ocean Tutorial Image 4") 
 &nbsp;  
 &nbsp;
 
+
 ---------------
 
-6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
+7) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
 
 >     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
->     2. Select which zone you want to deploy to, for example, CH-GVA-2
->     3. Select instance type "Tiny" for example
->     4. Select disk size (50GB)
->     5. Ignore SSH KEY
->     6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
->     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
->     8. Click Create and wait for your machine to build
+>     2. Select which region you want to deploy to, for example, london
+>     3. Select instance size "1GB" for example
+>     4. Attach your SSH KEY
+>     5. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+>     6. Click Create and wait for your machine to build
+>     7. Once the machine has built, go to "networking" -> "firewalls" and select "adt-build-machine" firewall and add your new droplet to the firewall
 
 Graphically you can see what I have described in these 8 steps here:
 
@@ -220,8 +220,10 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image12.png "Digital Ocean Tutorial Image 12")  
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image13.png "Digital Ocean Tutorial Image 13")  
+![](https://www.codebreakers.uk/images/dotutorial/image5.png "Digital Ocean Tutorial Image 5")  
+![](https://www.codebreakers.uk/images/dotutorial/image6.png "Digital Ocean Tutorial Image 6")  
+![](https://www.codebreakers.uk/images/dotutorial/image7.png "Digital Ocean Tutorial Image 7")  
+![](https://www.codebreakers.uk/images/dotutorial/image8.png "Digital Ocean Tutorial Image 8")  
 
 &nbsp;  
 &nbsp;  
@@ -229,7 +231,7 @@ Graphically you can see what I have described in these 8 steps here:
 
 ---------------
 
-7) Once the machine has built you can access it as follows:
+8) Once the machine has built you can access it as follows:
 
 &nbsp;  
 &nbsp; 
@@ -285,8 +287,8 @@ In Graphical form, it looks like this:
 &nbsp;  
 &nbsp;
 
-Grab your build machine's IP address (third column)
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image15.png "Digital Ocean Tutorial Image 15")
+Grab your build machine's IP address (second column)
+![](https://www.codebreakers.uk/images/dotutorial/image9.png "Digital Ocean Tutorial Image 9")
 
 &nbsp;  
 &nbsp;
@@ -296,6 +298,6 @@ Run through the commands as shown on your laptop to access your build machine
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image16.png "Digital Ocean Tutorial Image 16")
+![](https://www.codebreakers.uk/images/dotutorial/image10.png "Digital Ocean Tutorial Image 10")
 
 --------------------------------------
