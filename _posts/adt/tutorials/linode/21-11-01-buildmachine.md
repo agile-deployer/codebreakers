@@ -51,7 +51,7 @@ This will give you your **public** key which you need later so, take a copy of t
 
 ------------------
 	
-3) If you want to deploy a machine (debian of ubuntu) using the stack script that you made in 2, you need to populate the following variables in your copy:
+3) If you want to deploy a machine (debian of ubuntu) using the stack script that you made in 2, you can see the following variables in the raw script
 
 &nbsp;  
 &nbsp;
@@ -63,15 +63,17 @@ This will give you your **public** key which you need later so, take a copy of t
 	
 >     SSH=\"\"  (the public key that you installed on your laptop as a key pair in 1)
 	
-Once you deploy your linode using the stack script from 2 it will look something like the following and you need to populate the variables required as you would for any other Stack Script on Linode.
+You need to now deploy a linode using the Stackscript that you constructed in 2 and populate the variables you just reviewd in the Stackscript you are building from which will look something like:
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image2.png "Linode Tutorial Image 2")
 	
-Select a machine image to build, a region and a machine size (most probably quite a small machine)
+You then need to set various options for the linode you are deploying. 
+	
+Select a machine image to build from (Ubuntu 20:04 and up or Debian 11 and up), a region and a machine size (most probably quite a small machine)
 
 ![](https://www.codebreakers.uk/images/linodetutorial/image3.png "Linode Tutorial Image 3")
 	
-Then enter a root password, make sure it is complex enough to satisfy any strength checks built into the OS
+Then enter (and record) a root password, make sure it is complex enough to satisfy any strength checks built into the OS
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image4.png "Linode Tutorial Image 4") 
 
@@ -88,7 +90,7 @@ Then switch on private networking
 
 --------------- 
 	
-6) Add a firewall to your build machine linode cutting off all but the SSH port and Ping from the ip address of your laptop. In other words, the only machine which has any access to your build machine linode is your own laptop through ssh and ping.
+6) Add a firewall to your new build machine linode cutting off all but the SSH port you set above and Pinging from the ip address of your laptop. In other words, the only machine which has any access to your build machine linode is your own laptop through ssh and ping.
 	
 For SSH, do as follows for the ip address of your laptop:  
 
@@ -101,12 +103,12 @@ For Ping, do as follows for the ip address of your laptop:
 	
 --------------------
 
-5) You can access your build machine now as follows:
+5) You can access your build machine from your laptop now as follows:
 	
 &nbsp;  
 &nbsp; 
 	
->     Discover what the machine's IP address is by looking at the Linode GUI system for the IP address of the build machine - 212.71.248.95
+>     Discover what the machine's IP address is by looking at the Linode GUI system for the IP address of the build machine - <buildmachineip> = 212.71.248.95
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image8.png "Linode Tutorial Image 8") 
 
