@@ -138,6 +138,6 @@ At this point, your build machine will only accept connections from your laptop.
 
 **IF YOU DO HAVE A BUILD SERVER RUNNING FROM A PREVIOUS BUILD, THEN JUST DO THE FOLLOWING**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JiweJOLr-R8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PR7R2Mrj59w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If you follow these steps, then, you will have a copy of your customised Joomla application running in the cloud. Leave the servers you have deployed running for use in the next tutorial in the series.
