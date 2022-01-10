@@ -108,7 +108,7 @@ For Ping, do as follows for the ip address of your laptop:
 &nbsp;  
 &nbsp; 
 	
->     Discover what the machine's IP address is by looking at the Linode GUI system for the IP address of the build machine - in this case: \<buildmachineip\> = 212.71.248.95
+Discover what the machine's IP address is by looking at the Linode GUI system for the IP address of the build machine - in this case: \<buildmachineip\> = 212.71.248.95
 	
 ![](https://www.codebreakers.uk/images/linodetutorial/image8.png "Linode Tutorial Image 8") 
 
