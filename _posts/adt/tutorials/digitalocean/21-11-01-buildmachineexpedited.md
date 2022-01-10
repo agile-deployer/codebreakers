@@ -294,6 +294,6 @@ Run through the commands as shown below on your laptop to access your build mach
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image16.png "Digital Ocean Tutorial Image 16")
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image10.png "Digital Ocean Tutorial Image 10")
 
 --------------------------------------
