@@ -284,8 +284,9 @@ The rest of the script will appear below here
  <br />
  </p>
 
-<p>Click on the security groups option of your digitalocean GUI
-<img src="https://www.codebreakers.uk/images/dotutorial/image1.png" alt="" title="Digital Ocean Tutorial Image 1" />
+<p>Click on the Networking main option and the “firewalls” sub option of your digitalocean GUI</p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image1.png" alt="" title="Digital Ocean Tutorial Image 1" />
  <br />
   
 Click “Create Firewall” and call it <strong>PRECISELY</strong> “adt-build-machine”. Remove all inbound rules and keep the outbound rules as they are set</p>
@@ -298,7 +299,8 @@ You can then see your new security Group “adt-build-machine” listed</p>
 <p><img src="https://www.codebreakers.uk/images/dotutorial/image3.png" alt="" title="Digital Ocean Tutorial Image 3" /> 
  <br />
  
-6) Add rules to the “adt-build-machine” security group to allow pinging and your build client to connect.</p>
+——————–
+6) Add rules to the “adt-build-machine” firewall to allow pinging and your build client to connect.</p>
 
 <p>So you will need to add 2 rules</p>
 
@@ -318,13 +320,12 @@ You can then see your new security Group “adt-build-machine” listed</p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
-2. Select which zone you want to deploy to, for example, CH-GVA-2
-3. Select instance type "Tiny" for example
-4. Select disk size (50GB)
-5. Ignore SSH KEY
-6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
-7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
-8. Click Create and wait for your machine to build
+2. Select which region you want to deploy to, for example, london
+3. Select instance size "1GB" for example
+4. Attach your SSH KEY
+5. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+6. Click Create and wait for your machine to build
+7. Once the machine has built, go to "networking" -&gt; "firewalls" and select "adt-build-machine" firewall and add your new droplet to the firewall
 </code></pre></div>  </div>
 </blockquote>
 
