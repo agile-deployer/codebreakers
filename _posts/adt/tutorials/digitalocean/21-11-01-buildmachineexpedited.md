@@ -169,17 +169,17 @@ You will need to create a firewall for your build machine. You can do this by cr
 &nbsp; 
 
 Click on the security groups option of your digitalocean GUI
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image1.png "Digital Ocean Tutorial Image 1")
+![](https://www.codebreakers.uk/images/dotutorial/image1.png "Digital Ocean Tutorial Image 1")
 &nbsp;  
 &nbsp; 
 Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove all inbound rules and keep the outbound rules as they are set
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image2.png "Digital Ocean Tutorial Image 2") 
+![](https://www.codebreakers.uk/images/dotutorial/image2.png "Digital Ocean Tutorial Image 2") 
 &nbsp;  
 &nbsp;
 You can then see your new security Group "adt-build-machine" listed  
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image2.png "Digital Ocean Tutorial Image 3") 
+![](https://www.codebreakers.uk/images/dotutorial/image2.png "Digital Ocean Tutorial Image 3") 
 &nbsp;  
 &nbsp;
 6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
@@ -192,7 +192,7 @@ So you will need to add 2 rules
 
 You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image4.png "Digital Ocean Tutorial Image 4") 
+![](https://www.codebreakers.uk/images/dotutorial/image4.png "Digital Ocean Tutorial Image 4") 
 &nbsp;  
 &nbsp;
 
