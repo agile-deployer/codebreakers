@@ -173,7 +173,7 @@ Click on the security groups option of your exoscale GUI
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image3.png "Exoscale Tutorial Image 3")
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" or something to your liking and then click "Create Group"
+Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" and then click "Create Group"
 
 ![](https://www.codebreakers.uk/images/exoscaletutorial/image5.png "Exoscale Tutorial Image 5") 
 &nbsp;  
@@ -193,7 +193,7 @@ So you will need to add 2 rules
 	
 1) Ping  
 2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
-   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
 
 You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 	
