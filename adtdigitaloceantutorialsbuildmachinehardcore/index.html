@@ -281,57 +281,56 @@ The rest of the script will appear below here
 
 <hr />
 
+<hr />
+
 <p>5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.</p>
 
-<p>You will need to create a security group for your build machine. You can do this as follows:
+<p>You will need to create a firewall for your build machine. You can do this by creating a firewall on this page:
  <br />
  </p>
 
-<p>Click on the security groups option of your digitalocean GUI
-<img src="https://www.codebreakers.uk/images/digitaloceantutorial/image3.png" alt="" title="Digital Ocean Tutorial Image 3" />
+<p>Click on the Networking main option and the “firewalls” sub option of your digitalocean GUI</p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image1.png" alt="" title="Digital Ocean Tutorial Image 1" />
  <br />
   
-Click “Add Security Group” and call it <strong>PRECISELY</strong> “adt-build-machine” or something to your liking and then click “Create Group”</p>
+Click “Create Firewall” and call it <strong>PRECISELY</strong> “adt-build-machine”. Remove all inbound rules and keep the outbound rules as they are set</p>
 
-<p><img src="https://www.codebreakers.uk/images/digitaloceantutorial/image5.png" alt="" title="Digital Ocean Tutorial Image 5" /> 
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image2.png" alt="" title="Digital Ocean Tutorial Image 2" /> 
  <br />
  
 You can then see your new security Group “adt-build-machine” listed</p>
 
-<p><img src="https://www.codebreakers.uk/images/digitaloceantutorial/image6.png" alt="" title="Digital Ocean Tutorial Image 6" /><br />
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image3.png" alt="" title="Digital Ocean Tutorial Image 3" /> 
  <br />
  
-Click on the “adt-build-machine” security group</p>
-
-<p>Add rules to the “adt-build-machine” security group to allow pinging and your build client to connect.</p>
-
-<p><img src="https://www.codebreakers.uk/images/digitaloceantutorial/image8.png" alt="" title="Digital Ocean Tutorial Image 8" /></p>
+——————–
+6) Add rules to the “adt-build-machine” firewall to allow pinging and your build client to connect.</p>
 
 <p>So you will need to add 2 rules</p>
 
 <p>1) Ping<br />
 2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.<br />
-   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”</p>
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”</p>
 
 <p>You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32</p>
 
-<p><img src="https://www.codebreakers.uk/images/digitaloceantutorial/image17.png" alt="" title="Digital Ocean Tutorial Image 17" /> 
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image4.png" alt="" title="Digital Ocean Tutorial Image 4" /> 
  <br />
  </p>
 
 <hr />
 
-<p>6) You need to spin up a small machine to be your build machine by clicking “Add” on the top right of the GUI. And then follow these steps:</p>
+<p>7) You need to spin up a small machine to be your build machine by clicking “Add” on the top right of the GUI. And then follow these steps:</p>
 
 <blockquote>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
-2. Select which zone you want to deploy to, for example, CH-GVA-2
-3. Select instance type "Tiny" for example
-4. Select disk size (50GB)
-5. Ignore SSH KEY
-6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
-7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
-8. Click Create and wait for your machine to build
+2. Select which region you want to deploy to, for example, london
+3. Select instance size "1GB" for example
+4. Attach your SSH KEY
+5. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+6. Click Create and wait for your machine to build
+7. Once the machine has built, go to "networking" -&gt; "firewalls" and select "adt-build-machine" firewall and add your new droplet to the firewall
 </code></pre></div>  </div>
 </blockquote>
 
@@ -341,8 +340,10 @@ Click on the “adt-build-machine” security group</p>
  <br />
  </p>
 
-<p><img src="https://www.codebreakers.uk/images/digitaloceantutorial/image12.png" alt="" title="Digital Ocean Tutorial Image 12" /><br />
-<img src="https://www.codebreakers.uk/images/digitaloceantutorial/image13.png" alt="" title="Digital Ocean Tutorial Image 13" /></p>
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image5.png" alt="" title="Digital Ocean Tutorial Image 5" /><br />
+<img src="https://www.codebreakers.uk/images/dotutorial/image6.png" alt="" title="Digital Ocean Tutorial Image 6" /><br />
+<img src="https://www.codebreakers.uk/images/dotutorial/image7.png" alt="" title="Digital Ocean Tutorial Image 7" /><br />
+<img src="https://www.codebreakers.uk/images/dotutorial/image8.png" alt="" title="Digital Ocean Tutorial Image 8" /></p>
 
 <p> <br />
  <br />
@@ -350,7 +351,7 @@ Click on the “adt-build-machine” security group</p>
 
 <hr />
 
-<p>7) Once the machine has built you can access it as follows:</p>
+<p>8) Once the machine has built you can access it as follows:</p>
 
 <p> <br />
  </p>
@@ -421,8 +422,8 @@ Click on the “adt-build-machine” security group</p>
 <p> <br />
  </p>
 
-<p>Grab your build machine’s IP address (third column)
-<img src="https://www.codebreakers.uk/images/digitaloceantutorial/image15.png" alt="" title="Digital Ocean Tutorial Image 15" /></p>
+<p>Grab your build machine’s IP address (second column)
+<img src="https://www.codebreakers.uk/images/dotutorial/image9.png" alt="" title="Digital Ocean Tutorial Image 9" /></p>
 
 <p> <br />
  </p>
@@ -432,7 +433,7 @@ Click on the “adt-build-machine” security group</p>
 <p> <br />
  </p>
 
-<p><img src="https://www.codebreakers.uk/images/digitaloceantutorial/image16.png" alt="" title="Digital Ocean Tutorial Image 16" /></p>
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image10.png" alt="" title="Digital Ocean Tutorial Image 10" /></p>
 
 <hr />
 
