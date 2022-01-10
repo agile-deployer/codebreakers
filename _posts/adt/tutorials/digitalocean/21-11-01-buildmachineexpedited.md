@@ -168,7 +168,8 @@ You will need to create a firewall for your build machine. You can do this by cr
 &nbsp;  
 &nbsp; 
 
-Click on the security groups option of your digitalocean GUI
+Click on the Networking main option and the "firewalls" sub option of your digitalocean GUI
+         
 ![](https://www.codebreakers.uk/images/dotutorial/image1.png "Digital Ocean Tutorial Image 1")
 &nbsp;  
 &nbsp; 
@@ -182,7 +183,8 @@ You can then see your new security Group "adt-build-machine" listed
 ![](https://www.codebreakers.uk/images/dotutorial/image3.png "Digital Ocean Tutorial Image 3") 
 &nbsp;  
 &nbsp;
-6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
+--------------------
+6) Add rules to the "adt-build-machine" firewall to allow pinging and your build client to connect.  
 
 So you will need to add 2 rules  
 
@@ -202,13 +204,12 @@ You can see in this image that port 1035 is about to be opened up to the ip addr
 7) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
 
 >     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
->     2. Select which zone you want to deploy to, for example, CH-GVA-2
->     3. Select instance type "Tiny" for example
->     4. Select disk size (50GB)
->     5. Ignore SSH KEY
->     6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
->     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
->     8. Click Create and wait for your machine to build
+>     2. Select which region you want to deploy to, for example, london
+>     3. Select instance size "1GB" for example
+>     4. Attach your SSH KEY
+>     5. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+>     6. Click Create and wait for your machine to build
+>     7. Once the machine has built, go to "networking" -> "firewalls" and select "adt-build-machine" firewall and add your new droplet to the firewall
 
 Graphically you can see what I have described in these 8 steps here:
 
