@@ -216,10 +216,10 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image5.png "Digital Ocean Tutorial Image 5")  
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image6.png "Digital Ocean Tutorial Image 6")  
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image7.png "Digital Ocean Tutorial Image 7")  
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image8.png "Digital Ocean Tutorial Image 8")  
+![](https://www.codebreakers.uk/images/dotutorial/image5.png "Digital Ocean Tutorial Image 5")  
+![](https://www.codebreakers.uk/images/dotutorial/image6.png "Digital Ocean Tutorial Image 6")  
+![](https://www.codebreakers.uk/images/dotutorial/image7.png "Digital Ocean Tutorial Image 7")  
+![](https://www.codebreakers.uk/images/dotutorial/image8.png "Digital Ocean Tutorial Image 8")  
 
 &nbsp;  
 &nbsp;  
@@ -284,7 +284,7 @@ In Graphical form, it looks like this:
 &nbsp;
 
 Grab your build machine's IP address (third column)
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image9.png "Digital Ocean Tutorial Image 9")
+![](https://www.codebreakers.uk/images/dotutorial/image9.png "Digital Ocean Tutorial Image 9")
 
 &nbsp;  
 &nbsp;
@@ -294,6 +294,6 @@ Run through the commands as shown below on your laptop to access your build mach
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image10.png "Digital Ocean Tutorial Image 10")
+![](https://www.codebreakers.uk/images/dotutorial/image10.png "Digital Ocean Tutorial Image 10")
 
 --------------------------------------
