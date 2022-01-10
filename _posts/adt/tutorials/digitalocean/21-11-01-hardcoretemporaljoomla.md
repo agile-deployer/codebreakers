@@ -101,7 +101,7 @@ At this point, your build machine will only accept connections from your laptop.
 
 **IF YOU DO HAVE A BUILD SERVER RUNNING FROM A PREVIOUS BUILD, THEN JUST DO THE FOLLOWING**
   
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WiuacLCV_XU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xX5tGWVp6w0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
   If all has gone according to plan, you will have seen a full deployment of your temporal backup. 
   
