@@ -284,7 +284,7 @@ In Graphical form, it looks like this:
 &nbsp;  
 &nbsp;
 
-Grab your build machine's IP address (third column)
+Grab your build machine's IP address (second column)
 ![](https://www.codebreakers.uk/images/dotutorial/image9.png "Digital Ocean Tutorial Image 9")
 
 &nbsp;  
