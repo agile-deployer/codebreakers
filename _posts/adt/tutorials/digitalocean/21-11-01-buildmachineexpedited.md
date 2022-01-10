@@ -179,7 +179,7 @@ Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove al
 &nbsp;
 You can then see your new security Group "adt-build-machine" listed  
 
-![](https://www.codebreakers.uk/images/dotutorial/image2.png "Digital Ocean Tutorial Image 3") 
+![](https://www.codebreakers.uk/images/dotutorial/image3.png "Digital Ocean Tutorial Image 3") 
 &nbsp;  
 &nbsp;
 6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
@@ -216,8 +216,10 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image12.png "Digital Ocean Tutorial Image 12")  
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image13.png "Digital Ocean Tutorial Image 13")  
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image5.png "Digital Ocean Tutorial Image 5")  
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image6.png "Digital Ocean Tutorial Image 6")  
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image7.png "Digital Ocean Tutorial Image 7")  
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image8.png "Digital Ocean Tutorial Image 8")  
 
 &nbsp;  
 &nbsp;  
@@ -282,12 +284,12 @@ In Graphical form, it looks like this:
 &nbsp;
 
 Grab your build machine's IP address (third column)
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image15.png "Digital Ocean Tutorial Image 15")
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image9.png "Digital Ocean Tutorial Image 9")
 
 &nbsp;  
 &nbsp;
 
-Run through the commands as shown on your laptop to access your build machine
+Run through the commands as shown below on your laptop to access your build machine
 
 &nbsp;  
 &nbsp;
