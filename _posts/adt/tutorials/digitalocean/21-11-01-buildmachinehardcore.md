@@ -186,7 +186,8 @@ You can then see your new security Group "adt-build-machine" listed
 ![](https://www.codebreakers.uk/images/dotutorial/image3.png "Digital Ocean Tutorial Image 3") 
 &nbsp;  
 &nbsp;
---------------------
+--------------------. 
+
 6) Add rules to the "adt-build-machine" firewall to allow pinging and your build client to connect.  
 
 So you will need to add 2 rules  
@@ -204,7 +205,7 @@ You can see in this image that port 1035 is about to be opened up to the ip addr
 
 ---------------
 
-7) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
+7) You need to spin up a small machine to be your build machine by clicking "Create Droplet" on the top right of the GUI. And then follow these steps:
 
 >     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
 >     2. Select which region you want to deploy to, for example, london
