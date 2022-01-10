@@ -164,32 +164,35 @@ The top part of the copy that you made in 2 will now look like this:
 
 5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.
 
-You will need to create a security group for your build machine. You can do this as follows:
+You will need to create a firewall for your build machine. You can do this by creating a firewall on this page:
 &nbsp;  
 &nbsp; 
 
 Click on the security groups option of your digitalocean GUI
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image3.png "Digital Ocean Tutorial Image 3")
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image1.png "Digital Ocean Tutorial Image 1")
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" or something to your liking and then click "Create Group"
+Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove all inbound rules and keep the outbound rules as they are set
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image5.png "Digital Ocean Tutorial Image 5") 
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image2.png "Digital Ocean Tutorial Image 2") 
 &nbsp;  
 &nbsp;
 You can then see your new security Group "adt-build-machine" listed  
 
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image2.png "Digital Ocean Tutorial Image 3") 
+&nbsp;  
+&nbsp;
 6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
 
 So you will need to add 2 rules  
 
 1) Ping  
 2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
-   If you SSH_PORT is 1035 and your build client IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
 
 You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 
-![](https://www.codebreakers.uk/images/digitaloceantutorial/image17.png "Digital Ocean Tutorial Image 17") 
+![](https://www.codebreakers.uk/images/digitaloceantutorial/image4.png "Digital Ocean Tutorial Image 4") 
 &nbsp;  
 &nbsp;
 
