@@ -146,7 +146,7 @@ Once logged in to your build machine
 &nbsp;  
 &nbsp;
 
-And then enter your build machine password
+And then enter your build machine password (this is the password you entered into the Stack Script when you were configuring it above)
 
 &nbsp;  
 &nbsp; 	
