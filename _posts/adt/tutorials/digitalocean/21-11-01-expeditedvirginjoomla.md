@@ -41,11 +41,11 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
-I then need a set of compute access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with compute access. In my separate text file, I record:
+You then need a Digital Ocean Personal Access Token, so, go to the menu on the left of your Digital Ocean gui system and click "API" then Select "Tokens" and from there you can generate a Personal Access Token. 
 
 >     digitalocean_token_compute="AAAAA"  where AAAAA are the actual values generated when I click "Add Key"
 
-I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my digitalocean dashboard and generate an IAM key with S3 access. In my separate text file, I record:
+I then need a set of Spaces access keys so, I go to the "API" option on my digitalocean dashboard and generate a set of "Spaces" keys. In my separate text file, I record:
 
 >     digitalocean_access_key_s3="BBBBB"  where BBBBB and CCCCC are the actual values generated when I click "Add Key"
 >     digitalocean_secret_key_s3="CCCCC"
