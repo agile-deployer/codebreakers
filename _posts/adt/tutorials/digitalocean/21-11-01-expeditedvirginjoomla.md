@@ -97,7 +97,7 @@ Then we can open up the
 
 >     vi digitalocean1.tmpl
 
-This file looks like this (I have put a dashes before each line I wish to modify for this deployment which is for illustrative purposes only):
+This file looks like this (I have put dashes before each line I wish to modify for this deployment which is for illustrative purposes only):
 
 >     ###############################################################################################  
 >     # Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md  
