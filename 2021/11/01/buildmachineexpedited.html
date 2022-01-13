@@ -1,0 +1,347 @@
+<p>layout: post
+description: The Agile Deployment Toolkit Vultr Build Machine Method
+title: Vultr ADT Tutorials Build Machine Method
+permalink: /adtvultrtutorialsbuildmachineexpedited/
+hide: true
+category: agiledeploymenttoolkit
+—</p>
+
+<h3 id="pre-build-preparations-for-expedited-and-full-builds">PRE BUILD PREPARATIONS FOR EXPEDITED AND FULL BUILDS:</h3>
+
+<p>Before performing an expedited or full build, you need to set up a build machine. The way you do this for Vultr is as follows:</p>
+
+<hr />
+
+<p>1) If you don’t have an SSH key pair or if you want a specific SSH key pair for your builds, issue the following command:</p>
+
+<p> <br />
+ </p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ssh-keygen -t rsa 
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>Your key will be saved to the indicated file, for example, <strong>/root/.ssh/id_rsa</strong> your path might be different such as <strong>/home/bob/.ssh/id_rsa</strong></p>
+
+<p>Issue the command (for example)</p>
+
+<p> <br />
+ </p>
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/cat /root/.ssh/id_rsa.pub - this will be your &lt;ssh-public-key-substance&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+  <br />
+This will give you your <strong>public</strong> key which you need later so, take a copy of the output that is printed to the screen.</p>
+
+<p> <br />
+ <br />
+ </p>
+
+<hr />
+
+<p>2) Take a copy of the script: <a href="https://github.com/agile-deployer/agile-infrastructure-build-client-scripts/blob/master/templatedconfigurations/templateoverrides/OverrideScript.sh">Initial Script</a></p>
+
+<p> <br />
+ <br />
+ </p>
+
+<hr />
+
+<p>3) If you look into the script that you made a copy of in 2, you need to populate the following variables in your copy:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER=""
+export BUILDMACHINE_PASSWORD="" 
+export BUILDMACHINE_SSH_PORT=""
+export LAPTOP_IP=""
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"\" 
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+  
+Now you need to decide on a username for your build machine, a password for your build machine, a port for your build machine’s ssh system and the IP address of your desktop or laptop.</p>
+
+<p>If I decide on a username of “agile-deployer” then in the copy that I made in 2, I need to change it as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_USER="agile-deployer"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>If I decide on a password of “QQQPPPZZZMMM123098” then in the copy that I made in 2, I need to change it as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>If you decide on an SSH_PORT of “1035” then in the copy that I made in 2, I need to change it as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export BUILDMACHINE_SSH_PORT="1035"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>You need to give the script your laptop IP address. You can do this by going to https://www.whatsmyip.com and so, if your ip address is: “111.111.111.111” and pasting your ip address into your copy as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export LAPTOP_IP="111.111.111.111"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>The <strong>public</strong> ssh key that you took a copy of in 1 needs to be pasted as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SSH=\"&lt;ssh-public-key-substance&gt;\"
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>The top part of the copy that you made in 2 will now look like this:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+   
+/bin/mkdir /root/logs
+   
+OUT_FILE="webserver-build-out-`/bin/date | /bin/sed 's/ //g'`"
+exec 1&gt;&gt;/root/logs/${OUT_FILE}
+ERR_FILE="webserver-build-err-`/bin/date | /bin/sed 's/ //g'`"
+exec 2&gt;&gt;/root/logs/${ERR_FILE}
+
+###############################################################################################
+# SET THESE FOR YOUR BUILD CLIENT MACHINE
+# THIS WILL NOT START A BUILD IT WILL JUST SETUP THE TOOLKIT
+# USE THIS IF YOU WANT TO PERFORM AN EXPEDITED OR A FULL BUILD FROM THE COMMAND LINE
+# ssh -i &lt;ssh-private-key&gt; -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildclientip&gt;
+# $BUILDCLIENT_USER&gt;sudo su
+# password:${BUILDCLIENT_PASSWORD}
+# cd agile-infrastructure-build-client-scripts/logs
+#################################################################################################
+export BUILDMACHINE_USER="agile-deployer"
+export BUILDMACHINE_PASSWORD="QQQPPPZZZMMM123098" #Make sure any password you choose is strong enough to pass any strength enforcement rules of your OS
+export BUILDMACHINE_SSH_PORT="1035"
+export LAPTOP_IP="111.111.111.111"
+ 
+/bin/echo "
+#BASE OVERRIDES
+export SSH=\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEgqlNPY9uh6SpihNXm/7XGqOKvAcH8Z0Y6pZG9lTIm/PHI5VijIFqs0OzM3DPLFARtut7lojBoKq9ljBmKeVBGX5EkJ5O3CJfEZs9E13e2Qk+7F9wTmoMBG8XY4l/SmD9HddLTS/7Oadg+C4RDxHlSMrl1PSCdzlM14spHCI8rwUntNCUY+fObolqel0829zYDX0oEWzYyoIEUs1847X3cRp9+yZsjqSD5Nw9jacLcWjtdfClEvx5F8ZVm0+s5OLtz9cCf6NkOgYf3KFz+e8qAO/w83Umh5B2Gem1uOxSDtUmzVlRiMTfP6CTSKRnYRnkb97F9RZsmAsG6+g+eKvp root@penguin\" #paste your public key here
+
+The rest of the script will appear below here
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ <br />
+ </p>
+
+<hr />
+
+<p>4) Take a copy of this entire updated script and keep it safe because you will likely want to use this script multiple times in future deployments remember that anyone who has a copy of this script you have made has enough information to access the build machine you are going to deploy in a minute.</p>
+
+<p> <br />
+ <br />
+ </p>
+
+<hr />
+
+<p>5) What you need to do now is to use this script to spin up your build machine and you will do this by pasting it into the user data area of your build machine.</p>
+
+<p>You will need to create a firewall for your build machine. You can do this by creating a firewall on this page:
+ <br />
+ </p>
+
+<p>Click on the Networking main option and the “firewalls” sub option of your vultr GUI</p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image1.png" alt="" title="Vultr Tutorial Image 1" />
+ <br />
+  
+Click “Create Firewall” and call it <strong>PRECISELY</strong> “adt-build-machine”. Remove all inbound rules and keep the outbound rules as they are set</p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image2.png" alt="" title="Vultr Tutorial Image 2" /> 
+ <br />
+ 
+You can then see your new security Group “adt-build-machine” listed</p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image3.png" alt="" title="Vultr Tutorial Image 3" /> 
+ <br />
+ 
+——————-.</p>
+
+<p>6) Add rules to the “adt-build-machine” firewall to allow pinging and your build client to connect.</p>
+
+<p>So you will need to add 2 rules</p>
+
+<p>1) Ping<br />
+2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.<br />
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”</p>
+
+<p>You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32</p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image4.png" alt="" title="Vultr Tutorial Image 4" /> 
+ <br />
+ </p>
+
+<hr />
+
+<p>7) You need to spin up a small machine to be your build machine by clicking “Create Droplet” on the top right of the GUI. And then follow these steps:</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
+2. Select which region you want to deploy to, for example, london
+3. Select instance size "1GB" for example
+4. Attach your SSH KEY
+5. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
+6. Click Create and wait for your machine to build
+7. Once the machine has built, go to "networking" -&gt; "firewalls" and select "adt-build-machine" firewall and add your new droplet to the firewall
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Graphically you can see what I have described in these 8 steps here:</p>
+
+<p> <br />
+ <br />
+ </p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image5.png" alt="" title="Vultr Tutorial Image 5" /><br />
+<img src="https://www.codebreakers.uk/images/dotutorial/image6.png" alt="" title="Vultr Tutorial Image 6" /><br />
+<img src="https://www.codebreakers.uk/images/dotutorial/image7.png" alt="" title="Vultr Tutorial Image 7" /><br />
+<img src="https://www.codebreakers.uk/images/dotutorial/image8.png" alt="" title="Vultr Tutorial Image 8" /></p>
+
+<p> <br />
+ <br />
+ </p>
+
+<hr />
+
+<p>8) Once the machine has built you can access it as follows:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Discover what the machine's IP address is by looking at the Vultr GUI system for the IP address of the build machine - In this case: 185.19.29.134
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>Now on your laptop issue the command:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /root/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildmachineip&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>or yours might be:</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i /home/${username}/.ssh/id_rsa -p ${BUILDCLIENT_SSH_PORT} $BUILDCLIENT_USER@&lt;buildmachineip&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>Once logged in to your build machine</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su 
+[sudo] password for agile-deployer:
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>And then enter your build machine password</p>
+
+<p> <br />
+ </p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>${BUILDMACHINE_PASSWORD}
+</code></pre></div>  </div>
+</blockquote>
+
+<p> <br />
+ </p>
+
+<p>In Graphical form, it looks like this:</p>
+
+<p> <br />
+ </p>
+
+<p>Grab your build machine’s IP address (second column)
+<img src="https://www.codebreakers.uk/images/dotutorial/image9.png" alt="" title="Vultr Tutorial Image 9" /></p>
+
+<p> <br />
+ </p>
+
+<p>Run through the commands as shown below on your laptop to access your build machine</p>
+
+<p> <br />
+ </p>
+
+<p><img src="https://www.codebreakers.uk/images/dotutorial/image10.png" alt="" title="Vultr Tutorial Image 10" /></p>
+
+<hr />
