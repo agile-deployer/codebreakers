@@ -1,3 +1,4 @@
+---
 layout: post
 description: The Agile Deployment Toolkit Vultr Build Machine Method
 title: Vultr ADT Tutorials Build Machine Method
