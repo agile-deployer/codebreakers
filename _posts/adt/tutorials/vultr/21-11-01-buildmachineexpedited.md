@@ -285,7 +285,7 @@ In Graphical form, it looks like this:
 &nbsp;
 
 Grab your build machine's IP address (second column)
-![](https://www.codebreakers.uk/images/vultrtutorial/image9.png "Vultr Tutorial Image 9")
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage7.png "Vultr Tutorial Image 9")
 
 &nbsp;  
 &nbsp;
@@ -295,6 +295,6 @@ Run through the commands as shown below on your laptop to access your build mach
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/vultrtutorial/image10.png "Vultr Tutorial Image 10")
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage8.png "Vultr Tutorial Image 10")
 
 --------------------------------------
