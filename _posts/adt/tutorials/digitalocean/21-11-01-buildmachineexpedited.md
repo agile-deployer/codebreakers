@@ -178,7 +178,7 @@ Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove al
 ![](https://www.codebreakers.uk/images/dotutorial/image2.png "Digital Ocean Tutorial Image 2") 
 &nbsp;  
 &nbsp;
-You can then see your new security Group "adt-build-machine" listed  
+You can then see your firewall "adt-build-machine" listed  
 
 ![](https://www.codebreakers.uk/images/dotutorial/image3.png "Digital Ocean Tutorial Image 3") 
 &nbsp;  
