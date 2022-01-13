@@ -170,17 +170,16 @@ You will need to create a firewall for your build machine. You can do this by cr
 
 Click on the Networking main option and the "firewalls" sub option of your vultr GUI
          
-![](https://www.codebreakers.uk/images/vultrtutorial/image1.png "Vultr Tutorial Image 1")
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage1.png "Vultr Tutorial Image 1")
 &nbsp;  
 &nbsp; 
 Click "Create Firewall" and call it **PRECISELY** "adt-build-machine". Remove all inbound rules and keep the outbound rules as they are set
 
-![](https://www.codebreakers.uk/images/vultrtutorial/image2.png "Vultr Tutorial Image 2") 
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage2.png "Vultr Tutorial Image 2") 
 &nbsp;  
 &nbsp;
-You can then see your new security Group "adt-build-machine" listed  
+You can then see your new firewall "adt-build-machine" listed  
 
-![](https://www.codebreakers.uk/images/vultrtutorial/image3.png "Vultr Tutorial Image 3") 
 &nbsp;  
 &nbsp;
 -------------------. 
@@ -195,7 +194,7 @@ So you will need to add 2 rules
 
 You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 
-![](https://www.codebreakers.uk/images/vultrtutorial/image4.png "Vultr Tutorial Image 4") 
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage3.png "Vultr Tutorial Image 3") 
 &nbsp;  
 &nbsp;
 
@@ -218,10 +217,10 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/vultrtutorial/image5.png "Vultr Tutorial Image 5")  
-![](https://www.codebreakers.uk/images/vultrtutorial/image6.png "Vultr Tutorial Image 6")  
-![](https://www.codebreakers.uk/images/vultrtutorial/image7.png "Vultr Tutorial Image 7")  
-![](https://www.codebreakers.uk/images/vultrtutorial/image8.png "Vultr Tutorial Image 8")  
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage4.png "Vultr Tutorial Image 5")  
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage5.png "Vultr Tutorial Image 6")  
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage6.png "Vultr Tutorial Image 7")  
+![](https://www.codebreakers.uk/images/vultrtutorial/vultrimage7.png "Vultr Tutorial Image 8")  
 
 &nbsp;  
 &nbsp;  
