@@ -83,7 +83,7 @@ To do this, if you don't have a git account sign up with one (in this case using
 
 Then create a github "personal access token" by following: 
 
-[Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) making sure you give it all "repo" permissions
+[Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) making sure you give it all "repo" permissions as well as the "delete repository" permission
 
 >     gitpersonalaccesstoken="KKKKK" where KKKKK represents your actual personal access token
 
