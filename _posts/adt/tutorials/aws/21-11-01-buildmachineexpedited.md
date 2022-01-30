@@ -197,37 +197,33 @@ Save the security group and then you can see it listed:
 &nbsp;
 
 
+6) You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04       
+![](https://www.codebreakers.uk/images/awstutorial/image7.png "AWS Tutorial Image 7") 
+&nbsp;  
+&nbsp;
          
-![](https://www.codebreakers.uk/images/awstutorial/image11.png "AWS Tutorial Image 11") 
+   Select your machine size
+
+&nbsp;  
+&nbsp; 
+
+![](https://www.codebreakers.uk/images/awstutorial/image8.png "AWS Tutorial Image 8") 
+&nbsp;  
+&nbsp;
+         
+Review your build machines configuration
+         
+![](https://www.codebreakers.uk/images/awstutorial/image9.png "AWS Tutorial Image 9") 
+&nbsp;  
+&nbsp;
+         
+Add your previously created adt-build-machine security group to your machine (after the machine is built, you can close the port 22 that was previously opened)         
+![](https://www.codebreakers.uk/images/awstutorial/image10.png "AWS Tutorial Image 10") 
 &nbsp;  
 &nbsp;
 
 
----------------
-
-7) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
-
->     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
->     2. Select which zone you want to deploy to, for example, CH-GVA-2
->     3. Select instance type "Tiny" for example
->     4. Select disk size (50GB)
->     5. Ignore SSH KEY
->     6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
->     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
->     8. Click Create and wait for your machine to build
-
-Graphically you can see what I have described in these 8 steps here:
-
-&nbsp;  
-&nbsp;  
-&nbsp;
-
-![](https://www.codebreakers.uk/images/awstutorial/image7.png "AWS Tutorial Image 7")  
-![](https://www.codebreakers.uk/images/awstutorial/image8.png "AWS Tutorial Image 8")
-![](https://www.codebreakers.uk/images/awstutorial/image9.png "AWS Tutorial Image 9")  
-![](https://www.codebreakers.uk/images/awstutorial/image10.png "AWS Tutorial Image 10")  
-![](https://www.codebreakers.uk/images/awstutorial/image11.png "AWS Tutorial Image 11")  
-
+--------------
 
 &nbsp;  
 &nbsp;  
@@ -286,16 +282,6 @@ And then enter your build machine password
 &nbsp;  
 &nbsp;
 
-In Graphical form, it looks like this:
-
-&nbsp;  
-&nbsp;
-
-Grab your build machine's IP address (third column)
-![](https://www.codebreakers.uk/images/awstutorial/image15.png "AWS Tutorial Image 15")
-
-&nbsp;  
-&nbsp;
 
 Run through the commands as shown on your laptop to access your build machine
 
