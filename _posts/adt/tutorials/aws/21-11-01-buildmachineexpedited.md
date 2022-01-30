@@ -171,12 +171,7 @@ You will need to create a security group for your build machine. You can do this
 Click on the security groups option of your aws GUI and click "Create Security Group" and call it **PRECISELY** "adt-build-machine"
 
 ![](https://www.codebreakers.uk/images/awstutorial/image5.png "AWS Tutorial Image 5")
-&nbsp;  
-&nbsp; 
 
-![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6") 
-&nbsp;  
-&nbsp;
 You can then see your new security Group "adt-build-machine" listed  
 
 6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
@@ -191,7 +186,18 @@ So you will need to add 3 rules
          
 You can see in this image that port 1035 is be opened up to the ip address of my laptop 111.111.111.111/32  
 You can see in this image that port 22 is about to be opened up to the ip address of 0.0.0.0/0        
+         
+Save the security group and then you can see it listed:
+         
+&nbsp;  
+&nbsp; 
 
+![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6") 
+&nbsp;  
+&nbsp;
+
+
+         
 ![](https://www.codebreakers.uk/images/awstutorial/image11.png "AWS Tutorial Image 11") 
 &nbsp;  
 &nbsp;
