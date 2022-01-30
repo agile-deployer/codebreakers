@@ -114,7 +114,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     ------export ACCESS_KEY=""   #MANDATORY  
 >     ------export SECRET_KEY=""   #MANDATORY  
 >     ------export DNS_USERNAME=""  #MANDATORY  
->     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key AAAAA
 >     export DNS_CHOICE="aws" #MANDATORY - you will need to set your DNS nameservers according to this choice  
 >     ------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY  
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian  
@@ -254,7 +254,7 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     ------export ACCESS_KEY="XXXXX"   #MANDATORY
 >     ------export SECRET_KEY="YYYYY"   #MANDATORY
 >     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
->     ------export DNS_SECURITY_KEY="CCCCC:DDDDD"   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key AAAAA
 >     export DNS_CHOICE="aws" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
