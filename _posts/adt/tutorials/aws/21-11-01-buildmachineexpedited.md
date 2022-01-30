@@ -200,7 +200,7 @@ You can see in this image that port 22 is about to be opened up to the ip addres
 6) 
          
 >     You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04       
-![](https://www.codebreakers.uk/images/awstutorial/image7.png "AWS Tutorial Image 7") 
+![](https://www.codebreakers.uk/images/awstutorial/image13.png "AWS Tutorial Image 13") 
 &nbsp;  
 &nbsp;
          
@@ -209,19 +209,19 @@ You can see in this image that port 22 is about to be opened up to the ip addres
 &nbsp;  
 &nbsp; 
 
-![](https://www.codebreakers.uk/images/awstutorial/image8.png "AWS Tutorial Image 8") 
+![](https://www.codebreakers.uk/images/awstutorial/image14.png "AWS Tutorial Image 14") 
 &nbsp;  
 &nbsp;
          
 >     Review your build machines configuration
          
-![](https://www.codebreakers.uk/images/awstutorial/image9.png "AWS Tutorial Image 9") 
+![](https://www.codebreakers.uk/images/awstutorial/image15.png "AWS Tutorial Image 15") 
 &nbsp;  
 &nbsp;
          
 >    Paste your userdata script you made a copy of and modified earlier into the userdata area (scroll down)
          
-![](https://www.codebreakers.uk/images/awstutorial/image12.png "AWS Tutorial Image 12") 
+![](https://www.codebreakers.uk/images/awstutorial/image16.png "AWS Tutorial Image 16") 
 &nbsp;  
 &nbsp;         
          
