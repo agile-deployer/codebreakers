@@ -169,7 +169,7 @@ You will need to create a security group for your build machine. You can do this
 &nbsp; 
 
 Click on the security groups option of your aws GUI
-![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")
+![](https://www.codebreakers.uk/images/awstutorial/image4.png "AWS Tutorial Image 4")
 &nbsp;  
 &nbsp; 
 Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" and click "Create Group"
@@ -189,7 +189,7 @@ So you will need to add 2 rules
 
 You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
 
-![](https://www.codebreakers.uk/images/awstutorial/image17.png "AWS Tutorial Image 17") 
+![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6") 
 &nbsp;  
 &nbsp;
 
@@ -213,8 +213,12 @@ Graphically you can see what I have described in these 8 steps here:
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/awstutorial/image12.png "AWS Tutorial Image 12")  
-![](https://www.codebreakers.uk/images/awstutorial/image13.png "AWS Tutorial Image 13")  
+![](https://www.codebreakers.uk/images/awstutorial/image7.png "AWS Tutorial Image 7")  
+![](https://www.codebreakers.uk/images/awstutorial/image8.png "AWS Tutorial Image 8")
+![](https://www.codebreakers.uk/images/awstutorial/image9.png "AWS Tutorial Image 9")  
+![](https://www.codebreakers.uk/images/awstutorial/image10.png "AWS Tutorial Image 10")  
+![](https://www.codebreakers.uk/images/awstutorial/image11.png "AWS Tutorial Image 11")  
+
 
 &nbsp;  
 &nbsp;  
