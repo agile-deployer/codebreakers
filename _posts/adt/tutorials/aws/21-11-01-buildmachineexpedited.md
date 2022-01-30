@@ -219,6 +219,12 @@ You can see in this image that port 22 is about to be opened up to the ip addres
 &nbsp;  
 &nbsp;
          
+>    Paste your userdata script you made a copy of and modified earlier into the userdata area (scroll down)
+         
+![](https://www.codebreakers.uk/images/awstutorial/image12.png "AWS Tutorial Image 12") 
+&nbsp;  
+&nbsp;         
+         
 >     Add your previously created adt-build-machine security group to your machine (after the machine is built, you can close the port 22 that was previously opened)         
 ![](https://www.codebreakers.uk/images/awstutorial/image10.png "AWS Tutorial Image 10") 
 &nbsp;  
