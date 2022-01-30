@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -297,15 +297,18 @@ You can then see your new security Group “adt-build-machine” listed</p>
 
 <p>6) Add rules to the “adt-build-machine” security group to allow pinging and your build client to connect.</p>
 
-<p>So you will need to add 2 rules</p>
+<p>So you will need to add 3 rules</p>
 
 <p>1) Ping<br />
 2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.<br />
-   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”</p>
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with “CIDR 111.111.111.111/32 1035”
+3) A rule to allow acccess to your build machines defined 22 to be world accessible because the AMI needs to be able to access your machine<br />
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with “CIDR 0.0.0.0/0 22”</p>
 
-<p>You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32</p>
+<p>You can see in this image that port 1035 is be opened up to the ip address of my laptop 111.111.111.111/32<br />
+You can see in this image that port 22 is about to be opened up to the ip address of 0.0.0.0/0</p>
 
-<p><img src="https://www.codebreakers.uk/images/awstutorial/image6.png" alt="" title="AWS Tutorial Image 6" /> 
+<p><img src="https://www.codebreakers.uk/images/awstutorial/image11.png" alt="" title="AWS Tutorial Image 11" /> 
  <br />
  </p>
 
