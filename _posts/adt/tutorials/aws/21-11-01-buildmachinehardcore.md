@@ -169,59 +169,72 @@ You will need to create a security group for your build machine. You can do this
 &nbsp;  
 &nbsp; 
 
-Click on the security groups option of your aws GUI
-![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")
+>     Click on the security groups option of your aws GUI and click "Create Security Group" and call it **PRECISELY** "adt-build-machine"
+
+![](https://www.codebreakers.uk/images/awstutorial/image5.png "AWS Tutorial Image 5")
+
+You can then see your new security Group "adt-build-machine" listed  
+
+6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
+
+>     So you will need to add 3 rules  
+>     
+>     1) Ping  
+>     2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
+>        If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+>     3) A rule to allow acccess to your build machines defined 22 to be world accessible because the AMI needs to be able to access your machine  
+>     If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 0.0.0.0/0 22"
+         
+You can see in this image that port 1035 is be opened up to the ip address of my laptop 111.111.111.111/32  
+You can see in this image that port 22 is about to be opened up to the ip address of 0.0.0.0/0        
+         
+>     Save the security group and then you can see it listed:
+         
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" and then click "Create Group"
 
-![](https://www.codebreakers.uk/images/awstutorial/image5.png "AWS Tutorial Image 5") 
-&nbsp;  
-&nbsp;
-You can then see your new security Group "adt-build-machine" listed
-
-![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6")  
-&nbsp;  
-&nbsp;
-Click on the "adt-build-machine" security group
-
-Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect. 
-
-![](https://www.codebreakers.uk/images/awstutorial/image8.png "AWS Tutorial Image 8")  
-
-So you will need to add 2 rules  
-
-1) Ping  
-2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
-   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
-
-You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
-
-![](https://www.codebreakers.uk/images/awstutorial/image17.png "AWS Tutorial Image 17") 
+![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6") 
 &nbsp;  
 &nbsp;
 
----------------
 
-6) You need to spin up a small machine to be your build machine by clicking "Add" on the top right of the GUI. And then follow these steps:
-
->     1. Select which template you want debian 10 (or later) or ubuntu 20.04 (or later)
->     2. Select which zone you want to deploy to, for example, CH-GVA-2
->     3. Select instance type "Tiny" for example
->     4. Select disk size (50GB)
->     5. Ignore SSH KEY
->     6. Make sure your security group "adt-build-machine" is set for this machine and deselect the "default" security group if it is selected. 
->     7. In the "User Data" area of your VPC machine, paste the entire script that you were left with from 4.
->     8. Click Create and wait for your machine to build
-
-Graphically you can see what I have described in these 8 steps here:
-
-&nbsp;  
+6) 
+         
+>     You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04       
+![](https://www.codebreakers.uk/images/awstutorial/image7.png "AWS Tutorial Image 7") 
 &nbsp;  
 &nbsp;
+         
+>     Select your machine size
 
-![](https://www.codebreakers.uk/images/awstutorial/image12.png "AWS Tutorial Image 12")  
-![](https://www.codebreakers.uk/images/awstutorial/image13.png "AWS Tutorial Image 13")  
+&nbsp;  
+&nbsp; 
+
+![](https://www.codebreakers.uk/images/awstutorial/image8.png "AWS Tutorial Image 8") 
+&nbsp;  
+&nbsp;
+         
+>     Review your build machines configuration
+         
+![](https://www.codebreakers.uk/images/awstutorial/image9.png "AWS Tutorial Image 9") 
+&nbsp;  
+&nbsp;
+         
+>    Paste your userdata script you made a copy of and modified earlier into the userdata area (scroll down)
+         
+![](https://www.codebreakers.uk/images/awstutorial/image12.png "AWS Tutorial Image 12") 
+&nbsp;  
+&nbsp;         
+         
+>     Add your previously created adt-build-machine security group to your machine (after the machine is built, you can close the port 22 that was previously opened)         
+![](https://www.codebreakers.uk/images/awstutorial/image10.png "AWS Tutorial Image 10") 
+&nbsp;  
+&nbsp;
+         
+>     Review and Launch your build machine
+
+
+--------------
 
 &nbsp;  
 &nbsp;  
@@ -229,7 +242,7 @@ Graphically you can see what I have described in these 8 steps here:
 
 ---------------
 
-7) Once the machine has built you can access it as follows:
+8) Once the machine has built you can access it as follows:
 
 &nbsp;  
 &nbsp; 
@@ -280,16 +293,6 @@ And then enter your build machine password
 &nbsp;  
 &nbsp;
 
-In Graphical form, it looks like this:
-
-&nbsp;  
-&nbsp;
-
-Grab your build machine's IP address (third column)
-![](https://www.codebreakers.uk/images/awstutorial/image15.png "AWS Tutorial Image 15")
-
-&nbsp;  
-&nbsp;
 
 Run through the commands as shown on your laptop to access your build machine
 
