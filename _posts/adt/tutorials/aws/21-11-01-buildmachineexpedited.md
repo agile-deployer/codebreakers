@@ -181,15 +181,18 @@ You can then see your new security Group "adt-build-machine" listed
 
 6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
 
-So you will need to add 2 rules  
+So you will need to add 3 rules  
 
 1) Ping  
 2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
    If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+3) A rule to allow acccess to your build machines defined 22 to be world accessible because the AMI needs to be able to access your machine  
+   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 0.0.0.0/0 22"
+         
+You can see in this image that port 1035 is be opened up to the ip address of my laptop 111.111.111.111/32  
+You can see in this image that port 22 is about to be opened up to the ip address of 0.0.0.0/0        
 
-You can see in this image that port 1035 is about to be opened up to the ip address of my laptop 111.111.111.111/32  
-
-![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6") 
+![](https://www.codebreakers.uk/images/awstutorial/image11.png "AWS Tutorial Image 11") 
 &nbsp;  
 &nbsp;
 
