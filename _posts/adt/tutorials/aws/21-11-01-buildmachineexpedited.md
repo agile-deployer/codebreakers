@@ -197,7 +197,7 @@ You can see in this image that port 22 is about to be opened up to the ip addres
 &nbsp;
 
 
-6) 
+7) 
          
 >     You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04  
          
