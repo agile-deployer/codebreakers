@@ -199,8 +199,10 @@ You can see in this image that port 22 is about to be opened up to the ip addres
 
 6) 
          
->     You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04       
+>     You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04  
+         
 ![](https://www.codebreakers.uk/images/awstutorial/image13.png "AWS Tutorial Image 13") 
+         
 &nbsp;  
 &nbsp;
          
