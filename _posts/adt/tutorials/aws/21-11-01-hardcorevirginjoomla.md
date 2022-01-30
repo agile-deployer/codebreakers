@@ -108,18 +108,18 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     #############################################################################################  
 >     ------export S3_ACCESS_KEY=""  #MANDATORY  
 >     ------export S3_SECRET_KEY=""  #MANDATORY  
->     export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
->     export S3_LOCATION="US" #For aws, this always needs to be set to "US"  
+>     export S3_HOST_BASE="s3.eu-west-1.amazonaws.com" #MANDATORY
+>     export S3_LOCATION="EU" #MANDATORY 
 >     export TOKEN="" #NOT REQUIRED  
 >     ------export ACCESS_KEY=""   #MANDATORY  
 >     ------export SECRET_KEY=""   #MANDATORY  
 >     ------export DNS_USERNAME=""  #MANDATORY  
->     ------export DNS_SECURITY_KEY=""   #MANDATORY - This is your access key and your secret key, written: DNS_SECURITY_KEY="${ACCESS_KEY}:${SECRET_KEY}"  
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key
 >     export DNS_CHOICE="aws" #MANDATORY - you will need to set your DNS nameservers according to this choice  
 >     ------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY  
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian  
 >     export BUILDOS_VERSION="11" #MANDATORY one of 20.04|10 11  
->     export DEFAULT_USER="debian" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "debian" if you are deploying debian  
+>     export DEFAULT_USER="admin" #MANDATORY - - This must be "ubuntu" if you are deploying ubuntu and "admin" if you are deploying debian
 >     ------export WEBSITE_DISPLAY_NAME="" #MANDATORY  
 >   
 >     ------export WEBSITE_NAME="" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
@@ -157,13 +157,13 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     ------export APPLICATION_IDENTIFIER="3"
 >     ------export PHP_VERSION="7.4"
 >     export REGION=""
->     export REGION_ID="1128bd56-b4d9-4ac6-a7b9-c715b187ce11"
->     export DB_SIZE="10G"
->     export DB_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
->     export WS_SIZE="10G"
->     export WS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
->     export AS_SIZE="10G"
->     export AS_SERVER_TYPE="b6cd1ff5-3a2f-4e9d-a4d1-8988c1191fe8"
+>     export REGION_ID="eu-west-1"
+>     export DB_SIZE="t2.micro"
+>     export DB_SERVER_TYPE="t2.micro"
+>     export WS_SIZE="t2.micro"
+>     export WS_SERVER_TYPE="t2.micro"
+>     export AS_SIZE="t2.micro"
+>     export AS_SERVER_TYPE="t2.micro"
 >     export CLOUDHOST="aws"
 >     export MACHINE_TYPE="AWS"
 >     export ALGORITHM="rsa"
