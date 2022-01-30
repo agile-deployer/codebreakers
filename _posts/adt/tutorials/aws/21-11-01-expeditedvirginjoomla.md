@@ -41,23 +41,32 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
+You can create IAM keys for AWS in the following way:
+
+![](https://www.codebreakers.uk/images/awstutorial/image1.png "AWS Tutorial Image 1")  
+
+Select the access rights that you deployment needs:
+![](https://www.codebreakers.uk/images/awstutorial/image2.png "AWS Tutorial Image 2")  
+
+And click "Create Access Key"
+![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")  
+
+
 I then need a set of compute access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with compute access. In my separate text file, I record:
 
->     aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
+>     aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
 >     aws_secret_key_compute="YYYYY"
 
-I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with S3 access. In my separate text file, I record:
+Now I need to use my access keys for S3 access
 
->     aws_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
->     aws_secret_key_s3="BBBBB"
+>     aws_access_key_s3="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
+>     aws_secret_key_s3="YYYYY"
 
 
-I then need a set of DNS access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with DNS access. In my separate text file, I record:
+I then need a set of DNS access keys so, at the moment I don't support Route 53 DNS so, you need to get your access keys for cloudflare. To get started creating an API Token, log into the Cloudflare Dashboard and go to User Profile -> API Tokens or simply click here. From the API Token home screen select Create Token.
 
->     aws_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
->     aws_secret_key_dns="DDDDD"
+>     cloudflare_access_key_dns="AAAAA"  where AAAAA are the actual values generated
 
-**NOTE:** Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn't have to juggle three set of keys then and could use the same key pair in all three cases.
 
 -----------------------------------
 
