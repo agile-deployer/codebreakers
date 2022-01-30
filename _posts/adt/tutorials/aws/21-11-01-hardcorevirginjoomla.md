@@ -46,12 +46,11 @@ I then need a set of Object Storage (S3) access keys so, I go to the IAM option 
 >     aws_secret_key_s3="BBBBB"
 
 
-I then need a set of DNS access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with DNS access. In my separate text file, I record:
+I then need a set of DNS access keys so, at the moment I don't support Route 53 DNS so, you need to get your access keys for cloudflare. To get started creating an API Token, log into the Cloudflare Dashboard and go to User Profile -> API Tokens or simply click here. From the API Token home screen select Create Token.
 
->     aws_access_key_dns="CCCCC"  where CCCCC and DDDDD are the actual values generated when I click "Add Key"
->     aws_secret_key_dns="DDDDD"
+>     cloudflare_access_key_dns="CCCCC"  where CCCCC are the actual values generated
 
-**NOTE:** Alternatively you could generate one set of IAM keys and give that one set all three permissions, Compute, DNS and S3. You wouldn't have to juggle three set of keys then and could use the same key pair in all three cases.
+
 
 -----------------------------------
 
@@ -114,7 +113,7 @@ This file looks like this (I have put a dashes before each line I wish to modify
 >     ------export ACCESS_KEY=""   #MANDATORY  
 >     ------export SECRET_KEY=""   #MANDATORY  
 >     ------export DNS_USERNAME=""  #MANDATORY  
->     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key AAAAA
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key CCCCC
 >     export DNS_CHOICE="aws" #MANDATORY - you will need to set your DNS nameservers according to this choice  
 >     ------export CLOUDHOST_EMAIL_ADDRESS="" #MANDATORY  
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian  
@@ -254,7 +253,7 @@ and using the values I recorded in my text file earlier, I modify the file as fo
 >     ------export ACCESS_KEY="XXXXX"   #MANDATORY
 >     ------export SECRET_KEY="YYYYY"   #MANDATORY
 >     ------export DNS_USERNAME="testemail@testemail.com"  #MANDATORY
->     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key AAAAA
+>     ------export DNS_SECURITY_KEY=""   #MANDATORY - You DNS secret key CCCCC
 >     export DNS_CHOICE="aws" #MANDATORY - you will need to set your DNS nameservers according to this choice
 >     ------export CLOUDHOST_EMAIL_ADDRESS="testemail@testemail.com" #MANDATORY
 >     export BUILDOS="debian" #MANDATORY one of ubuntu|debian
