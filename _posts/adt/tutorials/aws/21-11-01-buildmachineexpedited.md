@@ -168,7 +168,7 @@ You will need to create a security group for your build machine. You can do this
 &nbsp;  
 &nbsp; 
 
-Click on the security groups option of your aws GUI and click "Create Security Group" and call it **PRECISELY** "adt-build-machine"
+>     Click on the security groups option of your aws GUI and click "Create Security Group" and call it **PRECISELY** "adt-build-machine"
 
 ![](https://www.codebreakers.uk/images/awstutorial/image5.png "AWS Tutorial Image 5")
 
@@ -176,18 +176,18 @@ You can then see your new security Group "adt-build-machine" listed
 
 6) Add rules to the "adt-build-machine" security group to allow pinging and your build client to connect.  
 
-So you will need to add 3 rules  
-
-1) Ping  
-2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
-   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
-3) A rule to allow acccess to your build machines defined 22 to be world accessible because the AMI needs to be able to access your machine  
-   If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 0.0.0.0/0 22"
+>     So you will need to add 3 rules  
+>     
+>     1) Ping  
+>     2) A rule to allow acccess to your build machines defined SSH_PORT from your laptop.  
+>        If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 111.111.111.111/32 1035"
+>     3) A rule to allow acccess to your build machines defined 22 to be world accessible because the AMI needs to be able to access your machine  
+>     If you SSH_PORT is 1035 and your laptop IP is 111.111.111.111 then you will need a TCP rule with "CIDR 0.0.0.0/0 22"
          
 You can see in this image that port 1035 is be opened up to the ip address of my laptop 111.111.111.111/32  
 You can see in this image that port 22 is about to be opened up to the ip address of 0.0.0.0/0        
          
-Save the security group and then you can see it listed:
+>     Save the security group and then you can see it listed:
          
 &nbsp;  
 &nbsp; 
@@ -197,12 +197,14 @@ Save the security group and then you can see it listed:
 &nbsp;
 
 
-6) You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04       
+6) 
+         
+>     You now need to start an EC2 instance picking a Debian or Ubuntu AMI in this case, Ubuntu 20.04       
 ![](https://www.codebreakers.uk/images/awstutorial/image7.png "AWS Tutorial Image 7") 
 &nbsp;  
 &nbsp;
          
-   Select your machine size
+>     Select your machine size
 
 &nbsp;  
 &nbsp; 
@@ -211,16 +213,18 @@ Save the security group and then you can see it listed:
 &nbsp;  
 &nbsp;
          
-Review your build machines configuration
+>     Review your build machines configuration
          
 ![](https://www.codebreakers.uk/images/awstutorial/image9.png "AWS Tutorial Image 9") 
 &nbsp;  
 &nbsp;
          
-Add your previously created adt-build-machine security group to your machine (after the machine is built, you can close the port 22 that was previously opened)         
+>     Add your previously created adt-build-machine security group to your machine (after the machine is built, you can close the port 22 that was previously opened)         
 ![](https://www.codebreakers.uk/images/awstutorial/image10.png "AWS Tutorial Image 10") 
 &nbsp;  
 &nbsp;
+         
+>     Review and Launch your build machine
 
 
 --------------
