@@ -168,13 +168,13 @@ You will need to create a security group for your build machine. You can do this
 &nbsp;  
 &nbsp; 
 
-Click on the security groups option of your aws GUI
-![](https://www.codebreakers.uk/images/awstutorial/image4.png "AWS Tutorial Image 4")
+Click on the security groups option of your aws GUI and click "Create Security Group" and call it **PRECISELY** "adt-build-machine"
+
+![](https://www.codebreakers.uk/images/awstutorial/image5.png "AWS Tutorial Image 5")
 &nbsp;  
 &nbsp; 
-Click "Add Security Group" and call it **PRECISELY** "adt-build-machine" and click "Create Group"
 
-![](https://www.codebreakers.uk/images/awstutorial/image5.png "AWS Tutorial Image 5") 
+![](https://www.codebreakers.uk/images/awstutorial/image6.png "AWS Tutorial Image 6") 
 &nbsp;  
 &nbsp;
 You can then see your new security Group "adt-build-machine" listed  
