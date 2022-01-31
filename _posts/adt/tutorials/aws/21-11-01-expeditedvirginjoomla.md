@@ -45,7 +45,14 @@ You can create IAM keys for AWS in the following way:
 
 ![](https://www.codebreakers.uk/images/awstutorial/image1.png "AWS Tutorial Image 1")  
 
-Select the access rights that you deployment needs:
+Select the access rights that you deployment needs:  
+
+You will definitely need: AmazonEC2FullAccess and AmazonS3FullAccess in all scenarios  
+
+If you want to deploy an RDS managed database you will need: AmazonRDSFullAccess  
+If you want to deploy an EFS filesystem you will need : AmazonElasticFileSystemFullAccess  
+If you want to control your route53 records you will need: AmazonRoute53FullAccess 
+
 ![](https://www.codebreakers.uk/images/awstutorial/image2.png "AWS Tutorial Image 2")  
 
 And click "Create Access Key"
