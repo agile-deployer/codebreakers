@@ -182,7 +182,7 @@ You can then see your new firewall "adt-build-machine" listed
 
 &nbsp;  
 &nbsp;
--------------------. 
+-------------------
 
 6) Add rules to the "adt-build-machine" firewall to allow pinging and your build client to connect.  
 
