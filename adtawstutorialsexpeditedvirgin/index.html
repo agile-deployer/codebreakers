@@ -139,8 +139,15 @@ window.onload = wrap_img;
 
 <p><img src="https://www.codebreakers.uk/images/awstutorial/image1.png" alt="" title="AWS Tutorial Image 1" /></p>
 
-<p>Select the access rights that you deployment needs:
-<img src="https://www.codebreakers.uk/images/awstutorial/image2.png" alt="" title="AWS Tutorial Image 2" /></p>
+<p>Select the access rights that you deployment needs:</p>
+
+<p>You will definitely need: AmazonEC2FullAccess and AmazonS3FullAccess in all scenarios</p>
+
+<p>If you want to deploy an RDS managed database you will need: AmazonRDSFullAccess<br />
+If you want to deploy an EFS filesystem you will need : AmazonElasticFileSystemFullAccess<br />
+If you want to control your route53 records you will need: AmazonRoute53FullAccess</p>
+
+<p><img src="https://www.codebreakers.uk/images/awstutorial/image2.png" alt="" title="AWS Tutorial Image 2" /></p>
 
 <p>And click “Create Access Key”
 <img src="https://www.codebreakers.uk/images/awstutorial/image3.png" alt="" title="AWS Tutorial Image 3" /></p>
