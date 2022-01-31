@@ -35,14 +35,32 @@ You can of course use a legacy version of joomla also by choosing a different ve
 
 -------------------------------------
 
-I then need a set of compute access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with compute access. In my separate text file, I record:
+You can create IAM keys for AWS in the following way:
 
->     aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
+![](https://www.codebreakers.uk/images/awstutorial/image1.png "AWS Tutorial Image 1")  
+
+Select the access rights that you deployment needs:  
+
+You will definitely need: AmazonEC2FullAccess and AmazonS3FullAccess in all scenarios  
+
+If you want to deploy an RDS managed database you will need: AmazonRDSFullAccess  
+If you want to deploy an EFS filesystem you will need : AmazonElasticFileSystemFullAccess  
+If you want to control your route53 records you will need: AmazonRoute53FullAccess 
+
+![](https://www.codebreakers.uk/images/awstutorial/image2.png "AWS Tutorial Image 2")  
+
+And click "Create Access Key"
+![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")  
+
+
+In my separate text file, I record the access keys I have created:
+
+>     aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
 >     aws_secret_key_compute="YYYYY"
 
 I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with S3 access. In my separate text file, I record:
 
->     aws_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
+>     aws_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Create Access Key"
 >     aws_secret_key_s3="BBBBB"
 
 
