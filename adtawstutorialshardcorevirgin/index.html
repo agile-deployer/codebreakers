@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -132,10 +132,27 @@ window.onload = wrap_img;
 
 <hr />
 
-<p>I then need a set of compute access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with compute access. In my separate text file, I record:</p>
+<p>You can create IAM keys for AWS in the following way:</p>
+
+<p><img src="https://www.codebreakers.uk/images/awstutorial/image1.png" alt="" title="AWS Tutorial Image 1" /></p>
+
+<p>Select the access rights that you deployment needs:</p>
+
+<p>You will definitely need: AmazonEC2FullAccess and AmazonS3FullAccess in all scenarios</p>
+
+<p>If you want to deploy an RDS managed database you will need: AmazonRDSFullAccess<br />
+If you want to deploy an EFS filesystem you will need : AmazonElasticFileSystemFullAccess<br />
+If you want to control your route53 records you will need: AmazonRoute53FullAccess</p>
+
+<p><img src="https://www.codebreakers.uk/images/awstutorial/image2.png" alt="" title="AWS Tutorial Image 2" /></p>
+
+<p>And click “Create Access Key”
+<img src="https://www.codebreakers.uk/images/awstutorial/image3.png" alt="" title="AWS Tutorial Image 3" /></p>
+
+<p>In my separate text file, I record the access keys I have created:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Add Key"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
 aws_secret_key_compute="YYYYY"
 </code></pre></div>  </div>
 </blockquote>
@@ -143,7 +160,7 @@ aws_secret_key_compute="YYYYY"
 <p>I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with S3 access. In my separate text file, I record:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Add Key"
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Create Access Key"
 aws_secret_key_s3="BBBBB"
 </code></pre></div>  </div>
 </blockquote>
