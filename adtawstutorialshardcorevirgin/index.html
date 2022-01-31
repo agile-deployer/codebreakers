@@ -138,16 +138,18 @@ window.onload = wrap_img;
 
 <p>Select the access rights that you deployment needs:</p>
 
-<p>You will definitely need: AmazonEC2FullAccess and AmazonS3FullAccess in all scenarios</p>
+<p>You will definitely need: <strong>AmazonEC2FullAccess</strong> and <strong>AmazonS3FullAccess</strong> in all scenarios</p>
 
-<p>If you want to deploy an RDS managed database you will need: AmazonRDSFullAccess<br />
-If you want to deploy an EFS filesystem you will need : AmazonElasticFileSystemFullAccess<br />
-If you want to control your route53 records you will need: AmazonRoute53FullAccess</p>
+<p>If you want to deploy an RDS managed database you will need: <strong>AmazonRDSFullAccess</strong><br />
+If you want to deploy an EFS filesystem you will need : <strong>AmazonElasticFileSystemFullAccess</strong><br />
+If you want to control your route53 records you will need: <strong>AmazonRoute53FullAccess</strong></p>
 
 <p><img src="https://www.codebreakers.uk/images/awstutorial/image2.png" alt="" title="AWS Tutorial Image 2" /></p>
 
 <p>And click “Create Access Key”
 <img src="https://www.codebreakers.uk/images/awstutorial/image3.png" alt="" title="AWS Tutorial Image 3" /></p>
+
+<p>You can either generate one set of keys with all these permissions enabled or different keys based on function</p>
 
 <p>In my separate text file, I record the access keys I have created:</p>
 
@@ -165,10 +167,10 @@ aws_secret_key_s3="BBBBB"
 </code></pre></div>  </div>
 </blockquote>
 
-<p>I then need a set of DNS access keys so, at the moment I don’t support Route 53 DNS so, you need to get your access keys for cloudflare. To get started creating an API Token, log into the Cloudflare Dashboard and go to User Profile -&gt; API Tokens or simply click here. From the API Token home screen select Create Token.</p>
+<p>I then need a set of DNS access keys so, my Route53 access key can be recorded here:</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cloudflare_access_key_dns="CCCCC"  where CCCCC are the actual values generated
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awsroute53_access_key_dns="CCCCC"  where CCCCC are the actual values generated
 </code></pre></div>  </div>
 </blockquote>
 
