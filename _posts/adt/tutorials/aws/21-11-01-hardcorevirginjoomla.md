@@ -41,17 +41,18 @@ You can create IAM keys for AWS in the following way:
 
 Select the access rights that you deployment needs:  
 
-You will definitely need: AmazonEC2FullAccess and AmazonS3FullAccess in all scenarios  
+You will definitely need: **AmazonEC2FullAccess** and **AmazonS3FullAccess** in all scenarios  
 
-If you want to deploy an RDS managed database you will need: AmazonRDSFullAccess  
-If you want to deploy an EFS filesystem you will need : AmazonElasticFileSystemFullAccess  
-If you want to control your route53 records you will need: AmazonRoute53FullAccess 
+If you want to deploy an RDS managed database you will need: **AmazonRDSFullAccess**  
+If you want to deploy an EFS filesystem you will need : **AmazonElasticFileSystemFullAccess**  
+If you want to control your route53 records you will need: **AmazonRoute53FullAccess** 
 
 ![](https://www.codebreakers.uk/images/awstutorial/image2.png "AWS Tutorial Image 2")  
 
 And click "Create Access Key"
 ![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")  
 
+You can either generate one set of keys with all these permissions enabled or different keys based on function
 
 In my separate text file, I record the access keys I have created:
 
@@ -64,10 +65,9 @@ I then need a set of Object Storage (S3) access keys so, I go to the IAM option 
 >     aws_secret_key_s3="BBBBB"
 
 
-I then need a set of DNS access keys so, at the moment I don't support Route 53 DNS so, you need to get your access keys for cloudflare. To get started creating an API Token, log into the Cloudflare Dashboard and go to User Profile -> API Tokens or simply click here. From the API Token home screen select Create Token.
+I then need a set of DNS access keys so, my Route53 access key can be recorded here:
 
->     cloudflare_access_key_dns="CCCCC"  where CCCCC are the actual values generated
-
+>     awsroute53_access_key_dns="CCCCC"  where CCCCC are the actual values generated
 
 
 -----------------------------------
