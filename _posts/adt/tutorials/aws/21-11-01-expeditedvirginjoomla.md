@@ -59,7 +59,7 @@ And click "Create Access Key"
 ![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")  
 
 
-I then need a set of compute access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with compute access. In my separate text file, I record:
+In my separate text file, I record the access keys I have created:
 
 >     aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
 >     aws_secret_key_compute="YYYYY"
