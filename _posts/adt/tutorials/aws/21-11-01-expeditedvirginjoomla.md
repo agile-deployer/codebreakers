@@ -69,12 +69,12 @@ In my separate text file, I record the access keys I have created:
 Now I need to use my access keys for S3 access
 
 >     aws_access_key_s3="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
->     aws_secret_key_s3="YYYYY"
+>     aws_secret_key_s3="YYYYY"  
 
 
-I then need a set of DNS access keys so, at the moment I don't support Route 53 DNS so, you need to get your access keys for cloudflare. To get started creating an API Token, log into the Cloudflare Dashboard and go to User Profile -> API Tokens or simply click here. From the API Token home screen select Create Token.
+I then need a set of DNS access keys so, my Route53 access key can be recorded here:
 
->     cloudflare_access_key_dns="AAAAA"  where AAAAA are the actual values generated
+>     awsroute53_access_key_dns="CCCCC"  where CCCCC are the actual values generated
 
 
 -----------------------------------
