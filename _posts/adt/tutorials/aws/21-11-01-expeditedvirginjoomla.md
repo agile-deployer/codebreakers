@@ -74,7 +74,8 @@ Now I need to use my access keys for S3 access
 
 I then need a set of DNS access keys so, my Route53 access key can be recorded here:
 
->     awsroute53_access_key_dns="CCCCC"  where CCCCC are the actual values generated
+>     aws_access_key_dns="XXXXX"  where XXXXX are the actual values generated
+>     aws_secret_key_dns="YYYYY"  where YYYYY are the actual values generated
 
 
 -----------------------------------
