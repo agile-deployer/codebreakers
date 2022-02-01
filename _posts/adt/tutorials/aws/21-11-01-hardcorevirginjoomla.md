@@ -34,7 +34,6 @@ And I note the latest version in a separate text file:
 You can of course use a legacy version of joomla also by choosing a different version numnber. 
 
 -------------------------------------
-
 You can create IAM keys for AWS in the following way:
 
 ![](https://www.codebreakers.uk/images/awstutorial/image1.png "AWS Tutorial Image 1")  
@@ -45,31 +44,33 @@ You will definitely need: **AmazonEC2FullAccess** and **AmazonS3FullAccess** in 
 
 If you want to deploy an RDS managed database you will need: **AmazonRDSFullAccess**  
 If you want to deploy an EFS filesystem you will need : **AmazonElasticFileSystemFullAccess**  
-If you want to control your route53 records you will need: **AmazonRoute53FullAccess** 
+If you want to control your route53 records you will need: **AmazonRoute53FullAccess**
+
+You can either generate one set of keys with all these permissions enabled or different keys based on functional scope
+Assuming that you are creating one set of keys with all your permissions I will call the keys "XXXXX" and "YYYYY"
 
 ![](https://www.codebreakers.uk/images/awstutorial/image2.png "AWS Tutorial Image 2")  
 
 And click "Create Access Key"
 ![](https://www.codebreakers.uk/images/awstutorial/image3.png "AWS Tutorial Image 3")  
 
-You can either generate one set of keys with all these permissions enabled or different keys based on function
 
 In my separate text file, I record the access keys I have created:
 
 >     aws_access_key_compute="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
 >     aws_secret_key_compute="YYYYY"
 
-I then need a set of Object Storage (S3) access keys so, I go to the IAM option on my aws dashboard and generate an IAM key with S3 access. In my separate text file, I record:
+Now I need to use my access keys for S3 access
 
->     aws_access_key_s3="AAAAA"  where AAAAA and BBBBB are the actual values generated when I click "Create Access Key"
->     aws_secret_key_s3="BBBBB"
+>     aws_access_key_s3="XXXXX"  where XXXXX and YYYYY are the actual values generated when I click "Create Access Key"
+>     aws_secret_key_s3="YYYYY"  
 
 
 I then need a set of DNS access keys so, my Route53 access key can be recorded here:
 
->     awsroute53_access_key_dns="CCCCC"  where CCCCC are the actual values generated
-
-
+>     aws_access_key_dns="XXXXX"  where XXXXX are the actual values generated
+>     aws_secret_key_dns="YYYYY"  where YYYYY are the actual values generated
+>     
 -----------------------------------
 
 You now need to make a note of the email address that you have registered with your aws account:
