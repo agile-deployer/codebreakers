@@ -53,7 +53,8 @@ If you want to deploy an RDS managed database you will need: **AmazonRDSFullAcce
 If you want to deploy an EFS filesystem you will need : **AmazonElasticFileSystemFullAccess**  
 If you want to control your route53 records you will need: **AmazonRoute53FullAccess**
 
-You can either generate one set of keys with all these permissions enabled or different keys based on function
+You can either generate one set of keys with all these permissions enabled or different keys based on functional scope
+Assuming that you are creating one set of keys with all your permissions I will call the keys "XXXXX" and "YYYYY"
 
 ![](https://www.codebreakers.uk/images/awstutorial/image2.png "AWS Tutorial Image 2")  
 
