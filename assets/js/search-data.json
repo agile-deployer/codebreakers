@@ -575,7 +575,7 @@
     
         ,"post52": {
             "title": "The Agile Deployment Toolkit",
-            "content": "Toolkit Repositories . Agile Deployment Toolkit Build Client Repository Agile Deployment Toolkit Autoscaler Repository Agile Deployment Toolkit Webserver Repository Agile Deployment Toolkit Database Repository . Introduction . Tech Overview . Background Philosophy . The Vision . Tutorials .",
+            "content": "Toolkit Main Code Repositories . Agile Deployment Toolkit Build Client Repository Agile Deployment Toolkit Autoscaler Repository Agile Deployment Toolkit Webserver Repository Agile Deployment Toolkit Database Repository . Toolkit Description . Introduction . Tech Overview . Background Philosophy . The Vision . Tutorials .",
             "url": "https://www.codebreakers.uk/agiledeploymenttoolkit/",
             "relUrl": "/agiledeploymenttoolkit/",
             "date": " • Nov 1, 2021"
