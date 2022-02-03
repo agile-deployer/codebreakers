@@ -295,6 +295,6 @@ Run through the commands as shown on your laptop to access your build machine
 &nbsp;  
 &nbsp;
 
-![](https://www.codebreakers.uk/images/awstutorial/image16.png "AWS Tutorial Image 16")
+![](https://www.codebreakers.uk/images/awstutorial/image17.png "AWS Tutorial Image 17")
 
 --------------------------------------
