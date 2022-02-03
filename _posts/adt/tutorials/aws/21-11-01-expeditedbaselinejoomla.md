@@ -108,7 +108,7 @@ You can make any other adjustments you want like if you want to choose APACHE in
 With your baseline template fully configured, you are now ready to perform a baseline build (in other words, directly install a live application starting from zilch).
 That will look something like the following:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JiweJOLr-R8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9Whlm1egIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If you follow these steps, then, you will have a copy of your customised Joomla application running in the cloud. 
 **Leave the servers you have deployed running for use in the next tutorial in the series.**
