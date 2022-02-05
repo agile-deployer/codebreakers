@@ -8,7 +8,9 @@ https://agile-deployer.github.io/codebreakers/
 
 # Codebreakers
 
-This is the documentation repository for the code breakers project. You will find information about our software here including tutorial and other help
+This is the documentation repository for the code breakers project. You will find information about our software here including tutorial and other help.
+
+This website is live at: [Codebreakers](www.codebreakers.uk)
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
 
