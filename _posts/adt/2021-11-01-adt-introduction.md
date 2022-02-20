@@ -15,7 +15,7 @@ category: agiledeploymenttoolkit
 
 * Do you want to have consistent security processes baked in to your server deployments? 
 
-* Would you like to be able to redeploy to a different (supported) VPS host easily - within 20 minutes or so, if you needed to?
+* Would you like to be able to redeploy to a different (supported) VPS host easily - within 20 minutes or so if needed?
 
 * Does automated server configuration with the latest releases of software included for each deployment sound attractive?
 
