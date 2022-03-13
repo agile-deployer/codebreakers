@@ -48,10 +48,10 @@ baseurl: "/"
 #      permalink: /codebreakers/:categories/:title/
 
 # Github and twitter are optional:
-minima:
-  social_links:
-    twitter: fastdotai
-    github: fastai
+#minima:
+#  social_links:
+#    twitter: fastdotai
+#    github: fastai
 
 # Set this to true to get LaTeX math equation support
 use_math: 
