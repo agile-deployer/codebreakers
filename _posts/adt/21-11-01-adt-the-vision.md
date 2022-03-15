@@ -7,6 +7,8 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+#### THE STRUCTURAL VISION FOR TOWN A
+
 What I am trying to achieve here is to treat fully featured applications as in essence "reusable" encapsulated components. What this means is that if a development team develops an application using a CMS, say Joomla, then using this toolkit that application can be deployed or "instantiated" as a reusable component at an application level. This is similar to how plugins and extensions are used as components within the CMS itself except the application itself is the component or the building block out of which business needs can be met in the same way that plugins or extensions are the reusable components out of which application needs can be met. The ultimate vision I have for this is that for a given town, you can deploy an encapsulated application or set of applications once for each postcode and then have people who live in that postcode join the community to get better organised at a local level. Lets use "Town A" as an example. You could have
 
 ##### postcode0.townAsocial.uk  
