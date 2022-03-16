@@ -387,8 +387,8 @@ Then you need to run the script:
 
 >     cd helperscripts
 
->     ./GenerateOverrideTemplate.sh  (make sure you review and set all **ALL** of the settings - reviewing them generates the stackscript)
-**ESSENTIAL NOTE: with the GenerateOverrideTemplate scipt above, you need to review every setting for the stack script to be generated**
+>     ./GenerateOverrideTemplate.sh  (make sure you review and set all **ALL** of the settings - reviewing them generates the stackscript)  
+>     **ESSENTIAL NOTE: with the GenerateOverrideTemplate scipt above, you need to review every setting for the stack script to be generated**
 
 >     ./GenerateHardcoreUserDataScript.sh stack
 
