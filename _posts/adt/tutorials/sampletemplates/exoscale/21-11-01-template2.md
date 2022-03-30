@@ -7,8 +7,8 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl on my build machine**
-**This is how your template should look (obviously with your own values if you are making a baseline deployment of a CMS, in this case Wordpress, on the Exoscale provider)**
+**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl on my build machine**  
+**This is how your template should look (obviously with your own values if you are making a baseline deployment of a CMS, in this case Wordpress, on the Exoscale provider)**  
 
 export APPLICATION="wordpress" #MANDATORY (joomla or wordpress or drupal or moodle)  
 export APPLICATION_IDENTIFIER="2" #MANDATORY (1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle)  
