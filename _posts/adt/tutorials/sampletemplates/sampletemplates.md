@@ -10,4 +10,6 @@ category: agiledeploymenttoolkit
 
 #### EXOSCALE
 
-[Template 1] (https://www.codebreakers.uk/adtawstutorialsexpeditedvirgin)   
+[Template 1] (https://www.codebreakers.uk/exotemplate1)   
+[Template 2] (https://www.codebreakers.uk/exotemplate2)   
+
