@@ -38,11 +38,11 @@ export DEFAULT_USER="debian" #MANDATORY - This must be "ubuntu" if you are deplo
 export WEBSITE_DISPLAY_NAME="Nuocial" #MANDATORY  
 export WEBSITE_NAME="nuocial" #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial   
 export WEBSITE_URL="demo.nuocial.org.uk"  #MANDATORY  
-export SYSTEM_EMAIL_PROVIDER="" #MANDATORY  
-export SYSTEM_TOEMAIL_ADDRESS="" #MANDATORY  
-export SYSTEM_FROMEMAIL_ADDRESS="" #MANDATORY  
-export SYSTEM_EMAIL_USERNAME="" #MANDATORY  
-export SYSTEM_EMAIL_PASSWORD="" #MANDATORY  
+export SYSTEM_EMAIL_PROVIDER="3" #MANDATORY   3=AWS SES  
+export SYSTEM_TOEMAIL_ADDRESS="webmaster@nuocial.org.uk" #MANDATORY  
+export SYSTEM_FROMEMAIL_ADDRESS="webmaster@nuocial.org.uk" #MANDATORY  
+export SYSTEM_EMAIL_USERNAME="ADHU£UDHJHFJHJHSJGJDFJHS" #MANDATORY  AWS SES USERNAME  
+export SYSTEM_EMAIL_PASSWORD="jhwdf9hweifubhwkfjhweu9fhiuwehf9iuwherfi9uhwef" #MANDATORY  AWS SES PASSWORD  
 export SERVER_TIMEZONE_CONTINENT="Europe"  
 export SERVER_TIMEZONE_CITY="London"  
 export PRODUCTION="0"  
