@@ -10,17 +10,13 @@ category: agiledeploymenttoolkit
 This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale1.tmpl on my build machine
 This is how your template should look (obviously with your own values if you are making a virgin deployment of a CMS, in this case Joomla, on the Exoscale provider)
 
+-----------------------
+
 export APPLICATION="joomla"  
 export JOOMLA_VERSION="4.1.1" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
 export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal
 export APPLICATION_IDENTIFIER="1" #MANDATORY - 1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle  
 export APPLICATION_BASELINE_SOURCECODE_REPOSITORY="JOOMLA:4.1.1" #MANDATORY  
-  
-##### change this to, for example, JOOMLA:4.0.3 if you are deploying joomla (APPLICATION=joomla)  
-###### change this to, WORDPRESS if you are deploying wordpress  
-###### change this to, for example, DRUPAL:9.2.6 if you are deploying drupal (APPLICATION=drupal)  
-###### change this to, MOODLE if you are deploying moodle  
-  
 export S3_ACCESS_KEY="EXO12wjduefu2ejefjh23j23hj23hj"  #MANDATORY  
 export S3_SECRET_KEY="Yhdjefuefh3rjhefjhgefu3ruhewkqwhdj3ejef1"  #MANDATORY  
 export S3_HOST_BASE="sos-ch-gva-2.exo.io" #MANDATORY  
