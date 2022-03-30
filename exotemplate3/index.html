@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Agile Deployment Toolkit Tutorials" />
 <meta property="og:description" content="The Agile Deployment Toolkit Tutorials" />
-<link rel="canonical" href="https://www.codebreakers.uk/exotemplate2/" />
-<meta property="og:url" content="https://www.codebreakers.uk/exotemplate2/" />
+<link rel="canonical" href="https://www.codebreakers.uk/exotemplate3/" />
+<meta property="og:url" content="https://www.codebreakers.uk/exotemplate3/" />
 <meta property="og:site_name" content="Codebreakers" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-01T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-11-01T00:00:00-05:00","url":"https://www.codebreakers.uk/exotemplate2/","@type":"BlogPosting","headline":"Tutorials","dateModified":"2021-11-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.codebreakers.uk/exotemplate2/"},"description":"The Agile Deployment Toolkit Tutorials","@context":"https://schema.org"}</script>
+{"datePublished":"2021-11-01T00:00:00-05:00","url":"https://www.codebreakers.uk/exotemplate3/","@type":"BlogPosting","headline":"Tutorials","dateModified":"2021-11-01T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.codebreakers.uk/exotemplate3/"},"description":"The Agile Deployment Toolkit Tutorials","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.codebreakers.uk/feed.xml" title="Codebreakers" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -93,42 +93,40 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale2.tmpl on my build machine
-This is how your template should look (obviously with your own values if you are making a baseline deployment of a CMS, in this case Wordpress, on the Exoscale provider)</p>
+    <p>This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/exoscale/exoscale3.tmpl on my build machine
+This is how your template should look (obviously with your own values if you are making a temporal (hourly) deployment of a CMS, in this case Wordpress, on the Exoscale provider)</p>
 
-<p>###############################################################################################</p>
-<h1 id="refer-to-build_hometemplatedconfigurationsspecificationmd">Refer to: ${BUILD_HOME}/templatedconfigurations/specification.md</h1>
-<p>###############################################################################################
-export APPLICATION=”wordpress” #MANDATORY (joomla or wordpress or drupal or moodle)
-export APPLICATION_IDENTIFIER=”2” #MANDATORY (1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle)
-export BASELINE_DB_REPOSITORY=”nuocialboss-db-baseline” #MANDATORY
-export APPLICATION_BASELINE_SOURCECODE_REPOSITORY=”nuocialboss-webroot-sourcecode-baseline” #MANDATORY
-export PERSIST_ASSETS_TO_CLOUD=”0” #MANDATORY 
-export DIRECTORIES_TO_MOUNT=”” #MANDATORY - this will define which directories in your webroot will be mounted from S3, if PERSIST_ASSETS_TO_CLOUD=1
-########################
-export APPLICATION_REPOSITORY_PROVIDER=”github” #MANDATORY  MAKE SURE THESE 5 APPLICATION_* settings are correct for where your application repositories are.
-export APPLICATION_REPOSITORY_OWNER=”adt-demos” #MANDATORY
-export APPLICATION_REPOSITORY_USERNAME=”adt-demos” #MANDATORY
-export APPLICATION_REPOSITORY_PASSWORD=”none” #MANDATORY
-export APPLICATION_REPOSITORY_TOKEN=”ghp_jdhhfue3ue4ufkw219kbfobsfbi3e” #MANDATORY
-#######################
-export S3_ACCESS_KEY=”EXOjdhhfhie3u3j2efbei3i33jfe”  #MANDATORY
-export S3_SECRET_KEY=”jsnhdjndfoweofiu2foijweflnwefohwefoiwdovjn”  #MANDATORY
+<p>export APPLICATION=”wordpress” #MANDATORY joomla, wordpress, drupal or moodle
+export BUILD_CHOICE=”2” #MANDATORY 2=hourly, 3=daily, 4=weekly, 5=monthly, 6=bimonthly
+export BUILD_ARCHIVE_CHOICE=”hourly” #MANDATORY hourly, daily, weekly, monthly, bimonthly
+export PERSIST_ASSETS_TO_CLOUD=”2” #MANDATORY
+export APPLICATION_IDENTIFIER=”2” #MANDATORY - 1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle
+export DIRECTORIES_TO_MOUNT=”wp-content.uploads” #MANDATORY The directories of dynamic assets that will be stored in S3
+export S3_ACCESS_KEY=”EXOjsdvwerfiowefwdkvjnwdvijnw”  #MANDATORY
+export S3_SECRET_KEY=”jsdu23uerbwdkvbwiuwefiwefkhjweifbweijfbweif”  #MANDATORY
 export S3_HOST_BASE=”sos-ch-gva-2.exo.io” #MANDATORY
 export S3_LOCATION=”US” #For exoscale, this always needs to be set to “US”
 export TOKEN=”” #NOT REQUIRED
-export ACCESS_KEY=”EXOjdhhfhie3u3j2efbei3i33jfe”   #MANDATORY
-export SECRET_KEY=”jsnhdjndfoweofiu2foijweflnwefohwefoiwdovjn”   #MANDATORY
-export DNS_USERNAME=”you@cloudflareemail.tld”  #MANDATORY - the email address you registered with cloudflare
-export DNS_SECURITY_KEY=”jhwdu3823uweufhu232323ewejfwejwefhj”   #MANDATORY
+export ACCESS_KEY=”EXOjsdvwerfiowefwdkvjnwdvijnw”  #MANDATORY
+export SECRET_KEY=”jsdu23uerbwdkvbwiuwefiwefkhjweifbweijfbweif”  #MANDATORY
+export DNS_USERNAME=”you@cloudflareemail.tld”  #MANDATORY - the email address you registered for cloudflare with
+export DNS_SECURITY_KEY=”jnfejfni3reiefhunefuhe83rieifnhuehf2”   #MANDATORY - for DNS_CHOICE=”exoscale” written: DNS_SECURITY_KEY=”${ACCESS_KEY}:${SECRET_KEY}” for DNS_CHOICE=”cloudflare” written: DNS_SECURITY_KEY=”${CLOUDFLARE_DNS_KEY}”
 export DNS_CHOICE=”cloudflare” #MANDATORY - you will need to set your DNS nameservers according to this choice
-export CLOUDHOST_EMAIL_ADDRESS=”you@cloudhost.tld” #MANDATORY - the email address you registered for your cloudhost with (in this case, Exoscale)
-export BUILDOS=”debian” #MANDATORY one of ubuntu|debian
-export BUILDOS_VERSION=”11” #MANDATORY one of 20.04 22.04|10 11
-export DEFAULT_USER=”debian” #MANDATORY - This must be “ubuntu” if you are deploying ubuntu and “debian” if you are deploying debian
-export WEBSITE_DISPLAY_NAME=”Nuocial” #MANDATORY<br />
-export WEBSITE_NAME=”nuocial” #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial<br />
+export CLOUDHOST_EMAIL_ADDRESS=”you@cloudhostemail.tld” #MANDATORY - the email address you registered for your cloudhost with, in this case, Exoscale
+export BUILDOS=”ubuntu” #MANDATORY one of ubuntu|debian
+export BUILDOS_VERSION=”22.04” #MANDATORY one of 20.04 22.04|10 11
+export DEFAULT_USER=”ubuntu” #MANDATORY - - This must be “ubuntu” if you are deploying ubuntu and “debian” if you are deploying debian
+export BUILD_IDENTIFIER=”nuocial” #MANDATORY
+export WEBSITE_DISPLAY_NAME=”Nuocial” #MANDATORY
+export WEBSITE_NAME=”nuocial” #MANDATORY - This is the exact value of the core of your WEBSITE_URL, for example, www.nuocial.org.uk would be nuocial
 export WEBSITE_URL=”demo.nuocial.org.uk”  #MANDATORY
+###########################################################
+export APPLICATION_REPOSITORY_PROVIDER=”github” #MANDATORY Make sure these 5 settings match where your backups is stored with your git provider
+export APPLICATION_REPOSITORY_OWNER=”adt-demos” #MANDATORY
+export APPLICATION_REPOSITORY_USERNAME=”adt-demos” #MANDATORY
+export APPLICATION_REPOSITORY_PASSWORD=”none” #MANDATORY 
+export APPLICATION_REPOSITORY_TOKEN=”ghp_hfe83484fue4fujwjwjfhu32ruhefjoqehikfg” #MANDATORY
+###########################################################
 export SYSTEM_EMAIL_PROVIDER=”” #MANDATORY
 export SYSTEM_TOEMAIL_ADDRESS=”” #MANDATORY
 export SYSTEM_FROMEMAIL_ADDRESS=”” #MANDATORY
@@ -136,20 +134,20 @@ export SYSTEM_EMAIL_USERNAME=”” #MANDATORY
 export SYSTEM_EMAIL_PASSWORD=”” #MANDATORY
 export SERVER_TIMEZONE_CONTINENT=”Europe”
 export SERVER_TIMEZONE_CITY=”London”
-export PRODUCTION=”0”
-export DEVELOPMENT=”1”
+export PRODUCTION=”1”
+export DEVELOPMENT=”0”
 export SUPERSAFE_WEBROOT=”1”
 export WEBSERVER_CHOICE=”NGINX”
-export NUMBER_WS=”1”
 export NO_AUTOSCALERS=”1”
+export NUMBER_WS=”2”
 export SUPERSAFE_DB=”1”
 export DISABLE_HOURLY=”0”
 export DATABASE_INSTALLATION_TYPE=”MySQL”
 export DB_PORT=”2035”
 export SSH_PORT=”1035”
 export GATEWAY_GUARDIAN=”0”
-export BUILD_CHOICE=”1” #MANDATORY
-export BUILD_ARCHIVE_CHOICE=”baseline”
+export BASELINE_DB_REPOSITORY=””
+export APPLICATION_BASELINE_SOURCECODE_REPOSITORY=””
 export APPLICATION_LANGUAGE=”PHP”
 export PHP_VERSION=”8.1”
 export REGION=””
@@ -177,10 +175,21 @@ export DATASTORE_CHOICE=”exoscale”
 export SSL_GENERATION_METHOD=”AUTOMATIC”
 export SSL_GENERATION_SERVICE=”LETSENCRYPT”
 export BYPASS_DB_LAYER=”0”
-export APPLICATION_NAME=”WORDY DEMO APPLICATION”
 export PUBLIC_KEY_NAME=”AGILE_TOOLKIT_PUBLIC_KEY”
 export DBaaS_HOSTNAME=””
 export DBaaS_USERNAME=””
+export DBaaS_PASSWORD=””
+export DBaaS_DBNAME=””
+export DATABASE_DBaaS_INSTALLATION_TYPE=””
+export DBaaSDBSECURITYGROUP=””
+export WSIP=””
+export WSIP_PRIVATE=””
+export DBIP=””
+export DBIP_PRIVATE=””
+export ASIP=””
+export ASIP_PRIVATE=””
+export APPLICATION_NAME=”WORDY DEMO APPLICATION”
+export DNS_REGION=””
 export MAPS_API_KEY=””
 export PHP_MODE=””
 export PHP_MAX_CHILDREN=””
@@ -203,12 +212,11 @@ export DATABASE_IMAGE_ID=””
 export ASSETS_BUCKET=””
 export JOOMLA_VERSION=””
 export DRUPAL_VERSION=””
-export BUILD_HOME=”/home/agile-deployer/agile-infrastructure-build-client-scripts”
-export BUILD_CLIENT_IP=”185.18.26.191”
-export BUILD_IDENTIFIER=”nuocial”
-export PUBLIC_KEY_ID=”AGILE_TOOLKIT_PUBLIC_KEY-nuocial”</p>
+export BUILD_HOME=””
+export BUILD_CLIENT_IP=””
+export PUBLIC_KEY_ID=””</p>
 
-  </div><a class="u-url" href="/exotemplate2/" hidden></a>
+  </div><a class="u-url" href="/exotemplate3/" hidden></a>
 </article>
 
       </div>
