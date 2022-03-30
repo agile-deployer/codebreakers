@@ -2,7 +2,7 @@
 layout: post
 description: The Agile Deployment Toolkit Tutorials
 title: Tutorials
-permalink: /tutorials/
+permalink: /exotemplate1/
 hide: true
 category: agiledeploymenttoolkit
 ---
