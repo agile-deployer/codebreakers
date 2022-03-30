@@ -26,4 +26,4 @@ You will need to repeatedly reference the [Specification](https://github.com/agi
 * [AWS Tutorials](https://www.codebreakers.uk/adtawstutorials/)
 
 
-* [Example Templates by Provider](https://github.com/agile-deployer/codebreakers/blob/master/_posts/adt/tutorials/sampletemplates/exoscale/template1.tmpl)
+* [Example Templates by Provider](https://www.codebreakers.uk/sampletemplates/)
