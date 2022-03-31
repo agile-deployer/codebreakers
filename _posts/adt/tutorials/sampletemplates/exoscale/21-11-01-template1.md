@@ -12,7 +12,7 @@ category: agiledeploymenttoolkit
 
 -----------------------
 
-export APPLICATION="joomla"  #MANDATORY
+export APPLICATION="joomla"  #MANDATORY  
 export JOOMLA_VERSION="4.1.1" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
 export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal
 export APPLICATION_IDENTIFIER="1" #MANDATORY - 1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle  
