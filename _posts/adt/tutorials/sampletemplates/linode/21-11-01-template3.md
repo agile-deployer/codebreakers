@@ -1,3 +1,15 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /linodetemplate3/
+hide: true
+category: agiledeploymenttoolkit
+---
+
+**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/linode/linode3.tmpl on my build machine**  
+**This is how your template should look (obviously with your own values if you are making a temporal (weekly) deployment of a CMS, in this case Wordpress, on the Linode provider)** 
+
 export APPLICATION="wordpress" #MANDATORY joomla, wordpress, drupal or moodle  
 export LINODEACCOUNT_USERNAME="user123" #MANDATORY  
 export BUILD_CHOICE="4" #MANDATORY 2=hourly, 3=daily, 4=weekly, 5=monthly, 6=bimonthly  
