@@ -8,6 +8,7 @@ category: agiledeploymenttoolkit
 ---
 
 **This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/linode/linode2.tmpl on my build machine**  
+
 **This is how your template should look (obviously with your own values if you are making a baseline deployment of a CMS, in this case Wordpress, on the Linode provider)** 
 
 
