@@ -1,3 +1,12 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /linodetemplate1/
+hide: true
+category: agiledeploymenttoolkit
+---
+
 export APPLICATION="joomla"  
 export LINODEACCOUNT_USERNAME="user123" #MANDATORY  
 export JOOMLA_VERSION="4.1.2" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
