@@ -1,3 +1,16 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /linodetemplate2/
+hide: true
+category: agiledeploymenttoolkit
+---
+
+**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/linode/linode2.tmpl on my build machine**  
+**This is how your template should look (obviously with your own values if you are making a baseline deployment of a CMS, in this case Wordpress, on the Linode provider)** 
+
+
 export APPLICATION="wordpress" #MANDATORY (joomla or wordpress or drupal or moodle)  
 export LINODEACCOUNT_USERNAME="user123" #MANDATORY  
 export APPLICATION_IDENTIFIER="1" #MANDATORY (1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle)  
