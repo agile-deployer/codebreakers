@@ -1,3 +1,12 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /vultrtemplate1/
+hide: true
+category: agiledeploymenttoolkit
+---
+
 export APPLICATION="joomla" #MANDATORY  
 export JOOMLA_VERSION="4.1.2" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
 export DRUPAL_VERSION="9.2.1"  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal  
