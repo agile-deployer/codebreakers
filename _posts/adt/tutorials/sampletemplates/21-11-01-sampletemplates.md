@@ -19,3 +19,9 @@ category: agiledeploymenttoolkit
 [Template 1](https://www.codebreakers.uk/linodetemplate1)   
 [Template 2](https://www.codebreakers.uk/linodetemplate2)   
 [Template 3](https://www.codebreakers.uk/linodetemplate3) 
+
+#### VULTR
+
+[Template 1](https://www.codebreakers.uk/vultrtemplate1)   
+[Template 2](https://www.codebreakers.uk/vultrtemplate2)   
+[Template 3](https://www.codebreakers.uk/vultrtemplate3) 
