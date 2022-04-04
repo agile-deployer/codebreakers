@@ -7,7 +7,7 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-#### EXOSCALE
+#### DIGITAL OCEAN
 
 [Template 1](https://www.codebreakers.uk/digitaloceantemplate1)   
 [Template 2](https://www.codebreakers.uk/digitaloceantemplate2)   
