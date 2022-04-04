@@ -7,6 +7,11 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
+#### EXOSCALE
+
+[Template 1](https://www.codebreakers.uk/digitaloceantemplate1)   
+[Template 2](https://www.codebreakers.uk/digitaloceantemplate2)   
+[Template 3](https://www.codebreakers.uk/digitaloceantemplate3)  
 
 #### EXOSCALE
 
