@@ -30,3 +30,9 @@ category: agiledeploymenttoolkit
 [Template 1](https://www.codebreakers.uk/vultrtemplate1)   
 [Template 2](https://www.codebreakers.uk/vultrtemplate2)   
 [Template 3](https://www.codebreakers.uk/vultrtemplate3) 
+
+#### AWS
+
+[Template 1](https://www.codebreakers.uk/awstemplate1)   
+[Template 2](https://www.codebreakers.uk/awstemplate2)   
+[Template 3](https://www.codebreakers.uk/awstemplate3) 
