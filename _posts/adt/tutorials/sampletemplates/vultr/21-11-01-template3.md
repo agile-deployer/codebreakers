@@ -1,3 +1,15 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /vultrtemplate3/
+hide: true
+category: agiledeploymenttoolkit
+---
+
+**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/vultr/vultr3.tmpl on my build machine**  
+**This is how your template should look (obviously with your own values if you are making a virgin deployment of a CMS, in this case Joomla, on the Vultr provider)**
+
 export APPLICATION="wordpress" #MANDATORY joomla, wordpress, drupal or moodle  
 export BUILD_CHOICE="2" #MANDATORY 2=hourly, 3=daily, 4=weekly, 5=monthly, 6=bimonthly  
 export BUILD_ARCHIVE_CHOICE="hourly" #MANDATORY hourly, daily, weekly, monthly, bimonthly  
