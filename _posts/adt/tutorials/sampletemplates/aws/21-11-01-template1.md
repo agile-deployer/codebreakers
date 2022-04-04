@@ -1,3 +1,17 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /awstemplate1/
+hide: true
+category: agiledeploymenttoolkit
+---
+
+**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/aws/aws1.tmpl on my build machine**  
+**This is how your template should look (obviously with your own values if you are making a virgin deployment of a CMS, in this case Joomla, on the AWS provider)**   
+
+-----------------------
+
 export APPLICATION="joomla" #MANDATORY  
 export JOOMLA_VERSION="4.1.2" #MANDATORY - change this to the version you want to deploy, for example 4.0.3 set it to "" if you are deploying anything but joomla  
 export DRUPAL_VERSION=""  #MANDATORY - change this to the version you want to deploy, for example, 9.2.6 set it to "" if you are deploying anything but drupal  
