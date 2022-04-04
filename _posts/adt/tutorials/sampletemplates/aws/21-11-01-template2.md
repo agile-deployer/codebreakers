@@ -1,3 +1,17 @@
+---
+layout: post
+description: The Agile Deployment Toolkit Tutorials
+title: Tutorials
+permalink: /awstemplate2/
+hide: true
+category: agiledeploymenttoolkit
+---
+
+**This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/aws/aws2.tmpl on my build machine**  
+**This is how your template should look (obviously with your own values if you are making a virgin deployment of a CMS, in this case Joomla, on the AWS provider)**   
+
+-----------------------
+
 export APPLICATION="wordpress" #MANDATORY (joomla or wordpress or drupal or moodle)  
 export APPLICATION_IDENTIFIER="2" #MANDATORY (1 for joomla, 2 for wordpress, 3 for drupal, 4 for moodle)  
 export BASELINE_DB_REPOSITORY="wordydemo-db-baseline" #MANDATORY  
