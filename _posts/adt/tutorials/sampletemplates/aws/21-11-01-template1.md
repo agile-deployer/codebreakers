@@ -1,7 +1,7 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit Tutorials
-title: Tutorials
+title: Template 1
 permalink: /awstemplate1/
 hide: true
 category: agiledeploymenttoolkit
