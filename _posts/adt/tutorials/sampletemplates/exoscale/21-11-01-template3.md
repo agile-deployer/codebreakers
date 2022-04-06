@@ -1,7 +1,7 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit Tutorials
-title: Tutorials
+title: Template 3
 permalink: /exotemplate3/
 hide: true
 category: agiledeploymenttoolkit
