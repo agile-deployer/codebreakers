@@ -1,7 +1,7 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit Tutorials
-title: Tutorials
+title: Template 2
 permalink: /linodetemplate2/
 hide: true
 category: agiledeploymenttoolkit
