@@ -1,14 +1,14 @@
 ---
 layout: post
 description: The Agile Deployment Toolkit Tutorials
-title: Tutorials
+title: Template 1
 permalink: /digitaloceantemplate1/
 hide: true
 category: agiledeploymenttoolkit
 ---
 
 **This file is at: /home/agile-deployer/agile-infrastructure-build-client-scripts/templatedconfigurations/templates/digitalocean/digitalocean1.tmpl on my build machine**  
-**This is how your template should look (obviously with your own values if you are making a virgin deployment of a CMS, in this case Joomla, on the DigitalOcean provider)**   
+**This is how your template should look (obviously with your own values if you are making a baseline deployment of a CMS, in this case Joomla, on the DigitalOcean provider)**   
 
 -----------------------
 
