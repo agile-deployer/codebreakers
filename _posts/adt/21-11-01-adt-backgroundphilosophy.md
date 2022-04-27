@@ -7,7 +7,7 @@ hide: true
 category: agiledeploymenttoolkit
 ---
 
-In "another life", I was a consultant for a big IT outsourcing company used by the government for a lot of projects that they needed doing. The problem was the social disconnect. The users of the systems lived on a different planet to those of us building them. So, in order to be a "consultant with conviction", I went to actually look, or, was led into looking by my intuitive self, to genuinely interact with the people that are end users of the systems as an end user of the sytems so that I could actually advise based on experience rather than assumption. Here's what I found:
+In "another life", I was a consultant for a big IT outsourcing company used by the government for a lot of projects that they needed doing. The problem was the social disconnect. The users of the systems lived on a different planet to those of us building them. So, in order to be a "consultant with conviction", I went to actually look, or, was led into looking by my intuitive self, to genuinely interact with the people that are end users of the systems as an end user of the systems so that I could actually advise based on experience rather than assumption. Here's what I found:
 
 1. The assumption is that people who rely on government systems don't have much to contribute. That's a very misled and even arrogant assumption if you actually mix with such ones you would find out that they know more than you and that your assumptions about which end of society is the arse end is just that, an assumption, and, it depends on your social orientation bias not on what it actually is. That was my first lesson which I relay here. 
 
