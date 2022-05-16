@@ -19,4 +19,6 @@ To register for my demo experiment go [here](https://docs.google.com/forms/d/e/1
 **(note, the recommendation is that you set up an email address with your chosen provider exclusively for use with this community)**   
   
   
-Once your registation has been acccepted you will be able to login at [Demo](https://tryout.nuocial.org.uk)
+Once your registation has been acccepted you will be able to login at [Demo](https://tryout.nuocial.org.uk)  
+
+You always have to keep in mind what your end objective is and to not be too over ambitious. So, in the first case here, I am looking to put together a proof of concept website with a few tens of users or members that demonstrates that working as an amateur I have been able to produce something worthwhile. This toolkit is designed to create a structure scalable to any size but for it to do that it would need large scale buy in from technically minded people. With a successful proof of concept under our belts it would be a strong position to be able to say, "why not expand beyond proof of concept" and produce something which might actually be a strong contribution to shoring up the social process for vulnerable and excluded people. 
