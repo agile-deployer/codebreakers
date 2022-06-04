@@ -19,8 +19,6 @@ category: agiledeploymenttoolkit
 
 ### [Introduction](https://www.codebreakers.uk/introduction/)
 
-### [Proposal](https://www.codebreakers.uk/proposal/)
-
 ### [Tech Overview](https://www.codebreakers.uk/agiledeploymenttoolkittechoverview/) 
 
 ### [Background Philosophy](https://www.codebreakers.uk/backgroundphilosophy/)
