@@ -1,0 +1,11 @@
+There is an old saying "start as you mean to go on" and for a lot of startups, often they start without much cash and then they get some cash and they lose site of old wisdom and change how they operate.
+My objective here is to work as "cash free" as possible for as long as possible and to make that the ethos.
+This approach doesn't come without challenges because as soon as you approach most people about putting some work in the first question is, "How much are you paying mate?" which can be a blocker because as far as the word on the street goes, more money good, less money bad but, there's a lot of grey area in there and you can discover that for yourself.
+So, to be very clear, you can't get blood out of a stone and so, if I haven't got money I can't pay you money can I, but, that is not the same as there not being anything in it for you. 
+
+As a first step then, these unpaid positions are open withing codebreakers.
+
+1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](www.github.com/agile-deployer)
+2) Application testers - people willing to test applications deployed using the ADT. 
+3) Application developers - people willing to develop applications using the latest CMS systems deployed using the ADT such as Joomla, Wordpress and Drupal.
+4) Application deployers - people willing to learn how the ADT works (the ADT is a DMS (Deployment Management System) and it is similar to the amount of effort you would put in to learning a CMS but for deployment rather than content). 
