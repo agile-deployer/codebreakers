@@ -16,7 +16,7 @@ I used to be a pro but I got promoted to being an amateur about 20 years ago and
 
 As a first step then, these unpaid positions are open withing codebreakers.
 
-1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](www.github.com/agile-deployer)  
+1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](https://www.github.com/agile-deployer)  
 
 2) Application testers - people willing to test applications deployed using the ADT.  
 
