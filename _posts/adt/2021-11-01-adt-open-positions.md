@@ -16,7 +16,10 @@ I used to be a pro but I got promoted to being an amateur about 20 years ago and
 
 As a first step then, these unpaid positions are open withing codebreakers.
 
-1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](www.github.com/agile-deployer)
-2) Application testers - people willing to test applications deployed using the ADT. 
-3) Application developers - people willing to develop applications using the latest CMS systems deployed using the ADT such as Joomla, Wordpress and Drupal.
+1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](www.github.com/agile-deployer)  
+
+2) Application testers - people willing to test applications deployed using the ADT.  
+
+3) Application developers - people willing to develop applications using the latest CMS systems deployed using the ADT such as Joomla, Wordpress and Drupal.  
+
 4) Application deployers - people willing to learn how the ADT works (the ADT is a DMS (Deployment Management System) and it is similar to the amount of effort you would put in to learning a CMS but for deployment rather than content). 
