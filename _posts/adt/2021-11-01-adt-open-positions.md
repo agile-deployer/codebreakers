@@ -15,6 +15,8 @@ There is an old saying "start as you mean to go on" and for a lot of startups, o
 
 ### If you are keen, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
 
+The roles which I am looking for volunteers to fill are:  
+
 1) Toolkit Developers - Very highly technical Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing and extending the Agile Deployment Toolkit: [ADT](https://www.github.com/agile-deployer)  
 
 2) Application testers - Technology capable people willing to test as end users applications deployed using the ADT.  
