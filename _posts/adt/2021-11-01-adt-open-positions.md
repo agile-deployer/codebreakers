@@ -17,7 +17,7 @@ You'll never be free of capitalism because the law is "if you over capitalise yo
 
 ### As a first step then, there are various opportunities to capitalise yourself within Codebreakers the style of capitalisation is an open question but chances are it won't be fiscal capitalisation. I can't say what your reward will be, but, the old saying is "there must be something in it for him (in this case you)", and, trusting that and more importantly knowing that is the challenge.   
 
-### If you are interested, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
+### If you are keen, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
 
 1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](https://www.github.com/agile-deployer)  
 
