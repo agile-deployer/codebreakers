@@ -19,7 +19,7 @@ You'll never be free of capitalism because the law is "if you over capitalise yo
 
 ### If you are keen, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
 
-1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing the agile deployment toolkit: [ADT](https://www.github.com/agile-deployer)  
+1) Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing and extending the Agile Deployment Toolkit: [ADT](https://www.github.com/agile-deployer)  
 
 2) Application testers - people willing to test applications deployed using the ADT.  
 
