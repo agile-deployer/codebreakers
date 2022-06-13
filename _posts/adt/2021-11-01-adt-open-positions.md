@@ -15,7 +15,7 @@ You'll never be free of capitalism because the law is "if you over capitalise yo
 
 ------------------------
 
-### As a first step then, there are various opportunities to capitalise yourself within Codebreakers the style of capitalisation is an open question but chances are it won't be fiscal capitalisation. I can't say what your reward will be, but, the old saying is "there must be something in it for him (in this case you)", and, trusting that there is an unseen process that enforces thst and more importantly knowing that there is, challenges us.    
+### As a first step then, there are various opportunities to capitalise yourself within Codebreakers the style of capitalisation is an open question but chances are it won't be fiscal capitalisation. I can't say what your reward will be, but, the old saying is "there must be something in it for him (in this case you)", and, trusting that there is an unseen process that enforces that and more importantly knowing that there is, challenges us.    
 
 ### If you are keen, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
 
