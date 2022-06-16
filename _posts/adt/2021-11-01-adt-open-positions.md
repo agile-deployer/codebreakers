@@ -19,8 +19,8 @@ The roles which I am looking for volunteers to fill are:
 
 1) Toolkit Developers - Very highly technical Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing and extending the Agile Deployment Toolkit: [ADT](https://www.github.com/agile-deployer)  
 
-2) Application testers - Technology capable people willing to test as end users applications deployed using the ADT.  
+2) Application testers - Technology capable people willing to test as end users applications deployed using the [ADT](https://www.github.com/agile-deployer)  
 
-3) Application developers - Moderately technical people willing to develop applications using the latest CMS systems deployed using the ADT such as Joomla, Wordpress and Drupal.  
+3) Application developers - Moderately technical people willing to develop applications using the latest CMS systems deployed using the [ADT](https://www.github.com/agile-deployer) such as Joomla, Wordpress and Drupal.  
 
-4) Application deployers - Highly technical people willing to learn how the ADT works (the ADT is a DMS (Deployment Management System) and it is similar to the amount of effort you would put in to learning a CMS but for deployment rather than content). 
+4) Application deployers - Highly technical people willing to learn how the [ADT](https://www.github.com/agile-deployer) works (the ADT is a DMS (Deployment Management System) and it is similar to the amount of effort you would put in to learning a CMS but for deployment rather than content). 
