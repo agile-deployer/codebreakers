@@ -17,7 +17,7 @@ As a first step, then, there are various opportunities to capitalise yourself wi
 
 Computer systems don't run on a wing and a prayer hardnosed engineering is required if they are to stand a chance of working or as the aircraft engineers put on the wall of hanger 9 at Heathrow back in the day, 
 
-"Note to management: these aircraft do not fly on bullshit alone"
+**"Note to management: these aircraft do not fly on bullshit alone"**
 
 With that in mind, then, if we are to have any chance at all of getting airbourne, metaphorically, with this project, there needs to be interest and input from highly proficient people of which I might be one. If this project doesn't get that it will be dead in the water before it even starts. 
 
