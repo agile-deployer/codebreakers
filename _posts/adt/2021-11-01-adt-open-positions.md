@@ -15,7 +15,7 @@ As a first step, then, there are various opportunities to capitalise yourself wi
 
 ### If you are keen, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
 
-Computer systems don't run on a wing and a prayer hardnosed engineering is required if they are to stand a chance of working or as the aircraft engineers put on the wall of hanger 9 at Heathrow back in the day, 
+Computer systems don't run on a wing and a prayer hardnosed engineering is required if they are to stand a chance of working or as the aircraft engineers put on the wall of Hanger 9 at Heathrow back in the day, 
 
 **"Note to management: these aircraft do not fly on bullshit alone"**
 
