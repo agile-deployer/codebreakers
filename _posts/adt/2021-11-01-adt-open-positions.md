@@ -15,13 +15,10 @@ As a first step, then, there are various opportunities to capitalise yourself wi
 
 ### If you are keen, open an issue on [this](https://github.com/agile-deployer/codebreakers/issues) repository expressing your interest. 
 
-Computer systems don't run on a wing and a prayer hardnosed engineering is required if they are to stand a chance of working or as the aircraft engineers put on the wall of Hanger 9 at Heathrow back in the day, 
+Computer systems don't run on a wing and a prayer; hardnosed engineering is required if they are to stand a chance of working. If we are to have any chance at all of getting airbourne, metaphorically, with this project, there needs to be interest and input from highly proficient people of which I might be one.  
+If this project doesn't get that it will be dead in the water before it even starts. 
 
-**"Note to management: these aircraft do not fly on bullshit alone"**
-
-With that in mind, then, if we are to have any chance at all of getting airbourne, metaphorically, with this project, there needs to be interest and input from highly proficient people of which I might be one. If this project doesn't get that it will be dead in the water before it even starts. 
-
-The roles which I am looking for volunteers to fill are:  
+The roles which volunteers are need for are:  
 
 1) Toolkit Developers - Very highly technical Linux deployment specialists with knowledge of the Linux shell and cloud host environments for help with developing and extending the Agile Deployment Toolkit: [ADT](https://www.github.com/agile-deployer)  
 
